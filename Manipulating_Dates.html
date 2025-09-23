@@ -1,0 +1,1162 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Numerical Calculations With Dates &#8212; An Introduction to Python for Financial Python</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Manipulating_Dates';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Pandas" href="An_Introduction_To_Pandas.html" />
+    <link rel="prev" title="Functions" href="Functions.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/Small_Logo.png" class="logo__image only-light" alt="An Introduction to Python for Financial Python - Home"/>
+    <script>document.write(`<img src="_static/Small_Logo.png" class="logo__image only-dark" alt="An Introduction to Python for Financial Python - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Background Material: An Introduction to Python for Financial Python
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Basic_Grammar.html"><em><strong>Introduction</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Strings.html"><em><strong>Strings</strong></em></a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="Numbers_%26_Booleans.html"><em><strong>Numbers &amp; Booleans</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Control_Statements.html"><em><strong>Statements That Control Other Statements</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="A_First_Look_At_Lists.html"><em><strong>Lists</strong></em></a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="Tuples.html"><em><strong>Tuples</strong></em></a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="Dictionaries.html"><em><strong>Dictionaries</strong></em></a></li>
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="Functions.html"><em><strong>Functions</strong></em></a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#"><em><strong>Numerical Calculations With Dates</strong></em></a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="An_Introduction_To_Pandas.html"><em><strong>Pandas</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="An_Introduction_To_NumPy.html"><em><strong>NumPy</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sets.html"><em><strong>Sets</strong></em></a></li>
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/PatrickJHess/background_material" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/PatrickJHess/background_material/issues/new?title=Issue%20on%20page%20%2FManipulating_Dates.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Manipulating_Dates.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Numerical Calculations With Dates</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><em><strong>Numerical Calculations With Dates</strong></em></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#many-financial-calculations-such-as-aligning-present-value-factors-with-payment-dates-or-annualizing-returns-and-volatility-rely-on-numerical-date-analysis-this-notebook-explores-key-python-modules-for-date-handling">Many financial calculations, such as aligning present value factors with payment dates or annualizing returns and volatility, rely on numerical date analysis. This notebook explores key Python modules for date handling:</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#datetime-modules"><em><strong>Datetime Modules</strong></em></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-offers-numerous-libraries-and-modules-and-one-frequently-used-in-finance-is-datetime-the-module-is-part-of-the-standard-python-library-the-modules-defines-objects-with-specific-attributes-and-methods-allowing-for-the-manipulation-of-dates">Python offers numerous libraries and modules, and one frequently used in finance is datetime. The module is part of the standard Python library. The modules defines objects with specific attributes and methods allowing for the manipulation of dates.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-datetime-object"><em><strong>Create A datetime Object</strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-datetime-method-is-part-of-the-datetime-module-its-parameters-include-year-month-day-hour-minute-second-and-microsecond-arguments-are-required-for-year-month-and-day-the-other-parameters-default-to-zero">The <font color="green">datetime()</font> method is part of the datetime module. Its parameters include year, month, day, hour, minute, second, and microsecond. Arguments are required for year, month, and day. The other parameters default to zero.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#one-way-to-use-the-datetime-method-is-to-import-the-datetime-module-and-then-access-the-method-as-an-extension-of-the-module">One way to use the <font color="green">datetime</font> method is to import the <font color="green">datetime</font> module and then access the method as an extension of the module.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#it-s-more-convenient-to-import-the-datetime-method-directly-from-the-datetime-module-and-then-refer-to-it-without-the-module-prefix-the-notebooks-of-financial-python-import-the-datetime-method-from-the-datetime-module">It’s more convenient to import the <font color="green">datetime</font> method directly from the <font color="green">datetime</font> module and then refer to it without the module prefix.  The notebooks of Financial Python import the <font color="green">datetime</font> method from the <font color="green">datetime</font> module.</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#datetime-object-from-a-string"><em><strong>Datetime Object From A String</strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-strptime-method-of-a-datetime-object-converts-a-string-into-a-datetime-object-this-method-requires-two-string-arguments-the-date-s-string-representation-and-the-format-of-the-representation-as-arguments">The <font color="green">strptime()</font> method of a datetime object converts a string into a datetime object. This method requires two string arguments: the date’s string representation and the format of the representation as arguments.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-format-string-specifies-how-the-date-and-time-components-are-structured-year-month-and-day-arguments-denoted-as-y-m-and-d-respectively-must-be-preceded-by-a-percent-sign-a-capital-y-signifies-a-four-digit-year-for-time-hours-minutes-and-seconds-are-represented-by-capital-h-m-and-s-respectively-microseconds-are-an-attribute-of-seconds-additionally-the-characters-used-to-separate-the-arguments-within-the-string-must-be-explicitly-defined-in-the-format">The format string specifies how the date and time components are structured. Year, month, and day arguments (denoted as <code class="docutils literal notranslate"><span class="pre">y</span></code>, <code class="docutils literal notranslate"><span class="pre">m</span></code>, and <code class="docutils literal notranslate"><span class="pre">d</span></code> respectively) must be preceded by a percent sign. A capital <code class="docutils literal notranslate"><span class="pre">Y</span></code> signifies a four-digit year. For time, hours, minutes, and seconds are represented by capital <code class="docutils literal notranslate"><span class="pre">h</span></code>, <code class="docutils literal notranslate"><span class="pre">m</span></code>, and <code class="docutils literal notranslate"><span class="pre">s</span></code> respectively. Microseconds are an attribute of seconds. Additionally, the characters used to separate the arguments within the string must be explicitly defined in the format.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#in-this-example-the-year-is-four-digits-and-separated-from-the-month-and-day-by-a-dash-hours-minutes-and-seconds-are-separated-by-a-backslash-the-separators-must-be-included-in-the-format-string">In this example the year is four digits and separated from the month and day by a dash. Hours, minutes, and seconds are separated by a backslash  The separators must be included in the format string.</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#string-from-a-datetime-object"><em><strong>String From A datetime Object</strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-datetime-object-can-be-converted-to-a-string-using-either-the-built-in-python-function-str-or-the-strptime-method-of-the-datetime-object">A datetime object can be converted to a string using either the built-in Python function <font color="green">str()</font> or the <font color="green">strptime()</font> method of the datetime object.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-str-function-outputs-a-string-where-dashes-separate-years-months-and-days-and-colons-separate-hours-minutes-and-seconds">The <font color="green">str()</font> function outputs a string where dashes separate years, months, and days, and colons separate hours, minutes, and seconds.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#in-contrast-the-strptime-method-requires-a-format-string-here-the-previously-defined-format-string-of-time-stamp-is-used">In contrast, the <font color="green">strptime()</font> method requires a format string.  Here the previously defined format string of <font color="green">time_stamp</font> is used.</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#some-datetime-attributes"><em><strong>Some Datetime Attributes</strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#useful-attributes-of-a-datetime-object-are-the">Useful attributes of a datetime object are the:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-attribute-are-accessed-with-the-dot-notation-these-attributed-are-demonstrated-for-time-stamp-by-iterating-through-the-results-of-zipping-the-lists-attribute-list-and-attribute-names">The attribute are accessed with the dot notation.  These attributed are demonstrated for <font color="green">time_stamp</font> by iterating through the results of zipping the lists <font color="green">attribute_list</font> and <font color="green">attribute_names</font>.</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#date-object"><em><strong>date() Object</strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-date-is-returned-with-the-datetime-method-date-or-is-created-with-the-date-moudule-of-the-datetime-library-a-date-object-includes-the-year-month-and-day-of-datetime-objects-if-the-date-module-is-imported-the-module-can-be-created-by-passing-year-month-and-day-as-arguments">The <font color="green">date()</font> is returned with the datetime method <font color="green">date()</font> or is created with the date moudule of the datetime library. A date object includes the year, month, and day of datetime objects.  If the date module is imported, the module can be created by passing year, month, and day as arguments.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#import-date-from-datetime"><em><strong>Import date From datetime</strong></em></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#subtracting-and-adding-datetime-objects"><em><strong>Subtracting And Adding datetime Objects</strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#subtracting"><em><strong>Subtracting</strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#one-datetime-or-date-object-can-be-subtracted-from-another-the-result-is-the-datetime-method-timedelta-with-specified-values-of-days-seconds-and-microseconds-the-variable-date-difference-is-assigned-time-stamp-less-april-15-th-2025">One datetime or date object can be subtracted from another.  The result is the datetime method <font color="green">timedelta()</font> with specified values of days, seconds, and microseconds.  The variable <font color="green">date_difference</font> is assigned time_stamp less  April 15$^{th} 2025.</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-attributes-of-date-difference-are-days-seconds-and-microseconds-the-seconds-are-converted-to-hours-and-minutes-and-are-displayed-along-with-days">The attributes of <font color="green">date_difference</font> are days, seconds, and microseconds.  The seconds are converted to hours and minutes and are displayed along with days.</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#timedelta-method"><em><strong>timedelta() Method</strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-timedelta-method-allows-for-the-addition-or-subtraction-of-time-from-a-datetime-object-this-method-s-parameters-are-weeks-days-hours-minutes-seconds-microseconds-and-milliseconds-the-default-values-of-the-arguments-are-all-zero-the-following-examples-demonstrate-the-use-of-this-method-after-it-has-been-imported-rather-than-using-the-datetime-prefix">The <font color="green">timedelta()</font> method allows for the addition or subtraction of time from a datetime object. This method’s parameters are weeks, days, hours, minutes, seconds, microseconds, and milliseconds.  The default values of the arguments are all zero.  The following examples demonstrate the use of this method after it has been imported, rather than using the datetime prefix.</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#relativedelta-from-datetutil-library-more-convenient-than-timedelta-method"><em><strong>relativedelta From datetutil Library More Convenient Than timedelta() Method</strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-dateutil-module-builds-upon-the-datetime-module-offering-an-enhanced-relativedelta-method-this-method-expands-on-timedelta-by-providing-additional-parameters-most-notably-for-our-use-is-year-and-month">The <font color="green">dateutil</font> module builds upon the datetime module, offering an enhanced <font color="green">relativedelta()</font> method. This method expands on <font color="green">timedelta</font> by providing additional parameters; most notably for our use is year and month.</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calendar-module-monthrange-method"><em><strong>calendar Module monthrange() Method</strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-monthrange-method-found-in-the-calendar-module-takes-the-year-and-month-as-parameters-it-returns-two-values-the-weekday-of-the-first-day-of-the-month-and-the-last-calendar-day-of-the-month-the-calendar-module-is-imported-and-the-function-is-demonstrated-with-the-datetime-object-time-stamp">The <font color="green">monthrange()</font> method, found in the <font color="green">calendar</font> module, takes the year and month as parameters. It returns two values: the weekday of the first day of the month and the last calendar day of the month. The <font color="green">calendar</font> module is imported and the function is demonstrated with the datetime object <font color="green">time_stamp</font>.</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <img src='https://docs.google.com/drawings/d/e/2PACX-1vSW_igArgJVAh-SLSxgtXmZ7zVkRviKkdCRKTy1ZavuSCdUQBdwdXEwIEO0rftkPHtgh8bSGX-K3ZON/pub?w=960&h=720'><section id="numerical-calculations-with-dates">
+<h1><em><strong>Numerical Calculations With Dates</strong></em><a class="headerlink" href="#numerical-calculations-with-dates" title="Link to this heading">#</a></h1>
+<section id="many-financial-calculations-such-as-aligning-present-value-factors-with-payment-dates-or-annualizing-returns-and-volatility-rely-on-numerical-date-analysis-this-notebook-explores-key-python-modules-for-date-handling">
+<h2>Many financial calculations, such as aligning present value factors with payment dates or annualizing returns and volatility, rely on numerical date analysis. This notebook explores key Python modules for date handling:<a class="headerlink" href="#many-financial-calculations-such-as-aligning-present-value-factors-with-payment-dates-or-annualizing-returns-and-volatility-rely-on-numerical-date-analysis-this-notebook-explores-key-python-modules-for-date-handling" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><em><strong>datetime: Provides diverse methods for numerical date representation.</strong></em></p></li>
+<li><p><em><strong>dateutil.relativedelta: Enables flexible manipulation of datetime objects.</strong></em></p></li>
+<li><p><em><strong>calendar: Useful for identifying specific days, such as the last day of the month.</strong></em></p></li>
+</ul>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="datetime-modules">
+<h1><em><strong>Datetime Modules</strong></em><a class="headerlink" href="#datetime-modules" title="Link to this heading">#</a></h1>
+<section id="python-offers-numerous-libraries-and-modules-and-one-frequently-used-in-finance-is-datetime-the-module-is-part-of-the-standard-python-library-the-modules-defines-objects-with-specific-attributes-and-methods-allowing-for-the-manipulation-of-dates">
+<h2>Python offers numerous libraries and modules, and one frequently used in finance is datetime. The module is part of the standard Python library. The modules defines objects with specific attributes and methods allowing for the manipulation of dates.<a class="headerlink" href="#python-offers-numerous-libraries-and-modules-and-one-frequently-used-in-finance-is-datetime-the-module-is-part-of-the-standard-python-library-the-modules-defines-objects-with-specific-attributes-and-methods-allowing-for-the-manipulation-of-dates" title="Link to this heading">#</a></h2>
+</section>
+<section id="create-a-datetime-object">
+<h2><em><strong>Create A datetime Object</strong></em><a class="headerlink" href="#create-a-datetime-object" title="Link to this heading">#</a></h2>
+<section id="the-datetime-method-is-part-of-the-datetime-module-its-parameters-include-year-month-day-hour-minute-second-and-microsecond-arguments-are-required-for-year-month-and-day-the-other-parameters-default-to-zero">
+<h3>The <font color='green'>datetime()</font> method is part of the datetime module. Its parameters include year, month, day, hour, minute, second, and microsecond. Arguments are required for year, month, and day. The other parameters default to zero.<a class="headerlink" href="#the-datetime-method-is-part-of-the-datetime-module-its-parameters-include-year-month-day-hour-minute-second-and-microsecond-arguments-are-required-for-year-month-and-day-the-other-parameters-default-to-zero" title="Link to this heading">#</a></h3>
+</section>
+<section id="one-way-to-use-the-datetime-method-is-to-import-the-datetime-module-and-then-access-the-method-as-an-extension-of-the-module">
+<h3>One way to use the <font color='green'>datetime</font> method is to import the <font color='green'>datetime</font> module and then access the method as an extension of the module.<a class="headerlink" href="#one-way-to-use-the-datetime-method-is-to-import-the-datetime-module-and-then-access-the-method-as-an-extension-of-the-module" title="Link to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">datetime</span>
+<span class="n">example</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2025</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">15</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="it-s-more-convenient-to-import-the-datetime-method-directly-from-the-datetime-module-and-then-refer-to-it-without-the-module-prefix-the-notebooks-of-financial-python-import-the-datetime-method-from-the-datetime-module">
+<h3>It’s more convenient to import the <font color='green'>datetime</font> method directly from the <font color='green'>datetime</font> module and then refer to it without the module prefix.  The notebooks of Financial Python import the <font color='green'>datetime</font> method from the <font color='green'>datetime</font> module.<a class="headerlink" href="#it-s-more-convenient-to-import-the-datetime-method-directly-from-the-datetime-module-and-then-refer-to-it-without-the-module-prefix-the-notebooks-of-financial-python-import-the-datetime-method-from-the-datetime-module" title="Link to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">datetime</span>
+<span class="n">example_dateimte</span><span class="o">=</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2025</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">14</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">2000010</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">datetime</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">example</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2025</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">14</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">200010</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">example</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>datetime.datetime(2025, 6, 15, 14, 30, 10, 200010)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">datetime</span> <span class="c1"># Import the &#39;datetime&#39; class from the &#39;datetime&#39; module.</span>
+                             <span class="c1"># This class is essential for working with dates and times.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">example_datetime</span><span class="o">=</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2025</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">14</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">200010</span><span class="p">)</span>
+<span class="n">example_datetime</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>datetime.datetime(2025, 6, 15, 14, 30, 10, 200010)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="datetime-object-from-a-string">
+<h2><em><strong>Datetime Object From A String</strong></em><a class="headerlink" href="#datetime-object-from-a-string" title="Link to this heading">#</a></h2>
+<section id="the-strptime-method-of-a-datetime-object-converts-a-string-into-a-datetime-object-this-method-requires-two-string-arguments-the-date-s-string-representation-and-the-format-of-the-representation-as-arguments">
+<h3>The <font color='green'>strptime()</font> method of a datetime object converts a string into a datetime object. This method requires two string arguments: the date’s string representation and the format of the representation as arguments.<a class="headerlink" href="#the-strptime-method-of-a-datetime-object-converts-a-string-into-a-datetime-object-this-method-requires-two-string-arguments-the-date-s-string-representation-and-the-format-of-the-representation-as-arguments" title="Link to this heading">#</a></h3>
+</section>
+<section id="the-format-string-specifies-how-the-date-and-time-components-are-structured-year-month-and-day-arguments-denoted-as-y-m-and-d-respectively-must-be-preceded-by-a-percent-sign-a-capital-y-signifies-a-four-digit-year-for-time-hours-minutes-and-seconds-are-represented-by-capital-h-m-and-s-respectively-microseconds-are-an-attribute-of-seconds-additionally-the-characters-used-to-separate-the-arguments-within-the-string-must-be-explicitly-defined-in-the-format">
+<h3>The format string specifies how the date and time components are structured. Year, month, and day arguments (denoted as <code class="docutils literal notranslate"><span class="pre">y</span></code>, <code class="docutils literal notranslate"><span class="pre">m</span></code>, and <code class="docutils literal notranslate"><span class="pre">d</span></code> respectively) must be preceded by a percent sign. A capital <code class="docutils literal notranslate"><span class="pre">Y</span></code> signifies a four-digit year. For time, hours, minutes, and seconds are represented by capital <code class="docutils literal notranslate"><span class="pre">h</span></code>, <code class="docutils literal notranslate"><span class="pre">m</span></code>, and <code class="docutils literal notranslate"><span class="pre">s</span></code> respectively. Microseconds are an attribute of seconds. Additionally, the characters used to separate the arguments within the string must be explicitly defined in the format.<a class="headerlink" href="#the-format-string-specifies-how-the-date-and-time-components-are-structured-year-month-and-day-arguments-denoted-as-y-m-and-d-respectively-must-be-preceded-by-a-percent-sign-a-capital-y-signifies-a-four-digit-year-for-time-hours-minutes-and-seconds-are-represented-by-capital-h-m-and-s-respectively-microseconds-are-an-attribute-of-seconds-additionally-the-characters-used-to-separate-the-arguments-within-the-string-must-be-explicitly-defined-in-the-format" title="Link to this heading">#</a></h3>
+</section>
+<section id="in-this-example-the-year-is-four-digits-and-separated-from-the-month-and-day-by-a-dash-hours-minutes-and-seconds-are-separated-by-a-backslash-the-separators-must-be-included-in-the-format-string">
+<h3>In this example the year is four digits and separated from the month and day by a dash. Hours, minutes, and seconds are separated by a backslash  The separators must be included in the format string.<a class="headerlink" href="#in-this-example-the-year-is-four-digits-and-separated-from-the-month-and-day-by-a-dash-hours-minutes-and-seconds-are-separated-by-a-backslash-the-separators-must-be-included-in-the-format-string" title="Link to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">string_date</span><span class="o">=</span><span class="s1">&#39;2025-06-15 14/30/10.200010&#39;</span>
+<span class="n">format_string_date</span><span class="o">=</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1"> %H/%M/%S.</span><span class="si">%f</span><span class="s1">&#39;</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define a string variable that holds a date and time in a specific, custom format.</span>
+<span class="c1"># Note the combination of hyphens, spaces, slashes, and a period as separators.</span>
+<span class="n">string_date</span> <span class="o">=</span> <span class="s1">&#39;2025-06-15 14/30/10.200010&#39;</span>
+
+<span class="c1"># Define a format string that precisely matches the structure of &#39;string_date&#39;.</span>
+<span class="c1"># Each &#39;%&#39; code represents a specific component of the date/time:</span>
+<span class="c1"># %Y: Full year with century (e.g., 2025)</span>
+<span class="c1"># %m: Month as a zero-padded decimal number (e.g., 06)</span>
+<span class="c1"># %d: Day of the month as a zero-padded decimal number (e.g., 15)</span>
+<span class="c1"># %H: Hour (24-hour clock) as a zero-padded decimal number (e.g., 14)</span>
+<span class="c1"># %M: Minute as a zero-padded decimal number (e.g., 30)</span>
+<span class="c1"># %S: Second as a zero-padded decimal number (e.g., 10)</span>
+<span class="c1"># %f: Microsecond as a decimal number, zero-padded on the left (e.g., 200010)</span>
+<span class="c1"># IMPORTANT: The literal characters (hyphens, spaces, slashes, periods) in the format string</span>
+<span class="c1"># must exactly match those in the &#39;string_date&#39; for successful parsing.</span>
+<span class="n">format_string_date</span> <span class="o">=</span> <span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1"> %H/%M/%S.</span><span class="si">%f</span><span class="s1">&#39;</span>
+
+<span class="c1"># Use the &#39;strptime()&#39; class method of &#39;datetime&#39; to parse the &#39;string_date&#39;.</span>
+<span class="c1"># &#39;strptime()&#39; (string parse time) takes the date string and its corresponding format string</span>
+<span class="c1"># as arguments, and attempts to convert the string into a &#39;datetime&#39; object.</span>
+<span class="c1"># If the &#39;string_date&#39; does not exactly match the &#39;format_string_date&#39;, a ValueError will be raised.</span>
+<span class="n">time_stamp</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">string_date</span><span class="p">,</span> <span class="n">format_string_date</span><span class="p">)</span>
+
+<span class="c1"># Display the resulting &#39;datetime&#39; object.</span>
+<span class="c1"># When a datetime object is printed or evaluated, Python presents it in a standard</span>
+<span class="c1"># ISO 8601-like format (YYYY-MM-DD HH:MM:SS.microseconds), regardless of the input format.</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">time_stamp</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-06-15 14:30:10.200010
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="string-from-a-datetime-object">
+<h2><em><strong>String From A datetime Object</strong></em><a class="headerlink" href="#string-from-a-datetime-object" title="Link to this heading">#</a></h2>
+<section id="a-datetime-object-can-be-converted-to-a-string-using-either-the-built-in-python-function-str-or-the-strptime-method-of-the-datetime-object">
+<h3>A datetime object can be converted to a string using either the built-in Python function <font color='green'>str()</font> or the <font color='green'>strptime()</font> method of the datetime object.<a class="headerlink" href="#a-datetime-object-can-be-converted-to-a-string-using-either-the-built-in-python-function-str-or-the-strptime-method-of-the-datetime-object" title="Link to this heading">#</a></h3>
+</section>
+<section id="the-str-function-outputs-a-string-where-dashes-separate-years-months-and-days-and-colons-separate-hours-minutes-and-seconds">
+<h3>The <font color='green'>str()</font> function outputs a string where dashes separate years, months, and days, and colons separate hours, minutes, and seconds.<a class="headerlink" href="#the-str-function-outputs-a-string-where-dashes-separate-years-months-and-days-and-colons-separate-hours-minutes-and-seconds" title="Link to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">builtin_function</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">time_stamp</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="in-contrast-the-strptime-method-requires-a-format-string-here-the-previously-defined-format-string-of-time-stamp-is-used">
+<h3>In contrast, the <font color='green'>strptime()</font> method requires a format string.  Here the previously defined format string of <font color='green'>time_stamp</font> is used.<a class="headerlink" href="#in-contrast-the-strptime-method-requires-a-format-string-here-the-previously-defined-format-string-of-time-stamp-is-used" title="Link to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">datetime_method</span><span class="o">=</span><span class="n">time_stamp</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="n">format_string_date</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Assuming &#39;time_stamp&#39; is a datetime object (e.g., from datetime.strptime)</span>
+<span class="c1"># and &#39;format_string_date&#39; is the format string used for parsing or desired for formatting.</span>
+
+<span class="c1"># Convert the &#39;time_stamp&#39; datetime object into a string using the built-in &#39;str()&#39; function.</span>
+<span class="c1"># The &#39;str()&#39; function provides a default, human-readable, and generally unambiguous</span>
+<span class="c1"># string representation of the datetime object (usually in ISO 8601-like format).</span>
+<span class="c1"># It does not allow custom formatting.</span>
+<span class="n">builtin_function</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">time_stamp</span><span class="p">)</span>
+
+<span class="c1"># Convert the &#39;time_stamp&#39; datetime object into a string using the &#39;strftime()&#39; method.</span>
+<span class="c1"># &#39;strftime()&#39; (string format time) allows you to format the datetime object</span>
+<span class="c1"># into a string according to a specified format code string (&#39;format_string_date&#39;).</span>
+<span class="c1"># This gives precise control over how the date and time components appear in the output string.</span>
+<span class="n">datetime_method</span> <span class="o">=</span> <span class="n">time_stamp</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="n">format_string_date</span><span class="p">)</span>
+
+<span class="c1"># Display both resulting strings.</span>
+<span class="c1"># You will likely observe that &#39;builtin_function&#39; uses a default format (e.g., YYYY-MM-DD HH:MM:SS.ffffff)</span>
+<span class="c1"># while &#39;datetime_method&#39; uses the specific format you defined in &#39;format_string_date&#39;.</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Using str(): </span><span class="si">{</span><span class="n">builtin_function</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Using strftime(): </span><span class="si">{</span><span class="n">datetime_method</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># For context, if time_stamp was &#39;2025-06-15 14:30:10.200010&#39;</span>
+<span class="c1"># and format_string_date was &#39;%Y-%m-%d %H/%M/%S.%f&#39;:</span>
+<span class="c1"># builtin_function would likely be &#39;2025-06-15 14:30:10.200010&#39; (matches ISO format here)</span>
+<span class="c1"># datetime_method would be &#39;2025-06-15 14/30/10.200010&#39; (matches original input string format)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Using str(): 2025-06-15 14:30:10.200010
+Using strftime(): 2025-06-15 14/30/10.200010
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="some-datetime-attributes">
+<h2><em><strong>Some Datetime Attributes</strong></em><a class="headerlink" href="#some-datetime-attributes" title="Link to this heading">#</a></h2>
+<section id="useful-attributes-of-a-datetime-object-are-the">
+<h3>Useful attributes of a datetime object are the:<a class="headerlink" href="#useful-attributes-of-a-datetime-object-are-the" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><em><strong>year</strong></em></p></li>
+<li><p><em><strong>month</strong></em></p></li>
+<li><p><em><strong>day</strong></em></p></li>
+<li><p><em><strong>hour</strong></em></p></li>
+<li><p><em><strong>second</strong></em></p></li>
+<li><p><em><strong>microsecond</strong></em></p></li>
+</ul>
+</section>
+<section id="the-attribute-are-accessed-with-the-dot-notation-these-attributed-are-demonstrated-for-time-stamp-by-iterating-through-the-results-of-zipping-the-lists-attribute-list-and-attribute-names">
+<h3>The attribute are accessed with the dot notation.  These attributed are demonstrated for <font color='green'>time_stamp</font> by iterating through the results of zipping the lists <font color='green'>attribute_list</font> and <font color='green'>attribute_names</font>.<a class="headerlink" href="#the-attribute-are-accessed-with-the-dot-notation-these-attributed-are-demonstrated-for-time-stamp-by-iterating-through-the-results-of-zipping-the-lists-attribute-list-and-attribute-names" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Assuming &#39;time_stamp&#39; is an existing datetime object, for example,</span>
+<span class="c1"># created as: time_stamp = datetime(2025, 6, 15, 14, 30, 10, 200010)</span>
+
+<span class="c1"># Create a list containing individual time components by accessing</span>
+<span class="c1"># specific attributes (year, month, day, hour, minute, second, microsecond)</span>
+<span class="c1"># directly from the &#39;time_stamp&#39; datetime object.</span>
+<span class="n">attribute_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">time_stamp</span><span class="o">.</span><span class="n">year</span><span class="p">,</span> <span class="n">time_stamp</span><span class="o">.</span><span class="n">month</span><span class="p">,</span> <span class="n">time_stamp</span><span class="o">.</span><span class="n">day</span><span class="p">,</span>
+                  <span class="n">time_stamp</span><span class="o">.</span><span class="n">hour</span><span class="p">,</span> <span class="n">time_stamp</span><span class="o">.</span><span class="n">minute</span><span class="p">,</span> <span class="n">time_stamp</span><span class="o">.</span><span class="n">second</span><span class="p">,</span>
+                  <span class="n">time_stamp</span><span class="o">.</span><span class="n">microsecond</span><span class="p">]</span>
+
+<span class="c1"># Create a corresponding list of descriptive names for each attribute.</span>
+<span class="n">attribute_name</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">,</span> <span class="s1">&#39;Month&#39;</span><span class="p">,</span> <span class="s1">&#39;Day&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;Hour&#39;</span><span class="p">,</span> <span class="s1">&#39;Minute&#39;</span><span class="p">,</span> <span class="s1">&#39;Second&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;Micro Second&#39;</span><span class="p">]</span>
+
+<span class="c1"># Iterate simultaneously over both &#39;attribute_list&#39; and &#39;attribute_name&#39;</span>
+<span class="c1"># using the &#39;zip()&#39; function.</span>
+<span class="c1"># In each iteration, &#39;attribute&#39; will get a value from &#39;attribute_list&#39;</span>
+<span class="c1"># and &#39;name&#39; will get the corresponding string from &#39;attribute_name&#39;.</span>
+<span class="k">for</span> <span class="n">attribute</span><span class="p">,</span> <span class="n">name</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">attribute_list</span><span class="p">,</span> <span class="n">attribute_name</span><span class="p">):</span>
+  <span class="c1"># Print the name of the attribute followed by its extracted value.</span>
+  <span class="c1"># A colon and a space are used as separators for clear output.</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">name</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span><span class="p">,</span> <span class="n">attribute</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Year:  2025
+Month:  6
+Day:  15
+Hour:  14
+Minute:  30
+Second:  10
+Micro Second:  200010
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="date-object">
+<h2><em><strong>date() Object</strong></em><a class="headerlink" href="#date-object" title="Link to this heading">#</a></h2>
+<section id="the-date-is-returned-with-the-datetime-method-date-or-is-created-with-the-date-moudule-of-the-datetime-library-a-date-object-includes-the-year-month-and-day-of-datetime-objects-if-the-date-module-is-imported-the-module-can-be-created-by-passing-year-month-and-day-as-arguments">
+<h3>The <font color='green'>date()</font> is returned with the datetime method <font color='green'>date()</font> or is created with the date moudule of the datetime library. A date object includes the year, month, and day of datetime objects.  If the date module is imported, the module can be created by passing year, month, and day as arguments.<a class="headerlink" href="#the-date-is-returned-with-the-datetime-method-date-or-is-created-with-the-date-moudule-of-the-datetime-library-a-date-object-includes-the-year-month-and-day-of-datetime-objects-if-the-date-module-is-imported-the-module-can-be-created-by-passing-year-month-and-day-as-arguments" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">time_stamp</span><span class="o">.</span><span class="n">date</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>datetime.date(2025, 6, 15)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="import-date-from-datetime">
+<h3><em><strong>Import date From datetime</strong></em><a class="headerlink" href="#import-date-from-datetime" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">date</span>
+<span class="c1">#date(time_stamp.year,time_stamp.month,time_stamp.day)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="subtracting-and-adding-datetime-objects">
+<h2><em><strong>Subtracting And Adding datetime Objects</strong></em><a class="headerlink" href="#subtracting-and-adding-datetime-objects" title="Link to this heading">#</a></h2>
+<section id="subtracting">
+<h3><em><strong>Subtracting</strong></em><a class="headerlink" href="#subtracting" title="Link to this heading">#</a></h3>
+<section id="one-datetime-or-date-object-can-be-subtracted-from-another-the-result-is-the-datetime-method-timedelta-with-specified-values-of-days-seconds-and-microseconds-the-variable-date-difference-is-assigned-time-stamp-less-april-15-th-2025">
+<h4>One datetime or date object can be subtracted from another.  The result is the datetime method <font color='green'>timedelta()</font> with specified values of days, seconds, and microseconds.  The variable <font color='green'>date_difference</font> is assigned time_stamp less  April 15$^{th} 2025.<a class="headerlink" href="#one-datetime-or-date-object-can-be-subtracted-from-another-the-result-is-the-datetime-method-timedelta-with-specified-values-of-days-seconds-and-microseconds-the-variable-date-difference-is-assigned-time-stamp-less-april-15-th-2025" title="Link to this heading">#</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">date_differences</span><span class="o">=</span><span class="n">time_stamp</span><span class="o">-</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2025</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">15</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="the-attributes-of-date-difference-are-days-seconds-and-microseconds-the-seconds-are-converted-to-hours-and-minutes-and-are-displayed-along-with-days">
+<h4>The attributes of <font color='green'>date_difference</font> are days, seconds, and microseconds.  The seconds are converted to hours and minutes and are displayed along with days.<a class="headerlink" href="#the-attributes-of-date-difference-are-days-seconds-and-microseconds-the-seconds-are-converted-to-hours-and-minutes-and-are-displayed-along-with-days" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Assuming &#39;time_stamp&#39; is already a datetime object as:</span>
+<span class="c1"># time_stamp = datetime(2025, 6, 15, 14, 30, 10, 200010)</span>
+
+<span class="c1"># Calculate the difference between &#39;time_stamp&#39; and another specific datetime.</span>
+<span class="c1"># When no time components are provided to the datetime constructor, they default to midnight (00:00:00.000000).</span>
+<span class="c1"># So, datetime(2025, 4, 15) represents April 15, 2025, at 12:00:00 AM.</span>
+<span class="n">date_differences</span> <span class="o">=</span> <span class="n">time_stamp</span> <span class="o">-</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2025</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span>
+
+<span class="c1"># Display the result of the subtraction.</span>
+<span class="c1"># Subtracting two datetime objects yields a &#39;timedelta&#39; object,</span>
+<span class="c1"># which represents a duration of time.</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">date_differences</span><span class="p">)</span>
+
+<span class="c1"># --- Calculation Breakdown for the example output ---</span>
+<span class="c1"># From April 15, 2025 (00:00:00) to June 15, 2025 (14:30:10.200010):</span>
+<span class="c1"># Remaining days in April: 30 (total days in April) - 15 (start day) = 15 days</span>
+<span class="c1"># Days in May: 31 days</span>
+<span class="c1"># Days in June: 15 days (up to the 15th)</span>
+<span class="c1"># Total days: 15 + 31 + 15 = 61 days</span>
+<span class="c1"># The time component (14:30:10.200010) is the time difference from midnight.</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>61 days, 14:30:10.200010
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Extract the number of whole days from the &#39;timedelta&#39; object.</span>
+<span class="c1"># The &#39;.days&#39; attribute directly provides the total number of full days in the duration.</span>
+<span class="n">difference_in_days</span> <span class="o">=</span> <span class="n">date_differences</span><span class="o">.</span><span class="n">days</span>
+
+<span class="c1"># Calculate the fractional part of the hours from the &#39;timedelta&#39; object&#39;s seconds.</span>
+<span class="c1"># The &#39;.seconds&#39; attribute of a timedelta object returns the number of seconds</span>
+<span class="c1"># *within the part of the duration that is less than a day*.</span>
+<span class="c1"># It does NOT include seconds from the full days.</span>
+<span class="c1"># To convert these remaining seconds into hours, divide by (60 seconds * 60 minutes).</span>
+<span class="n">difference_in_hours</span> <span class="o">=</span> <span class="n">date_differences</span><span class="o">.</span><span class="n">seconds</span> <span class="o">/</span> <span class="p">(</span><span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span><span class="p">)</span>
+
+<span class="c1"># Calculate the fractional part of the minutes from the &#39;timedelta&#39; object&#39;s seconds.</span>
+<span class="c1"># Similar to hours, &#39;.seconds&#39; only provides seconds less than a day.</span>
+<span class="c1"># To convert these remaining seconds into minutes, divide by 60 seconds.</span>
+<span class="n">difference_in_minutes</span> <span class="o">=</span> <span class="n">date_differences</span><span class="o">.</span><span class="n">seconds</span> <span class="o">/</span> <span class="mi">60</span>
+
+<span class="c1"># Print all three calculated differences.</span>
+<span class="c1"># You will see the total days, and the fractional hours/minutes of the remaining time.</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">difference_in_days</span><span class="p">,</span> <span class="n">difference_in_hours</span><span class="p">,</span> <span class="n">difference_in_minutes</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>61 14.502777777777778 870.1666666666666
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="timedelta-method">
+<h3><em><strong>timedelta() Method</strong></em><a class="headerlink" href="#timedelta-method" title="Link to this heading">#</a></h3>
+<section id="the-timedelta-method-allows-for-the-addition-or-subtraction-of-time-from-a-datetime-object-this-method-s-parameters-are-weeks-days-hours-minutes-seconds-microseconds-and-milliseconds-the-default-values-of-the-arguments-are-all-zero-the-following-examples-demonstrate-the-use-of-this-method-after-it-has-been-imported-rather-than-using-the-datetime-prefix">
+<h4>The <font color='green'>timedelta()</font> method allows for the addition or subtraction of time from a datetime object. This method’s parameters are weeks, days, hours, minutes, seconds, microseconds, and milliseconds.  The default values of the arguments are all zero.  The following examples demonstrate the use of this method after it has been imported, rather than using the datetime prefix.<a class="headerlink" href="#the-timedelta-method-allows-for-the-addition-or-subtraction-of-time-from-a-datetime-object-this-method-s-parameters-are-weeks-days-hours-minutes-seconds-microseconds-and-milliseconds-the-default-values-of-the-arguments-are-all-zero-the-following-examples-demonstrate-the-use-of-this-method-after-it-has-been-imported-rather-than-using-the-datetime-prefix" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">timedelta</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">time_stamp</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-06-15 14:30:10.200010
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Subtract timedelta() amount</span>
+<span class="n">time_stamp</span><span class="o">-</span><span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">61</span><span class="p">,</span><span class="n">seconds</span><span class="o">=</span><span class="mi">52210</span><span class="p">,</span> <span class="n">microseconds</span><span class="o">=</span><span class="mi">200010</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>datetime.datetime(2025, 4, 15, 0, 0)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Add timedelta() amount</span>
+<span class="n">datetime</span><span class="p">(</span><span class="mi">2025</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">15</span><span class="p">)</span><span class="o">+</span><span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">61</span><span class="p">,</span> <span class="n">seconds</span><span class="o">=</span><span class="mi">52210</span><span class="p">,</span> <span class="n">microseconds</span><span class="o">=</span><span class="mi">200010</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>datetime.datetime(2025, 6, 15, 14, 30, 10, 200010)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="relativedelta-from-datetutil-library-more-convenient-than-timedelta-method">
+<h2><em><strong>relativedelta From datetutil Library More Convenient Than timedelta() Method</strong></em><a class="headerlink" href="#relativedelta-from-datetutil-library-more-convenient-than-timedelta-method" title="Link to this heading">#</a></h2>
+<section id="the-dateutil-module-builds-upon-the-datetime-module-offering-an-enhanced-relativedelta-method-this-method-expands-on-timedelta-by-providing-additional-parameters-most-notably-for-our-use-is-year-and-month">
+<h3>The <font color='green'>dateutil</font> module builds upon the datetime module, offering an enhanced <font color='green'>relativedelta()</font> method. This method expands on <font color='green'>timedelta</font> by providing additional parameters; most notably for our use is year and month.<a class="headerlink" href="#the-dateutil-module-builds-upon-the-datetime-module-offering-an-enhanced-relativedelta-method-this-method-expands-on-timedelta-by-providing-additional-parameters-most-notably-for-our-use-is-year-and-month" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">dateutil.relativedelta</span><span class="w"> </span><span class="kn">import</span> <span class="n">relativedelta</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">time_stamp</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-06-15 14:30:10.200010
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Subtract two months using relativedelta()</span>
+<span class="n">time_stamp</span><span class="o">-</span><span class="n">relativedelta</span><span class="p">(</span><span class="n">months</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>datetime.datetime(2025, 4, 15, 14, 30, 10, 200010)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Add two years using relativedelta()</span>
+<span class="n">time_stamp</span><span class="o">+</span><span class="n">relativedelta</span><span class="p">(</span><span class="n">years</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>datetime.datetime(2027, 6, 15, 14, 30, 10, 200010)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Subtract 61 days using relativedelta()</span>
+<span class="n">time_stamp</span><span class="o">-</span><span class="n">relativedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">61</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>datetime.datetime(2025, 4, 15, 14, 30, 10, 200010)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="calendar-module-monthrange-method">
+<h2><em><strong>calendar Module monthrange() Method</strong></em><a class="headerlink" href="#calendar-module-monthrange-method" title="Link to this heading">#</a></h2>
+<section id="the-monthrange-method-found-in-the-calendar-module-takes-the-year-and-month-as-parameters-it-returns-two-values-the-weekday-of-the-first-day-of-the-month-and-the-last-calendar-day-of-the-month-the-calendar-module-is-imported-and-the-function-is-demonstrated-with-the-datetime-object-time-stamp">
+<h3>The <font color='green'>monthrange()</font> method, found in the <font color='green'>calendar</font> module, takes the year and month as parameters. It returns two values: the weekday of the first day of the month and the last calendar day of the month. The <font color='green'>calendar</font> module is imported and the function is demonstrated with the datetime object <font color='green'>time_stamp</font>.<a class="headerlink" href="#the-monthrange-method-found-in-the-calendar-module-takes-the-year-and-month-as-parameters-it-returns-two-values-the-weekday-of-the-first-day-of-the-month-and-the-last-calendar-day-of-the-month-the-calendar-module-is-imported-and-the-function-is-demonstrated-with-the-datetime-object-time-stamp" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">calendar</span>
+<span class="n">calendar</span><span class="o">.</span><span class="n">monthrange</span><span class="p">(</span><span class="n">time_stamp</span><span class="o">.</span><span class="n">year</span><span class="p">,</span><span class="n">time_stamp</span><span class="o">.</span><span class="n">month</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(6, 30)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">calendar</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">calendar</span><span class="w"> </span><span class="kn">import</span> <span class="n">monthrange</span>
+<span class="n">monthrange</span><span class="p">(</span><span class="n">time_stamp</span><span class="o">.</span><span class="n">year</span><span class="p">,</span><span class="n">time_stamp</span><span class="o">.</span><span class="n">month</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(6, 30)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Functions.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><em><strong>Functions</strong></em></p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="An_Introduction_To_Pandas.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><em><strong>Pandas</strong></em></p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><em><strong>Numerical Calculations With Dates</strong></em></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#many-financial-calculations-such-as-aligning-present-value-factors-with-payment-dates-or-annualizing-returns-and-volatility-rely-on-numerical-date-analysis-this-notebook-explores-key-python-modules-for-date-handling">Many financial calculations, such as aligning present value factors with payment dates or annualizing returns and volatility, rely on numerical date analysis. This notebook explores key Python modules for date handling:</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#datetime-modules"><em><strong>Datetime Modules</strong></em></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-offers-numerous-libraries-and-modules-and-one-frequently-used-in-finance-is-datetime-the-module-is-part-of-the-standard-python-library-the-modules-defines-objects-with-specific-attributes-and-methods-allowing-for-the-manipulation-of-dates">Python offers numerous libraries and modules, and one frequently used in finance is datetime. The module is part of the standard Python library. The modules defines objects with specific attributes and methods allowing for the manipulation of dates.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-datetime-object"><em><strong>Create A datetime Object</strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-datetime-method-is-part-of-the-datetime-module-its-parameters-include-year-month-day-hour-minute-second-and-microsecond-arguments-are-required-for-year-month-and-day-the-other-parameters-default-to-zero">The <font color="green">datetime()</font> method is part of the datetime module. Its parameters include year, month, day, hour, minute, second, and microsecond. Arguments are required for year, month, and day. The other parameters default to zero.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#one-way-to-use-the-datetime-method-is-to-import-the-datetime-module-and-then-access-the-method-as-an-extension-of-the-module">One way to use the <font color="green">datetime</font> method is to import the <font color="green">datetime</font> module and then access the method as an extension of the module.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#it-s-more-convenient-to-import-the-datetime-method-directly-from-the-datetime-module-and-then-refer-to-it-without-the-module-prefix-the-notebooks-of-financial-python-import-the-datetime-method-from-the-datetime-module">It’s more convenient to import the <font color="green">datetime</font> method directly from the <font color="green">datetime</font> module and then refer to it without the module prefix.  The notebooks of Financial Python import the <font color="green">datetime</font> method from the <font color="green">datetime</font> module.</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#datetime-object-from-a-string"><em><strong>Datetime Object From A String</strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-strptime-method-of-a-datetime-object-converts-a-string-into-a-datetime-object-this-method-requires-two-string-arguments-the-date-s-string-representation-and-the-format-of-the-representation-as-arguments">The <font color="green">strptime()</font> method of a datetime object converts a string into a datetime object. This method requires two string arguments: the date’s string representation and the format of the representation as arguments.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-format-string-specifies-how-the-date-and-time-components-are-structured-year-month-and-day-arguments-denoted-as-y-m-and-d-respectively-must-be-preceded-by-a-percent-sign-a-capital-y-signifies-a-four-digit-year-for-time-hours-minutes-and-seconds-are-represented-by-capital-h-m-and-s-respectively-microseconds-are-an-attribute-of-seconds-additionally-the-characters-used-to-separate-the-arguments-within-the-string-must-be-explicitly-defined-in-the-format">The format string specifies how the date and time components are structured. Year, month, and day arguments (denoted as <code class="docutils literal notranslate"><span class="pre">y</span></code>, <code class="docutils literal notranslate"><span class="pre">m</span></code>, and <code class="docutils literal notranslate"><span class="pre">d</span></code> respectively) must be preceded by a percent sign. A capital <code class="docutils literal notranslate"><span class="pre">Y</span></code> signifies a four-digit year. For time, hours, minutes, and seconds are represented by capital <code class="docutils literal notranslate"><span class="pre">h</span></code>, <code class="docutils literal notranslate"><span class="pre">m</span></code>, and <code class="docutils literal notranslate"><span class="pre">s</span></code> respectively. Microseconds are an attribute of seconds. Additionally, the characters used to separate the arguments within the string must be explicitly defined in the format.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#in-this-example-the-year-is-four-digits-and-separated-from-the-month-and-day-by-a-dash-hours-minutes-and-seconds-are-separated-by-a-backslash-the-separators-must-be-included-in-the-format-string">In this example the year is four digits and separated from the month and day by a dash. Hours, minutes, and seconds are separated by a backslash  The separators must be included in the format string.</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#string-from-a-datetime-object"><em><strong>String From A datetime Object</strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-datetime-object-can-be-converted-to-a-string-using-either-the-built-in-python-function-str-or-the-strptime-method-of-the-datetime-object">A datetime object can be converted to a string using either the built-in Python function <font color="green">str()</font> or the <font color="green">strptime()</font> method of the datetime object.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-str-function-outputs-a-string-where-dashes-separate-years-months-and-days-and-colons-separate-hours-minutes-and-seconds">The <font color="green">str()</font> function outputs a string where dashes separate years, months, and days, and colons separate hours, minutes, and seconds.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#in-contrast-the-strptime-method-requires-a-format-string-here-the-previously-defined-format-string-of-time-stamp-is-used">In contrast, the <font color="green">strptime()</font> method requires a format string.  Here the previously defined format string of <font color="green">time_stamp</font> is used.</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#some-datetime-attributes"><em><strong>Some Datetime Attributes</strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#useful-attributes-of-a-datetime-object-are-the">Useful attributes of a datetime object are the:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-attribute-are-accessed-with-the-dot-notation-these-attributed-are-demonstrated-for-time-stamp-by-iterating-through-the-results-of-zipping-the-lists-attribute-list-and-attribute-names">The attribute are accessed with the dot notation.  These attributed are demonstrated for <font color="green">time_stamp</font> by iterating through the results of zipping the lists <font color="green">attribute_list</font> and <font color="green">attribute_names</font>.</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#date-object"><em><strong>date() Object</strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-date-is-returned-with-the-datetime-method-date-or-is-created-with-the-date-moudule-of-the-datetime-library-a-date-object-includes-the-year-month-and-day-of-datetime-objects-if-the-date-module-is-imported-the-module-can-be-created-by-passing-year-month-and-day-as-arguments">The <font color="green">date()</font> is returned with the datetime method <font color="green">date()</font> or is created with the date moudule of the datetime library. A date object includes the year, month, and day of datetime objects.  If the date module is imported, the module can be created by passing year, month, and day as arguments.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#import-date-from-datetime"><em><strong>Import date From datetime</strong></em></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#subtracting-and-adding-datetime-objects"><em><strong>Subtracting And Adding datetime Objects</strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#subtracting"><em><strong>Subtracting</strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#one-datetime-or-date-object-can-be-subtracted-from-another-the-result-is-the-datetime-method-timedelta-with-specified-values-of-days-seconds-and-microseconds-the-variable-date-difference-is-assigned-time-stamp-less-april-15-th-2025">One datetime or date object can be subtracted from another.  The result is the datetime method <font color="green">timedelta()</font> with specified values of days, seconds, and microseconds.  The variable <font color="green">date_difference</font> is assigned time_stamp less  April 15$^{th} 2025.</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-attributes-of-date-difference-are-days-seconds-and-microseconds-the-seconds-are-converted-to-hours-and-minutes-and-are-displayed-along-with-days">The attributes of <font color="green">date_difference</font> are days, seconds, and microseconds.  The seconds are converted to hours and minutes and are displayed along with days.</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#timedelta-method"><em><strong>timedelta() Method</strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-timedelta-method-allows-for-the-addition-or-subtraction-of-time-from-a-datetime-object-this-method-s-parameters-are-weeks-days-hours-minutes-seconds-microseconds-and-milliseconds-the-default-values-of-the-arguments-are-all-zero-the-following-examples-demonstrate-the-use-of-this-method-after-it-has-been-imported-rather-than-using-the-datetime-prefix">The <font color="green">timedelta()</font> method allows for the addition or subtraction of time from a datetime object. This method’s parameters are weeks, days, hours, minutes, seconds, microseconds, and milliseconds.  The default values of the arguments are all zero.  The following examples demonstrate the use of this method after it has been imported, rather than using the datetime prefix.</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#relativedelta-from-datetutil-library-more-convenient-than-timedelta-method"><em><strong>relativedelta From datetutil Library More Convenient Than timedelta() Method</strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-dateutil-module-builds-upon-the-datetime-module-offering-an-enhanced-relativedelta-method-this-method-expands-on-timedelta-by-providing-additional-parameters-most-notably-for-our-use-is-year-and-month">The <font color="green">dateutil</font> module builds upon the datetime module, offering an enhanced <font color="green">relativedelta()</font> method. This method expands on <font color="green">timedelta</font> by providing additional parameters; most notably for our use is year and month.</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calendar-module-monthrange-method"><em><strong>calendar Module monthrange() Method</strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-monthrange-method-found-in-the-calendar-module-takes-the-year-and-month-as-parameters-it-returns-two-values-the-weekday-of-the-first-day-of-the-month-and-the-last-calendar-day-of-the-month-the-calendar-module-is-imported-and-the-function-is-demonstrated-with-the-datetime-object-time-stamp">The <font color="green">monthrange()</font> method, found in the <font color="green">calendar</font> module, takes the year and month as parameters. It returns two values: the weekday of the first day of the month and the last calendar day of the month. The <font color="green">calendar</font> module is imported and the function is demonstrated with the datetime object <font color="green">time_stamp</font>.</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Financial Python
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

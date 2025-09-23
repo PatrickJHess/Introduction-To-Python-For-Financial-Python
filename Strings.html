@@ -1,0 +1,1228 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Strings &#8212; An Introduction to Python for Financial Python</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Strings';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Numbers &amp; Booleans" href="Numbers_%26_Booleans.html" />
+    <link rel="prev" title="Introduction" href="Basic_Grammar.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/Small_Logo.png" class="logo__image only-light" alt="An Introduction to Python for Financial Python - Home"/>
+    <script>document.write(`<img src="_static/Small_Logo.png" class="logo__image only-dark" alt="An Introduction to Python for Financial Python - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Background Material: An Introduction to Python for Financial Python
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Basic_Grammar.html"><em><strong>Introduction</strong></em></a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#"><em><strong>Strings</strong></em></a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="Numbers_%26_Booleans.html"><em><strong>Numbers &amp; Booleans</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Control_Statements.html"><em><strong>Statements That Control Other Statements</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="A_First_Look_At_Lists.html"><em><strong>Lists</strong></em></a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="Tuples.html"><em><strong>Tuples</strong></em></a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="Dictionaries.html"><em><strong>Dictionaries</strong></em></a></li>
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="Functions.html"><em><strong>Functions</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Manipulating_Dates.html"><em><strong>Numerical Calculations With Dates</strong></em></a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="An_Introduction_To_Pandas.html"><em><strong>Pandas</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="An_Introduction_To_NumPy.html"><em><strong>NumPy</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sets.html"><em><strong>Sets</strong></em></a></li>
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/PatrickJHess/background_material" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/PatrickJHess/background_material/issues/new?title=Issue%20on%20page%20%2FStrings.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Strings.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Strings</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><em><strong>Strings</strong></em></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-string-is-a-variable-that-represents-printable-characters-such-as-letters-numbers-etc-like-numbers-and-booleans-strings-hold-single-values-unlike-numbers-and-booleans-strings-are-iterable-if-a-variable-is-iterable-the-values-or-members-of-the-variable-can-be-enumerated-in-the-case-of-strings-the-characters-can-be-enumerated-many-python-concepts-can-be-illustrated-with-strings">A string is a variable that represents printable characters, such as letters, numbers, etc. Like numbers and booleans, strings hold single values.  Unlike numbers and booleans, strings are iterable.  If a variable is iterable, the values or members  of the variable can be enumerated.  In the case of strings, the characters can be enumerated.  Many Python concepts can be illustrated with strings.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#strings-are-defined-using-either-single-or-double-quotes-to-include-a-single-quote-within-a-string-either-use-double-quotes-for-the-string-s-definition-or-precede-the-single-quote-inside-the-string-with-a-backslash-and-the-parser-will-disregard-it">Strings are defined using either single or double quotes. To include a single quote within a string, either use double quotes for the string’s definition or precede the single quote inside the string with a backslash (\) and the parser will disregard it.</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#assigning-a-string-value"><em><strong>Assigning A String Value</strong></em></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#combining-or-concatenating-strings"><em><strong>Combining Or Concatenating Strings</strong></em></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#strings-can-be-combined-or-concatenated-with-the-plus-sign-including-using-the-short-cut-version-of-the-plus-sign">Strings can be combined or concatenated with the plus sign including using the short-cut version of the plus sign (+=).</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#length-of-a-string"><em><strong>Length Of A String</strong></em></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#strings-being-iterable-necessarily-contain-elements-or-members-that-possess-a-countable-length-python-s-built-in-len-function-provides-this-count-returning-the-number-of-elements-within-the-iterable-an-empty-string-or-any-empty-iterable-will-have-a-length-of-zero-in-the-case-of-a-string-the-length-is-equal-to-the-number-of-characters-including-blanks-that-are-in-the-string">Strings, being iterable, necessarily contain elements or members that possess a countable length. Python’s built-in <font color="green">len()</font> function provides this count, returning the number of elements within the iterable. An empty string or any empty iterable will have a length of zero. In the case of a string, the length is equal to the number of characters, including blanks, that are in the string.</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#iterating-through-a-string-and-zero-based-indexes"><em><strong>Iterating Through A String And Zero-Based Indexes</strong></em></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-code-demonstrates-iterating-through-the-string-finance-using-two-different-for-loop-approaches">The code demonstrates iterating through the string <font color="green">finance</font> using two different <font color="green">for loop</font> approaches.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-first-example-is-a-basic-for-loop-that-assigns-each-character-of-the-string-to-the-variable-character-and-then-prints-it">The first example is a basic <font color="green">for loop</font> that assigns each character of the string to the variable <font color="green">character</font> and then prints it.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-second-uses-the-enumerate-function-this-function-binds-each-character-member-of-the-string-to-its-index-location-the-loop-then-produces-both-the-index-and-the-character-in-each-iteration-printing-them-as-pairs">The second uses the <font color="green">enumerate()</font> function. This function binds each character (member of the string) to its index location. The loop then produces both the index and the character in each iteration, printing them as pairs.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#in-the-second-example-notice-that-the-index-value-ranges-from-zero-to-six-an-example-of-zero-based-indexing-the-following-code-is-another-example-of-zero-based-indexing-that-prints-characters-in-locations-0-3-and-6-that-represent-f-a-and-e">In the second example notice that the index value ranges from zero to six; an example of zero-based indexing.  The following code is another example of zero-based indexing that prints characters in locations 0, 3, and 6 that represent F, a, and e.</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#slicing-a-string"><em><strong>Slicing A String</strong></em></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#string-slicing-utilizes-index-locations-a-slice-is-defined-by-its-starting-and-ending-points-along-with-the-step-size-each-separated-by-a-colon-the-beginning-index-defaults-to-zero-the-ending-to-the-iterable-s-length-and-the-step-size-to-one-consequently-these-two-statements-produce-identical-slices">String slicing utilizes index locations. A slice is defined by its starting and ending points, along with the step size, each separated by a colon. The beginning index defaults to zero, the ending to the iterable’s length, and the step size to one. Consequently, these two statements produce identical slices.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#negative-beginning-or-ending-values-cause-the-slice-to-operate-relative-to-the-iterable-s-length-the-first-line-of-code-below-extracts-the-final-four-characters-while-the-second-extracts-the-initial-four">Negative beginning or ending values cause the slice to operate relative to the iterable’s length. The first line of code below extracts the final four characters, while the second extracts the initial four.</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#converting-numbers-and-booleans-to-strings"><em><strong>Converting Numbers And Booleans To Strings</strong></em></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-str-function-in-python-is-used-to-convert-numerical-and-boolean-data-types-into-strings-below-are-examples-showing-how-integers-floats-and-boolean-values-are-transformed-into-their-string-representations">The <font color="green">str()</font> function in Python is used to convert numerical and boolean data types into strings. Below are examples showing how integers, floats, and boolean values are transformed into their string representations.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#converting-strings-to-numbers-and-booleans"><em><strong>Converting Strings To Numbers And Booleans</strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#strings-values-of-numbers-can-be-converted-to-integers-or-floating-point-numbers-the-boolean-value-of-an-empty-string-is-false-all-others-true">Strings values of numbers can be converted to integers or floating point numbers.  The boolean value of an empty string is False; all others, True.</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#four-useful-string-methods"><em><strong>Four Useful String Methods</strong></em></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numerous-methods-are-available-for-string-manipulation-in-python-four-of-the-most-relevant-are-described-and-demonstrated">Numerous methods are available for string manipulation in Python. Four of the most relevant are described and demonstrated.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#click-here-for-a-decription-of-these-and-other-string-methods">Click here for a decription of these and other string methods.</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <img src='https://docs.google.com/drawings/d/e/2PACX-1vQScYKcfvY_pinL1oDRrkUO0W3VW8moi_3xWfb3B2-3M-FABcfgx0-mEiE_gtjZDk-Ofmn6CnFCXmbe/pub?w=960&h=720'><section id="strings">
+<h1><em><strong>Strings</strong></em><a class="headerlink" href="#strings" title="Link to this heading">#</a></h1>
+<section id="a-string-is-a-variable-that-represents-printable-characters-such-as-letters-numbers-etc-like-numbers-and-booleans-strings-hold-single-values-unlike-numbers-and-booleans-strings-are-iterable-if-a-variable-is-iterable-the-values-or-members-of-the-variable-can-be-enumerated-in-the-case-of-strings-the-characters-can-be-enumerated-many-python-concepts-can-be-illustrated-with-strings">
+<h2>A string is a variable that represents printable characters, such as letters, numbers, etc. Like numbers and booleans, strings hold single values.  Unlike numbers and booleans, strings are iterable.  If a variable is iterable, the values or members  of the variable can be enumerated.  In the case of strings, the characters can be enumerated.  Many Python concepts can be illustrated with strings.<a class="headerlink" href="#a-string-is-a-variable-that-represents-printable-characters-such-as-letters-numbers-etc-like-numbers-and-booleans-strings-hold-single-values-unlike-numbers-and-booleans-strings-are-iterable-if-a-variable-is-iterable-the-values-or-members-of-the-variable-can-be-enumerated-in-the-case-of-strings-the-characters-can-be-enumerated-many-python-concepts-can-be-illustrated-with-strings" title="Link to this heading">#</a></h2>
+</section>
+<section id="strings-are-defined-using-either-single-or-double-quotes-to-include-a-single-quote-within-a-string-either-use-double-quotes-for-the-string-s-definition-or-precede-the-single-quote-inside-the-string-with-a-backslash-and-the-parser-will-disregard-it">
+<h2>Strings are defined using either single or double quotes. To include a single quote within a string, either use double quotes for the string’s definition or precede the single quote inside the string with a backslash (\) and the parser will disregard it.<a class="headerlink" href="#strings-are-defined-using-either-single-or-double-quotes-to-include-a-single-quote-within-a-string-either-use-double-quotes-for-the-string-s-definition-or-precede-the-single-quote-inside-the-string-with-a-backslash-and-the-parser-will-disregard-it" title="Link to this heading">#</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Assign the string &quot;Python&quot; to the variable &#39;python&#39;.</span>
+<span class="n">python</span> <span class="o">=</span> <span class="s1">&#39;Python&#39;</span>
+
+<span class="c1"># Assign the string &quot;Finance&quot; to the variable &#39;finance&#39;.</span>
+<span class="n">finance</span> <span class="o">=</span> <span class="s1">&#39;Finance&#39;</span>
+
+<span class="c1"># Assign a descriptive string to &#39;python_fun&#39;.</span>
+<span class="c1"># This string expresses an opinion about combining finance and python.</span>
+<span class="n">python_fun</span> <span class="o">=</span> <span class="s2">&quot;It&#39;s fun to use finance with python&quot;</span>
+
+<span class="c1"># Assign another descriptive string to &#39;finance_fun&#39;.</span>
+<span class="c1"># This string also expresses an opinion, using an escaped single quote (\&#39;)</span>
+<span class="c1"># because the string itself is defined with single quotes and contains an apostrophe.</span>
+<span class="n">finance_fun</span> <span class="o">=</span> <span class="s1">&#39;It</span><span class="se">\&#39;</span><span class="s1">s fun to use python with finance&#39;</span>
+
+<span class="c1"># Print the values of the &#39;python&#39; and &#39;finance&#39; variables.</span>
+<span class="c1"># They will be printed on the same line, separated by a space by default.</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">python</span><span class="p">,</span> <span class="n">finance</span><span class="p">)</span>
+
+<span class="c1"># Print the values of the &#39;python_fun&#39; and &#39;finance_fun&#39; variables.</span>
+<span class="c1"># They will also be printed on the same line, separated by a space.</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">python_fun</span><span class="p">,</span> <span class="n">finance_fun</span><span class="p">)</span>
+
+<span class="c1"># Print a descriptive label &quot;Type of fiance&quot; followed by the data type of the &#39;finance&#39; variable.</span>
+<span class="c1"># The &#39;type()&#39; built-in function returns the type of the object passed to it.</span>
+<span class="c1"># For a string literal like &quot;Finance&quot;, its type is &lt;class &#39;str&#39;&gt;.</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Type of fiance&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">finance</span><span class="p">))</span>
+
+</pre></div>
+</div>
+</section>
+</section>
+<section id="assigning-a-string-value">
+<h1><em><strong>Assigning A String Value</strong></em><a class="headerlink" href="#assigning-a-string-value" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Assign the string &quot;Python&quot; to the variable &#39;python&#39;.</span>
+<span class="n">python</span> <span class="o">=</span> <span class="s1">&#39;Python&#39;</span>
+
+<span class="c1"># Assign the string &quot;Finance&quot; to the variable &#39;finance&#39;.</span>
+<span class="n">finance</span> <span class="o">=</span> <span class="s1">&#39;Finance&#39;</span>
+
+<span class="c1"># Assign a descriptive string to &#39;python_fun&#39;.</span>
+<span class="c1"># This string expresses an opinion about combining finance and python.</span>
+<span class="n">python_fun</span> <span class="o">=</span> <span class="s2">&quot;It&#39;s fun to use finance with python&quot;</span>
+
+<span class="c1"># Assign another descriptive string to &#39;finance_fun&#39;.</span>
+<span class="c1"># This string also expresses an opinion, using an escaped single quote (\&#39;)</span>
+<span class="c1"># because the string itself is defined with single quotes and contains an apostrophe.</span>
+<span class="n">finance_fun</span> <span class="o">=</span> <span class="s1">&#39;It</span><span class="se">\&#39;</span><span class="s1">s fun to use python with finance&#39;</span>
+
+<span class="c1"># Print the values of the &#39;python&#39; and &#39;finance&#39; variables.</span>
+<span class="c1"># They will be printed on the same line, separated by a space by default.</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">python</span><span class="p">,</span> <span class="n">finance</span><span class="p">)</span>
+
+<span class="c1"># Print the values of the &#39;python_fun&#39; and &#39;finance_fun&#39; variables.</span>
+<span class="c1"># They will also be printed on the same line, separated by a space.</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">python_fun</span><span class="p">,</span> <span class="n">finance_fun</span><span class="p">)</span>
+
+<span class="c1"># Print a descriptive label &quot;Type of fiance&quot; followed by the data type of the &#39;finance&#39; variable.</span>
+<span class="c1"># The &#39;type()&#39; built-in function returns the type of the object passed to it.</span>
+<span class="c1"># For a string literal like &quot;Finance&quot;, its type is &lt;class &#39;str&#39;&gt;.</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Type of fiance&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">finance</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Python Finance
+It&#39;s fun to use finance with python It&#39;s fun to use python with finance
+Type of fiance &lt;class &#39;str&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="combining-or-concatenating-strings">
+<h1><em><strong>Combining Or Concatenating Strings</strong></em><a class="headerlink" href="#combining-or-concatenating-strings" title="Link to this heading">#</a></h1>
+<section id="strings-can-be-combined-or-concatenated-with-the-plus-sign-including-using-the-short-cut-version-of-the-plus-sign">
+<h2>Strings can be combined or concatenated with the plus sign including using the short-cut version of the plus sign (+=).<a class="headerlink" href="#strings-can-be-combined-or-concatenated-with-the-plus-sign-including-using-the-short-cut-version-of-the-plus-sign" title="Link to this heading">#</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize a string variable &#39;python&#39; with the value &quot;Python&quot;.</span>
+<span class="n">python</span> <span class="o">=</span> <span class="s1">&#39;Python&#39;</span>
+
+<span class="c1"># Initialize a string variable &#39;finance&#39; with the value &quot;Finance&quot;.</span>
+<span class="n">finance</span> <span class="o">=</span> <span class="s1">&#39;Finance&#39;</span>
+
+<span class="c1"># Initialize a string variable &#39;python_fun&#39; with a descriptive phrase.</span>
+<span class="c1"># Double quotes are used here, allowing a single apostrophe inside without escaping.</span>
+<span class="n">python_fun</span> <span class="o">=</span> <span class="s2">&quot;It&#39;s fun to use finance with python&quot;</span>
+
+<span class="c1"># Initialize a string variable &#39;finance_fun&#39; with another descriptive phrase.</span>
+<span class="c1"># Single quotes are used, so the apostrophe in &quot;It&#39;s&quot; is escaped using a backslash (\&#39;).</span>
+<span class="n">finance_fun</span> <span class="o">=</span> <span class="s1">&#39;It</span><span class="se">\&#39;</span><span class="s1">s fun to use python with finance&#39;</span>
+
+<span class="c1"># Print the result of concatenating the &#39;python&#39; and &#39;finance&#39; strings.</span>
+<span class="c1"># The &#39;+&#39; operator joins the two strings directly, without any space in between.</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">python</span> <span class="o">+</span> <span class="n">finance</span><span class="p">)</span>
+
+<span class="c1"># Concatenate the string &#39; &amp; &#39; to the existing value of &#39;python&#39;.</span>
+<span class="c1"># The &#39;+=&#39; operator is an in-place operation, meaning it modifies the &#39;python&#39; variable itself.</span>
+<span class="c1"># After this line, &#39;python&#39; will become &quot;Python &amp; &quot;.</span>
+<span class="n">python</span> <span class="o">+=</span> <span class="s1">&#39; &amp; &#39;</span>
+
+<span class="c1"># Print the new value of &#39;python&#39; concatenated with the &#39;finance&#39; string.</span>
+<span class="c1"># This will show &quot;Python &amp; Finance&quot;.</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">python</span> <span class="o">+</span> <span class="n">finance</span><span class="p">)</span>
+
+<span class="c1"># Concatenate &#39;python_fun&#39;, the literal string &#39;...&#39;, and &#39;finance_fun&#39;.</span>
+<span class="c1"># The result will be a single string combining these three parts.</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">python_fun</span> <span class="o">+</span> <span class="s1">&#39;...&#39;</span> <span class="o">+</span> <span class="n">finance_fun</span><span class="p">)</span>
+
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize a string variable &#39;python&#39; with the value &quot;Python&quot;.</span>
+<span class="n">python</span> <span class="o">=</span> <span class="s1">&#39;Python&#39;</span>
+
+<span class="c1"># Initialize a string variable &#39;finance&#39; with the value &quot;Finance&quot;.</span>
+<span class="n">finance</span> <span class="o">=</span> <span class="s1">&#39;Finance&#39;</span>
+
+<span class="c1"># Initialize a string variable &#39;python_fun&#39; with a descriptive phrase.</span>
+<span class="c1"># Double quotes are used here, allowing a single apostrophe inside without escaping.</span>
+<span class="n">python_fun</span> <span class="o">=</span> <span class="s2">&quot;It&#39;s fun to use finance with python&quot;</span>
+
+<span class="c1"># Initialize a string variable &#39;finance_fun&#39; with another descriptive phrase.</span>
+<span class="c1"># Single quotes are used, so the apostrophe in &quot;It&#39;s&quot; is escaped using a backslash (\&#39;).</span>
+<span class="n">finance_fun</span> <span class="o">=</span> <span class="s1">&#39;It</span><span class="se">\&#39;</span><span class="s1">s fun to use python with finance&#39;</span>
+
+<span class="c1"># Print the result of concatenating the &#39;python&#39; and &#39;finance&#39; strings.</span>
+<span class="c1"># The &#39;+&#39; operator joins the two strings directly, without any space in between.</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">python</span> <span class="o">+</span> <span class="n">finance</span><span class="p">)</span>
+
+<span class="c1"># Concatenate the string &#39; &amp; &#39; to the existing value of &#39;python&#39;.</span>
+<span class="c1"># The &#39;+=&#39; operator is an in-place operation, meaning it modifies the &#39;python&#39; variable itself.</span>
+<span class="c1"># After this line, &#39;python&#39; will become &quot;Python &amp; &quot;.</span>
+<span class="n">python</span> <span class="o">+=</span> <span class="s1">&#39; &amp; &#39;</span>
+
+<span class="c1"># Print the new value of &#39;python&#39; concatenated with the &#39;finance&#39; string.</span>
+<span class="c1"># This will show &quot;Python &amp; Finance&quot;.</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">python</span> <span class="o">+</span> <span class="n">finance</span><span class="p">)</span>
+
+<span class="c1"># Concatenate &#39;python_fun&#39;, the literal string &#39;...&#39;, and &#39;finance_fun&#39;.</span>
+<span class="c1"># The result will be a single string combining these three parts.</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">python_fun</span> <span class="o">+</span> <span class="s1">&#39;...&#39;</span> <span class="o">+</span> <span class="n">finance_fun</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PythonFinance
+Python &amp; Finance
+It&#39;s fun to use finance with python...It&#39;s fun to use python with finance
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="length-of-a-string">
+<h1><em><strong>Length Of A String</strong></em><a class="headerlink" href="#length-of-a-string" title="Link to this heading">#</a></h1>
+<section id="strings-being-iterable-necessarily-contain-elements-or-members-that-possess-a-countable-length-python-s-built-in-len-function-provides-this-count-returning-the-number-of-elements-within-the-iterable-an-empty-string-or-any-empty-iterable-will-have-a-length-of-zero-in-the-case-of-a-string-the-length-is-equal-to-the-number-of-characters-including-blanks-that-are-in-the-string">
+<h2>Strings, being iterable, necessarily contain elements or members that possess a countable length. Python’s built-in <font color='green'>len()</font> function provides this count, returning the number of elements within the iterable. An empty string or any empty iterable will have a length of zero. In the case of a string, the length is equal to the number of characters, including blanks, that are in the string.<a class="headerlink" href="#strings-being-iterable-necessarily-contain-elements-or-members-that-possess-a-countable-length-python-s-built-in-len-function-provides-this-count-returning-the-number-of-elements-within-the-iterable-an-empty-string-or-any-empty-iterable-will-have-a-length-of-zero-in-the-case-of-a-string-the-length-is-equal-to-the-number-of-characters-including-blanks-that-are-in-the-string" title="Link to this heading">#</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize a string variable &#39;python&#39; with the value &quot;Python&quot;.</span>
+<span class="n">python</span> <span class="o">=</span> <span class="s1">&#39;Python&#39;</span>
+
+<span class="c1"># Initialize a string variable &#39;finance&#39; with the value &quot;Finance&quot;.</span>
+<span class="n">finance</span> <span class="o">=</span> <span class="s1">&#39;Finance&#39;</span>
+
+<span class="c1"># Concatenate the string &#39; &amp; &#39; to the existing value of &#39;python&#39;.</span>
+<span class="c1"># The &#39;+=&#39; operator modifies &#39;python&#39; in-place.</span>
+<span class="c1"># After this line, &#39;python&#39; will become &quot;Python &amp; &quot;.</span>
+<span class="n">python</span> <span class="o">+=</span> <span class="s1">&#39; &amp; &#39;</span>
+
+<span class="c1"># Print two pieces of information about the &#39;finance&#39; string:</span>
+<span class="c1"># 1. The length of the &#39;finance&#39; string using the built-in &#39;len()&#39; function.</span>
+<span class="c1">#    &#39;Finance&#39; has 7 characters, so len(&#39;Finance&#39;) is 7.</span>
+<span class="c1"># 2. The &#39;finance&#39; string itself.</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">finance</span><span class="p">),</span> <span class="n">finance</span><span class="p">)</span>
+
+<span class="c1"># Print two pieces of information about the &#39;python&#39; string:</span>
+<span class="c1"># 1. The length of the &#39;python&#39; string. Since it was modified to &quot;Python &amp; &quot;,</span>
+<span class="c1">#    its length is 6 (for &quot;Python&quot;) + 3 (for &quot; &amp; &quot;) = 9.</span>
+<span class="c1"># 2. The &#39;python&#39; string itself.</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">python</span><span class="p">),</span> <span class="n">python</span><span class="p">)</span>
+
+<span class="c1"># Initialize an empty string literal and assign it to &#39;empty_string&#39;.</span>
+<span class="n">empty_string</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+
+<span class="c1"># Print two pieces of information about the &#39;empty_string&#39;:</span>
+<span class="c1"># 1. The length of the &#39;empty_string&#39;. An empty string has 0 characters.</span>
+<span class="c1"># 2. The &#39;empty_string&#39; itself (which will be nothing).</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">empty_string</span><span class="p">),</span> <span class="n">empty_string</span><span class="p">)</span>
+
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize a string variable &#39;python&#39; with the value &quot;Python&quot;.</span>
+<span class="n">python</span> <span class="o">=</span> <span class="s1">&#39;Python&#39;</span>
+
+<span class="c1"># Initialize a string variable &#39;finance&#39; with the value &quot;Finance&quot;.</span>
+<span class="n">finance</span> <span class="o">=</span> <span class="s1">&#39;Finance&#39;</span>
+
+<span class="c1"># Concatenate the string &#39; &amp; &#39; to the existing value of &#39;python&#39;.</span>
+<span class="c1"># The &#39;+=&#39; operator modifies &#39;python&#39; in-place.</span>
+<span class="c1"># After this line, &#39;python&#39; will become &quot;Python &amp; &quot;.</span>
+<span class="n">python</span> <span class="o">+=</span> <span class="s1">&#39; &amp; &#39;</span>
+
+<span class="c1"># Print two pieces of information about the &#39;finance&#39; string:</span>
+<span class="c1"># 1. The length of the &#39;finance&#39; string using the built-in &#39;len()&#39; function.</span>
+<span class="c1">#    &#39;Finance&#39; has 7 characters, so len(&#39;Finance&#39;) is 7.</span>
+<span class="c1"># 2. The &#39;finance&#39; string itself.</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">finance</span><span class="p">),</span> <span class="n">finance</span><span class="p">)</span>
+
+<span class="c1"># Print two pieces of information about the &#39;python&#39; string:</span>
+<span class="c1"># 1. The length of the &#39;python&#39; string. Since it was modified to &quot;Python &amp; &quot;,</span>
+<span class="c1">#    its length is 6 (for &quot;Python&quot;) + 3 (for &quot; &amp; &quot;) = 9.</span>
+<span class="c1"># 2. The &#39;python&#39; string itself.</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">python</span><span class="p">),</span> <span class="n">python</span><span class="p">)</span>
+
+<span class="c1"># Initialize an empty string literal and assign it to &#39;empty_string&#39;.</span>
+<span class="n">empty_string</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+
+<span class="c1"># Print two pieces of information about the &#39;empty_string&#39;:</span>
+<span class="c1"># 1. The length of the &#39;empty_string&#39;. An empty string has 0 characters.</span>
+<span class="c1"># 2. The &#39;empty_string&#39; itself (which will be nothing).</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">empty_string</span><span class="p">),</span> <span class="n">empty_string</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7 Finance
+9 Python &amp; 
+0 
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="iterating-through-a-string-and-zero-based-indexes">
+<h1><em><strong>Iterating Through A String And Zero-Based Indexes</strong></em><a class="headerlink" href="#iterating-through-a-string-and-zero-based-indexes" title="Link to this heading">#</a></h1>
+<section id="the-code-demonstrates-iterating-through-the-string-finance-using-two-different-for-loop-approaches">
+<h2>The code demonstrates iterating through the string <font color='green'>finance</font> using two different <font color='green'>for loop</font> approaches.<a class="headerlink" href="#the-code-demonstrates-iterating-through-the-string-finance-using-two-different-for-loop-approaches" title="Link to this heading">#</a></h2>
+</section>
+<section id="the-first-example-is-a-basic-for-loop-that-assigns-each-character-of-the-string-to-the-variable-character-and-then-prints-it">
+<h2>The first example is a basic <font color='green'>for loop</font> that assigns each character of the string to the variable <font color='green'>character</font> and then prints it.<a class="headerlink" href="#the-first-example-is-a-basic-for-loop-that-assigns-each-character-of-the-string-to-the-variable-character-and-then-prints-it" title="Link to this heading">#</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">character</span> <span class="ow">in</span> <span class="n">finance</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">character</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="the-second-uses-the-enumerate-function-this-function-binds-each-character-member-of-the-string-to-its-index-location-the-loop-then-produces-both-the-index-and-the-character-in-each-iteration-printing-them-as-pairs">
+<h2>The second uses the <font color='green'>enumerate()</font> function. This function binds each character (member of the string) to its index location. The loop then produces both the index and the character in each iteration, printing them as pairs.<a class="headerlink" href="#the-second-uses-the-enumerate-function-this-function-binds-each-character-member-of-the-string-to-its-index-location-the-loop-then-produces-both-the-index-and-the-character-in-each-iteration-printing-them-as-pairs" title="Link to this heading">#</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">character</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">finance</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">character</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="in-the-second-example-notice-that-the-index-value-ranges-from-zero-to-six-an-example-of-zero-based-indexing-the-following-code-is-another-example-of-zero-based-indexing-that-prints-characters-in-locations-0-3-and-6-that-represent-f-a-and-e">
+<h2>In the second example notice that the index value ranges from zero to six; an example of zero-based indexing.  The following code is another example of zero-based indexing that prints characters in locations 0, 3, and 6 that represent F, a, and e.<a class="headerlink" href="#in-the-second-example-notice-that-the-index-value-ranges-from-zero-to-six-an-example-of-zero-based-indexing-the-following-code-is-another-example-of-zero-based-indexing-that-prints-characters-in-locations-0-3-and-6-that-represent-f-a-and-e" title="Link to this heading">#</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">finance</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">finance</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span><span class="n">finance</span><span class="p">[</span><span class="mi">6</span><span class="p">])</span>
+
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Iterate over each individual character in the &#39;finance&#39; string.</span>
+<span class="c1"># In each iteration of the loop, the variable &#39;character&#39; will be</span>
+<span class="c1"># assigned the next character from the &#39;finance&#39; string.</span>
+<span class="k">for</span> <span class="n">character</span> <span class="ow">in</span> <span class="n">finance</span><span class="p">:</span>
+  <span class="c1"># Print the current &#39;character&#39;.</span>
+  <span class="c1"># By default, &#39;print()&#39; adds a newline character at the end,</span>
+  <span class="c1"># so each character will appear on a separate line in the output.</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">character</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>F
+i
+n
+a
+n
+c
+e
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Iterate over the &#39;finance&#39; string using &#39;enumerate()&#39;.</span>
+<span class="c1"># &#39;enumerate()&#39; is a built-in function that adds a counter (index) to an iterable.</span>
+<span class="c1"># For each item in &#39;finance&#39;:</span>
+<span class="c1">#   - &#39;index&#39; will be the current position (starting from 0).</span>
+<span class="c1">#   - &#39;character&#39; will be the actual character at that position.</span>
+<span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">character</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">finance</span><span class="p">):</span>
+  <span class="c1"># Print both the &#39;index&#39; and the &#39;character&#39; for the current iteration.</span>
+  <span class="c1"># By default, &#39;print()&#39; separates arguments with a space and ends with a newline,</span>
+  <span class="c1"># so each index-character pair will appear on a separate line.</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">character</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0 F
+1 i
+2 n
+3 a
+4 n
+5 c
+6 e
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Another example of zero-based indexing - prints characters in locations 0, 3, and 6 that represent F, a, and e.</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">finance</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">finance</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span><span class="n">finance</span><span class="p">[</span><span class="mi">6</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>F a e
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="slicing-a-string">
+<h1><em><strong>Slicing A String</strong></em><a class="headerlink" href="#slicing-a-string" title="Link to this heading">#</a></h1>
+<section id="string-slicing-utilizes-index-locations-a-slice-is-defined-by-its-starting-and-ending-points-along-with-the-step-size-each-separated-by-a-colon-the-beginning-index-defaults-to-zero-the-ending-to-the-iterable-s-length-and-the-step-size-to-one-consequently-these-two-statements-produce-identical-slices">
+<h2>String slicing utilizes index locations. A slice is defined by its starting and ending points, along with the step size, each separated by a colon. The beginning index defaults to zero, the ending to the iterable’s length, and the step size to one. Consequently, these two statements produce identical slices.<a class="headerlink" href="#string-slicing-utilizes-index-locations-a-slice-is-defined-by-its-starting-and-ending-points-along-with-the-step-size-each-separated-by-a-colon-the-beginning-index-defaults-to-zero-the-ending-to-the-iterable-s-length-and-the-step-size-to-one-consequently-these-two-statements-produce-identical-slices" title="Link to this heading">#</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">finance</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">finance</span><span class="p">[:</span><span class="mi">4</span><span class="p">])</span>
+</pre></div>
+</div>
+</section>
+<section id="negative-beginning-or-ending-values-cause-the-slice-to-operate-relative-to-the-iterable-s-length-the-first-line-of-code-below-extracts-the-final-four-characters-while-the-second-extracts-the-initial-four">
+<h2>Negative beginning or ending values cause the slice to operate relative to the iterable’s length. The first line of code below extracts the final four characters, while the second extracts the initial four.<a class="headerlink" href="#negative-beginning-or-ending-values-cause-the-slice-to-operate-relative-to-the-iterable-s-length-the-first-line-of-code-below-extracts-the-final-four-characters-while-the-second-extracts-the-initial-four" title="Link to this heading">#</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">finance</span><span class="p">[</span><span class="o">-</span><span class="mi">4</span><span class="p">:])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">finance</span><span class="p">[:</span><span class="o">-</span><span class="mi">3</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Print a slice of the &#39;finance&#39; string from index 0 (inclusive) up to, but not including, index 4.</span>
+<span class="c1"># This will extract the characters at indices 0, 1, 2, and 3.</span>
+<span class="c1"># &#39;Finance&#39; -&gt; F(0) i(1) n(2) a(3) n(4) c(5) e(6)</span>
+<span class="c1"># finance[0:4] will be &#39;Fina&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">finance</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">])</span>
+
+<span class="c1"># Print a slice of the &#39;finance&#39; string where the starting index is omitted.</span>
+<span class="c1"># When the starting index is omitted, it defaults to 0.</span>
+<span class="c1"># So, finance[:4] is equivalent to finance[0:4].</span>
+<span class="c1"># finance[:4] will also be &#39;Fina&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">finance</span><span class="p">[:</span><span class="mi">4</span><span class="p">])</span>
+
+<span class="c1"># Print a slice of the &#39;finance&#39; string using negative indexing from the end.</span>
+<span class="c1"># -4 means starting 4 characters from the end.</span>
+<span class="c1"># When the ending index is omitted, it defaults to the end of the string.</span>
+<span class="c1"># &#39;Finance&#39; -&gt; F i n a n c e</span>
+<span class="c1"># Indices:      0 1 2 3 4 5 6</span>
+<span class="c1"># Negative:    -7-6-5-4-3-2-1</span>
+<span class="c1"># finance[-4:] will be &#39;ance&#39; (characters at -4, -3, -2, -1)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">finance</span><span class="p">[</span><span class="o">-</span><span class="mi">4</span><span class="p">:])</span>
+
+<span class="c1"># Print a slice of the &#39;finance&#39; string using negative indexing for the end.</span>
+<span class="c1"># When the starting index is omitted, it defaults to 0.</span>
+<span class="c1"># -3 means stopping 3 characters from the end (exclusive).</span>
+<span class="c1"># So, it extracts characters from index 0 up to, but not including, index -3.</span>
+<span class="c1"># &#39;Finance&#39; -&gt; F(0) i(1) n(2) a(3) n(4) c(5) e(6)</span>
+<span class="c1"># Negative:    -7-6-5-4-3-2-1</span>
+<span class="c1"># finance[:-3] will be &#39;Fina&#39; (characters up to index 3, not including index 4)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">finance</span><span class="p">[:</span><span class="o">-</span><span class="mi">3</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fina
+Fina
+ance
+Fina
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="converting-numbers-and-booleans-to-strings">
+<h1><em><strong>Converting Numbers And Booleans To Strings</strong></em><a class="headerlink" href="#converting-numbers-and-booleans-to-strings" title="Link to this heading">#</a></h1>
+<section id="the-str-function-in-python-is-used-to-convert-numerical-and-boolean-data-types-into-strings-below-are-examples-showing-how-integers-floats-and-boolean-values-are-transformed-into-their-string-representations">
+<h2>The <font color='green'>str()</font> function in Python is used to convert numerical and boolean data types into strings. Below are examples showing how integers, floats, and boolean values are transformed into their string representations.<a class="headerlink" href="#the-str-function-in-python-is-used-to-convert-numerical-and-boolean-data-types-into-strings-below-are-examples-showing-how-integers-floats-and-boolean-values-are-transformed-into-their-string-representations" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize an integer variable &#39;x&#39; with the value 5.</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="c1"># Initialize a floating-point variable &#39;y&#39; with the value 10.3.</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mf">10.3</span>
+
+<span class="c1"># Perform a comparison operation: check if &#39;y&#39; is greater than &#39;x&#39;.</span>
+<span class="c1"># The result of a comparison is always a boolean value (True or False).</span>
+<span class="c1"># In this case, 10.3 &gt; 5 is True, so &#39;z&#39; will be assigned the boolean value True.</span>
+<span class="n">z</span> <span class="o">=</span> <span class="n">y</span> <span class="o">&gt;</span> <span class="n">x</span>
+
+<span class="c1"># Print the data type of each variable (x, y, and z) using the built-in &#39;type()&#39; function.</span>
+<span class="c1"># - type(x) will be &lt;class &#39;int&#39;&gt;</span>
+<span class="c1"># - type(y) will be &lt;class &#39;float&#39;&gt;</span>
+<span class="c1"># - type(z) will be &lt;class &#39;bool&#39;&gt;</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="nb">type</span><span class="p">(</span><span class="n">y</span><span class="p">),</span> <span class="nb">type</span><span class="p">(</span><span class="n">z</span><span class="p">))</span>
+
+<span class="c1"># Convert the integer &#39;x&#39; to its string representation and assign it to &#39;a&#39;.</span>
+<span class="c1"># &#39;a&#39; will be the string &quot;5&quot;.</span>
+<span class="n">a</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="c1"># Convert the float &#39;y&#39; to its string representation and assign it to &#39;b&#39;.</span>
+<span class="c1"># &#39;b&#39; will be the string &quot;10.3&quot;.</span>
+<span class="n">b</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+
+<span class="c1"># Convert the boolean &#39;z&#39; (which is True) to its string representation and assign it to &#39;c&#39;.</span>
+<span class="c1"># &#39;c&#39; will be the string &quot;True&quot;.</span>
+<span class="n">c</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+
+<span class="c1"># Print the value and data type of each of the newly created string variables (a, b, and c).</span>
+<span class="c1"># - a will be &quot;5&quot;, type(a) will be &lt;class &#39;str&#39;&gt;</span>
+<span class="c1"># - b will be &quot;10.3&quot;, type(b) will be &lt;class &#39;str&#39;&gt;</span>
+<span class="c1"># - c will be &quot;True&quot;, type(c) will be &lt;class &#39;str&#39;&gt;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">),</span> <span class="n">b</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">b</span><span class="p">),</span> <span class="n">c</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">c</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;int&#39;&gt; &lt;class &#39;float&#39;&gt; &lt;class &#39;bool&#39;&gt;
+5 &lt;class &#39;str&#39;&gt; 10.3 &lt;class &#39;str&#39;&gt; True &lt;class &#39;str&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="converting-strings-to-numbers-and-booleans">
+<h2><em><strong>Converting Strings To Numbers And Booleans</strong></em><a class="headerlink" href="#converting-strings-to-numbers-and-booleans" title="Link to this heading">#</a></h2>
+<section id="strings-values-of-numbers-can-be-converted-to-integers-or-floating-point-numbers-the-boolean-value-of-an-empty-string-is-false-all-others-true">
+<h3>Strings values of numbers can be converted to integers or floating point numbers.  The boolean value of an empty string is False; all others, True.<a class="headerlink" href="#strings-values-of-numbers-can-be-converted-to-integers-or-floating-point-numbers-the-boolean-value-of-an-empty-string-is-false-all-others-true" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Convert the string &#39;10&#39; to a floating-point number (10.0) and print it.</span>
+<span class="c1"># The `float()` constructor can convert integers, floats, and string representations</span>
+<span class="c1"># of numbers to floating-point type.</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="s1">&#39;10&#39;</span><span class="p">))</span>
+
+<span class="c1"># Convert the string &#39;10&#39; to an integer number (10) and print it.</span>
+<span class="c1"># The `int()` constructor can convert integers, floats, and string representations</span>
+<span class="c1"># of integers to integer type.</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="s1">&#39;10&#39;</span><span class="p">))</span>
+
+<span class="c1"># Initialize an empty string literal and assign it to the variable &#39;empty&#39;.</span>
+<span class="n">empty</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+
+<span class="c1"># Print two pieces of information about the &#39;empty&#39; string:</span>
+<span class="c1"># 1. Its length using `len()`. An empty string has a length of 0.</span>
+<span class="c1"># 2. Its boolean value using `bool()`. An empty string is considered &quot;falsy&quot; (evaluates to False).</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">empty</span><span class="p">),</span> <span class="nb">bool</span><span class="p">(</span><span class="n">empty</span><span class="p">))</span>
+
+<span class="c1"># Initialize a string containing a single space character and assign it to &#39;space&#39;.</span>
+<span class="n">space</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span>
+
+<span class="c1"># Print two pieces of information about the &#39;space&#39; string:</span>
+<span class="c1"># 1. Its length using `len()`. A string with one space has a length of 1.</span>
+<span class="c1"># 2. Its boolean value using `bool()`. A non-empty string (even one with just whitespace)</span>
+<span class="c1">#    is considered &quot;truthy&quot; (evaluates to True).</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">space</span><span class="p">),</span> <span class="nb">bool</span><span class="p">(</span><span class="n">space</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10.0
+10
+0 False
+1 True
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="four-useful-string-methods">
+<h1><em><strong>Four Useful String Methods</strong></em><a class="headerlink" href="#four-useful-string-methods" title="Link to this heading">#</a></h1>
+<section id="numerous-methods-are-available-for-string-manipulation-in-python-four-of-the-most-relevant-are-described-and-demonstrated">
+<h2>Numerous methods are available for string manipulation in Python. Four of the most relevant are described and demonstrated.<a class="headerlink" href="#numerous-methods-are-available-for-string-manipulation-in-python-four-of-the-most-relevant-are-described-and-demonstrated" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><em><strong>find(): To locate the index of the first occurrence of a substring within the string. If the substring is absent, it returns -1.</strong></em></p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">finance</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;F&#39;</span><span class="p">),</span><span class="s1">&#39;   &#39;</span><span class="p">,</span><span class="n">finance</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;I&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><em><strong>replace(): To substitute a string with another. If the replacement is empty, it results in the removal of the original string. Arguments include the string to be replaced, the replacement string, and the number of replacements (defaulting to all occurrences).</strong></em></p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">finance</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;n&#39;</span><span class="p">,</span><span class="s1">&#39;N&#39;</span><span class="p">),</span><span class="s1">&#39;   &#39;</span><span class="p">,</span><span class="n">finance</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;n&#39;</span><span class="p">,</span><span class="s1">&#39;N&#39;</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span><span class="s1">&#39;   &#39;</span><span class="p">,</span><span class="n">finance</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;n&#39;</span><span class="p">,</span><span class="s1">&#39; &#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><em><strong>split(): To convert a string into a list. It takes the split character (default is whitespace) and the number of splits (default is all) as arguments.</strong></em></p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">python_fun</span><span class="o">.</span><span class="n">split</span><span class="p">(),</span><span class="s1">&#39;   &#39;</span><span class="p">,</span><span class="n">python_fun</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;i&#39;</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><em><strong>join(): To convert an iterable into a string. The method is applied to the separator. The method’s argument is the iterable</strong></em></p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;  &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">python_fun</span><span class="o">.</span><span class="n">split</span><span class="p">()),</span><span class="s1">&#39;   &#39;</span><span class="p">,</span><span class="s1">&#39;$&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">python_fun</span><span class="o">.</span><span class="n">split</span><span class="p">()))</span>
+</pre></div>
+</div>
+</section>
+<section id="click-here-for-a-decription-of-these-and-other-string-methods">
+<h2><a class="reference external" href="https://www.w3schools.com/python/python_ref_string.asp">Click here for a decription of these and other string methods.</a><a class="headerlink" href="#click-here-for-a-decription-of-these-and-other-string-methods" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># --- Section 1: Using the `str.find()` method ---</span>
+
+<span class="c1"># The `str.find(substring)` method returns the lowest index (position)</span>
+<span class="c1"># in the string where the &#39;substring&#39; is found.</span>
+<span class="c1"># If the &#39;substring&#39; is not found, it returns -1.</span>
+
+<span class="c1"># finance.find(&#39;F&#39;): &#39;F&#39; is the first character in &#39;Finance&#39;, so its index is 0.</span>
+<span class="c1"># finance.find(&#39;I&#39;): &#39;I&#39; (uppercase) is not present in &#39;Finance&#39; (which has &#39;i&#39; lowercase), so it returns -1.</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">finance</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;F&#39;</span><span class="p">),</span> <span class="s1">&#39;   &#39;</span><span class="p">,</span> <span class="n">finance</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;I&#39;</span><span class="p">))</span>
+
+
+<span class="c1"># --- Section 2: Using the `str.replace()` method ---</span>
+
+<span class="c1"># The `str.replace(old, new, count)` method returns a *new* string</span>
+<span class="c1"># where occurrences of &#39;old&#39; are replaced by &#39;new&#39;.</span>
+<span class="c1"># The original string (&#39;finance&#39;) remains unchanged.</span>
+<span class="c1"># The optional &#39;count&#39; argument specifies the maximum number of replacements to make.</span>
+
+<span class="c1"># finance.replace(&#39;n&#39;,&#39;N&#39;): Replaces ALL occurrences of &#39;n&#39; with &#39;N&#39;.</span>
+<span class="c1">#   &#39;Finance&#39; (n at index 2, n at index 4) becomes &#39;FiNaNce&#39;.</span>
+<span class="c1"># finance.replace(&#39;n&#39;,&#39;N&#39;,1): Replaces only the FIRST occurrence of &#39;n&#39; with &#39;N&#39;.</span>
+<span class="c1">#   &#39;Finance&#39; (n at index 2) becomes &#39;FiNance&#39;.</span>
+<span class="c1"># finance.replace(&#39;n&#39;,&#39; &#39;): Replaces ALL occurrences of &#39;n&#39; with a space character.</span>
+<span class="c1">#   &#39;Finance&#39; becomes &#39;Fi ance&#39;.</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">finance</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;n&#39;</span><span class="p">,</span><span class="s1">&#39;N&#39;</span><span class="p">),</span><span class="s1">&#39;   &#39;</span><span class="p">,</span><span class="n">finance</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;n&#39;</span><span class="p">,</span><span class="s1">&#39;N&#39;</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span><span class="s1">&#39;   &#39;</span><span class="p">,</span><span class="n">finance</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;n&#39;</span><span class="p">,</span><span class="s1">&#39; &#39;</span><span class="p">))</span>
+
+
+<span class="c1"># --- Section 3: Using the `str.split()` method ---</span>
+
+<span class="c1"># The `str.split(separator, maxsplit)` method splits a string into a list of substrings.</span>
+<span class="c1"># If &#39;separator&#39; is not provided (or is None), it splits by any whitespace</span>
+<span class="c1"># and automatically handles multiple spaces by treating them as one.</span>
+
+<span class="c1"># python_fun.split(): Splits the string by any whitespace.</span>
+<span class="c1">#   &quot;It&#39;s fun to use finance with python&quot; becomes</span>
+<span class="c1">#   [&#39;It\&#39;s&#39;, &#39;fun&#39;, &#39;to&#39;, &#39;use&#39;, &#39;finance&#39;, &#39;with&#39;, &#39;python&#39;]</span>
+<span class="c1"># python_fun.split(&#39;i&#39;,1): Splits the string by the first occurrence of the character &#39;i&#39;.</span>
+<span class="c1">#   The &#39;1&#39; limits the number of splits to one, resulting in two parts.</span>
+<span class="c1">#   &quot;It&#39;s fun to use finance with python&quot; splits at the &#39;i&#39; in &quot;It&#39;s&quot;</span>
+<span class="c1">#   or at the first &#39;i&#39; encountered (in &#39;finance&#39;). Let&#39;s trace it:</span>
+<span class="c1">#   Original: &quot;It&#39;s fun to use finance with python&quot;</span>
+<span class="c1">#             ^ first &#39;i&#39; is at index 4</span>
+<span class="c1">#   Result: [&quot;It&#39;s fun to use f&quot;, &quot;nance with python&quot;]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">python_fun</span><span class="o">.</span><span class="n">split</span><span class="p">(),</span><span class="s1">&#39;   &#39;</span><span class="p">,</span><span class="n">python_fun</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;i&#39;</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
+
+
+<span class="c1"># --- Section 4: Using the `str.join()` method ---</span>
+
+<span class="c1"># The `str.join(iterable)` method is a string method used to concatenate</span>
+<span class="c1"># elements of an iterable (like a list of strings).</span>
+<span class="c1"># The string on which `.join()` is called acts as the separator between the elements.</span>
+
+<span class="c1"># &#39;  &#39;.join(python_fun.split()):</span>
+<span class="c1">#   First, python_fun.split() creates the list: [&#39;It\&#39;s&#39;, &#39;fun&#39;, &#39;to&#39;, &#39;use&#39;, &#39;finance&#39;, &#39;with&#39;, &#39;python&#39;].</span>
+<span class="c1">#   Then, these elements are joined together with &#39;  &#39; (two spaces) as the separator.</span>
+<span class="c1">#   Result: &quot;It&#39;s  fun  to  use  finance  with  python&quot;</span>
+<span class="c1"># &#39;$&#39;.join(python_fun.split()):</span>
+<span class="c1">#   Uses the same list, but joins the elements with &#39;$&#39; as the separator.</span>
+<span class="c1">#   Result: &quot;It&#39;s$fun$to$use$finance$with$python&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;  &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">python_fun</span><span class="o">.</span><span class="n">split</span><span class="p">()),</span><span class="s1">&#39;   &#39;</span><span class="p">,</span><span class="s1">&#39;$&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">python_fun</span><span class="o">.</span><span class="n">split</span><span class="p">()))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     -1
+FiNaNce     FiNance     Fi a ce
+[&quot;It&#39;s&quot;, &#39;fun&#39;, &#39;to&#39;, &#39;use&#39;, &#39;finance&#39;, &#39;with&#39;, &#39;python&#39;]     [&quot;It&#39;s fun to use f&quot;, &#39;nance with python&#39;]
+It&#39;s  fun  to  use  finance  with  python     It&#39;s$fun$to$use$finance$with$python
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Basic_Grammar.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><em><strong>Introduction</strong></em></p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Numbers_%26_Booleans.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><em><strong>Numbers &amp; Booleans</strong></em></p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><em><strong>Strings</strong></em></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-string-is-a-variable-that-represents-printable-characters-such-as-letters-numbers-etc-like-numbers-and-booleans-strings-hold-single-values-unlike-numbers-and-booleans-strings-are-iterable-if-a-variable-is-iterable-the-values-or-members-of-the-variable-can-be-enumerated-in-the-case-of-strings-the-characters-can-be-enumerated-many-python-concepts-can-be-illustrated-with-strings">A string is a variable that represents printable characters, such as letters, numbers, etc. Like numbers and booleans, strings hold single values.  Unlike numbers and booleans, strings are iterable.  If a variable is iterable, the values or members  of the variable can be enumerated.  In the case of strings, the characters can be enumerated.  Many Python concepts can be illustrated with strings.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#strings-are-defined-using-either-single-or-double-quotes-to-include-a-single-quote-within-a-string-either-use-double-quotes-for-the-string-s-definition-or-precede-the-single-quote-inside-the-string-with-a-backslash-and-the-parser-will-disregard-it">Strings are defined using either single or double quotes. To include a single quote within a string, either use double quotes for the string’s definition or precede the single quote inside the string with a backslash (\) and the parser will disregard it.</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#assigning-a-string-value"><em><strong>Assigning A String Value</strong></em></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#combining-or-concatenating-strings"><em><strong>Combining Or Concatenating Strings</strong></em></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#strings-can-be-combined-or-concatenated-with-the-plus-sign-including-using-the-short-cut-version-of-the-plus-sign">Strings can be combined or concatenated with the plus sign including using the short-cut version of the plus sign (+=).</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#length-of-a-string"><em><strong>Length Of A String</strong></em></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#strings-being-iterable-necessarily-contain-elements-or-members-that-possess-a-countable-length-python-s-built-in-len-function-provides-this-count-returning-the-number-of-elements-within-the-iterable-an-empty-string-or-any-empty-iterable-will-have-a-length-of-zero-in-the-case-of-a-string-the-length-is-equal-to-the-number-of-characters-including-blanks-that-are-in-the-string">Strings, being iterable, necessarily contain elements or members that possess a countable length. Python’s built-in <font color="green">len()</font> function provides this count, returning the number of elements within the iterable. An empty string or any empty iterable will have a length of zero. In the case of a string, the length is equal to the number of characters, including blanks, that are in the string.</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#iterating-through-a-string-and-zero-based-indexes"><em><strong>Iterating Through A String And Zero-Based Indexes</strong></em></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-code-demonstrates-iterating-through-the-string-finance-using-two-different-for-loop-approaches">The code demonstrates iterating through the string <font color="green">finance</font> using two different <font color="green">for loop</font> approaches.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-first-example-is-a-basic-for-loop-that-assigns-each-character-of-the-string-to-the-variable-character-and-then-prints-it">The first example is a basic <font color="green">for loop</font> that assigns each character of the string to the variable <font color="green">character</font> and then prints it.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-second-uses-the-enumerate-function-this-function-binds-each-character-member-of-the-string-to-its-index-location-the-loop-then-produces-both-the-index-and-the-character-in-each-iteration-printing-them-as-pairs">The second uses the <font color="green">enumerate()</font> function. This function binds each character (member of the string) to its index location. The loop then produces both the index and the character in each iteration, printing them as pairs.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#in-the-second-example-notice-that-the-index-value-ranges-from-zero-to-six-an-example-of-zero-based-indexing-the-following-code-is-another-example-of-zero-based-indexing-that-prints-characters-in-locations-0-3-and-6-that-represent-f-a-and-e">In the second example notice that the index value ranges from zero to six; an example of zero-based indexing.  The following code is another example of zero-based indexing that prints characters in locations 0, 3, and 6 that represent F, a, and e.</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#slicing-a-string"><em><strong>Slicing A String</strong></em></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#string-slicing-utilizes-index-locations-a-slice-is-defined-by-its-starting-and-ending-points-along-with-the-step-size-each-separated-by-a-colon-the-beginning-index-defaults-to-zero-the-ending-to-the-iterable-s-length-and-the-step-size-to-one-consequently-these-two-statements-produce-identical-slices">String slicing utilizes index locations. A slice is defined by its starting and ending points, along with the step size, each separated by a colon. The beginning index defaults to zero, the ending to the iterable’s length, and the step size to one. Consequently, these two statements produce identical slices.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#negative-beginning-or-ending-values-cause-the-slice-to-operate-relative-to-the-iterable-s-length-the-first-line-of-code-below-extracts-the-final-four-characters-while-the-second-extracts-the-initial-four">Negative beginning or ending values cause the slice to operate relative to the iterable’s length. The first line of code below extracts the final four characters, while the second extracts the initial four.</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#converting-numbers-and-booleans-to-strings"><em><strong>Converting Numbers And Booleans To Strings</strong></em></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-str-function-in-python-is-used-to-convert-numerical-and-boolean-data-types-into-strings-below-are-examples-showing-how-integers-floats-and-boolean-values-are-transformed-into-their-string-representations">The <font color="green">str()</font> function in Python is used to convert numerical and boolean data types into strings. Below are examples showing how integers, floats, and boolean values are transformed into their string representations.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#converting-strings-to-numbers-and-booleans"><em><strong>Converting Strings To Numbers And Booleans</strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#strings-values-of-numbers-can-be-converted-to-integers-or-floating-point-numbers-the-boolean-value-of-an-empty-string-is-false-all-others-true">Strings values of numbers can be converted to integers or floating point numbers.  The boolean value of an empty string is False; all others, True.</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#four-useful-string-methods"><em><strong>Four Useful String Methods</strong></em></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numerous-methods-are-available-for-string-manipulation-in-python-four-of-the-most-relevant-are-described-and-demonstrated">Numerous methods are available for string manipulation in Python. Four of the most relevant are described and demonstrated.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#click-here-for-a-decription-of-these-and-other-string-methods">Click here for a decription of these and other string methods.</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Financial Python
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

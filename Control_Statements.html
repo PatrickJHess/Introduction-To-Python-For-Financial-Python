@@ -1,0 +1,1262 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Statements That Control Other Statements &#8212; An Introduction to Python for Financial Python</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Control_Statements';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Lists" href="A_First_Look_At_Lists.html" />
+    <link rel="prev" title="Numbers &amp; Booleans" href="Numbers_%26_Booleans.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/Small_Logo.png" class="logo__image only-light" alt="An Introduction to Python for Financial Python - Home"/>
+    <script>document.write(`<img src="_static/Small_Logo.png" class="logo__image only-dark" alt="An Introduction to Python for Financial Python - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Background Material: An Introduction to Python for Financial Python
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Basic_Grammar.html"><em><strong>Introduction</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Strings.html"><em><strong>Strings</strong></em></a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="Numbers_%26_Booleans.html"><em><strong>Numbers &amp; Booleans</strong></em></a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#"><em><strong>Statements That Control Other Statements</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="A_First_Look_At_Lists.html"><em><strong>Lists</strong></em></a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="Tuples.html"><em><strong>Tuples</strong></em></a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="Dictionaries.html"><em><strong>Dictionaries</strong></em></a></li>
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="Functions.html"><em><strong>Functions</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Manipulating_Dates.html"><em><strong>Numerical Calculations With Dates</strong></em></a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="An_Introduction_To_Pandas.html"><em><strong>Pandas</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="An_Introduction_To_NumPy.html"><em><strong>NumPy</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sets.html"><em><strong>Sets</strong></em></a></li>
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/PatrickJHess/background_material" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/PatrickJHess/background_material/issues/new?title=Issue%20on%20page%20%2FControl_Statements.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Control_Statements.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Statements That Control Other Statements</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-provides-various-control-statements-to-manage-program-flow">Python provides various control statements to manage program flow.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#these-include">These include:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generally-these-statements-conclude-with-a-colon-the-statement-being-controlled-can-be-on-the-same-line-however-separate-lines-and-proper-indentation-are-required-to-control-multiple-statements-this-notebook-demonstrates-each-of-these-control-statements-except-for-functions-for-help-with-functions-review-the-function-notebook">Generally, these statements conclude with a colon. The statement being controlled can be on the same line; however, separate lines and proper indentation are required to control multiple statements. This notebook demonstrates each of these control statements except for functions. For help with functions review the Function Notebook</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#to-start-we-assign-the-string-finance-to-the-variable-finance">To start, we assign the string “Finance” to the variable <font color="green">finance</font>:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#for-help-with-strings-review-string-notebook">For help with strings review String Notebook.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#looping-statements"><em><strong>Looping Statements</strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-first-example-demonstrates-a-for-loop-iterating-through-each-character-of-the-string">The first example demonstrates a <font color="green">for</font> loop, iterating through each character of the string</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-second-example-interrupts-the-iteration-with-a-while-statement-this-loop-continues-as-long-as-the-boolean-value-of-the-while-condition-remains-true">The second example interrupts the iteration with a <font color="green">while</font> statement. This loop continues as long as the Boolean value of the <font color="green">while</font> condition remains True.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-third-example-interrupts-the-iteration-with-the-continue-statement-this-statement-transfers-control-back-to-the-beginning-of-the-for-loop-skipping-the-remaining-statements-within-the-loop-s-current-iteration">The third example interrupts the iteration with the <font color="green">continue</font> statement. This statement transfers control back to the beginning of the <font color="green">for</font> loop skipping the remaining statements within the loop’s current iteration.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-fourth-example-utilizes-the-break-statement-to-interrupt-the-iteration-this-achieves-an-effect-similar-to-the-while-loop-condition-terminating-the-loop-when-the-condition-is-met-instead-of-defining-a-counter-the-python-function-enumerate-is-used-to-create-an-iterable-that-includes-two-elements-the-number-of-iterations-index-location-of-each-character-and-the-character-the-enumerate-function-was-demonstrated-in-string-notebook">The fourth example utilizes the <font color="green">break</font> statement to interrupt the iteration. This achieves an effect similar to the <font color="green">while</font> loop condition, terminating the loop when the condition is met. Instead of defining a counter, the Python function <font color="green">enumerate()</font> is used to create an iterable that includes two elements: the number of iterations (index location of each character) and the character.  The <font color="green">enumerate()</font> function was demonstrated in String Notebook</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-same-exercises-could-be-performed-with-any-iterable-the-first-example-is-repeated-with-the-list-created-from-the-string-split-method">The same exercises could be performed with any iterable.  The first example is repeated with the list created from the string <font color="green">split()</font> method.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#for-help-with-the-string-method-split-take-a-look-at-the-explanation-in-the-string-notebook">For help with the string method <font color="green">split()</font> take a look at the explanation in the String Notebook</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-simple-for-loop"><em><strong>A Simple <font color="green">for</font> Loop</strong></em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-while-to-interrupt-iteration"><em><strong>Using <font color="green">while</font> To Interrupt Iteration</strong></em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-continue-statement-to-control-a-for-loop"><em><strong>Using The <font color="green">continue</font> Statement To Control A <font color="green">for</font> Loop</strong></em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-break-to-interrupt-a-for-loop"><em><strong>Using Break To Interrupt A For Loop</strong></em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#looping-through-a-list-created-by-the-string-method-split"><em><strong>Looping Through A List Created By The String Method <font color="green">split()</font></strong></em></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conditional-statements"><em><strong>Conditional Statements</strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-conditional-statements-in-python-are-if-elif-and-else-in-the-case-of-if-and-elif-the-controlled-statements-are-executed-when-the-condition-is-true-the-controlled-statements-of-else-are-executed-when-the-proceeding-if-or-elif-statements-are-false">The conditional statements in Python are <font color="green">if, elif</font>, and <font color="green">else</font>.  In the case of <font color="green">if</font> and <font color="green">elif</font> the controlled statements are executed when the condition is true.   The controlled statements of <font color="green">else</font> are executed when the proceeding <font color="green">if</font> or <font color="green">elif</font> statements are false.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-first-example-tests-the-boolean-value-of-finance-when-the-conditional-and-controlled-statements-are-on-one-and-two-lines">The first example tests the boolean value of <font color="green">finance</font> when the conditional and controlled statements are on one and two lines.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-second-example-does-the-same-with-the-variable-empty-that-is-assigned-an-empty-string">The second example does the same with the variable <font color="green">empty</font> that is assigned an empty string.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-third-fourth-and-fifth-examples-demonstrate-the-if-elif-and-else-statements-these-examples-use-the-in-operator-to-determine-if-a-letter-is-in-the-string-assigned-to-finance-a-member-of-the-object">The third, fourth, and fifth examples demonstrate the <font color="green">if, elif</font>, and <font color="green">else</font> statements.  These examples use the <font color="green">in</font> operator to determine if a letter is in the string assigned to <font color="green">finance</font> (a member of the object).</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#control-controlled-statements-on-single-or-multiple-lines"><em><strong>Control &amp; Controlled Statements On Single Or Multiple Lines</strong></em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-if-elif-and-else-statements-if-statement-true"><em><strong>The <font color="green">if, elif</font>, And <font color="green">else</font> Statements: if Statement True</strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#capitalize-method-of-string-objects-changes-the-lower-case-letter-to-upper-case"><font color="green">capitalize()</font> Method Of string objects changes the lower case letter to upper case.</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-if-elif-and-else-statements-if-statement-false-elif-true"><em><strong>The <font color="green">if, elif</font>, And <font color="green">else</font> Statements: if Statement False, <font color="green">elif</font> True</strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><font color="green">capitalize()</font> Method Of string objects changes the lower case letter to upper case.</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-if-elif-and-else-statements-if-elif-statements-false-else-statement-executed"><em><strong>The <font color="green">if, elif</font>, And <font color="green">else</font> Statements: <font color="green">if &amp; elif</font> Statements False, <font color="green">else</font> Statement Executed</strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"><font color="green">capitalize()</font> Method Of string objects changes the lower case letter to upper case.</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-try-and-except"><em><strong>The <font color="green">try</font> And <font color="green">except</font></strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#if-the-block-code-controlled-by-a-try-statement-fails-the-code-controlled-by-the-except-statement-is-executed-here-it-is-illustrated-with-the-square-root-of-minus-four-because-the-square-root-of-minus-four-cannot-be-represented-as-a-real-number-the-statement-controlled-by-try-fails-the-statements-controlled-by-except-multiplies-the-square-root-of-plus-four-by-the-python-representation-of-the-imaginary-number-ij">If the block code controlled by a <font color="green">try</font> statement fails, the code controlled by the <font color="green">except</font> statement is executed.  Here it is illustrated with the square root of minus four.  Because the square root of minus four cannot be represented as a real number the statement controlled by <font color="green">try</font> fails.  The statements controlled by <font color="green">except</font> multiplies the square root of plus four by the Python representation of the imaginary number ij.</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <img src='https://docs.google.com/drawings/d/e/2PACX-1vR9RdrFix-GP2Hx98wglCnePUYFTzis9LWibNcJxoYpkz7O1MDmw0CRZxlNCrNWnzXxtzR67a7o9Tvl/pub?w=960&h=720'><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">pick_url</span><span class="p">():</span>
+  <span class="n">colab</span><span class="o">=</span><span class="s2">&quot;[Colab](https://colab.research.google.com/drive/1ZswcXD-pYY-uIBMrnxCE7x6MdMm0DT3J?usp=drive_link)&quot;</span>
+  <span class="n">pdf</span><span class="o">=</span><span class="s2">&quot;[PDF](https://drive.google.com/file/d/182-6sL34ELfOrsEW3XbkfuizpacMu6ZQ/view?usp=drive_link)&quot;</span>
+  <span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+  <span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">Markdown</span>
+  <span class="n">is_colab</span> <span class="o">=</span> <span class="s1">&#39;google.colab&#39;</span> <span class="ow">in</span> <span class="n">sys</span><span class="o">.</span><span class="n">modules</span>
+  <span class="k">if</span> <span class="n">is_colab</span><span class="p">:</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Click The Link For Relevant Colab Notebook:</span><span class="si">{</span><span class="n">colab</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">))</span>
+  <span class="k">else</span><span class="p">:</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Click The Link For Relevant PDF Of Notebook:</span><span class="si">{</span><span class="n">pdf</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pick_url</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>Click The Link For Relevant PDF Of Notebook:<a class="reference external" href="https://drive.google.com/file/d/182-6sL34ELfOrsEW3XbkfuizpacMu6ZQ/view?usp=drive_link">PDF</a></p>
+</div>
+</div>
+<section class="tex2jax_ignore mathjax_ignore" id="statements-that-control-other-statements">
+<h1><em><strong>Statements That Control Other Statements</strong></em><a class="headerlink" href="#statements-that-control-other-statements" title="Link to this heading">#</a></h1>
+<section id="python-provides-various-control-statements-to-manage-program-flow">
+<h2>Python provides various control statements to manage program flow.<a class="headerlink" href="#python-provides-various-control-statements-to-manage-program-flow" title="Link to this heading">#</a></h2>
+</section>
+<section id="these-include">
+<h2>These include:<a class="headerlink" href="#these-include" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><em><strong>Looping Statements</strong></em></p></li>
+<li><p><em><strong>Statements That Interrupt Loops</strong></em></p></li>
+<li><p><em><strong>Conditional statements</strong></em></p></li>
+<li><p><em><strong>Exception handling for errors</strong></em></p></li>
+<li><p><em><strong>Functions</strong></em></p></li>
+</ul>
+</section>
+<section id="generally-these-statements-conclude-with-a-colon-the-statement-being-controlled-can-be-on-the-same-line-however-separate-lines-and-proper-indentation-are-required-to-control-multiple-statements-this-notebook-demonstrates-each-of-these-control-statements-except-for-functions-for-help-with-functions-review-the-function-notebook">
+<h2>Generally, these statements conclude with a colon. The statement being controlled can be on the same line; however, separate lines and proper indentation are required to control multiple statements. This notebook demonstrates each of these control statements except for functions. For help with functions review the <a class="reference external" href="https://drive.google.com/file/d/1W467MnjtESTBKfnEEVI0Ovzshi-XXjXW/view?usp=sharing">Function Notebook</a><a class="headerlink" href="#generally-these-statements-conclude-with-a-colon-the-statement-being-controlled-can-be-on-the-same-line-however-separate-lines-and-proper-indentation-are-required-to-control-multiple-statements-this-notebook-demonstrates-each-of-these-control-statements-except-for-functions-for-help-with-functions-review-the-function-notebook" title="Link to this heading">#</a></h2>
+</section>
+<section id="to-start-we-assign-the-string-finance-to-the-variable-finance">
+<h2>To start, we assign the string “Finance” to the variable <font color='green'>finance</font>:<a class="headerlink" href="#to-start-we-assign-the-string-finance-to-the-variable-finance" title="Link to this heading">#</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">finance</span><span class="o">=</span><span class="s1">&#39;Finance&#39;</span>
+</pre></div>
+</div>
+</section>
+<section id="for-help-with-strings-review-string-notebook">
+<h2>For help with strings review <a class="reference external" href="https://colab.research.google.com/drive/1h5DB7E0TMrCUykrVgNSSZgL9UKTIDA5p#scrollTo=4okoa5ikjMN3">String Notebook</a>.<a class="headerlink" href="#for-help-with-strings-review-string-notebook" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">finance</span><span class="o">=</span><span class="s1">&#39;Finance&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="looping-statements">
+<h2><em><strong>Looping Statements</strong></em><a class="headerlink" href="#looping-statements" title="Link to this heading">#</a></h2>
+<section id="the-first-example-demonstrates-a-for-loop-iterating-through-each-character-of-the-string">
+<h3>The first example demonstrates a <font color='green'>for</font> loop, iterating through each character of the string<a class="headerlink" href="#the-first-example-demonstrates-a-for-loop-iterating-through-each-character-of-the-string" title="Link to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">characters</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
+<span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">finance</span><span class="p">:</span>
+  <span class="n">characters</span><span class="o">+=</span><span class="n">char</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">characters</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="the-second-example-interrupts-the-iteration-with-a-while-statement-this-loop-continues-as-long-as-the-boolean-value-of-the-while-condition-remains-true">
+<h3>The second example interrupts the iteration with a <font color='green'>while</font> statement. This loop continues as long as the Boolean value of the <font color='green'>while</font> condition remains True.<a class="headerlink" href="#the-second-example-interrupts-the-iteration-with-a-while-statement-this-loop-continues-as-long-as-the-boolean-value-of-the-while-condition-remains-true" title="Link to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">index</span><span class="o">=</span><span class="mi">0</span>
+<span class="n">characters</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
+<span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">characters</span><span class="p">)</span><span class="o">&lt;</span><span class="mi">3</span><span class="p">:</span>
+  <span class="n">characters</span><span class="o">+=</span><span class="n">finance</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+  <span class="n">index</span><span class="o">+=</span><span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">characters</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="the-third-example-interrupts-the-iteration-with-the-continue-statement-this-statement-transfers-control-back-to-the-beginning-of-the-for-loop-skipping-the-remaining-statements-within-the-loop-s-current-iteration">
+<h3>The third example interrupts the iteration with the <font color='green'>continue</font> statement. This statement transfers control back to the beginning of the <font color='green'>for</font> loop skipping the remaining statements within the loop’s current iteration.<a class="headerlink" href="#the-third-example-interrupts-the-iteration-with-the-continue-statement-this-statement-transfers-control-back-to-the-beginning-of-the-for-loop-skipping-the-remaining-statements-within-the-loop-s-current-iteration" title="Link to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">characters</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
+<span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">finance</span><span class="p">:</span>
+  <span class="k">if</span> <span class="n">char</span><span class="o">==</span><span class="s1">&#39;n&#39;</span><span class="p">:</span><span class="k">continue</span>
+  <span class="n">characters</span><span class="o">+=</span><span class="n">char</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">characters</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="the-fourth-example-utilizes-the-break-statement-to-interrupt-the-iteration-this-achieves-an-effect-similar-to-the-while-loop-condition-terminating-the-loop-when-the-condition-is-met-instead-of-defining-a-counter-the-python-function-enumerate-is-used-to-create-an-iterable-that-includes-two-elements-the-number-of-iterations-index-location-of-each-character-and-the-character-the-enumerate-function-was-demonstrated-in-string-notebook">
+<h3>The fourth example utilizes the <font color='green'>break</font> statement to interrupt the iteration. This achieves an effect similar to the <font color='green'>while</font> loop condition, terminating the loop when the condition is met. Instead of defining a counter, the Python function <font color='green'>enumerate()</font> is used to create an iterable that includes two elements: the number of iterations (index location of each character) and the character.  The <font color='green'>enumerate()</font> function was demonstrated in <a class="reference external" href="https://colab.research.google.com/drive/1h5DB7E0TMrCUykrVgNSSZgL9UKTIDA5p#scrollTo=fYpH0rePj-C1">String Notebook</a><a class="headerlink" href="#the-fourth-example-utilizes-the-break-statement-to-interrupt-the-iteration-this-achieves-an-effect-similar-to-the-while-loop-condition-terminating-the-loop-when-the-condition-is-met-instead-of-defining-a-counter-the-python-function-enumerate-is-used-to-create-an-iterable-that-includes-two-elements-the-number-of-iterations-index-location-of-each-character-and-the-character-the-enumerate-function-was-demonstrated-in-string-notebook" title="Link to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">characters</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
+<span class="k">for</span> <span class="n">index</span><span class="p">,</span><span class="n">char</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">finance</span><span class="p">):</span>
+  <span class="k">if</span> <span class="n">index</span><span class="o">==</span><span class="mi">3</span><span class="p">:</span><span class="k">break</span>
+  <span class="n">characters</span><span class="o">+=</span><span class="n">char</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">characters</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="the-same-exercises-could-be-performed-with-any-iterable-the-first-example-is-repeated-with-the-list-created-from-the-string-split-method">
+<h3>The same exercises could be performed with any iterable.  The first example is repeated with the list created from the string <font color='green'>split()</font> method.<a class="headerlink" href="#the-same-exercises-could-be-performed-with-any-iterable-the-first-example-is-repeated-with-the-list-created-from-the-string-split-method" title="Link to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">characters</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
+<span class="n">split_finance</span><span class="o">=</span><span class="n">finance</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">split_finance</span><span class="p">:</span>
+  <span class="n">characters</span><span class="o">+=</span><span class="n">char</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">characters</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="for-help-with-the-string-method-split-take-a-look-at-the-explanation-in-the-string-notebook">
+<h3>For help with the string method <font color='green'>split()</font> take a look at the explanation in the <a class="reference external" href="https://colab.research.google.com/drive/1h5DB7E0TMrCUykrVgNSSZgL9UKTIDA5p#scrollTo=rb7Y9oVKygYc">String Notebook</a><a class="headerlink" href="#for-help-with-the-string-method-split-take-a-look-at-the-explanation-in-the-string-notebook" title="Link to this heading">#</a></h3>
+</section>
+<section id="a-simple-for-loop">
+<h3><em><strong>A Simple <font color='green'>for</font> Loop</strong></em><a class="headerlink" href="#a-simple-for-loop" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize an empty string variable named &#39;characters&#39;.</span>
+<span class="c1"># This variable will be used to build a new string.</span>
+<span class="n">characters</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+
+<span class="c1"># Iterate over each character in the &#39;finance&#39; variable.</span>
+<span class="c1"># It&#39;s assumed that &#39;finance&#39; is an iterable, such as a string, list, or tuple.</span>
+<span class="c1"># For each iteration, &#39;char&#39; will hold the current character.</span>
+<span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">finance</span><span class="p">:</span>
+  <span class="c1"># Concatenate the current &#39;char&#39; to the &#39;characters&#39; string with += operator</span>
+  <span class="c1"># This effectively appends each character from &#39;finance&#39; one by one</span>
+  <span class="c1"># to build the &#39;characters&#39; string.</span>
+  <span class="n">characters</span> <span class="o">+=</span> <span class="n">char</span>
+
+<span class="c1"># After the loop finishes (i.e., all characters from &#39;finance&#39; have been processed),</span>
+<span class="c1"># print the final &#39;characters&#39; string to the console.</span>
+<span class="c1"># This will display the complete sequence of characters that were in &#39;finance&#39;.</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">characters</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Finance
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="using-while-to-interrupt-iteration">
+<h3><em><strong>Using <font color='green'>while</font> To Interrupt Iteration</strong></em><a class="headerlink" href="#using-while-to-interrupt-iteration" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize an integer variable &#39;index&#39; to 0.</span>
+<span class="c1"># This variable will serve as a counter or pointer,</span>
+<span class="c1"># indicating the current position when accessing characters from &#39;finance&#39;.</span>
+<span class="n">index</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="c1"># Determine the &#39;limit&#39; for how many characters to extract.</span>
+<span class="c1"># If &#39;finance&#39; has 3 or more characters, set the limit to 3.</span>
+<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">finance</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">:</span>
+    <span class="n">limit</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="c1"># Otherwise (if &#39;finance&#39; has fewer than 3 characters),</span>
+<span class="c1"># set the limit to the actual length of &#39;finance&#39;.</span>
+<span class="c1"># This prevents trying to access characters beyond the string&#39;s bounds.</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">limit</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">finance</span><span class="p">)</span>
+
+<span class="c1"># Initialize an empty string variable named &#39;characters&#39;.</span>
+<span class="c1"># This string will be built up by appending characters from &#39;finance&#39;.</span>
+<span class="n">characters</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+
+<span class="c1"># Start a &#39;while&#39; loop.</span>
+<span class="c1"># The loop will continue as long as the number of characters collected</span>
+<span class="c1"># in the &#39;characters&#39; string is less than the calculated &#39;limit&#39;.</span>
+<span class="c1"># This ensures that we only extract up to &#39;limit&#39; characters.</span>
+<span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">characters</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">limit</span><span class="p">:</span>
+  <span class="c1"># Append the character at the current &#39;index&#39; from the &#39;finance&#39; variable</span>
+  <span class="c1"># to the &#39;characters&#39; string.</span>
+  <span class="c1"># Example: If finance=&quot;abc&quot; and index=0, characters becomes &quot;a&quot;.</span>
+  <span class="n">characters</span> <span class="o">+=</span> <span class="n">finance</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+
+  <span class="c1"># Increment the &#39;index&#39; by 1.</span>
+  <span class="c1"># This moves the pointer to the next character in &#39;finance&#39; for the</span>
+  <span class="c1"># subsequent iteration of the loop.</span>
+  <span class="n">index</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="c1"># After the loop has completed (i.e., &#39;limit&#39; number of characters have been</span>
+<span class="c1"># extracted and appended to &#39;characters&#39;), print the final &#39;characters&#39; string.</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">characters</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fin
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="using-the-continue-statement-to-control-a-for-loop">
+<h3><em><strong>Using The <font color='green'>continue</font> Statement To Control A <font color='green'>for</font> Loop</strong></em><a class="headerlink" href="#using-the-continue-statement-to-control-a-for-loop" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize an empty string variable named &#39;characters&#39;.</span>
+<span class="c1"># This string will be used to store characters from &#39;finance&#39;</span>
+<span class="c1"># after some filtering.</span>
+<span class="n">characters</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+
+<span class="c1"># Iterate over each character present in the &#39;finance&#39; variable.</span>
+<span class="c1"># It&#39;s assumed that &#39;finance&#39; is an iterable, such as a string or a list of characters.</span>
+<span class="c1"># In each iteration, the current character is assigned to the variable &#39;char&#39;.</span>
+<span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">finance</span><span class="p">:</span>
+  <span class="c1"># Check if the current character &#39;char&#39; is equal to the lowercase letter &#39;n&#39;.</span>
+  <span class="k">if</span> <span class="n">char</span> <span class="o">==</span> <span class="s1">&#39;n&#39;</span><span class="p">:</span>
+    <span class="c1"># If &#39;char&#39; is &#39;n&#39;, the &#39;continue&#39; statement is executed.</span>
+    <span class="c1"># &#39;continue&#39; immediately skips the rest of the current loop iteration</span>
+    <span class="c1"># and proceeds to the next iteration of the &#39;for&#39; loop.</span>
+    <span class="c1"># This effectively causes any &#39;n&#39; characters to be skipped and not appended.</span>
+    <span class="k">continue</span>
+
+  <span class="c1"># If the &#39;char&#39; is NOT &#39;n&#39; (i.e., the &#39;continue&#39; statement was not executed),</span>
+  <span class="c1"># append the current &#39;char&#39; to the &#39;characters&#39; string.</span>
+  <span class="c1"># This builds up the new string, excluding any &#39;n&#39;s.</span>
+  <span class="n">characters</span> <span class="o">+=</span> <span class="n">char</span>
+
+<span class="c1"># After the loop has completed, print the final &#39;characters&#39; string to the console.</span>
+<span class="c1"># This string will contain all characters from &#39;finance&#39; except for the letter &#39;n&#39;.</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">characters</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fiace
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="using-break-to-interrupt-a-for-loop">
+<h3><em><strong>Using Break To Interrupt A For Loop</strong></em><a class="headerlink" href="#using-break-to-interrupt-a-for-loop" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize an empty string variable named &#39;characters&#39;.</span>
+<span class="c1"># This string will be built up by appending selected characters from &#39;finance&#39;.</span>
+<span class="n">characters</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+
+<span class="c1"># Iterate over the &#39;finance&#39; sequence (e.g., a string or list).</span>
+<span class="c1"># The &#39;enumerate&#39; function provides both the &#39;index&#39; (position) and the &#39;char&#39; (character)</span>
+<span class="c1"># for each item in &#39;finance&#39; during the loop.</span>
+<span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">char</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">finance</span><span class="p">):</span>
+  <span class="c1"># Check if the current &#39;index&#39; has reached the predefined &#39;limit&#39;.</span>
+  <span class="c1"># IMPORTANT: The &#39;limit&#39; variable must be defined and have an integer value</span>
+  <span class="c1"># before this loop is executed. It dictates how many characters to extract.</span>
+  <span class="k">if</span> <span class="n">index</span> <span class="o">==</span> <span class="n">limit</span><span class="p">:</span>
+    <span class="c1"># If the &#39;index&#39; reaches the &#39;limit&#39;, the &#39;break&#39; statement is executed.</span>
+    <span class="c1"># &#39;break&#39; immediately terminates the loop entirely,</span>
+    <span class="c1"># regardless of whether there are more characters in &#39;finance&#39;.</span>
+    <span class="k">break</span>
+
+  <span class="c1"># If the &#39;index&#39; has not yet reached the &#39;limit&#39; (i.e., &#39;break&#39; was not executed),</span>
+  <span class="c1"># append the current &#39;char&#39; to the &#39;characters&#39; string.</span>
+  <span class="c1"># This gradually builds the string with characters up to the &#39;limit&#39;.</span>
+  <span class="n">characters</span> <span class="o">+=</span> <span class="n">char</span>
+
+<span class="c1"># After the loop has completed (either by reaching &#39;limit&#39; or exhausting &#39;finance&#39;),</span>
+<span class="c1"># print the final &#39;characters&#39; string to the console.</span>
+<span class="c1"># This string will contain the characters from &#39;finance&#39; up to the &#39;limit&#39; specified.</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">characters</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fin
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="looping-through-a-list-created-by-the-string-method-split">
+<h3><em><strong>Looping Through A List Created By The String Method <font color='green'>split()</font></strong></em><a class="headerlink" href="#looping-through-a-list-created-by-the-string-method-split" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize an empty string variable named &#39;characters&#39;.</span>
+<span class="c1"># This string will be used to accumulate parts of the &#39;finance&#39; variable,</span>
+<span class="c1"># specifically after it has been split.</span>
+<span class="n">characters</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+
+<span class="c1"># Split the &#39;finance&#39; string into a list of substrings (words).</span>
+<span class="c1"># The `.split()` method, when called without any arguments, splits the string</span>
+<span class="c1"># by any whitespace (spaces, tabs, newlines) and removes empty strings</span>
+<span class="c1"># from the result. For example, &quot;hello world&quot; becomes [&quot;hello&quot;, &quot;world&quot;].</span>
+<span class="c1"># The resulting list of words is stored in &#39;split_finance&#39;.</span>
+<span class="n">split_finance</span> <span class="o">=</span> <span class="n">finance</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+
+<span class="c1"># Iterate over each item (which will be a word/substring) in the &#39;split_finance&#39; list.</span>
+<span class="c1"># In each iteration, &#39;char&#39; (though it represents a word here) will hold</span>
+<span class="c1"># the current word from the list.</span>
+<span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">split_finance</span><span class="p">:</span>
+  <span class="c1"># Append the current &#39;char&#39; (word) to the &#39;characters&#39; string.</span>
+  <span class="c1"># Since &#39;char&#39; is a word and not a single character, this concatenates</span>
+  <span class="c1"># all the words together without any spaces in between them.</span>
+  <span class="n">characters</span> <span class="o">+=</span> <span class="n">char</span>
+
+<span class="c1"># After the loop has completed, print the final &#39;characters&#39; string to the console.</span>
+<span class="c1"># This string will contain all the original words from &#39;finance&#39; joined together</span>
+<span class="c1"># without any intervening spaces or other whitespace.</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">characters</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Finance
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="conditional-statements">
+<h2><em><strong>Conditional Statements</strong></em><a class="headerlink" href="#conditional-statements" title="Link to this heading">#</a></h2>
+<section id="the-conditional-statements-in-python-are-if-elif-and-else-in-the-case-of-if-and-elif-the-controlled-statements-are-executed-when-the-condition-is-true-the-controlled-statements-of-else-are-executed-when-the-proceeding-if-or-elif-statements-are-false">
+<h3>The conditional statements in Python are <font color='green'>if, elif</font>, and <font color='green'>else</font>.  In the case of <font color='green'>if</font> and <font color='green'>elif</font> the controlled statements are executed when the condition is true.   The controlled statements of <font color='green'>else</font> are executed when the proceeding <font color='green'>if</font> or <font color='green'>elif</font> statements are false.<a class="headerlink" href="#the-conditional-statements-in-python-are-if-elif-and-else-in-the-case-of-if-and-elif-the-controlled-statements-are-executed-when-the-condition-is-true-the-controlled-statements-of-else-are-executed-when-the-proceeding-if-or-elif-statements-are-false" title="Link to this heading">#</a></h3>
+</section>
+<section id="the-first-example-tests-the-boolean-value-of-finance-when-the-conditional-and-controlled-statements-are-on-one-and-two-lines">
+<h3>The first example tests the boolean value of <font color='green'>finance</font> when the conditional and controlled statements are on one and two lines.<a class="headerlink" href="#the-first-example-tests-the-boolean-value-of-finance-when-the-conditional-and-controlled-statements-are-on-one-and-two-lines" title="Link to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="nb">bool</span><span class="p">(</span><span class="n">finance</span><span class="p">):</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">finance</span><span class="p">)</span>
+<span class="k">if</span> <span class="nb">bool</span><span class="p">(</span><span class="n">finance</span><span class="p">):</span> <span class="nb">print</span><span class="p">(</span><span class="n">finance</span><span class="p">)</span>
+
+</pre></div>
+</div>
+</section>
+<section id="the-second-example-does-the-same-with-the-variable-empty-that-is-assigned-an-empty-string">
+<h3>The second example does the same with the variable <font color='green'>empty</font> that is assigned an empty string.<a class="headerlink" href="#the-second-example-does-the-same-with-the-variable-empty-that-is-assigned-an-empty-string" title="Link to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">empty</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+<span class="k">if</span> <span class="nb">bool</span><span class="p">(</span><span class="n">empty</span><span class="p">):</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">empty</span><span class="p">)</span>
+<span class="k">if</span> <span class="nb">bool</span><span class="p">(</span><span class="n">empty</span><span class="p">):</span> <span class="nb">print</span><span class="p">(</span><span class="n">empty</span><span class="p">)</span>
+
+</pre></div>
+</div>
+</section>
+<section id="the-third-fourth-and-fifth-examples-demonstrate-the-if-elif-and-else-statements-these-examples-use-the-in-operator-to-determine-if-a-letter-is-in-the-string-assigned-to-finance-a-member-of-the-object">
+<h3>The third, fourth, and fifth examples demonstrate the <font color='green'>if, elif</font>, and <font color='green'>else</font> statements.  These examples use the <font color='green'>in</font> operator to determine if a letter is in the string assigned to <font color='green'>finance</font> (a member of the object).<a class="headerlink" href="#the-third-fourth-and-fifth-examples-demonstrate-the-if-elif-and-else-statements-these-examples-use-the-in-operator-to-determine-if-a-letter-is-in-the-string-assigned-to-finance-a-member-of-the-object" title="Link to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">char</span> <span class="o">=</span> <span class="s1">&#39;i&#39;</span>
+<span class="k">if</span> <span class="n">char</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span> <span class="ow">in</span> <span class="n">finance</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">char</span> <span class="o">+</span> <span class="s1">&#39; present&#39;</span><span class="p">)</span> <span class="c1"># This will print &quot;i present&quot;</span>
+<span class="k">elif</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">finance</span><span class="p">:</span>
+<span class="k">else</span><span class="p">:</span><span class="o">.</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">char</span> <span class="o">+</span> <span class="s1">&#39; or &#39;</span> <span class="o">+</span> <span class="n">char</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span> <span class="o">+</span> <span class="s1">&#39; not present&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">char</span> <span class="o">=</span> <span class="s1">&#39;f&#39;</span>
+
+<span class="k">if</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">finance</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">char</span> <span class="o">+</span> <span class="s1">&#39; present&#39;</span><span class="p">)</span> <span class="c1"># This will print &quot;f present&quot;</span>
+<span class="k">elif</span> <span class="n">char</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span> <span class="ow">in</span> <span class="n">finance</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">char</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span> <span class="o">+</span> <span class="s1">&#39; present&#39;</span><span class="p">)</span> <span class="c1"># This will print &quot;F present&quot;</span>
+<span class="k">else</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">char</span> <span class="o">+</span> <span class="s1">&#39; or &#39;</span> <span class="o">+</span> <span class="n">char</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span> <span class="o">+</span> <span class="s1">&#39; not present&#39;</span><span class="p">)</span>
+
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">char</span> <span class="o">=</span> <span class="s1">&#39;g&#39;</span>
+<span class="k">if</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">finance</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">char</span> <span class="o">+</span> <span class="s1">&#39; present&#39;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">char</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span> <span class="ow">in</span> <span class="n">finance</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">char</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span> <span class="o">+</span> <span class="s1">&#39; present&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">char</span> <span class="o">+</span> <span class="s1">&#39; or &#39;</span> <span class="o">+</span> <span class="n">char</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span> <span class="o">+</span> <span class="s1">&#39; not present&#39;</span><span class="p">)</span>
+
+</pre></div>
+</div>
+</section>
+<section id="control-controlled-statements-on-single-or-multiple-lines">
+<h3><em><strong>Control &amp; Controlled Statements On Single Or Multiple Lines</strong></em><a class="headerlink" href="#control-controlled-statements-on-single-or-multiple-lines" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check if the &#39;finance&#39; variable evaluates to True in a boolean context.</span>
+<span class="c1"># The built-in &#39;bool()&#39; function returns True for &quot;truthy&quot; values and False for &quot;falsy&quot; values.</span>
+<span class="c1"># In Python, common &quot;falsy&quot; values include:</span>
+<span class="c1"># - None</span>
+<span class="c1"># - False</span>
+<span class="c1"># - Numeric zero (0, 0.0, 0j)</span>
+<span class="c1"># - Empty sequences (e.g., &#39;&#39;, [], (), {})</span>
+<span class="c1"># All other values are generally considered &quot;truthy&quot;.</span>
+<span class="k">if</span> <span class="nb">bool</span><span class="p">(</span><span class="n">finance</span><span class="p">):</span>
+  <span class="c1"># If &#39;finance&#39; is truthy (e.g., a non-empty string, a non-zero number, a non-empty list),</span>
+  <span class="c1"># then print its value to the console.</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">finance</span><span class="p">)</span>
+
+<span class="c1"># This is functionally identical to the block above, but written as a one-liner.</span>
+<span class="c1"># Python allows the statement following &#39;if&#39; to be on the same line if it&#39;s a single statement.</span>
+<span class="c1"># The condition &#39;bool(finance)&#39; evaluates the truthiness of &#39;finance&#39; in the same way.</span>
+<span class="k">if</span> <span class="nb">bool</span><span class="p">(</span><span class="n">finance</span><span class="p">):</span> <span class="nb">print</span><span class="p">(</span><span class="n">finance</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Finance
+Finance
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize an empty string literal and assign it to the variable &#39;empty&#39;.</span>
+<span class="c1"># An empty string is considered a &quot;falsy&quot; value in Python&#39;s boolean context.</span>
+<span class="n">empty</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+
+<span class="c1"># Check if the &#39;empty&#39; variable evaluates to True in a boolean context.</span>
+<span class="c1"># The `bool(&#39;&#39;)` operation will return False because an empty string is a &quot;falsy&quot; value.</span>
+<span class="k">if</span> <span class="nb">bool</span><span class="p">(</span><span class="n">empty</span><span class="p">):</span>
+  <span class="c1"># Since &#39;bool(empty)&#39; evaluates to False, this &#39;print&#39; statement will NOT be executed.</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">empty</span><span class="p">)</span>
+
+<span class="c1"># This is a concise, one-line &#39;if&#39; statement that performs the exact same check.</span>
+<span class="c1"># The condition &#39;bool(empty)&#39; will again evaluate to False.</span>
+<span class="k">if</span> <span class="nb">bool</span><span class="p">(</span><span class="n">empty</span><span class="p">):</span> <span class="nb">print</span><span class="p">(</span><span class="n">empty</span><span class="p">)</span>
+<span class="c1"># Consequently, this &#39;print&#39; statement will also NOT be executed.</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="the-if-elif-and-else-statements-if-statement-true">
+<h3><em><strong>The <font color='green'>if, elif</font>, And <font color='green'>else</font> Statements: if Statement True</strong></em><a class="headerlink" href="#the-if-elif-and-else-statements-if-statement-true" title="Link to this heading">#</a></h3>
+<section id="capitalize-method-of-string-objects-changes-the-lower-case-letter-to-upper-case">
+<h4><font color='green'>capitalize()</font> Method Of string objects changes the lower case letter to upper case.<a class="headerlink" href="#capitalize-method-of-string-objects-changes-the-lower-case-letter-to-upper-case" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize a string variable &#39;char&#39; with the lowercase letter &#39;i&#39;.</span>
+<span class="n">char</span> <span class="o">=</span> <span class="s1">&#39;i&#39;</span>
+
+<span class="c1"># --- Conditional Logic to Check for Character Presence ---</span>
+
+<span class="c1"># First Condition: Check if the capitalized version of &#39;char&#39; exists within &#39;finance&#39;.</span>
+<span class="c1"># - char.capitalize() converts &#39;i&#39; to &#39;I&#39;.</span>
+<span class="c1"># - The &#39;in&#39; operator checks if the substring (&#39;I&#39;) is present anywhere in &#39;finance&#39;.</span>
+<span class="c1"># IMPORTANT: The &#39;finance&#39; variable must be a string (or other sequence) defined elsewhere in your code.</span>
+<span class="k">if</span> <span class="n">char</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span> <span class="ow">in</span> <span class="n">finance</span><span class="p">:</span>
+  <span class="c1"># If &#39;I&#39; is found in &#39;finance&#39;, print a message indicating its presence.</span>
+  <span class="c1"># This branch takes precedence. For example, if finance is &quot;FINANCE&quot;, this will be true.</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">char</span> <span class="o">+</span> <span class="s1">&#39; present&#39;</span><span class="p">)</span> <span class="c1"># This will print &quot;i present&quot;</span>
+
+<span class="c1"># Second Condition (executed ONLY if the first &#39;if&#39; condition was False):</span>
+<span class="c1"># Check if the original lowercase &#39;char&#39; exists within &#39;finance&#39;.</span>
+<span class="k">elif</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">finance</span><span class="p">:</span>
+  <span class="c1"># If &#39;i&#39; is found in &#39;finance&#39; (and &#39;I&#39; was NOT found), print a message.</span>
+  <span class="c1"># Note: This will capitalize &#39;char&#39; for printing, even though the check was for lowercase.</span>
+  <span class="c1"># For example, if finance is &quot;finance&quot; (and not &quot;FINANCE&quot;), this will be true.</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">char</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span> <span class="o">+</span> <span class="s1">&#39; present&#39;</span><span class="p">)</span> <span class="c1"># This will print &quot;I present&quot;</span>
+
+<span class="c1"># Else Condition (executed ONLY if both the &#39;if&#39; and &#39;elif&#39; conditions were False):</span>
+<span class="c1"># Neither the capitalized nor the original lowercase &#39;char&#39; was found in &#39;finance&#39;.</span>
+<span class="k">else</span><span class="p">:</span>
+  <span class="c1"># Print a message indicating that neither form of the character is present.</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">char</span> <span class="o">+</span> <span class="s1">&#39; or &#39;</span> <span class="o">+</span> <span class="n">char</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span> <span class="o">+</span> <span class="s1">&#39; not present&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>I present
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="the-if-elif-and-else-statements-if-statement-false-elif-true">
+<h3><em><strong>The <font color='green'>if, elif</font>, And <font color='green'>else</font> Statements: if Statement False, <font color='green'>elif</font> True</strong></em><a class="headerlink" href="#the-if-elif-and-else-statements-if-statement-false-elif-true" title="Link to this heading">#</a></h3>
+<section id="id1">
+<h4><font color='green'>capitalize()</font> Method Of string objects changes the lower case letter to upper case.<a class="headerlink" href="#id1" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize a string variable &#39;char&#39; with the lowercase letter &#39;f&#39;.</span>
+<span class="n">char</span> <span class="o">=</span> <span class="s1">&#39;f&#39;</span>
+
+<span class="c1"># --- Conditional Logic to Check for Character Presence ---</span>
+
+<span class="c1"># First Condition: Check if the original lowercase &#39;char&#39; exists within &#39;finance&#39;.</span>
+<span class="c1"># - The &#39;in&#39; operator checks if the substring (&#39;f&#39;) is present anywhere in &#39;finance&#39;.</span>
+<span class="c1"># IMPORTANT: The &#39;finance&#39; variable must be a string (or other sequence) defined elsewhere in your code.</span>
+<span class="k">if</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">finance</span><span class="p">:</span>
+  <span class="c1"># If &#39;f&#39; is found in &#39;finance&#39;, print a message indicating its presence.</span>
+  <span class="c1"># This branch takes precedence. For example, if finance is &quot;finance&quot;, this will be true.</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">char</span> <span class="o">+</span> <span class="s1">&#39; present&#39;</span><span class="p">)</span> <span class="c1"># This will print &quot;f present&quot;</span>
+
+<span class="c1"># Second Condition (executed ONLY if the first &#39;if&#39; condition was False):</span>
+<span class="c1"># Check if the capitalized version of &#39;char&#39; exists within &#39;finance&#39;.</span>
+<span class="c1"># - char.capitalize() converts &#39;f&#39; to &#39;F&#39;.</span>
+<span class="c1"># - This check runs only if the lowercase &#39;f&#39; was NOT found in &#39;finance&#39;.</span>
+<span class="k">elif</span> <span class="n">char</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span> <span class="ow">in</span> <span class="n">finance</span><span class="p">:</span>
+  <span class="c1"># If &#39;F&#39; is found in &#39;finance&#39; (and &#39;f&#39; was NOT found), print a message.</span>
+  <span class="c1"># For example, if finance is &quot;FINANCE&quot; (and not &quot;finance&quot;), this will be true.</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">char</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span> <span class="o">+</span> <span class="s1">&#39; present&#39;</span><span class="p">)</span> <span class="c1"># This will print &quot;F present&quot;</span>
+
+<span class="c1"># Else Condition (executed ONLY if both the &#39;if&#39; and &#39;elif&#39; conditions were False):</span>
+<span class="c1"># Neither the lowercase &#39;char&#39; nor its capitalized version was found in &#39;finance&#39;.</span>
+<span class="k">else</span><span class="p">:</span>
+  <span class="c1"># Print a message indicating that neither form of the character is present.</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">char</span> <span class="o">+</span> <span class="s1">&#39; or &#39;</span> <span class="o">+</span> <span class="n">char</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span> <span class="o">+</span> <span class="s1">&#39; not present&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>F present
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="the-if-elif-and-else-statements-if-elif-statements-false-else-statement-executed">
+<h3><em><strong>The <font color='green'>if, elif</font>, And <font color='green'>else</font> Statements: <font color='green'>if &amp; elif</font> Statements False, <font color='green'>else</font> Statement Executed</strong></em><a class="headerlink" href="#the-if-elif-and-else-statements-if-elif-statements-false-else-statement-executed" title="Link to this heading">#</a></h3>
+<section id="id2">
+<h4><font color='green'>capitalize()</font> Method Of string objects changes the lower case letter to upper case.<a class="headerlink" href="#id2" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define the character we are looking for.</span>
+<span class="c1"># In this case, &#39;char&#39; is initialized to the lowercase letter &#39;g&#39;.</span>
+<span class="n">char</span> <span class="o">=</span> <span class="s1">&#39;g&#39;</span>
+
+<span class="c1"># --- Conditional Logic to Check for Character Presence (Case-Sensitive) ---</span>
+
+<span class="c1"># First condition: Check if the exact lowercase &#39;char&#39; (&#39;g&#39;) exists within the &#39;finance&#39; variable.</span>
+<span class="c1"># The &#39;in&#39; operator performs a case-sensitive substring check.</span>
+<span class="c1"># The &#39;finance&#39; variable is assumed to be a string or other iterable defined elsewhere in the code.</span>
+<span class="k">if</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">finance</span><span class="p">:</span>
+  <span class="c1"># If &#39;g&#39; is found in &#39;finance&#39;, execute this block.</span>
+  <span class="c1"># The output will confirm the presence of the lowercase &#39;g&#39;.</span>
+  <span class="c1"># This condition has the highest priority.</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">char</span> <span class="o">+</span> <span class="s1">&#39; present&#39;</span><span class="p">)</span>
+
+<span class="c1"># Second condition: (Only evaluated if the first &#39;if&#39; condition was False)</span>
+<span class="c1"># Check if the capitalized version of &#39;char&#39; (&#39;G&#39;) exists within &#39;finance&#39;.</span>
+<span class="c1"># char.capitalize() converts &#39;g&#39; to &#39;G&#39;.</span>
+<span class="c1"># This check also performs a case-sensitive substring search for &#39;G&#39;.</span>
+<span class="k">elif</span> <span class="n">char</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span> <span class="ow">in</span> <span class="n">finance</span><span class="p">:</span>
+  <span class="c1"># If &#39;g&#39; was NOT found, but &#39;G&#39; IS found in &#39;finance&#39;, execute this block.</span>
+  <span class="c1"># The output will confirm the presence of the uppercase &#39;G&#39;.</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">char</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span> <span class="o">+</span> <span class="s1">&#39; present&#39;</span><span class="p">)</span>
+
+<span class="c1"># Else condition: (Only evaluated if both the &#39;if&#39; and &#39;elif&#39; conditions were False)</span>
+<span class="c1"># This block is executed if neither the lowercase &#39;g&#39; nor the uppercase &#39;G&#39;</span>
+<span class="c1"># was found anywhere in the &#39;finance&#39; variable.</span>
+<span class="k">else</span><span class="p">:</span>
+  <span class="c1"># Print a message indicating that neither form of the character is present.</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">char</span> <span class="o">+</span> <span class="s1">&#39; or &#39;</span> <span class="o">+</span> <span class="n">char</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span> <span class="o">+</span> <span class="s1">&#39; not present&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>g or G not present
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="the-try-and-except">
+<h3><em><strong>The <font color='green'>try</font> And <font color='green'>except</font></strong></em><a class="headerlink" href="#the-try-and-except" title="Link to this heading">#</a></h3>
+<section id="if-the-block-code-controlled-by-a-try-statement-fails-the-code-controlled-by-the-except-statement-is-executed-here-it-is-illustrated-with-the-square-root-of-minus-four-because-the-square-root-of-minus-four-cannot-be-represented-as-a-real-number-the-statement-controlled-by-try-fails-the-statements-controlled-by-except-multiplies-the-square-root-of-plus-four-by-the-python-representation-of-the-imaginary-number-ij">
+<h4>If the block code controlled by a <font color='green'>try</font> statement fails, the code controlled by the <font color='green'>except</font> statement is executed.  Here it is illustrated with the square root of minus four.  Because the square root of minus four cannot be represented as a real number the statement controlled by <font color='green'>try</font> fails.  The statements controlled by <font color='green'>except</font> multiplies the square root of plus four by the Python representation of the imaginary number ij.<a class="headerlink" href="#if-the-block-code-controlled-by-a-try-statement-fails-the-code-controlled-by-the-except-statement-is-executed-here-it-is-illustrated-with-the-square-root-of-minus-four-because-the-square-root-of-minus-four-cannot-be-represented-as-a-real-number-the-statement-controlled-by-try-fails-the-statements-controlled-by-except-multiplies-the-square-root-of-plus-four-by-the-python-representation-of-the-imaginary-number-ij" title="Link to this heading">#</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+<span class="n">x</span><span class="o">=-</span><span class="mi">4</span>
+<span class="k">try</span><span class="p">:</span>
+  <span class="n">answer</span><span class="o">=</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The RealNumber&#39;</span><span class="p">,</span><span class="n">answer</span><span class="p">)</span>
+<span class="k">except</span><span class="p">:</span>
+  <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="ow">in</span> <span class="p">[</span><span class="nb">int</span><span class="p">,</span><span class="nb">float</span><span class="p">]:</span>
+    <span class="n">answer</span><span class="o">=</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="p">)</span><span class="o">*</span><span class="mi">1</span><span class="n">j</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The Imaginary Number&#39;</span><span class="p">,</span><span class="n">answer</span><span class="p">)</span>
+  <span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x is not a integer or floating point Or Another Error&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">math</span> <span class="c1"># Import the &#39;math&#39; module, which provides mathematical functions like square root.</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mi">4</span> <span class="c1"># Initialize a variable &#39;x&#39; with a negative integer value.</span>
+
+<span class="k">try</span><span class="p">:</span>
+  <span class="c1"># Attempt to calculate the square root of &#39;x&#39;.</span>
+  <span class="c1"># The &#39;math.sqrt()&#39; function expects a non-negative number (0 or positive)</span>
+  <span class="c1"># to return a real number result. If &#39;x&#39; is negative, it raises a ValueError.</span>
+  <span class="c1"># If &#39;x&#39; is not a number at all (e.g., a string), it would raise a TypeError.</span>
+  <span class="n">answer</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+  <span class="c1"># This line will only execute if the math.sqrt(x) call was successful</span>
+  <span class="c1"># (i.e., &#39;x&#39; was a non-negative number).</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The RealNumber&#39;</span><span class="p">,</span> <span class="n">answer</span><span class="p">)</span>
+
+<span class="k">except</span><span class="p">:</span>
+  <span class="c1"># This &#39;except&#39; block is a broad catch-all. It will execute if *any* error</span>
+  <span class="c1"># (like ValueError for negative numbers, TypeError for non-numbers, etc.)</span>
+  <span class="c1"># occurs in the &#39;try&#39; block.</span>
+
+  <span class="c1"># Check if the type of &#39;x&#39; is either an integer or a floating-point number.</span>
+  <span class="c1"># This condition is designed to specifically handle the case where &#39;x&#39; is</span>
+  <span class="c1"># a negative number (which caused the ValueError in math.sqrt()).</span>
+  <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="ow">in</span> <span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">]:</span>
+    <span class="c1"># If &#39;x&#39; is a number and an error occurred (implying &#39;x&#39; was negative),</span>
+    <span class="c1"># calculate the square root of the absolute value of &#39;x&#39; (i.e., -x).</span>
+    <span class="c1"># Then, multiply by &#39;1j&#39; to represent the result as an imaginary number.</span>
+    <span class="c1"># For x = -4, this becomes math.sqrt(4) * 1j, which is 2.0 * 1j =&gt; (2+0j).</span>
+    <span class="c1"># Python uses j rather than i to denore the imaginary unit, because i can</span>
+    <span class="c1"># be used as a variable name.</span>
+    <span class="n">answer</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1</span><span class="n">j</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The Imaginary Number&#39;</span><span class="p">,</span> <span class="n">answer</span><span class="p">)</span>
+  <span class="k">else</span><span class="p">:</span>
+    <span class="c1"># This &#39;else&#39; block is executed if:</span>
+    <span class="c1"># 1. &#39;x&#39; is NOT an integer or a float (e.g., a string, list, etc.), AND</span>
+    <span class="c1"># 2. An error occurred in the &#39;try&#39; block (which would typically be a TypeError</span>
+    <span class="c1">#    when math.sqrt() is called with a non-numeric type).</span>
+    <span class="c1"># The message now explicitly mentions &quot;Or Another Error&quot; because this generic</span>
+    <span class="c1"># &#39;except&#39; can catch any unforeseen issues.</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x is not a integer or floating point Or Another Error&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The Imaginary Number 2j
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Numbers_%26_Booleans.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><em><strong>Numbers &amp; Booleans</strong></em></p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="A_First_Look_At_Lists.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><em><strong>Lists</strong></em></p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-provides-various-control-statements-to-manage-program-flow">Python provides various control statements to manage program flow.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#these-include">These include:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generally-these-statements-conclude-with-a-colon-the-statement-being-controlled-can-be-on-the-same-line-however-separate-lines-and-proper-indentation-are-required-to-control-multiple-statements-this-notebook-demonstrates-each-of-these-control-statements-except-for-functions-for-help-with-functions-review-the-function-notebook">Generally, these statements conclude with a colon. The statement being controlled can be on the same line; however, separate lines and proper indentation are required to control multiple statements. This notebook demonstrates each of these control statements except for functions. For help with functions review the Function Notebook</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#to-start-we-assign-the-string-finance-to-the-variable-finance">To start, we assign the string “Finance” to the variable <font color="green">finance</font>:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#for-help-with-strings-review-string-notebook">For help with strings review String Notebook.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#looping-statements"><em><strong>Looping Statements</strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-first-example-demonstrates-a-for-loop-iterating-through-each-character-of-the-string">The first example demonstrates a <font color="green">for</font> loop, iterating through each character of the string</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-second-example-interrupts-the-iteration-with-a-while-statement-this-loop-continues-as-long-as-the-boolean-value-of-the-while-condition-remains-true">The second example interrupts the iteration with a <font color="green">while</font> statement. This loop continues as long as the Boolean value of the <font color="green">while</font> condition remains True.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-third-example-interrupts-the-iteration-with-the-continue-statement-this-statement-transfers-control-back-to-the-beginning-of-the-for-loop-skipping-the-remaining-statements-within-the-loop-s-current-iteration">The third example interrupts the iteration with the <font color="green">continue</font> statement. This statement transfers control back to the beginning of the <font color="green">for</font> loop skipping the remaining statements within the loop’s current iteration.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-fourth-example-utilizes-the-break-statement-to-interrupt-the-iteration-this-achieves-an-effect-similar-to-the-while-loop-condition-terminating-the-loop-when-the-condition-is-met-instead-of-defining-a-counter-the-python-function-enumerate-is-used-to-create-an-iterable-that-includes-two-elements-the-number-of-iterations-index-location-of-each-character-and-the-character-the-enumerate-function-was-demonstrated-in-string-notebook">The fourth example utilizes the <font color="green">break</font> statement to interrupt the iteration. This achieves an effect similar to the <font color="green">while</font> loop condition, terminating the loop when the condition is met. Instead of defining a counter, the Python function <font color="green">enumerate()</font> is used to create an iterable that includes two elements: the number of iterations (index location of each character) and the character.  The <font color="green">enumerate()</font> function was demonstrated in String Notebook</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-same-exercises-could-be-performed-with-any-iterable-the-first-example-is-repeated-with-the-list-created-from-the-string-split-method">The same exercises could be performed with any iterable.  The first example is repeated with the list created from the string <font color="green">split()</font> method.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#for-help-with-the-string-method-split-take-a-look-at-the-explanation-in-the-string-notebook">For help with the string method <font color="green">split()</font> take a look at the explanation in the String Notebook</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-simple-for-loop"><em><strong>A Simple <font color="green">for</font> Loop</strong></em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-while-to-interrupt-iteration"><em><strong>Using <font color="green">while</font> To Interrupt Iteration</strong></em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-continue-statement-to-control-a-for-loop"><em><strong>Using The <font color="green">continue</font> Statement To Control A <font color="green">for</font> Loop</strong></em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-break-to-interrupt-a-for-loop"><em><strong>Using Break To Interrupt A For Loop</strong></em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#looping-through-a-list-created-by-the-string-method-split"><em><strong>Looping Through A List Created By The String Method <font color="green">split()</font></strong></em></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conditional-statements"><em><strong>Conditional Statements</strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-conditional-statements-in-python-are-if-elif-and-else-in-the-case-of-if-and-elif-the-controlled-statements-are-executed-when-the-condition-is-true-the-controlled-statements-of-else-are-executed-when-the-proceeding-if-or-elif-statements-are-false">The conditional statements in Python are <font color="green">if, elif</font>, and <font color="green">else</font>.  In the case of <font color="green">if</font> and <font color="green">elif</font> the controlled statements are executed when the condition is true.   The controlled statements of <font color="green">else</font> are executed when the proceeding <font color="green">if</font> or <font color="green">elif</font> statements are false.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-first-example-tests-the-boolean-value-of-finance-when-the-conditional-and-controlled-statements-are-on-one-and-two-lines">The first example tests the boolean value of <font color="green">finance</font> when the conditional and controlled statements are on one and two lines.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-second-example-does-the-same-with-the-variable-empty-that-is-assigned-an-empty-string">The second example does the same with the variable <font color="green">empty</font> that is assigned an empty string.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-third-fourth-and-fifth-examples-demonstrate-the-if-elif-and-else-statements-these-examples-use-the-in-operator-to-determine-if-a-letter-is-in-the-string-assigned-to-finance-a-member-of-the-object">The third, fourth, and fifth examples demonstrate the <font color="green">if, elif</font>, and <font color="green">else</font> statements.  These examples use the <font color="green">in</font> operator to determine if a letter is in the string assigned to <font color="green">finance</font> (a member of the object).</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#control-controlled-statements-on-single-or-multiple-lines"><em><strong>Control &amp; Controlled Statements On Single Or Multiple Lines</strong></em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-if-elif-and-else-statements-if-statement-true"><em><strong>The <font color="green">if, elif</font>, And <font color="green">else</font> Statements: if Statement True</strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#capitalize-method-of-string-objects-changes-the-lower-case-letter-to-upper-case"><font color="green">capitalize()</font> Method Of string objects changes the lower case letter to upper case.</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-if-elif-and-else-statements-if-statement-false-elif-true"><em><strong>The <font color="green">if, elif</font>, And <font color="green">else</font> Statements: if Statement False, <font color="green">elif</font> True</strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><font color="green">capitalize()</font> Method Of string objects changes the lower case letter to upper case.</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-if-elif-and-else-statements-if-elif-statements-false-else-statement-executed"><em><strong>The <font color="green">if, elif</font>, And <font color="green">else</font> Statements: <font color="green">if &amp; elif</font> Statements False, <font color="green">else</font> Statement Executed</strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"><font color="green">capitalize()</font> Method Of string objects changes the lower case letter to upper case.</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-try-and-except"><em><strong>The <font color="green">try</font> And <font color="green">except</font></strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#if-the-block-code-controlled-by-a-try-statement-fails-the-code-controlled-by-the-except-statement-is-executed-here-it-is-illustrated-with-the-square-root-of-minus-four-because-the-square-root-of-minus-four-cannot-be-represented-as-a-real-number-the-statement-controlled-by-try-fails-the-statements-controlled-by-except-multiplies-the-square-root-of-plus-four-by-the-python-representation-of-the-imaginary-number-ij">If the block code controlled by a <font color="green">try</font> statement fails, the code controlled by the <font color="green">except</font> statement is executed.  Here it is illustrated with the square root of minus four.  Because the square root of minus four cannot be represented as a real number the statement controlled by <font color="green">try</font> fails.  The statements controlled by <font color="green">except</font> multiplies the square root of plus four by the Python representation of the imaginary number ij.</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Financial Python
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
