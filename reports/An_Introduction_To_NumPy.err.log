@@ -26,7 +26,7 @@ print(transpose_array)
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mNameError[0m                                 Traceback (most recent call last)
-[0;32m/tmp/ipykernel_29071/4113901217.py[0m in [0;36m<module>[0;34m[0m
+[0;32m/tmp/ipykernel_26573/4113901217.py[0m in [0;36m<module>[0;34m[0m
 [0;32m----> 1[0;31m [0mtranspose_array[0m[0;34m=[0m[0mnp[0m[0;34m.[0m[0mtranspose[0m[0;34m([0m[0marray_method[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [0m[1;32m      2[0m print('Shape Of array_method',array_method.shape,
 [1;32m      3[0m       'Shape of transpose_array',transpose_array.shape)
