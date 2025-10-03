@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Introduction &#8212; An Introduction to Python for Financial Python</title>
+    <title>Basic Grammar &#8212; An Introduction to Python for Financial Python</title>
   
   
   
@@ -60,7 +60,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'Basic_Grammar';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Strings" href="Strings.html" />
+    <link rel="next" title="A Quick Look At Strings" href="Strings.html" />
     <link rel="prev" title="Background Material: An Introduction to Python for Financial Python" href="intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -180,43 +180,18 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#"><em><strong>Introduction</strong></em></a></li>
-<li class="toctree-l1"><a class="reference internal" href="Strings.html"><em><strong>Strings</strong></em></a></li>
-
-
-
-
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="Numbers_%26_Booleans.html"><em><strong>Numbers &amp; Booleans</strong></em></a></li>
-<li class="toctree-l1"><a class="reference internal" href="Control_Statements.html"><em><strong>Statements That Control Other Statements</strong></em></a></li>
-<li class="toctree-l1"><a class="reference internal" href="A_First_Look_At_Lists.html"><em><strong>Lists</strong></em></a></li>
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="Tuples.html"><em><strong>Tuples</strong></em></a></li>
-
-
-<li class="toctree-l1"><a class="reference internal" href="Dictionaries.html"><em><strong>Dictionaries</strong></em></a></li>
-
-
-
-
-
-
-
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="Functions.html"><em><strong>Functions</strong></em></a></li>
-<li class="toctree-l1"><a class="reference internal" href="Manipulating_Dates.html"><em><strong>Numerical Calculations With Dates</strong></em></a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="An_Introduction_To_Pandas.html"><em><strong>Pandas</strong></em></a></li>
-<li class="toctree-l1"><a class="reference internal" href="An_Introduction_To_NumPy.html"><em><strong>NumPy</strong></em></a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#"><em><strong>Basic Grammar</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Strings.html"><em><strong>A Quick Look At Strings</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Numbers_%26_Booleans.html"><em><strong>A Quick Introducton To Numbers And Booleans</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Control_Statements.html"><em><strong>Control Statements</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="A_First_Look_At_Lists.html"><em><strong>A First Look At Lists</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tuples.html"><em><strong>A Quick Introduction To Tuples</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Dictionaries.html"><em><strong>An Introductin To Dictionaries</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Functions.html"><em><strong>A Quick Look At Functions</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Manipulating_Dates.html"><em><strong>A Quick Introduction To Manipulating Dates</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="An_Introduction_To_Pandas.html"><em><strong>A Quick Introduction To Pandas</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="An_Introduction_To_NumPy.html"><em><strong>A Quick Introductin To NumPy</strong></em></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Sets.html"><em><strong>Sets</strong></em></a></li>
-
-
 </ul>
 
     </div>
@@ -402,7 +377,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Introduction</h1>
+    <h1>Basic Grammar</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -414,8 +389,7 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-like-all-programming-languages-imposes-rules-on-the-syntax-and-formatting-of-code-python-is-rightly-regarded-as-user-friendly-but-in-the-beginning-abiding-by-these-rules-may-seem-awkward-over-time-you-will-become-comfortable-with-the-required-syntax-and-formatting-the-obvious-recommendation-is-trust-the-process-and-learn-by-doing-as-new-concepts-and-commands-are-introduced">Python, like all programming languages, imposes rules on the syntax and formatting of code.  Python is rightly regarded as user friendly, but in the beginning abiding by these “rules’’ may seem awkward. Over time you will become comfortable with the required syntax and formatting. The obvious recommendation is “trust the process” and learn by doing as new concepts and commands are introduced.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naming-variables"><strong>Naming Variables</strong></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-most-basic-grammar-rule-of-python-is-naming-variables-the-names-of-variables-must-start-with-a-character-of-the-alphabet-or-an-underscore-valid-names-only-include-upper-and-lower-case-characters-of-the-alphabet-the-numbers-0-to-9-and-the-underscore-character-variable-names-are-case-sensitive-because-there-are-no-limits-on-the-length-of-a-variable-name-names-may-be-chosen-to-be-very-descriptive-making-python-code-transparent-it-goes-without-saying-that-short-names-are-often-convenient-users-should-be-mindful-of-the-trade-off-between-brevity-and-clarity">The most basic grammar rule of Python is naming variables.  The names of variables must start with a character of the alphabet or an underscore (_).  Valid names only include upper and lower case characters of the alphabet, the numbers 0 to 9, and the underscore character.  Variable names are case sensitive.  Because there are no limits on the length of a variable name, names may be chosen to be very descriptive making Python code transparent.  It goes without saying that short names are often convenient. Users should be mindful of the trade off between brevity and clarity.</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#there-is-one-final-thing-worth-noting-about-variable-names-when-a-value-is-assigned-to-a-variable-that-name-points-to-an-address-of-the-computer-s-memory-the-values-stored-at-the-address-are-considered-the-object-for-example-the-variables-two-and-2-are-valid-names-and-can-be-assigned-any-value-desired-or-can-be-set-equal-to-another-variable-if-two-is-assigned-2-and-2-is-assigned-2-the-names-two-and-2-point-to-the-same-location-in-memory-and-therefore-have-the-same-integer-value-of-2-if-the-value-of-two-is-changed-to-the-string-value-two-it-points-to-a-new-location-and-2-still-points-to-the-location-of-the-integer-2">There is one final thing worth noting about variable names. When a value is assigned to a variable, that name points to an address of the computer’s memory. The values stored at the address are considered the object. For example the variables <font color="green">two</font> and <font color="green">_2</font> are valid names and can be assigned any value desired or can be set equal to another variable.  if <font color="green">two</font> is assigned 2, and <font color="green">_2</font> is assigned 2, the names <font color="green">two</font> and <font color="green">_2</font> point to the same location in memory and therefore have the same integer value of 2. If the value of <font color="green">two</font> is changed to the string value ‘two’, it points to a new location and <font color="green">_2</font> still points to the location of the integer 2.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-most-basic-grammar-rule-of-python-is-naming-variables-the-names-of-variables-must-start-with-a-character-of-the-alphabet-or-an-underscore-valid-names-only-include-upper-and-lower-case-characters-of-the-alphabet-the-numbers-0-to-9-and-the-underscore-character-variable-names-are-case-sensitive-because-there-are-no-limits-on-the-length-of-a-variable-name-names-may-be-chosen-to-be-very-descriptive-making-python-code-transparent-it-goes-without-saying-that-short-names-are-often-convenient-users-should-be-mindful-of-the-tradeoff-between-brevity-and-clarity">The most basic grammar rule of Python is naming variables.  The names of variables must start with a character of the alphabet or an underscore (_).  Valid names only include upper and lower case characters of the alphabet, the numbers 0 to 9, and the underscore character.  Variable names are case sensitive.  Because there are no limits on the length of a variable name, names may be chosen to be very descriptive making Python code transparent.  It goes without saying that short names are often convenient. Users should be mindful of the tradeoff between brevity and clarity.</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reserved-keywords"><em><strong>Reserved Keywords</strong></em></a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#python-has-reserved-names-called-keywords-and-these-cannot-be-used-to-name-a-variable-executing-the-command">Python has reserved names called keywords, and these cannot be used to name a variable.   Executing the command</a></li>
 </ul>
@@ -453,18 +427,15 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <img src='https://docs.google.com/drawings/d/e/2PACX-1vQSotkPJbh_2lEmDfN445mCNimRVYoPmiu70mCaF8Y1nEJqHP-YgDWyKfVsiOHC9p_jEHCpDwglhe24/pub?w=960&h=720'><section class="tex2jax_ignore mathjax_ignore" id="introduction">
-<h1><em><strong>Introduction</strong></em><a class="headerlink" href="#introduction" title="Link to this heading">#</a></h1>
+  <img src='https://docs.google.com/drawings/d/e/2PACX-1vQSotkPJbh_2lEmDfN445mCNimRVYoPmiu70mCaF8Y1nEJqHP-YgDWyKfVsiOHC9p_jEHCpDwglhe24/pub?w=960&h=720'><section class="tex2jax_ignore mathjax_ignore" id="basic-grammar">
+<h1><em><strong>Basic Grammar</strong></em><a class="headerlink" href="#basic-grammar" title="Link to this heading">#</a></h1>
 <section id="python-like-all-programming-languages-imposes-rules-on-the-syntax-and-formatting-of-code-python-is-rightly-regarded-as-user-friendly-but-in-the-beginning-abiding-by-these-rules-may-seem-awkward-over-time-you-will-become-comfortable-with-the-required-syntax-and-formatting-the-obvious-recommendation-is-trust-the-process-and-learn-by-doing-as-new-concepts-and-commands-are-introduced">
 <h2>Python, like all programming languages, imposes rules on the syntax and formatting of code.  Python is rightly regarded as user friendly, but in the beginning abiding by these “rules’’ may seem awkward. Over time you will become comfortable with the required syntax and formatting. The obvious recommendation is “trust the process” and learn by doing as new concepts and commands are introduced.<a class="headerlink" href="#python-like-all-programming-languages-imposes-rules-on-the-syntax-and-formatting-of-code-python-is-rightly-regarded-as-user-friendly-but-in-the-beginning-abiding-by-these-rules-may-seem-awkward-over-time-you-will-become-comfortable-with-the-required-syntax-and-formatting-the-obvious-recommendation-is-trust-the-process-and-learn-by-doing-as-new-concepts-and-commands-are-introduced" title="Link to this heading">#</a></h2>
 </section>
 <section id="naming-variables">
 <h2><strong>Naming Variables</strong><a class="headerlink" href="#naming-variables" title="Link to this heading">#</a></h2>
-<section id="the-most-basic-grammar-rule-of-python-is-naming-variables-the-names-of-variables-must-start-with-a-character-of-the-alphabet-or-an-underscore-valid-names-only-include-upper-and-lower-case-characters-of-the-alphabet-the-numbers-0-to-9-and-the-underscore-character-variable-names-are-case-sensitive-because-there-are-no-limits-on-the-length-of-a-variable-name-names-may-be-chosen-to-be-very-descriptive-making-python-code-transparent-it-goes-without-saying-that-short-names-are-often-convenient-users-should-be-mindful-of-the-trade-off-between-brevity-and-clarity">
-<h3>The most basic grammar rule of Python is naming variables.  The names of variables must start with a character of the alphabet or an underscore (_).  Valid names only include upper and lower case characters of the alphabet, the numbers 0 to 9, and the underscore character.  Variable names are case sensitive.  Because there are no limits on the length of a variable name, names may be chosen to be very descriptive making Python code transparent.  It goes without saying that short names are often convenient. Users should be mindful of the trade off between brevity and clarity.<a class="headerlink" href="#the-most-basic-grammar-rule-of-python-is-naming-variables-the-names-of-variables-must-start-with-a-character-of-the-alphabet-or-an-underscore-valid-names-only-include-upper-and-lower-case-characters-of-the-alphabet-the-numbers-0-to-9-and-the-underscore-character-variable-names-are-case-sensitive-because-there-are-no-limits-on-the-length-of-a-variable-name-names-may-be-chosen-to-be-very-descriptive-making-python-code-transparent-it-goes-without-saying-that-short-names-are-often-convenient-users-should-be-mindful-of-the-trade-off-between-brevity-and-clarity" title="Link to this heading">#</a></h3>
-</section>
-<section id="there-is-one-final-thing-worth-noting-about-variable-names-when-a-value-is-assigned-to-a-variable-that-name-points-to-an-address-of-the-computer-s-memory-the-values-stored-at-the-address-are-considered-the-object-for-example-the-variables-two-and-2-are-valid-names-and-can-be-assigned-any-value-desired-or-can-be-set-equal-to-another-variable-if-two-is-assigned-2-and-2-is-assigned-2-the-names-two-and-2-point-to-the-same-location-in-memory-and-therefore-have-the-same-integer-value-of-2-if-the-value-of-two-is-changed-to-the-string-value-two-it-points-to-a-new-location-and-2-still-points-to-the-location-of-the-integer-2">
-<h3>There is one final thing worth noting about variable names. When a value is assigned to a variable, that name points to an address of the computer’s memory. The values stored at the address are considered the object. For example the variables <font color='green'>two</font> and <font color='green'>_2</font> are valid names and can be assigned any value desired or can be set equal to another variable.  if <font color='green'>two</font> is assigned 2, and <font color='green'>_2</font> is assigned 2, the names <font color='green'>two</font> and <font color='green'>_2</font> point to the same location in memory and therefore have the same integer value of 2. If the value of <font color='green'>two</font> is changed to the string value ‘two’, it points to a new location and <font color='green'>_2</font> still points to the location of the integer 2.<a class="headerlink" href="#there-is-one-final-thing-worth-noting-about-variable-names-when-a-value-is-assigned-to-a-variable-that-name-points-to-an-address-of-the-computer-s-memory-the-values-stored-at-the-address-are-considered-the-object-for-example-the-variables-two-and-2-are-valid-names-and-can-be-assigned-any-value-desired-or-can-be-set-equal-to-another-variable-if-two-is-assigned-2-and-2-is-assigned-2-the-names-two-and-2-point-to-the-same-location-in-memory-and-therefore-have-the-same-integer-value-of-2-if-the-value-of-two-is-changed-to-the-string-value-two-it-points-to-a-new-location-and-2-still-points-to-the-location-of-the-integer-2" title="Link to this heading">#</a></h3>
+<section id="the-most-basic-grammar-rule-of-python-is-naming-variables-the-names-of-variables-must-start-with-a-character-of-the-alphabet-or-an-underscore-valid-names-only-include-upper-and-lower-case-characters-of-the-alphabet-the-numbers-0-to-9-and-the-underscore-character-variable-names-are-case-sensitive-because-there-are-no-limits-on-the-length-of-a-variable-name-names-may-be-chosen-to-be-very-descriptive-making-python-code-transparent-it-goes-without-saying-that-short-names-are-often-convenient-users-should-be-mindful-of-the-tradeoff-between-brevity-and-clarity">
+<h3>The most basic grammar rule of Python is naming variables.  The names of variables must start with a character of the alphabet or an underscore (_).  Valid names only include upper and lower case characters of the alphabet, the numbers 0 to 9, and the underscore character.  Variable names are case sensitive.  Because there are no limits on the length of a variable name, names may be chosen to be very descriptive making Python code transparent.  It goes without saying that short names are often convenient. Users should be mindful of the tradeoff between brevity and clarity.<a class="headerlink" href="#the-most-basic-grammar-rule-of-python-is-naming-variables-the-names-of-variables-must-start-with-a-character-of-the-alphabet-or-an-underscore-valid-names-only-include-upper-and-lower-case-characters-of-the-alphabet-the-numbers-0-to-9-and-the-underscore-character-variable-names-are-case-sensitive-because-there-are-no-limits-on-the-length-of-a-variable-name-names-may-be-chosen-to-be-very-descriptive-making-python-code-transparent-it-goes-without-saying-that-short-names-are-often-convenient-users-should-be-mindful-of-the-tradeoff-between-brevity-and-clarity" title="Link to this heading">#</a></h3>
 </section>
 <section id="reserved-keywords">
 <h3><em><strong>Reserved Keywords</strong></em><a class="headerlink" href="#reserved-keywords" title="Link to this heading">#</a></h3>
@@ -513,25 +484,6 @@ await               finally             nonlocal            yield
 
 </pre></div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="mi">2</span>
-<span class="n">_3</span><span class="o">=</span><span class="mi">3</span>
-<span class="n">four</span><span class="o">=</span><span class="mi">4</span>
-<span class="n">x_plus_3</span><span class="o">=</span><span class="mi">5</span>
-<span class="n">xplus_3</span><span class="o">=</span><span class="mi">5</span>
-<span class="n">xplus3</span><span class="o">=</span><span class="mi">5</span>
-<span class="n">Return</span><span class="o">=</span><span class="s1">&#39;comeback&#39;</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">_3</span><span class="p">,</span><span class="n">four</span><span class="p">,</span><span class="n">x_plus_3</span><span class="p">,</span><span class="n">xplus_3</span><span class="p">,</span><span class="n">xplus3</span><span class="p">,</span><span class="n">Return</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2 3 4 5 5 5 comeback
-</pre></div>
-</div>
-</div>
-</div>
 </section>
 <section id="invalid-names">
 <h4><strong>Invalid Names</strong><a class="headerlink" href="#invalid-names" title="Link to this heading">#</a></h4>
@@ -564,7 +516,7 @@ await               finally             nonlocal            yield
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/tmp/ipykernel_31799/2438054105.py&quot;</span><span class="gt">, line </span><span class="mi">2</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/tmp/ipykernel_17171/2438054105.py&quot;</span><span class="gt">, line </span><span class="mi">2</span>
     <span class="n">x</span> <span class="n">plus</span> <span class="mi">3</span> <span class="o">=</span><span class="mi">5</span>
       <span class="o">^</span>
 <span class="ne">SyntaxError</span>: invalid syntax
@@ -574,13 +526,13 @@ await               finally             nonlocal            yield
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#First lettercharacter must be from the alphabet or an underscore</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#First letter character must be from the alphabet or an underscore</span>
 <span class="mi">3</span><span class="n">_plus_x</span><span class="o">=</span><span class="mi">5</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/tmp/ipython-input-2531807808.py&quot;</span><span class="gt">, line </span><span class="mi">2</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/tmp/ipython-input-2199279064.py&quot;</span><span class="gt">, line </span><span class="mi">2</span>
 <span class="g g-Whitespace">    </span><span class="mi">3</span><span class="n">_plus_x</span><span class="o">=</span><span class="mi">5</span>
      <span class="o">^</span>
 <span class="ne">SyntaxError</span>: invalid decimal literal
@@ -618,7 +570,7 @@ await               finally             nonlocal            yield
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/tmp/ipython-input-6-1360129314.py&quot;</span><span class="gt">, line </span><span class="mi">1</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/tmp/ipython-input-1360129314.py&quot;</span><span class="gt">, line </span><span class="mi">1</span>
     <span class="n">x</span> <span class="n">plus</span> <span class="mi">3</span> <span class="o">=</span><span class="mi">5</span>     <span class="c1">#The variable name includes a space</span>
       <span class="o">^</span>
 <span class="ne">SyntaxError</span>: invalid syntax
@@ -633,7 +585,7 @@ await               finally             nonlocal            yield
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/tmp/ipython-input-7-4031431944.py&quot;</span><span class="gt">, line </span><span class="mi">1</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/tmp/ipython-input-4031431944.py&quot;</span><span class="gt">, line </span><span class="mi">1</span>
 <span class="g g-Whitespace">    </span><span class="mi">3</span><span class="n">_plus_x</span><span class="o">=</span><span class="mi">5</span>    <span class="c1">#The variable name does not start with an alphabetic character or underscore:</span>
      <span class="o">^</span>
 <span class="ne">SyntaxError</span>: invalid decimal literal
@@ -648,7 +600,7 @@ await               finally             nonlocal            yield
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/tmp/ipython-input-8-3870892855.py&quot;</span><span class="gt">, line </span><span class="mi">1</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/tmp/ipython-input-3870892855.py&quot;</span><span class="gt">, line </span><span class="mi">1</span>
     <span class="k">return</span><span class="o">=</span><span class="s1">&#39;comeback&#39;</span>     <span class="c1">#The variable name is the reserved word return</span>
           <span class="o">^</span>
 <span class="ne">SyntaxError</span>: invalid syntax
@@ -683,7 +635,7 @@ await               finally             nonlocal            yield
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/tmp/ipython-input-10-641699163.py&quot;</span><span class="gt">, line </span><span class="mi">2</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/tmp/ipython-input-641699163.py&quot;</span><span class="gt">, line </span><span class="mi">2</span>
     <span class="n">y</span><span class="o">=</span><span class="mi">3</span>
     <span class="o">^</span>
 <span class="ne">IndentationError</span>: unexpected indent
@@ -740,7 +692,7 @@ await               finally             nonlocal            yield
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><em><strong>Strings</strong></em></p>
+        <p class="prev-next-title"><em><strong>A Quick Look At Strings</strong></em></p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -762,8 +714,7 @@ await               finally             nonlocal            yield
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-like-all-programming-languages-imposes-rules-on-the-syntax-and-formatting-of-code-python-is-rightly-regarded-as-user-friendly-but-in-the-beginning-abiding-by-these-rules-may-seem-awkward-over-time-you-will-become-comfortable-with-the-required-syntax-and-formatting-the-obvious-recommendation-is-trust-the-process-and-learn-by-doing-as-new-concepts-and-commands-are-introduced">Python, like all programming languages, imposes rules on the syntax and formatting of code.  Python is rightly regarded as user friendly, but in the beginning abiding by these “rules’’ may seem awkward. Over time you will become comfortable with the required syntax and formatting. The obvious recommendation is “trust the process” and learn by doing as new concepts and commands are introduced.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naming-variables"><strong>Naming Variables</strong></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-most-basic-grammar-rule-of-python-is-naming-variables-the-names-of-variables-must-start-with-a-character-of-the-alphabet-or-an-underscore-valid-names-only-include-upper-and-lower-case-characters-of-the-alphabet-the-numbers-0-to-9-and-the-underscore-character-variable-names-are-case-sensitive-because-there-are-no-limits-on-the-length-of-a-variable-name-names-may-be-chosen-to-be-very-descriptive-making-python-code-transparent-it-goes-without-saying-that-short-names-are-often-convenient-users-should-be-mindful-of-the-trade-off-between-brevity-and-clarity">The most basic grammar rule of Python is naming variables.  The names of variables must start with a character of the alphabet or an underscore (_).  Valid names only include upper and lower case characters of the alphabet, the numbers 0 to 9, and the underscore character.  Variable names are case sensitive.  Because there are no limits on the length of a variable name, names may be chosen to be very descriptive making Python code transparent.  It goes without saying that short names are often convenient. Users should be mindful of the trade off between brevity and clarity.</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#there-is-one-final-thing-worth-noting-about-variable-names-when-a-value-is-assigned-to-a-variable-that-name-points-to-an-address-of-the-computer-s-memory-the-values-stored-at-the-address-are-considered-the-object-for-example-the-variables-two-and-2-are-valid-names-and-can-be-assigned-any-value-desired-or-can-be-set-equal-to-another-variable-if-two-is-assigned-2-and-2-is-assigned-2-the-names-two-and-2-point-to-the-same-location-in-memory-and-therefore-have-the-same-integer-value-of-2-if-the-value-of-two-is-changed-to-the-string-value-two-it-points-to-a-new-location-and-2-still-points-to-the-location-of-the-integer-2">There is one final thing worth noting about variable names. When a value is assigned to a variable, that name points to an address of the computer’s memory. The values stored at the address are considered the object. For example the variables <font color="green">two</font> and <font color="green">_2</font> are valid names and can be assigned any value desired or can be set equal to another variable.  if <font color="green">two</font> is assigned 2, and <font color="green">_2</font> is assigned 2, the names <font color="green">two</font> and <font color="green">_2</font> point to the same location in memory and therefore have the same integer value of 2. If the value of <font color="green">two</font> is changed to the string value ‘two’, it points to a new location and <font color="green">_2</font> still points to the location of the integer 2.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-most-basic-grammar-rule-of-python-is-naming-variables-the-names-of-variables-must-start-with-a-character-of-the-alphabet-or-an-underscore-valid-names-only-include-upper-and-lower-case-characters-of-the-alphabet-the-numbers-0-to-9-and-the-underscore-character-variable-names-are-case-sensitive-because-there-are-no-limits-on-the-length-of-a-variable-name-names-may-be-chosen-to-be-very-descriptive-making-python-code-transparent-it-goes-without-saying-that-short-names-are-often-convenient-users-should-be-mindful-of-the-tradeoff-between-brevity-and-clarity">The most basic grammar rule of Python is naming variables.  The names of variables must start with a character of the alphabet or an underscore (_).  Valid names only include upper and lower case characters of the alphabet, the numbers 0 to 9, and the underscore character.  Variable names are case sensitive.  Because there are no limits on the length of a variable name, names may be chosen to be very descriptive making Python code transparent.  It goes without saying that short names are often convenient. Users should be mindful of the tradeoff between brevity and clarity.</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reserved-keywords"><em><strong>Reserved Keywords</strong></em></a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#python-has-reserved-names-called-keywords-and-these-cannot-be-used-to-name-a-variable-executing-the-command">Python has reserved names called keywords, and these cannot be used to name a variable.   Executing the command</a></li>
 </ul>

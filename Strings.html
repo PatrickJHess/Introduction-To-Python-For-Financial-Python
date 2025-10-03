@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Strings &#8212; An Introduction to Python for Financial Python</title>
+    <title>A Quick Look At Strings &#8212; An Introduction to Python for Financial Python</title>
   
   
   
@@ -60,8 +60,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'Strings';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Numbers &amp; Booleans" href="Numbers_%26_Booleans.html" />
-    <link rel="prev" title="Introduction" href="Basic_Grammar.html" />
+    <link rel="next" title="A Quick Introducton To Numbers And Booleans" href="Numbers_%26_Booleans.html" />
+    <link rel="prev" title="Basic Grammar" href="Basic_Grammar.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -180,43 +180,18 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="Basic_Grammar.html"><em><strong>Introduction</strong></em></a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#"><em><strong>Strings</strong></em></a></li>
-
-
-
-
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="Numbers_%26_Booleans.html"><em><strong>Numbers &amp; Booleans</strong></em></a></li>
-<li class="toctree-l1"><a class="reference internal" href="Control_Statements.html"><em><strong>Statements That Control Other Statements</strong></em></a></li>
-<li class="toctree-l1"><a class="reference internal" href="A_First_Look_At_Lists.html"><em><strong>Lists</strong></em></a></li>
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="Tuples.html"><em><strong>Tuples</strong></em></a></li>
-
-
-<li class="toctree-l1"><a class="reference internal" href="Dictionaries.html"><em><strong>Dictionaries</strong></em></a></li>
-
-
-
-
-
-
-
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="Functions.html"><em><strong>Functions</strong></em></a></li>
-<li class="toctree-l1"><a class="reference internal" href="Manipulating_Dates.html"><em><strong>Numerical Calculations With Dates</strong></em></a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="An_Introduction_To_Pandas.html"><em><strong>Pandas</strong></em></a></li>
-<li class="toctree-l1"><a class="reference internal" href="An_Introduction_To_NumPy.html"><em><strong>NumPy</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Basic_Grammar.html"><em><strong>Basic Grammar</strong></em></a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#"><em><strong>A Quick Look At Strings</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Numbers_%26_Booleans.html"><em><strong>A Quick Introducton To Numbers And Booleans</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Control_Statements.html"><em><strong>Control Statements</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="A_First_Look_At_Lists.html"><em><strong>A First Look At Lists</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tuples.html"><em><strong>A Quick Introduction To Tuples</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Dictionaries.html"><em><strong>An Introductin To Dictionaries</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Functions.html"><em><strong>A Quick Look At Functions</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Manipulating_Dates.html"><em><strong>A Quick Introduction To Manipulating Dates</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="An_Introduction_To_Pandas.html"><em><strong>A Quick Introduction To Pandas</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="An_Introduction_To_NumPy.html"><em><strong>A Quick Introductin To NumPy</strong></em></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Sets.html"><em><strong>Sets</strong></em></a></li>
-
-
 </ul>
 
     </div>
@@ -402,7 +377,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Strings</h1>
+    <h1>A Quick Look At Strings</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -412,47 +387,43 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><em><strong>Strings</strong></em></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-string-is-a-variable-that-represents-printable-characters-such-as-letters-numbers-etc-like-numbers-and-booleans-strings-hold-single-values-unlike-numbers-and-booleans-strings-are-iterable-if-a-variable-is-iterable-the-values-or-members-of-the-variable-can-be-enumerated-in-the-case-of-strings-the-characters-can-be-enumerated-many-python-concepts-can-be-illustrated-with-strings">A string is a variable that represents printable characters, such as letters, numbers, etc. Like numbers and booleans, strings hold single values.  Unlike numbers and booleans, strings are iterable.  If a variable is iterable, the values or members  of the variable can be enumerated.  In the case of strings, the characters can be enumerated.  Many Python concepts can be illustrated with strings.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#strings-are-defined-using-either-single-or-double-quotes-to-include-a-single-quote-within-a-string-either-use-double-quotes-for-the-string-s-definition-or-precede-the-single-quote-inside-the-string-with-a-backslash-and-the-parser-will-disregard-it">Strings are defined using either single or double quotes. To include a single quote within a string, either use double quotes for the string’s definition or precede the single quote inside the string with a backslash (\) and the parser will disregard it.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#strings-are-defined-using-either-single-or-double-quotes-the-single-quote-is-the-apostrophe-on-the-key-board-to-include-a-single-quote-as-part-of-a-string-either-use-double-quotes-for-the-string-s-definition-or-precede-the-single-quote-inside-the-string-with-a-backslash-and-the-parser-will-disregard-it">Strings are defined using either single or double quotes. The single quote is the apostrophe on the key board. To include a single quote as part of a string, either use double quotes for the string’s definition or precede the single quote inside the string with a backslash (\) and the parser will disregard it.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assigning-a-string-value"><em><strong>Assigning A String Value</strong></em></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#combining-or-concatenating-strings"><em><strong>Combining Or Concatenating Strings</strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#strings-can-be-combined-or-concatenated-with-the-plus-sign-including-using-the-short-cut-version-of-the-plus-sign">Strings can be combined or concatenated with the plus sign including using the short-cut version of the plus sign (+=).</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#assigning-a-string-value"><em><strong>Assigning A String Value</strong></em></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#combining-or-concatenating-strings"><em><strong>Combining Or Concatenating Strings</strong></em></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#strings-can-be-combined-or-concatenated-with-the-plus-sign-including-using-the-short-cut-version-of-the-plus-sign">Strings can be combined or concatenated with the plus sign including using the short-cut version of the plus sign (+=).</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#length-of-a-string"><em><strong>Length Of A String</strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#strings-being-iterable-necessarily-contain-elements-or-members-that-possess-a-countable-length-python-s-built-in-len-function-provides-this-count-returning-the-number-of-elements-within-the-iterable-an-empty-string-or-any-empty-iterable-will-have-a-length-of-zero-in-the-case-of-a-string-the-length-is-equal-to-the-number-of-characters-including-blanks-that-are-in-the-string">Strings, being iterable, necessarily contain elements or members that possess a countable length. Python’s built-in <font color="green">len()</font> function provides this count, returning the number of elements within the iterable. An empty string or any empty iterable will have a length of zero. In the case of a string, the length is equal to the number of characters, including blanks, that are in the string.</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#length-of-a-string"><em><strong>Length Of A String</strong></em></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#strings-being-iterable-necessarily-contain-elements-or-members-that-possess-a-countable-length-python-s-built-in-len-function-provides-this-count-returning-the-number-of-elements-within-the-iterable-an-empty-string-or-any-empty-iterable-will-have-a-length-of-zero-in-the-case-of-a-string-the-length-is-equal-to-the-number-of-characters-including-blanks-that-are-in-the-string">Strings, being iterable, necessarily contain elements or members that possess a countable length. Python’s built-in <font color="green">len()</font> function provides this count, returning the number of elements within the iterable. An empty string or any empty iterable will have a length of zero. In the case of a string, the length is equal to the number of characters, including blanks, that are in the string.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iterating-through-a-string-and-zero-based-indexes"><em><strong>Iterating Through A String And Zero-Based Indexes</strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-code-demonstrates-iterating-through-the-string-finance-using-two-different-for-loop-approaches">The code demonstrates iterating through the string <font color="green">finance</font> using two different <font color="green">for loop</font> approaches.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-first-example-is-a-basic-for-loop-that-assigns-each-character-of-the-string-to-the-variable-character-and-then-prints-it">The first example is a basic <font color="green">for loop</font> that assigns each character of the string to the variable <font color="green">character</font> and then prints it.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-second-uses-the-enumerate-function-this-function-binds-each-character-member-of-the-string-to-its-index-location-the-loop-then-produces-both-the-index-and-the-character-in-each-iteration-printing-them-as-pairs">The second uses the <font color="green">enumerate()</font> function. This function binds each character (member of the string) to its index location. The loop then produces both the index and the character in each iteration, printing them as pairs.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#in-the-second-example-notice-that-the-index-value-ranges-from-zero-to-six-an-example-of-zero-based-indexing-the-following-code-is-another-example-of-zero-based-indexing-that-prints-characters-in-locations-0-3-and-6-that-represent-f-a-and-e">In the second example notice that the index value ranges from zero to six; an example of zero-based indexing.  The following code is another example of zero-based indexing that prints characters in locations 0, 3, and 6 that represent F, a, and e.</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#iterating-through-a-string-and-zero-based-indexes"><em><strong>Iterating Through A String And Zero-Based Indexes</strong></em></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-code-demonstrates-iterating-through-the-string-finance-using-two-different-for-loop-approaches">The code demonstrates iterating through the string <font color="green">finance</font> using two different <font color="green">for loop</font> approaches.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-first-example-is-a-basic-for-loop-that-assigns-each-character-of-the-string-to-the-variable-character-and-then-prints-it">The first example is a basic <font color="green">for loop</font> that assigns each character of the string to the variable <font color="green">character</font> and then prints it.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-second-uses-the-enumerate-function-this-function-binds-each-character-member-of-the-string-to-its-index-location-the-loop-then-produces-both-the-index-and-the-character-in-each-iteration-printing-them-as-pairs">The second uses the <font color="green">enumerate()</font> function. This function binds each character (member of the string) to its index location. The loop then produces both the index and the character in each iteration, printing them as pairs.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#in-the-second-example-notice-that-the-index-value-ranges-from-zero-to-six-an-example-of-zero-based-indexing-the-following-code-is-another-example-of-zero-based-indexing-that-prints-characters-in-locations-0-3-and-6-that-represent-f-a-and-e">In the second example notice that the index value ranges from zero to six; an example of zero-based indexing.  The following code is another example of zero-based indexing that prints characters in locations 0, 3, and 6 that represent F, a, and e.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#slicing-a-string"><em><strong>Slicing A String</strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#string-slicing-utilizes-index-locations-a-slice-is-defined-by-its-starting-and-ending-points-along-with-the-step-size-each-separated-by-a-colon-the-beginning-index-defaults-to-zero-the-ending-to-the-iterable-s-length-and-the-step-size-to-one-consequently-these-two-statements-produce-identical-slices">String slicing utilizes index locations. A slice is defined by its starting and ending points, along with the step size, each separated by a colon. The beginning index defaults to zero, the ending to the iterable’s length, and the step size to one. Consequently, these two statements produce identical slices.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#negative-beginning-or-ending-values-cause-the-slice-to-operate-relative-to-the-iterable-s-length-finance-has-a-length-of-7-a-beginning-value-of-4-is-equivalent-to-a-beginning-value-of-3-an-ending-value-of-3-is-equivalent-to-an-ending-value-of-4-the-first-line-of-code-below-extracts-the-final-four-characters-while-the-second-extracts-the-initial-four">Negative beginning or ending values cause the slice to operate relative to the iterable’s length. <font color="green">finance()</font> has a length of 7. A beginning value of -4 is equivalent to a beginning value of 3. An ending value of -3 is equivalent to an ending value of 4. The first line of code below extracts the final four characters, while the second extracts the initial four.</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#slicing-a-string"><em><strong>Slicing A String</strong></em></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#string-slicing-utilizes-index-locations-a-slice-is-defined-by-its-starting-and-ending-points-along-with-the-step-size-each-separated-by-a-colon-the-beginning-index-defaults-to-zero-the-ending-to-the-iterable-s-length-and-the-step-size-to-one-consequently-these-two-statements-produce-identical-slices">String slicing utilizes index locations. A slice is defined by its starting and ending points, along with the step size, each separated by a colon. The beginning index defaults to zero, the ending to the iterable’s length, and the step size to one. Consequently, these two statements produce identical slices.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#negative-beginning-or-ending-values-cause-the-slice-to-operate-relative-to-the-iterable-s-length-the-first-line-of-code-below-extracts-the-final-four-characters-while-the-second-extracts-the-initial-four">Negative beginning or ending values cause the slice to operate relative to the iterable’s length. The first line of code below extracts the final four characters, while the second extracts the initial four.</a></li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#converting-numbers-and-booleans-to-strings"><em><strong>Converting Numbers And Booleans To Strings</strong></em></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-str-function-in-python-is-used-to-convert-numerical-and-boolean-data-types-into-strings-below-are-examples-showing-how-integers-floats-and-boolean-values-are-transformed-into-their-string-representations">The <font color="green">str()</font> function in Python is used to convert numerical and boolean data types into strings. Below are examples showing how integers, floats, and boolean values are transformed into their string representations.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#converting-strings-to-numbers-and-booleans"><em><strong>Converting Strings To Numbers And Booleans</strong></em></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#strings-values-of-numbers-can-be-converted-to-integers-or-floating-point-numbers-the-boolean-value-of-an-empty-string-is-false-all-others-true">Strings values of numbers can be converted to integers or floating point numbers.  The boolean value of an empty string is False; all others, True.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#converting-numbers-and-booleans-to-strings"><em><strong>Converting Numbers And Booleans To Strings</strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-str-function-in-python-is-used-to-convert-numerical-and-boolean-data-types-into-strings-below-are-examples-showing-how-integers-floats-and-boolean-values-are-transformed-into-their-string-representations">The <font color="green">str()</font> function in Python is used to convert numerical and boolean data types into strings. Below are examples showing how integers, floats, and boolean values are transformed into their string representations.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#converting-strings-to-numbers-and-booleans"><em><strong>Converting Strings To Numbers And Booleans</strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#strings-values-of-numbers-can-be-converted-to-integers-or-floating-point-numbers-the-boolean-value-of-an-empty-string-is-false-all-others-true">Strings values of numbers can be converted to integers or floating point numbers.  The boolean value of an empty string is False; all others, True.</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#four-useful-string-methods"><em><strong>Four Useful String Methods</strong></em></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numerous-methods-are-available-for-string-manipulation-in-python-four-of-the-most-relevant-are-described-and-demonstrated">Numerous methods are available for string manipulation in Python. Four of the most relevant are described and demonstrated.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#click-here-for-a-decription-of-these-and-other-string-methods">Click here for a decription of these and other string methods.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#four-useful-string-methods"><em><strong>Four Useful String Methods</strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#numerous-methods-are-available-for-string-manipulation-in-python-four-of-the-most-relevant-are-described-and-demonstrated">Numerous methods are available for string manipulation in Python. Four of the most relevant are described and demonstrated.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#click-here-for-a-description-of-these-and-other-string-methods">Click here for a description of these and other string methods.</a></li>
 </ul>
 </li>
 </ul>
-
             </nav>
         </div>
     </div>
@@ -463,13 +434,13 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <img src='https://docs.google.com/drawings/d/e/2PACX-1vQScYKcfvY_pinL1oDRrkUO0W3VW8moi_3xWfb3B2-3M-FABcfgx0-mEiE_gtjZDk-Ofmn6CnFCXmbe/pub?w=960&h=720'><section id="strings">
-<h1><em><strong>Strings</strong></em><a class="headerlink" href="#strings" title="Link to this heading">#</a></h1>
+  <img src='https://docs.google.com/drawings/d/e/2PACX-1vQScYKcfvY_pinL1oDRrkUO0W3VW8moi_3xWfb3B2-3M-FABcfgx0-mEiE_gtjZDk-Ofmn6CnFCXmbe/pub?w=960&h=720'><section class="tex2jax_ignore mathjax_ignore" id="a-quick-look-at-strings">
+<h1><em><strong>A Quick Look At Strings</strong></em><a class="headerlink" href="#a-quick-look-at-strings" title="Link to this heading">#</a></h1>
 <section id="a-string-is-a-variable-that-represents-printable-characters-such-as-letters-numbers-etc-like-numbers-and-booleans-strings-hold-single-values-unlike-numbers-and-booleans-strings-are-iterable-if-a-variable-is-iterable-the-values-or-members-of-the-variable-can-be-enumerated-in-the-case-of-strings-the-characters-can-be-enumerated-many-python-concepts-can-be-illustrated-with-strings">
 <h2>A string is a variable that represents printable characters, such as letters, numbers, etc. Like numbers and booleans, strings hold single values.  Unlike numbers and booleans, strings are iterable.  If a variable is iterable, the values or members  of the variable can be enumerated.  In the case of strings, the characters can be enumerated.  Many Python concepts can be illustrated with strings.<a class="headerlink" href="#a-string-is-a-variable-that-represents-printable-characters-such-as-letters-numbers-etc-like-numbers-and-booleans-strings-hold-single-values-unlike-numbers-and-booleans-strings-are-iterable-if-a-variable-is-iterable-the-values-or-members-of-the-variable-can-be-enumerated-in-the-case-of-strings-the-characters-can-be-enumerated-many-python-concepts-can-be-illustrated-with-strings" title="Link to this heading">#</a></h2>
 </section>
-<section id="strings-are-defined-using-either-single-or-double-quotes-to-include-a-single-quote-within-a-string-either-use-double-quotes-for-the-string-s-definition-or-precede-the-single-quote-inside-the-string-with-a-backslash-and-the-parser-will-disregard-it">
-<h2>Strings are defined using either single or double quotes. To include a single quote within a string, either use double quotes for the string’s definition or precede the single quote inside the string with a backslash (\) and the parser will disregard it.<a class="headerlink" href="#strings-are-defined-using-either-single-or-double-quotes-to-include-a-single-quote-within-a-string-either-use-double-quotes-for-the-string-s-definition-or-precede-the-single-quote-inside-the-string-with-a-backslash-and-the-parser-will-disregard-it" title="Link to this heading">#</a></h2>
+<section id="strings-are-defined-using-either-single-or-double-quotes-the-single-quote-is-the-apostrophe-on-the-key-board-to-include-a-single-quote-as-part-of-a-string-either-use-double-quotes-for-the-string-s-definition-or-precede-the-single-quote-inside-the-string-with-a-backslash-and-the-parser-will-disregard-it">
+<h2>Strings are defined using either single or double quotes. The single quote is the apostrophe on the key board. To include a single quote as part of a string, either use double quotes for the string’s definition or precede the single quote inside the string with a backslash (\) and the parser will disregard it.<a class="headerlink" href="#strings-are-defined-using-either-single-or-double-quotes-the-single-quote-is-the-apostrophe-on-the-key-board-to-include-a-single-quote-as-part-of-a-string-either-use-double-quotes-for-the-string-s-definition-or-precede-the-single-quote-inside-the-string-with-a-backslash-and-the-parser-will-disregard-it" title="Link to this heading">#</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Assign the string &quot;Python&quot; to the variable &#39;python&#39;.</span>
 <span class="n">python</span> <span class="o">=</span> <span class="s1">&#39;Python&#39;</span>
 
@@ -493,17 +464,16 @@ document.write(`
 <span class="c1"># They will also be printed on the same line, separated by a space.</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">python_fun</span><span class="p">,</span> <span class="n">finance_fun</span><span class="p">)</span>
 
-<span class="c1"># Print a descriptive label &quot;Type of fiance&quot; followed by the data type of the &#39;finance&#39; variable.</span>
+<span class="c1"># Print a descriptive label &quot;Type of finance&quot; followed by the data type of the &#39;finance&#39; variable.</span>
 <span class="c1"># The &#39;type()&#39; built-in function returns the type of the object passed to it.</span>
 <span class="c1"># For a string literal like &quot;Finance&quot;, its type is &lt;class &#39;str&#39;&gt;.</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Type of fiance&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">finance</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Type of finance&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">finance</span><span class="p">))</span>
 
 </pre></div>
 </div>
 </section>
-</section>
 <section id="assigning-a-string-value">
-<h1><em><strong>Assigning A String Value</strong></em><a class="headerlink" href="#assigning-a-string-value" title="Link to this heading">#</a></h1>
+<h2><em><strong>Assigning A String Value</strong></em><a class="headerlink" href="#assigning-a-string-value" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Assign the string &quot;Python&quot; to the variable &#39;python&#39;.</span>
@@ -529,26 +499,26 @@ document.write(`
 <span class="c1"># They will also be printed on the same line, separated by a space.</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">python_fun</span><span class="p">,</span> <span class="n">finance_fun</span><span class="p">)</span>
 
-<span class="c1"># Print a descriptive label &quot;Type of fiance&quot; followed by the data type of the &#39;finance&#39; variable.</span>
+<span class="c1"># Print a descriptive label &quot;Type of finance&quot; followed by the data type of the &#39;finance&#39; variable.</span>
 <span class="c1"># The &#39;type()&#39; built-in function returns the type of the object passed to it.</span>
 <span class="c1"># For a string literal like &quot;Finance&quot;, its type is &lt;class &#39;str&#39;&gt;.</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Type of fiance&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">finance</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Type of finance&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">finance</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Python Finance
 It&#39;s fun to use finance with python It&#39;s fun to use python with finance
-Type of fiance &lt;class &#39;str&#39;&gt;
+Type of finance &lt;class &#39;str&#39;&gt;
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="combining-or-concatenating-strings">
-<h1><em><strong>Combining Or Concatenating Strings</strong></em><a class="headerlink" href="#combining-or-concatenating-strings" title="Link to this heading">#</a></h1>
+<h2><em><strong>Combining Or Concatenating Strings</strong></em><a class="headerlink" href="#combining-or-concatenating-strings" title="Link to this heading">#</a></h2>
 <section id="strings-can-be-combined-or-concatenated-with-the-plus-sign-including-using-the-short-cut-version-of-the-plus-sign">
-<h2>Strings can be combined or concatenated with the plus sign including using the short-cut version of the plus sign (+=).<a class="headerlink" href="#strings-can-be-combined-or-concatenated-with-the-plus-sign-including-using-the-short-cut-version-of-the-plus-sign" title="Link to this heading">#</a></h2>
+<h3>Strings can be combined or concatenated with the plus sign including using the short-cut version of the plus sign (+=).<a class="headerlink" href="#strings-can-be-combined-or-concatenated-with-the-plus-sign-including-using-the-short-cut-version-of-the-plus-sign" title="Link to this heading">#</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize a string variable &#39;python&#39; with the value &quot;Python&quot;.</span>
 <span class="n">python</span> <span class="o">=</span> <span class="s1">&#39;Python&#39;</span>
 
@@ -628,9 +598,9 @@ It&#39;s fun to use finance with python...It&#39;s fun to use python with financ
 </section>
 </section>
 <section id="length-of-a-string">
-<h1><em><strong>Length Of A String</strong></em><a class="headerlink" href="#length-of-a-string" title="Link to this heading">#</a></h1>
+<h2><em><strong>Length Of A String</strong></em><a class="headerlink" href="#length-of-a-string" title="Link to this heading">#</a></h2>
 <section id="strings-being-iterable-necessarily-contain-elements-or-members-that-possess-a-countable-length-python-s-built-in-len-function-provides-this-count-returning-the-number-of-elements-within-the-iterable-an-empty-string-or-any-empty-iterable-will-have-a-length-of-zero-in-the-case-of-a-string-the-length-is-equal-to-the-number-of-characters-including-blanks-that-are-in-the-string">
-<h2>Strings, being iterable, necessarily contain elements or members that possess a countable length. Python’s built-in <font color='green'>len()</font> function provides this count, returning the number of elements within the iterable. An empty string or any empty iterable will have a length of zero. In the case of a string, the length is equal to the number of characters, including blanks, that are in the string.<a class="headerlink" href="#strings-being-iterable-necessarily-contain-elements-or-members-that-possess-a-countable-length-python-s-built-in-len-function-provides-this-count-returning-the-number-of-elements-within-the-iterable-an-empty-string-or-any-empty-iterable-will-have-a-length-of-zero-in-the-case-of-a-string-the-length-is-equal-to-the-number-of-characters-including-blanks-that-are-in-the-string" title="Link to this heading">#</a></h2>
+<h3>Strings, being iterable, necessarily contain elements or members that possess a countable length. Python’s built-in <font color='green'>len()</font> function provides this count, returning the number of elements within the iterable. An empty string or any empty iterable will have a length of zero. In the case of a string, the length is equal to the number of characters, including blanks, that are in the string.<a class="headerlink" href="#strings-being-iterable-necessarily-contain-elements-or-members-that-possess-a-countable-length-python-s-built-in-len-function-provides-this-count-returning-the-number-of-elements-within-the-iterable-an-empty-string-or-any-empty-iterable-will-have-a-length-of-zero-in-the-case-of-a-string-the-length-is-equal-to-the-number-of-characters-including-blanks-that-are-in-the-string" title="Link to this heading">#</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize a string variable &#39;python&#39; with the value &quot;Python&quot;.</span>
 <span class="n">python</span> <span class="o">=</span> <span class="s1">&#39;Python&#39;</span>
 
@@ -710,26 +680,26 @@ It&#39;s fun to use finance with python...It&#39;s fun to use python with financ
 </section>
 </section>
 <section id="iterating-through-a-string-and-zero-based-indexes">
-<h1><em><strong>Iterating Through A String And Zero-Based Indexes</strong></em><a class="headerlink" href="#iterating-through-a-string-and-zero-based-indexes" title="Link to this heading">#</a></h1>
+<h2><em><strong>Iterating Through A String And Zero-Based Indexes</strong></em><a class="headerlink" href="#iterating-through-a-string-and-zero-based-indexes" title="Link to this heading">#</a></h2>
 <section id="the-code-demonstrates-iterating-through-the-string-finance-using-two-different-for-loop-approaches">
-<h2>The code demonstrates iterating through the string <font color='green'>finance</font> using two different <font color='green'>for loop</font> approaches.<a class="headerlink" href="#the-code-demonstrates-iterating-through-the-string-finance-using-two-different-for-loop-approaches" title="Link to this heading">#</a></h2>
+<h3>The code demonstrates iterating through the string <font color='green'>finance</font> using two different <font color='green'>for loop</font> approaches.<a class="headerlink" href="#the-code-demonstrates-iterating-through-the-string-finance-using-two-different-for-loop-approaches" title="Link to this heading">#</a></h3>
 </section>
 <section id="the-first-example-is-a-basic-for-loop-that-assigns-each-character-of-the-string-to-the-variable-character-and-then-prints-it">
-<h2>The first example is a basic <font color='green'>for loop</font> that assigns each character of the string to the variable <font color='green'>character</font> and then prints it.<a class="headerlink" href="#the-first-example-is-a-basic-for-loop-that-assigns-each-character-of-the-string-to-the-variable-character-and-then-prints-it" title="Link to this heading">#</a></h2>
+<h3>The first example is a basic <font color='green'>for loop</font> that assigns each character of the string to the variable <font color='green'>character</font> and then prints it.<a class="headerlink" href="#the-first-example-is-a-basic-for-loop-that-assigns-each-character-of-the-string-to-the-variable-character-and-then-prints-it" title="Link to this heading">#</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">character</span> <span class="ow">in</span> <span class="n">finance</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">character</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
 <section id="the-second-uses-the-enumerate-function-this-function-binds-each-character-member-of-the-string-to-its-index-location-the-loop-then-produces-both-the-index-and-the-character-in-each-iteration-printing-them-as-pairs">
-<h2>The second uses the <font color='green'>enumerate()</font> function. This function binds each character (member of the string) to its index location. The loop then produces both the index and the character in each iteration, printing them as pairs.<a class="headerlink" href="#the-second-uses-the-enumerate-function-this-function-binds-each-character-member-of-the-string-to-its-index-location-the-loop-then-produces-both-the-index-and-the-character-in-each-iteration-printing-them-as-pairs" title="Link to this heading">#</a></h2>
+<h3>The second uses the <font color='green'>enumerate()</font> function. This function binds each character (member of the string) to its index location. The loop then produces both the index and the character in each iteration, printing them as pairs.<a class="headerlink" href="#the-second-uses-the-enumerate-function-this-function-binds-each-character-member-of-the-string-to-its-index-location-the-loop-then-produces-both-the-index-and-the-character-in-each-iteration-printing-them-as-pairs" title="Link to this heading">#</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">character</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">finance</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">character</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
 <section id="in-the-second-example-notice-that-the-index-value-ranges-from-zero-to-six-an-example-of-zero-based-indexing-the-following-code-is-another-example-of-zero-based-indexing-that-prints-characters-in-locations-0-3-and-6-that-represent-f-a-and-e">
-<h2>In the second example notice that the index value ranges from zero to six; an example of zero-based indexing.  The following code is another example of zero-based indexing that prints characters in locations 0, 3, and 6 that represent F, a, and e.<a class="headerlink" href="#in-the-second-example-notice-that-the-index-value-ranges-from-zero-to-six-an-example-of-zero-based-indexing-the-following-code-is-another-example-of-zero-based-indexing-that-prints-characters-in-locations-0-3-and-6-that-represent-f-a-and-e" title="Link to this heading">#</a></h2>
+<h3>In the second example notice that the index value ranges from zero to six; an example of zero-based indexing.  The following code is another example of zero-based indexing that prints characters in locations 0, 3, and 6 that represent F, a, and e.<a class="headerlink" href="#in-the-second-example-notice-that-the-index-value-ranges-from-zero-to-six-an-example-of-zero-based-indexing-the-following-code-is-another-example-of-zero-based-indexing-that-prints-characters-in-locations-0-3-and-6-that-represent-f-a-and-e" title="Link to this heading">#</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">finance</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">finance</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span><span class="n">finance</span><span class="p">[</span><span class="mi">6</span><span class="p">])</span>
 
 </pre></div>
@@ -802,16 +772,16 @@ e
 </section>
 </section>
 <section id="slicing-a-string">
-<h1><em><strong>Slicing A String</strong></em><a class="headerlink" href="#slicing-a-string" title="Link to this heading">#</a></h1>
+<h2><em><strong>Slicing A String</strong></em><a class="headerlink" href="#slicing-a-string" title="Link to this heading">#</a></h2>
 <section id="string-slicing-utilizes-index-locations-a-slice-is-defined-by-its-starting-and-ending-points-along-with-the-step-size-each-separated-by-a-colon-the-beginning-index-defaults-to-zero-the-ending-to-the-iterable-s-length-and-the-step-size-to-one-consequently-these-two-statements-produce-identical-slices">
-<h2>String slicing utilizes index locations. A slice is defined by its starting and ending points, along with the step size, each separated by a colon. The beginning index defaults to zero, the ending to the iterable’s length, and the step size to one. Consequently, these two statements produce identical slices.<a class="headerlink" href="#string-slicing-utilizes-index-locations-a-slice-is-defined-by-its-starting-and-ending-points-along-with-the-step-size-each-separated-by-a-colon-the-beginning-index-defaults-to-zero-the-ending-to-the-iterable-s-length-and-the-step-size-to-one-consequently-these-two-statements-produce-identical-slices" title="Link to this heading">#</a></h2>
+<h3>String slicing utilizes index locations. A slice is defined by its starting and ending points, along with the step size, each separated by a colon. The beginning index defaults to zero, the ending to the iterable’s length, and the step size to one. Consequently, these two statements produce identical slices.<a class="headerlink" href="#string-slicing-utilizes-index-locations-a-slice-is-defined-by-its-starting-and-ending-points-along-with-the-step-size-each-separated-by-a-colon-the-beginning-index-defaults-to-zero-the-ending-to-the-iterable-s-length-and-the-step-size-to-one-consequently-these-two-statements-produce-identical-slices" title="Link to this heading">#</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">finance</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">])</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">finance</span><span class="p">[:</span><span class="mi">4</span><span class="p">])</span>
 </pre></div>
 </div>
 </section>
-<section id="negative-beginning-or-ending-values-cause-the-slice-to-operate-relative-to-the-iterable-s-length-the-first-line-of-code-below-extracts-the-final-four-characters-while-the-second-extracts-the-initial-four">
-<h2>Negative beginning or ending values cause the slice to operate relative to the iterable’s length. The first line of code below extracts the final four characters, while the second extracts the initial four.<a class="headerlink" href="#negative-beginning-or-ending-values-cause-the-slice-to-operate-relative-to-the-iterable-s-length-the-first-line-of-code-below-extracts-the-final-four-characters-while-the-second-extracts-the-initial-four" title="Link to this heading">#</a></h2>
+<section id="negative-beginning-or-ending-values-cause-the-slice-to-operate-relative-to-the-iterable-s-length-finance-has-a-length-of-7-a-beginning-value-of-4-is-equivalent-to-a-beginning-value-of-3-an-ending-value-of-3-is-equivalent-to-an-ending-value-of-4-the-first-line-of-code-below-extracts-the-final-four-characters-while-the-second-extracts-the-initial-four">
+<h3>Negative beginning or ending values cause the slice to operate relative to the iterable’s length. <font color='green'>finance()</font> has a length of 7. A beginning value of -4 is equivalent to a beginning value of 3. An ending value of -3 is equivalent to an ending value of 4. The first line of code below extracts the final four characters, while the second extracts the initial four.<a class="headerlink" href="#negative-beginning-or-ending-values-cause-the-slice-to-operate-relative-to-the-iterable-s-length-finance-has-a-length-of-7-a-beginning-value-of-4-is-equivalent-to-a-beginning-value-of-3-an-ending-value-of-3-is-equivalent-to-an-ending-value-of-4-the-first-line-of-code-below-extracts-the-final-four-characters-while-the-second-extracts-the-initial-four" title="Link to this heading">#</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">finance</span><span class="p">[</span><span class="o">-</span><span class="mi">4</span><span class="p">:])</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">finance</span><span class="p">[:</span><span class="o">-</span><span class="mi">3</span><span class="p">])</span>
 </pre></div>
@@ -862,9 +832,9 @@ Fina
 </section>
 </section>
 <section id="converting-numbers-and-booleans-to-strings">
-<h1><em><strong>Converting Numbers And Booleans To Strings</strong></em><a class="headerlink" href="#converting-numbers-and-booleans-to-strings" title="Link to this heading">#</a></h1>
+<h2><em><strong>Converting Numbers And Booleans To Strings</strong></em><a class="headerlink" href="#converting-numbers-and-booleans-to-strings" title="Link to this heading">#</a></h2>
 <section id="the-str-function-in-python-is-used-to-convert-numerical-and-boolean-data-types-into-strings-below-are-examples-showing-how-integers-floats-and-boolean-values-are-transformed-into-their-string-representations">
-<h2>The <font color='green'>str()</font> function in Python is used to convert numerical and boolean data types into strings. Below are examples showing how integers, floats, and boolean values are transformed into their string representations.<a class="headerlink" href="#the-str-function-in-python-is-used-to-convert-numerical-and-boolean-data-types-into-strings-below-are-examples-showing-how-integers-floats-and-boolean-values-are-transformed-into-their-string-representations" title="Link to this heading">#</a></h2>
+<h3>The <font color='green'>str()</font> function in Python is used to convert numerical and boolean data types into strings. Below are examples showing how integers, floats, and boolean values are transformed into their string representations.<a class="headerlink" href="#the-str-function-in-python-is-used-to-convert-numerical-and-boolean-data-types-into-strings-below-are-examples-showing-how-integers-floats-and-boolean-values-are-transformed-into-their-string-representations" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize an integer variable &#39;x&#39; with the value 5.</span>
@@ -913,18 +883,18 @@ Fina
 </div>
 </section>
 <section id="converting-strings-to-numbers-and-booleans">
-<h2><em><strong>Converting Strings To Numbers And Booleans</strong></em><a class="headerlink" href="#converting-strings-to-numbers-and-booleans" title="Link to this heading">#</a></h2>
+<h3><em><strong>Converting Strings To Numbers And Booleans</strong></em><a class="headerlink" href="#converting-strings-to-numbers-and-booleans" title="Link to this heading">#</a></h3>
 <section id="strings-values-of-numbers-can-be-converted-to-integers-or-floating-point-numbers-the-boolean-value-of-an-empty-string-is-false-all-others-true">
-<h3>Strings values of numbers can be converted to integers or floating point numbers.  The boolean value of an empty string is False; all others, True.<a class="headerlink" href="#strings-values-of-numbers-can-be-converted-to-integers-or-floating-point-numbers-the-boolean-value-of-an-empty-string-is-false-all-others-true" title="Link to this heading">#</a></h3>
+<h4>Strings values of numbers can be converted to integers or floating point numbers.  The boolean value of an empty string is False; all others, True.<a class="headerlink" href="#strings-values-of-numbers-can-be-converted-to-integers-or-floating-point-numbers-the-boolean-value-of-an-empty-string-is-false-all-others-true" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Convert the string &#39;10&#39; to a floating-point number (10.0) and print it.</span>
-<span class="c1"># The `float()` constructor can convert integers, floats, and string representations</span>
+<span class="c1"># The `float()` constructor can convert integers and string representations</span>
 <span class="c1"># of numbers to floating-point type.</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="s1">&#39;10&#39;</span><span class="p">))</span>
 
 <span class="c1"># Convert the string &#39;10&#39; to an integer number (10) and print it.</span>
-<span class="c1"># The `int()` constructor can convert integers, floats, and string representations</span>
+<span class="c1"># The `int()` constructor can convert floats, and string representations</span>
 <span class="c1"># of integers to integer type.</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="s1">&#39;10&#39;</span><span class="p">))</span>
 
@@ -939,7 +909,7 @@ Fina
 <span class="c1"># Initialize a string containing a single space character and assign it to &#39;space&#39;.</span>
 <span class="n">space</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span>
 
-<span class="c1"># Print two pieces of information about the &#39;space&#39; string:</span>
+<span class="c1"># Print two pieces of information about the variable &#39;space&#39;:</span>
 <span class="c1"># 1. Its length using `len()`. A string with one space has a length of 1.</span>
 <span class="c1"># 2. Its boolean value using `bool()`. A non-empty string (even one with just whitespace)</span>
 <span class="c1">#    is considered &quot;truthy&quot; (evaluates to True).</span>
@@ -960,36 +930,36 @@ Fina
 </section>
 </section>
 <section id="four-useful-string-methods">
-<h1><em><strong>Four Useful String Methods</strong></em><a class="headerlink" href="#four-useful-string-methods" title="Link to this heading">#</a></h1>
+<h2><em><strong>Four Useful String Methods</strong></em><a class="headerlink" href="#four-useful-string-methods" title="Link to this heading">#</a></h2>
 <section id="numerous-methods-are-available-for-string-manipulation-in-python-four-of-the-most-relevant-are-described-and-demonstrated">
-<h2>Numerous methods are available for string manipulation in Python. Four of the most relevant are described and demonstrated.<a class="headerlink" href="#numerous-methods-are-available-for-string-manipulation-in-python-four-of-the-most-relevant-are-described-and-demonstrated" title="Link to this heading">#</a></h2>
+<h3>Numerous methods are available for string manipulation in Python. Four of the most relevant are described and demonstrated.<a class="headerlink" href="#numerous-methods-are-available-for-string-manipulation-in-python-four-of-the-most-relevant-are-described-and-demonstrated" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p><em><strong>find(): To locate the index of the first occurrence of a substring within the string. If the substring is absent, it returns -1.</strong></em></p></li>
+<li><p><em><strong><font color='green'>find()</font>: To locate the index of the first occurrence of a substring within the string. If the substring is absent, it returns -1.</strong></em></p></li>
 </ul>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">finance</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;F&#39;</span><span class="p">),</span><span class="s1">&#39;   &#39;</span><span class="p">,</span><span class="n">finance</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;I&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 <ul class="simple">
-<li><p><em><strong>replace(): To substitute a string with another. If the replacement is empty, it results in the removal of the original string. Arguments include the string to be replaced, the replacement string, and the number of replacements (defaulting to all occurrences).</strong></em></p></li>
+<li><p><em><strong><font color='green'>replace()</font>: To substitute a string with another. If the replacement is empty, it results in the removal of the original string. Arguments include the string to be replaced, the replacement string, and the number of replacements (defaulting to all occurrences).</strong></em></p></li>
 </ul>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">finance</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;n&#39;</span><span class="p">,</span><span class="s1">&#39;N&#39;</span><span class="p">),</span><span class="s1">&#39;   &#39;</span><span class="p">,</span><span class="n">finance</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;n&#39;</span><span class="p">,</span><span class="s1">&#39;N&#39;</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span><span class="s1">&#39;   &#39;</span><span class="p">,</span><span class="n">finance</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;n&#39;</span><span class="p">,</span><span class="s1">&#39; &#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 <ul class="simple">
-<li><p><em><strong>split(): To convert a string into a list. It takes the split character (default is whitespace) and the number of splits (default is all) as arguments.</strong></em></p></li>
+<li><p><em><strong><font color='green'>split()</font>: To convert a string into a list. It takes the split character (default is whitespace) and the number of splits (default is all) as arguments.</strong></em></p></li>
 </ul>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">python_fun</span><span class="o">.</span><span class="n">split</span><span class="p">(),</span><span class="s1">&#39;   &#39;</span><span class="p">,</span><span class="n">python_fun</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;i&#39;</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
 </pre></div>
 </div>
 <ul class="simple">
-<li><p><em><strong>join(): To convert an iterable into a string. The method is applied to the separator. The method’s argument is the iterable</strong></em></p></li>
+<li><p><em><strong><font color='green'>join()</font>: To convert an iterable into a string. The method is applied to the separator. The method’s argument is the iterable</strong></em></p></li>
 </ul>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;  &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">python_fun</span><span class="o">.</span><span class="n">split</span><span class="p">()),</span><span class="s1">&#39;   &#39;</span><span class="p">,</span><span class="s1">&#39;$&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">python_fun</span><span class="o">.</span><span class="n">split</span><span class="p">()))</span>
 </pre></div>
 </div>
 </section>
-<section id="click-here-for-a-decription-of-these-and-other-string-methods">
-<h2><a class="reference external" href="https://www.w3schools.com/python/python_ref_string.asp">Click here for a decription of these and other string methods.</a><a class="headerlink" href="#click-here-for-a-decription-of-these-and-other-string-methods" title="Link to this heading">#</a></h2>
+<section id="click-here-for-a-description-of-these-and-other-string-methods">
+<h3><a class="reference external" href="https://www.w3schools.com/python/python_ref_string.asp">Click here for a description of these and other string methods.</a><a class="headerlink" href="#click-here-for-a-description-of-these-and-other-string-methods" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># --- Section 1: Using the `str.find()` method ---</span>
@@ -1001,9 +971,18 @@ Fina
 <span class="c1"># finance.find(&#39;F&#39;): &#39;F&#39; is the first character in &#39;Finance&#39;, so its index is 0.</span>
 <span class="c1"># finance.find(&#39;I&#39;): &#39;I&#39; (uppercase) is not present in &#39;Finance&#39; (which has &#39;i&#39; lowercase), so it returns -1.</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">finance</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;F&#39;</span><span class="p">),</span> <span class="s1">&#39;   &#39;</span><span class="p">,</span> <span class="n">finance</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;I&#39;</span><span class="p">))</span>
-
-
-<span class="c1"># --- Section 2: Using the `str.replace()` method ---</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     -1
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># --- Section 2: Using the `str.replace()` method ---</span>
 
 <span class="c1"># The `str.replace(old, new, count)` method returns a *new* string</span>
 <span class="c1"># where occurrences of &#39;old&#39; are replaced by &#39;new&#39;.</span>
@@ -1015,11 +994,20 @@ Fina
 <span class="c1"># finance.replace(&#39;n&#39;,&#39;N&#39;,1): Replaces only the FIRST occurrence of &#39;n&#39; with &#39;N&#39;.</span>
 <span class="c1">#   &#39;Finance&#39; (n at index 2) becomes &#39;FiNance&#39;.</span>
 <span class="c1"># finance.replace(&#39;n&#39;,&#39; &#39;): Replaces ALL occurrences of &#39;n&#39; with a space character.</span>
-<span class="c1">#   &#39;Finance&#39; becomes &#39;Fi ance&#39;.</span>
+<span class="c1">#   &#39;Finance&#39; becomes &#39;Fi a ce&#39;.</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">finance</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;n&#39;</span><span class="p">,</span><span class="s1">&#39;N&#39;</span><span class="p">),</span><span class="s1">&#39;   &#39;</span><span class="p">,</span><span class="n">finance</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;n&#39;</span><span class="p">,</span><span class="s1">&#39;N&#39;</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span><span class="s1">&#39;   &#39;</span><span class="p">,</span><span class="n">finance</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;n&#39;</span><span class="p">,</span><span class="s1">&#39; &#39;</span><span class="p">))</span>
-
-
-<span class="c1"># --- Section 3: Using the `str.split()` method ---</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>FiNaNce     FiNance     Fi a ce
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># --- Section 3: Using the `str.split()` method ---</span>
 
 <span class="c1"># The `str.split(separator, maxsplit)` method splits a string into a list of substrings.</span>
 <span class="c1"># If &#39;separator&#39; is not provided (or is None), it splits by any whitespace</span>
@@ -1036,9 +1024,18 @@ Fina
 <span class="c1">#             ^ first &#39;i&#39; is at index 4</span>
 <span class="c1">#   Result: [&quot;It&#39;s fun to use f&quot;, &quot;nance with python&quot;]</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">python_fun</span><span class="o">.</span><span class="n">split</span><span class="p">(),</span><span class="s1">&#39;   &#39;</span><span class="p">,</span><span class="n">python_fun</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;i&#39;</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
-
-
-<span class="c1"># --- Section 4: Using the `str.join()` method ---</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&quot;It&#39;s&quot;, &#39;fun&#39;, &#39;to&#39;, &#39;use&#39;, &#39;finance&#39;, &#39;with&#39;, &#39;python&#39;]     [&quot;It&#39;s fun to use f&quot;, &#39;nance with python&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># --- Section 4: Using the `str.join()` method ---</span>
 
 <span class="c1"># The `str.join(iterable)` method is a string method used to concatenate</span>
 <span class="c1"># elements of an iterable (like a list of strings).</span>
@@ -1056,14 +1053,12 @@ Fina
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     -1
-FiNaNce     FiNance     Fi a ce
-[&quot;It&#39;s&quot;, &#39;fun&#39;, &#39;to&#39;, &#39;use&#39;, &#39;finance&#39;, &#39;with&#39;, &#39;python&#39;]     [&quot;It&#39;s fun to use f&quot;, &#39;nance with python&#39;]
-It&#39;s  fun  to  use  finance  with  python     It&#39;s$fun$to$use$finance$with$python
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>It&#39;s  fun  to  use  finance  with  python     It&#39;s$fun$to$use$finance$with$python
 </pre></div>
 </div>
 </div>
 </div>
+</section>
 </section>
 </section>
 
@@ -1103,7 +1098,7 @@ It&#39;s  fun  to  use  finance  with  python     It&#39;s$fun$to$use$finance$wi
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><em><strong>Introduction</strong></em></p>
+        <p class="prev-next-title"><em><strong>Basic Grammar</strong></em></p>
       </div>
     </a>
     <a class="right-next"
@@ -1111,7 +1106,7 @@ It&#39;s  fun  to  use  finance  with  python     It&#39;s$fun$to$use$finance$wi
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><em><strong>Numbers &amp; Booleans</strong></em></p>
+        <p class="prev-next-title"><em><strong>A Quick Introducton To Numbers And Booleans</strong></em></p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1131,47 +1126,43 @@ It&#39;s  fun  to  use  finance  with  python     It&#39;s$fun$to$use$finance$wi
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><em><strong>Strings</strong></em></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-string-is-a-variable-that-represents-printable-characters-such-as-letters-numbers-etc-like-numbers-and-booleans-strings-hold-single-values-unlike-numbers-and-booleans-strings-are-iterable-if-a-variable-is-iterable-the-values-or-members-of-the-variable-can-be-enumerated-in-the-case-of-strings-the-characters-can-be-enumerated-many-python-concepts-can-be-illustrated-with-strings">A string is a variable that represents printable characters, such as letters, numbers, etc. Like numbers and booleans, strings hold single values.  Unlike numbers and booleans, strings are iterable.  If a variable is iterable, the values or members  of the variable can be enumerated.  In the case of strings, the characters can be enumerated.  Many Python concepts can be illustrated with strings.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#strings-are-defined-using-either-single-or-double-quotes-to-include-a-single-quote-within-a-string-either-use-double-quotes-for-the-string-s-definition-or-precede-the-single-quote-inside-the-string-with-a-backslash-and-the-parser-will-disregard-it">Strings are defined using either single or double quotes. To include a single quote within a string, either use double quotes for the string’s definition or precede the single quote inside the string with a backslash (\) and the parser will disregard it.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#strings-are-defined-using-either-single-or-double-quotes-the-single-quote-is-the-apostrophe-on-the-key-board-to-include-a-single-quote-as-part-of-a-string-either-use-double-quotes-for-the-string-s-definition-or-precede-the-single-quote-inside-the-string-with-a-backslash-and-the-parser-will-disregard-it">Strings are defined using either single or double quotes. The single quote is the apostrophe on the key board. To include a single quote as part of a string, either use double quotes for the string’s definition or precede the single quote inside the string with a backslash (\) and the parser will disregard it.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assigning-a-string-value"><em><strong>Assigning A String Value</strong></em></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#combining-or-concatenating-strings"><em><strong>Combining Or Concatenating Strings</strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#strings-can-be-combined-or-concatenated-with-the-plus-sign-including-using-the-short-cut-version-of-the-plus-sign">Strings can be combined or concatenated with the plus sign including using the short-cut version of the plus sign (+=).</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#assigning-a-string-value"><em><strong>Assigning A String Value</strong></em></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#combining-or-concatenating-strings"><em><strong>Combining Or Concatenating Strings</strong></em></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#strings-can-be-combined-or-concatenated-with-the-plus-sign-including-using-the-short-cut-version-of-the-plus-sign">Strings can be combined or concatenated with the plus sign including using the short-cut version of the plus sign (+=).</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#length-of-a-string"><em><strong>Length Of A String</strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#strings-being-iterable-necessarily-contain-elements-or-members-that-possess-a-countable-length-python-s-built-in-len-function-provides-this-count-returning-the-number-of-elements-within-the-iterable-an-empty-string-or-any-empty-iterable-will-have-a-length-of-zero-in-the-case-of-a-string-the-length-is-equal-to-the-number-of-characters-including-blanks-that-are-in-the-string">Strings, being iterable, necessarily contain elements or members that possess a countable length. Python’s built-in <font color="green">len()</font> function provides this count, returning the number of elements within the iterable. An empty string or any empty iterable will have a length of zero. In the case of a string, the length is equal to the number of characters, including blanks, that are in the string.</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#length-of-a-string"><em><strong>Length Of A String</strong></em></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#strings-being-iterable-necessarily-contain-elements-or-members-that-possess-a-countable-length-python-s-built-in-len-function-provides-this-count-returning-the-number-of-elements-within-the-iterable-an-empty-string-or-any-empty-iterable-will-have-a-length-of-zero-in-the-case-of-a-string-the-length-is-equal-to-the-number-of-characters-including-blanks-that-are-in-the-string">Strings, being iterable, necessarily contain elements or members that possess a countable length. Python’s built-in <font color="green">len()</font> function provides this count, returning the number of elements within the iterable. An empty string or any empty iterable will have a length of zero. In the case of a string, the length is equal to the number of characters, including blanks, that are in the string.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iterating-through-a-string-and-zero-based-indexes"><em><strong>Iterating Through A String And Zero-Based Indexes</strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-code-demonstrates-iterating-through-the-string-finance-using-two-different-for-loop-approaches">The code demonstrates iterating through the string <font color="green">finance</font> using two different <font color="green">for loop</font> approaches.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-first-example-is-a-basic-for-loop-that-assigns-each-character-of-the-string-to-the-variable-character-and-then-prints-it">The first example is a basic <font color="green">for loop</font> that assigns each character of the string to the variable <font color="green">character</font> and then prints it.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-second-uses-the-enumerate-function-this-function-binds-each-character-member-of-the-string-to-its-index-location-the-loop-then-produces-both-the-index-and-the-character-in-each-iteration-printing-them-as-pairs">The second uses the <font color="green">enumerate()</font> function. This function binds each character (member of the string) to its index location. The loop then produces both the index and the character in each iteration, printing them as pairs.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#in-the-second-example-notice-that-the-index-value-ranges-from-zero-to-six-an-example-of-zero-based-indexing-the-following-code-is-another-example-of-zero-based-indexing-that-prints-characters-in-locations-0-3-and-6-that-represent-f-a-and-e">In the second example notice that the index value ranges from zero to six; an example of zero-based indexing.  The following code is another example of zero-based indexing that prints characters in locations 0, 3, and 6 that represent F, a, and e.</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#iterating-through-a-string-and-zero-based-indexes"><em><strong>Iterating Through A String And Zero-Based Indexes</strong></em></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-code-demonstrates-iterating-through-the-string-finance-using-two-different-for-loop-approaches">The code demonstrates iterating through the string <font color="green">finance</font> using two different <font color="green">for loop</font> approaches.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-first-example-is-a-basic-for-loop-that-assigns-each-character-of-the-string-to-the-variable-character-and-then-prints-it">The first example is a basic <font color="green">for loop</font> that assigns each character of the string to the variable <font color="green">character</font> and then prints it.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-second-uses-the-enumerate-function-this-function-binds-each-character-member-of-the-string-to-its-index-location-the-loop-then-produces-both-the-index-and-the-character-in-each-iteration-printing-them-as-pairs">The second uses the <font color="green">enumerate()</font> function. This function binds each character (member of the string) to its index location. The loop then produces both the index and the character in each iteration, printing them as pairs.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#in-the-second-example-notice-that-the-index-value-ranges-from-zero-to-six-an-example-of-zero-based-indexing-the-following-code-is-another-example-of-zero-based-indexing-that-prints-characters-in-locations-0-3-and-6-that-represent-f-a-and-e">In the second example notice that the index value ranges from zero to six; an example of zero-based indexing.  The following code is another example of zero-based indexing that prints characters in locations 0, 3, and 6 that represent F, a, and e.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#slicing-a-string"><em><strong>Slicing A String</strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#string-slicing-utilizes-index-locations-a-slice-is-defined-by-its-starting-and-ending-points-along-with-the-step-size-each-separated-by-a-colon-the-beginning-index-defaults-to-zero-the-ending-to-the-iterable-s-length-and-the-step-size-to-one-consequently-these-two-statements-produce-identical-slices">String slicing utilizes index locations. A slice is defined by its starting and ending points, along with the step size, each separated by a colon. The beginning index defaults to zero, the ending to the iterable’s length, and the step size to one. Consequently, these two statements produce identical slices.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#negative-beginning-or-ending-values-cause-the-slice-to-operate-relative-to-the-iterable-s-length-finance-has-a-length-of-7-a-beginning-value-of-4-is-equivalent-to-a-beginning-value-of-3-an-ending-value-of-3-is-equivalent-to-an-ending-value-of-4-the-first-line-of-code-below-extracts-the-final-four-characters-while-the-second-extracts-the-initial-four">Negative beginning or ending values cause the slice to operate relative to the iterable’s length. <font color="green">finance()</font> has a length of 7. A beginning value of -4 is equivalent to a beginning value of 3. An ending value of -3 is equivalent to an ending value of 4. The first line of code below extracts the final four characters, while the second extracts the initial four.</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#slicing-a-string"><em><strong>Slicing A String</strong></em></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#string-slicing-utilizes-index-locations-a-slice-is-defined-by-its-starting-and-ending-points-along-with-the-step-size-each-separated-by-a-colon-the-beginning-index-defaults-to-zero-the-ending-to-the-iterable-s-length-and-the-step-size-to-one-consequently-these-two-statements-produce-identical-slices">String slicing utilizes index locations. A slice is defined by its starting and ending points, along with the step size, each separated by a colon. The beginning index defaults to zero, the ending to the iterable’s length, and the step size to one. Consequently, these two statements produce identical slices.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#negative-beginning-or-ending-values-cause-the-slice-to-operate-relative-to-the-iterable-s-length-the-first-line-of-code-below-extracts-the-final-four-characters-while-the-second-extracts-the-initial-four">Negative beginning or ending values cause the slice to operate relative to the iterable’s length. The first line of code below extracts the final four characters, while the second extracts the initial four.</a></li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#converting-numbers-and-booleans-to-strings"><em><strong>Converting Numbers And Booleans To Strings</strong></em></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-str-function-in-python-is-used-to-convert-numerical-and-boolean-data-types-into-strings-below-are-examples-showing-how-integers-floats-and-boolean-values-are-transformed-into-their-string-representations">The <font color="green">str()</font> function in Python is used to convert numerical and boolean data types into strings. Below are examples showing how integers, floats, and boolean values are transformed into their string representations.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#converting-strings-to-numbers-and-booleans"><em><strong>Converting Strings To Numbers And Booleans</strong></em></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#strings-values-of-numbers-can-be-converted-to-integers-or-floating-point-numbers-the-boolean-value-of-an-empty-string-is-false-all-others-true">Strings values of numbers can be converted to integers or floating point numbers.  The boolean value of an empty string is False; all others, True.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#converting-numbers-and-booleans-to-strings"><em><strong>Converting Numbers And Booleans To Strings</strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-str-function-in-python-is-used-to-convert-numerical-and-boolean-data-types-into-strings-below-are-examples-showing-how-integers-floats-and-boolean-values-are-transformed-into-their-string-representations">The <font color="green">str()</font> function in Python is used to convert numerical and boolean data types into strings. Below are examples showing how integers, floats, and boolean values are transformed into their string representations.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#converting-strings-to-numbers-and-booleans"><em><strong>Converting Strings To Numbers And Booleans</strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#strings-values-of-numbers-can-be-converted-to-integers-or-floating-point-numbers-the-boolean-value-of-an-empty-string-is-false-all-others-true">Strings values of numbers can be converted to integers or floating point numbers.  The boolean value of an empty string is False; all others, True.</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#four-useful-string-methods"><em><strong>Four Useful String Methods</strong></em></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numerous-methods-are-available-for-string-manipulation-in-python-four-of-the-most-relevant-are-described-and-demonstrated">Numerous methods are available for string manipulation in Python. Four of the most relevant are described and demonstrated.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#click-here-for-a-decription-of-these-and-other-string-methods">Click here for a decription of these and other string methods.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#four-useful-string-methods"><em><strong>Four Useful String Methods</strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#numerous-methods-are-available-for-string-manipulation-in-python-four-of-the-most-relevant-are-described-and-demonstrated">Numerous methods are available for string manipulation in Python. Four of the most relevant are described and demonstrated.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#click-here-for-a-description-of-these-and-other-string-methods">Click here for a description of these and other string methods.</a></li>
 </ul>
 </li>
 </ul>
-
   </nav></div>
 
 </div></div>

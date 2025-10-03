@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>NumPy &#8212; An Introduction to Python for Financial Python</title>
+    <title>A Quick Introductin To NumPy &#8212; An Introduction to Python for Financial Python</title>
   
   
   
@@ -63,7 +63,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Sets" href="Sets.html" />
-    <link rel="prev" title="Pandas" href="An_Introduction_To_Pandas.html" />
+    <link rel="prev" title="A Quick Introduction To Pandas" href="An_Introduction_To_Pandas.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -182,43 +182,18 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="Basic_Grammar.html"><em><strong>Introduction</strong></em></a></li>
-<li class="toctree-l1"><a class="reference internal" href="Strings.html"><em><strong>Strings</strong></em></a></li>
-
-
-
-
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="Numbers_%26_Booleans.html"><em><strong>Numbers &amp; Booleans</strong></em></a></li>
-<li class="toctree-l1"><a class="reference internal" href="Control_Statements.html"><em><strong>Statements That Control Other Statements</strong></em></a></li>
-<li class="toctree-l1"><a class="reference internal" href="A_First_Look_At_Lists.html"><em><strong>Lists</strong></em></a></li>
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="Tuples.html"><em><strong>Tuples</strong></em></a></li>
-
-
-<li class="toctree-l1"><a class="reference internal" href="Dictionaries.html"><em><strong>Dictionaries</strong></em></a></li>
-
-
-
-
-
-
-
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="Functions.html"><em><strong>Functions</strong></em></a></li>
-<li class="toctree-l1"><a class="reference internal" href="Manipulating_Dates.html"><em><strong>Numerical Calculations With Dates</strong></em></a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="An_Introduction_To_Pandas.html"><em><strong>Pandas</strong></em></a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#"><em><strong>NumPy</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Basic_Grammar.html"><em><strong>Basic Grammar</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Strings.html"><em><strong>A Quick Look At Strings</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Numbers_%26_Booleans.html"><em><strong>A Quick Introducton To Numbers And Booleans</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Control_Statements.html"><em><strong>Control Statements</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="A_First_Look_At_Lists.html"><em><strong>A First Look At Lists</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tuples.html"><em><strong>A Quick Introduction To Tuples</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Dictionaries.html"><em><strong>An Introductin To Dictionaries</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Functions.html"><em><strong>A Quick Look At Functions</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Manipulating_Dates.html"><em><strong>A Quick Introduction To Manipulating Dates</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="An_Introduction_To_Pandas.html"><em><strong>A Quick Introduction To Pandas</strong></em></a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#"><em><strong>A Quick Introductin To NumPy</strong></em></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Sets.html"><em><strong>Sets</strong></em></a></li>
-
-
 </ul>
 
     </div>
@@ -404,7 +379,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>NumPy</h1>
+    <h1>A Quick Introductin To NumPy</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -415,11 +390,13 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-numpy-library-offers-efficient-numerical-procedures-that-simplify-complex-calculations-the-fundamental-object-in-this-library-is-the-numpy-array-like-pandas-numpy-must-be-imported-before-use-depending-on-your-notebook-you-may-need-to-install-numpy-before-importing-it">The NumPy library offers efficient numerical procedures that simplify complex calculations. The fundamental object in this library is the NumPy array. Like Pandas, NumPy must be imported before use. Depending on your notebook, you may need to install NumPy before importing it.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-example-code-cell-below-uses-a-try-and-except-code-block-to-import-numpy-and-assigns-it-the-common-alias-np-1">The example code cell below uses a <font color="green">try</font> and <font color="green">except</font> code block to import NumPy and assigns<br/> it the common alias <font color="green">np</font>.<span class="math notranslate nohighlight">\(^{1}\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-example-code-cell-below-uses-a-try-and-except-code-block-to-import-numpy-and-assigns-it-the-common-alias-np-1">The example code cell below uses a <font color="green">try</font> and <font color="green">except</font> code block to import NumPy and assigns<br/> it the common alias <font color="green">np</font>.<span class="math notranslate nohighlight">\(^{1}\)</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#for-a-discusion-of-try-and-except-code-blocks-see-chapter-control-statements"><span class="math notranslate nohighlight">\(^{1}\)</span> For a discusion of  <font color="green">try</font> and <font color="green">except</font> code blocks see Chapter <em>Control Statements</em>.</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-one-dimensional-array"><em><strong>A One Dimensional Array</strong></em></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-array-method-uses-iterable-data-such-as-a-list-as-its-argument-to-generate-numpy-arrays-for-instance-an-array-containing-the-numbers-1-2-and-3-can-be-created-from-a-list-2-3">The <font color="green">array()</font> method uses iterable data, such as a list, as its argument to generate NumPy arrays. For instance, an array containing the numbers 1, 2, and 3 can be created from a list.<span class="math notranslate nohighlight">\(^{2,3}\)</span></a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#if-you-need-a-little-help-with-this-concept-check-out-the-lists-notebook"><span class="math notranslate nohighlight">\(^{2}\)</span> If you need a little help with this concept check out the Lists Notebook</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#all-elements-of-a-numpy-array-are-of-the-same-type"><span class="math notranslate nohighlight">\(^{3}\)</span> All elements of a Numpy array are of the same type.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-array-method-uses-iterable-data-such-as-a-list-as-its-argument-to-generate-numpy-arrays-for-instance-an-array-containing-the-numbers-1-2-and-3-can-be-created-from-a-list-2">The <font color="green">array()</font> method uses iterable data, such as a list, as its argument to generate NumPy arrays. For instance, an array containing the numbers 1, 2, and 3 can be created from a list.<span class="math notranslate nohighlight">\(^{2}\)</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#if-you-need-a-little-help-with-this-concept-see-chapter-a-first-look-at-lists"><span class="math notranslate nohighlight">\(^{2}\)</span> If you need a little help with this concept see Chapter <em>A First Look At Lists</em>.</a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#three-important-attributes-of-arrays"><em><strong>Three Important Attributes Of Arrays</strong></em></a><ul class="nav section-nav flex-column">
@@ -433,7 +410,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multi-dimensional-arrays"><em><strong>Multi-Dimensional Arrays</strong></em></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy-arrays-cam-have-anyy-number-of-dimensions-our-attention-is-limited-to-two">Numpy arrays cam have anyy number of dimensions.  Our attention is limited to two:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy-arrays-cam-have-any-number-of-dimensions-our-attention-is-limited-to-two">Numpy arrays cam have any number of dimensions.  Our attention is limited to two:</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-simple-two-dimensional-array"><em><strong>A Simple Two-Dimensional Array</strong></em></a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#a-column-vector-represents-the-simplest-multi-dimensional-array-an-array-is-generated-from-a-nested-list-of-the-integers-one-two-and-three-this-array-has-two-dimensions-ndim-and-its-rows-and-columns-shape-are-three-and-one-respectively">A column vector represents the simplest multi-dimensional array. An array is generated from a nested list of the integers one, two, and three. This array has two dimensions (<font color="green">ndim</font>) and its rows and columns (<font color="green">shape</font>) are three and one, respectively.</a></li>
 </ul>
@@ -443,8 +420,8 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiplying-arrays"><em><strong>Multiplying Arrays</strong></em></a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-number-of-columns-in-the-first-matrix-must-equal-the-number-of-rows-in-the-second-matrix-in-order-to-perform-matrix-multiplication-the-resulting-matrix-has-elements-that-are-equal-to-the-sum-product-of-the-columns-and-rows-these-elements-are-indexed-by-the-rows-and-columns-the-numpy-method-matmul-can-be-used-to-multiply-two-conforming-matrices-in-the-example-provided-array-method-is-the-first-matrix-and-transpose-array-is-the-second-matrix-because-transpose-converts-rows-to-columns-the-number-of-columns-of-the-original-matrix-will-equal-number-of-rows-of-the-trasnposed-matrix-the-result-is-multiplied-array-a-square-matrix-with-two-rows-and-two-columns-4">The number of columns in the first matrix must equal the number of rows in the second matrix<br/> in order to perform matrix multiplication. The resulting matrix has elements that are equal to<br/> the sum product of the columns and rows. These elements are indexed by the rows and<br/> columns. The NumPy method <font color="green">matmul()</font> can be used to multiply two conforming matrices.<br/> In the example provided, <font color="green">array_method</font> is the first matrix and <font color="green">transpose_array</font> is the second<br/> matrix. Because <font color="green">transpose()</font> converts rows to columns, the number of columns of the original matrix will equal number of rows of the trasnposed matrix. The result is <font color="green">multiplied_array</font>, a square matrix with two rows and two columns.<span class="math notranslate nohighlight">\(^{4}\)</span></a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#the-volumes-use-the-matmul-method-to-multiply-matrices-the-ampersand-symbol-can-also-be-used-for-this-purpose-but-matmul-is-preferred-for-clarity"><span class="math notranslate nohighlight">\(^{4}\)</span>The volumes use the <font color="green">matmul()</font> method to multiply matrices; the ampersand symbol (@) can also be used for this purpose,<br/> but <font color="green">matmul()</font> is preferred for clarity.</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-number-of-columns-in-the-first-matrix-must-equal-the-number-of-rows-in-the-second-matrix-in-order-to-perform-matrix-multiplication-the-resulting-matrix-has-elements-that-are-equal-to-the-sum-product-of-the-columns-and-rows-these-elements-are-indexed-by-the-rows-and-columns-the-numpy-method-matmul-can-be-used-to-multiply-two-conforming-matrices-in-the-example-provided-array-method-is-the-first-matrix-and-transpose-array-is-the-second-matrix-because-transpose-converts-rows-to-columns-the-number-of-columns-of-the-original-matrix-will-equal-number-of-rows-of-the-transposed-matrix-the-result-is-multiplied-array-a-square-matrix-with-two-rows-and-two-columns-3">The number of columns in the first matrix must equal the number of rows in the second matrix<br/> in order to perform matrix multiplication. The resulting matrix has elements that are equal to<br/> the sum product of the columns and rows. These elements are indexed by the rows and<br/> columns. The NumPy method <font color="green">matmul()</font> can be used to multiply two conforming matrices.<br/> In the example provided, <font color="green">array_method</font> is the first matrix and <font color="green">transpose_array</font> is the second<br/> matrix. Because <font color="green">transpose()</font> converts rows to columns, the number of columns of the original matrix will equal number of rows of the transposed matrix. The result is <font color="green">multiplied_array</font>, a square matrix with two rows and two columns.<span class="math notranslate nohighlight">\(^{3}\)</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#the-volumes-use-the-matmul-method-to-multiply-matrices-the-ampersand-symbol-can-also-be-used-for-this-purpose-but-matmul-is-preferred-for-clarity"><span class="math notranslate nohighlight">\(^{3}\)</span>The volumes use the <font color="green">matmul()</font> method to multiply matrices; the ampersand symbol (@) can also be used for this purpose,<br/> but <font color="green">matmul()</font> is preferred for clarity.</a></li>
 </ul>
 </li>
 </ul>
@@ -474,15 +451,16 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <img src='https://docs.google.com/drawings/d/e/2PACX-1vTeP7VpYBIaWMt5akOIKJD9SMtp54hvQ-Wu8qwvhfqjUGMT08O3gHELWAId2AG2N9s1T3CAQ7mOqJi_/pub?w=960&h=720'><section class="tex2jax_ignore mathjax_ignore" id="numpy">
-<h1><em><strong>NumPy</strong></em><a class="headerlink" href="#numpy" title="Link to this heading">#</a></h1>
+  <img src='https://docs.google.com/drawings/d/e/2PACX-1vTeP7VpYBIaWMt5akOIKJD9SMtp54hvQ-Wu8qwvhfqjUGMT08O3gHELWAId2AG2N9s1T3CAQ7mOqJi_/pub?w=960&h=720'><section class="tex2jax_ignore mathjax_ignore" id="a-quick-introductin-to-numpy">
+<h1><em><strong>A Quick Introductin To NumPy</strong></em><a class="headerlink" href="#a-quick-introductin-to-numpy" title="Link to this heading">#</a></h1>
 <section id="the-numpy-library-offers-efficient-numerical-procedures-that-simplify-complex-calculations-the-fundamental-object-in-this-library-is-the-numpy-array-like-pandas-numpy-must-be-imported-before-use-depending-on-your-notebook-you-may-need-to-install-numpy-before-importing-it">
 <h2>The NumPy library offers efficient numerical procedures that simplify complex calculations. The fundamental object in this library is the NumPy array. Like Pandas, NumPy must be imported before use. Depending on your notebook, you may need to install NumPy before importing it.<a class="headerlink" href="#the-numpy-library-offers-efficient-numerical-procedures-that-simplify-complex-calculations-the-fundamental-object-in-this-library-is-the-numpy-array-like-pandas-numpy-must-be-imported-before-use-depending-on-your-notebook-you-may-need-to-install-numpy-before-importing-it" title="Link to this heading">#</a></h2>
 </section>
 <section id="the-example-code-cell-below-uses-a-try-and-except-code-block-to-import-numpy-and-assigns-it-the-common-alias-np-1">
 <h2>The example code cell below uses a <font color='green'>try</font> and <font color='green'>except</font> code block to import NumPy and assigns<br> it the common alias <font color='green'>np</font>.<span class="math notranslate nohighlight">\(^{1}\)</span><a class="headerlink" href="#the-example-code-cell-below-uses-a-try-and-except-code-block-to-import-numpy-and-assigns-it-the-common-alias-np-1" title="Link to this heading">#</a></h2>
 <hr class="docutils" />
-<p>#####<span class="math notranslate nohighlight">\(^{1}\)</span> An introduction to <font color='green'>try</font> and <font color='green'>except</font> code blocks <a href='https://colab.research.google.com/drive/1_U6FtHZjbjMtBRYrULipP2jnwKis4qgM?usp=sharing'>The Notebook Control Statements In The Library</a></p>
+<section id="for-a-discusion-of-try-and-except-code-blocks-see-chapter-control-statements">
+<h3><span class="math notranslate nohighlight">\(^{1}\)</span> For a discusion of  <font color='green'>try</font> and <font color='green'>except</font> code blocks see Chapter <em>Control Statements</em>.<a class="headerlink" href="#for-a-discusion-of-try-and-except-code-blocks-see-chapter-control-statements" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
@@ -495,16 +473,14 @@ document.write(`
 </div>
 </div>
 </section>
+</section>
 <section id="a-one-dimensional-array">
 <h2><em><strong>A One Dimensional Array</strong></em><a class="headerlink" href="#a-one-dimensional-array" title="Link to this heading">#</a></h2>
-<section id="the-array-method-uses-iterable-data-such-as-a-list-as-its-argument-to-generate-numpy-arrays-for-instance-an-array-containing-the-numbers-1-2-and-3-can-be-created-from-a-list-2-3">
-<h3>The <font color='green'>array()</font> method uses iterable data, such as a list, as its argument to generate NumPy arrays. For instance, an array containing the numbers 1, 2, and 3 can be created from a list.<span class="math notranslate nohighlight">\(^{2,3}\)</span><a class="headerlink" href="#the-array-method-uses-iterable-data-such-as-a-list-as-its-argument-to-generate-numpy-arrays-for-instance-an-array-containing-the-numbers-1-2-and-3-can-be-created-from-a-list-2-3" title="Link to this heading">#</a></h3>
+<section id="the-array-method-uses-iterable-data-such-as-a-list-as-its-argument-to-generate-numpy-arrays-for-instance-an-array-containing-the-numbers-1-2-and-3-can-be-created-from-a-list-2">
+<h3>The <font color='green'>array()</font> method uses iterable data, such as a list, as its argument to generate NumPy arrays. For instance, an array containing the numbers 1, 2, and 3 can be created from a list.<span class="math notranslate nohighlight">\(^{2}\)</span><a class="headerlink" href="#the-array-method-uses-iterable-data-such-as-a-list-as-its-argument-to-generate-numpy-arrays-for-instance-an-array-containing-the-numbers-1-2-and-3-can-be-created-from-a-list-2" title="Link to this heading">#</a></h3>
 <hr class="docutils" />
-<section id="if-you-need-a-little-help-with-this-concept-check-out-the-lists-notebook">
-<h4><span class="math notranslate nohighlight">\(^{2}\)</span> If you need a little help with this concept check out the <a class="reference external" href="https://colab.research.google.com/drive/14ieLqX8VoBMmHGeejw3lbHAYIEXTxk2a">Lists Notebook</a><a class="headerlink" href="#if-you-need-a-little-help-with-this-concept-check-out-the-lists-notebook" title="Link to this heading">#</a></h4>
-</section>
-<section id="all-elements-of-a-numpy-array-are-of-the-same-type">
-<h4><span class="math notranslate nohighlight">\(^{3}\)</span> All elements of a Numpy array are of the same type.<a class="headerlink" href="#all-elements-of-a-numpy-array-are-of-the-same-type" title="Link to this heading">#</a></h4>
+<section id="if-you-need-a-little-help-with-this-concept-see-chapter-a-first-look-at-lists">
+<h4><span class="math notranslate nohighlight">\(^{2}\)</span> If you need a little help with this concept see Chapter <em>A First Look At Lists</em>.<a class="headerlink" href="#if-you-need-a-little-help-with-this-concept-see-chapter-a-first-look-at-lists" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
@@ -572,8 +548,8 @@ Raising e To x [ 2.71828183  7.3890561  20.08553692]
 </section>
 <section id="multi-dimensional-arrays">
 <h2><em><strong>Multi-Dimensional Arrays</strong></em><a class="headerlink" href="#multi-dimensional-arrays" title="Link to this heading">#</a></h2>
-<section id="numpy-arrays-cam-have-anyy-number-of-dimensions-our-attention-is-limited-to-two">
-<h3>Numpy arrays cam have anyy number of dimensions.  Our attention is limited to two:<a class="headerlink" href="#numpy-arrays-cam-have-anyy-number-of-dimensions-our-attention-is-limited-to-two" title="Link to this heading">#</a></h3>
+<section id="numpy-arrays-cam-have-any-number-of-dimensions-our-attention-is-limited-to-two">
+<h3>Numpy arrays cam have any number of dimensions.  Our attention is limited to two:<a class="headerlink" href="#numpy-arrays-cam-have-any-number-of-dimensions-our-attention-is-limited-to-two" title="Link to this heading">#</a></h3>
 <ol class="arabic">
 <li><h4 class="rubric" id="one-dimensional-arrays-these-are-single-row-vectors-1-x-n">One-dimensional arrays: These are single-row vectors (1 x n).</h4>
 </li>
@@ -616,7 +592,16 @@ Raising e To x [ 2.71828183  7.3890561  20.08553692]
 <h4><font color='green'>array_method</font> with two rows and three columns is transposed and assigned to<br> <font color='green'>transpose_array</font> with three rows and two columns The sole argument of <font color='green'>transpose()</font><br> is the array that is to be transposed.<a class="headerlink" href="#array-method-with-two-rows-and-three-columns-is-transposed-and-assigned-to-transpose-array-with-three-rows-and-two-columns-the-sole-argument-of-transpose-is-the-array-that-is-to-be-transposed" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">transpose_array</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">array_method</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#create two dimensitional array: array_method</span>
+<span class="n">array_method</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#transpose array_method from (2,3) shape to (3,2) share</span>
+<span class="n">transpose_array</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">array_method</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Shape Of array_method&#39;</span><span class="p">,</span><span class="n">array_method</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span>
       <span class="s1">&#39;Shape of transpose_array&#39;</span><span class="p">,</span><span class="n">transpose_array</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">array_method</span><span class="p">)</span>
@@ -625,16 +610,12 @@ Raising e To x [ 2.71828183  7.3890561  20.08553692]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_31752</span><span class="o">/</span><span class="mf">4113901217.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">transpose_array</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">array_method</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Shape Of array_method&#39;</span><span class="p">,</span><span class="n">array_method</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span>       <span class="s1">&#39;Shape of transpose_array&#39;</span><span class="p">,</span><span class="n">transpose_array</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="nb">print</span><span class="p">(</span><span class="n">array_method</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="nb">print</span><span class="p">(</span><span class="n">transpose_array</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;array_method&#39; is not defined
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Shape Of array_method (2, 3) Shape of transpose_array (3, 2)
+[[1 2 3]
+ [4 5 6]]
+[[1 4]
+ [2 5]
+ [3 6]]
 </pre></div>
 </div>
 </div>
@@ -643,11 +624,11 @@ Raising e To x [ 2.71828183  7.3890561  20.08553692]
 </section>
 <section id="multiplying-arrays">
 <h3><em><strong>Multiplying Arrays</strong></em><a class="headerlink" href="#multiplying-arrays" title="Link to this heading">#</a></h3>
-<section id="the-number-of-columns-in-the-first-matrix-must-equal-the-number-of-rows-in-the-second-matrix-in-order-to-perform-matrix-multiplication-the-resulting-matrix-has-elements-that-are-equal-to-the-sum-product-of-the-columns-and-rows-these-elements-are-indexed-by-the-rows-and-columns-the-numpy-method-matmul-can-be-used-to-multiply-two-conforming-matrices-in-the-example-provided-array-method-is-the-first-matrix-and-transpose-array-is-the-second-matrix-because-transpose-converts-rows-to-columns-the-number-of-columns-of-the-original-matrix-will-equal-number-of-rows-of-the-trasnposed-matrix-the-result-is-multiplied-array-a-square-matrix-with-two-rows-and-two-columns-4">
-<h4>The number of columns in the first matrix must equal the number of rows in the second matrix<br> in order to perform matrix multiplication. The resulting matrix has elements that are equal to<br> the sum product of the columns and rows. These elements are indexed by the rows and<br> columns. The NumPy method <font color='green'>matmul()</font> can be used to multiply two conforming matrices.<br> In the example provided, <font color='green'>array_method</font> is the first matrix and <font color='green'>transpose_array</font> is the second<br> matrix. Because <font color='green'>transpose()</font> converts rows to columns, the number of columns of the original matrix will equal number of rows of the trasnposed matrix. The result is <font color='green'>multiplied_array</font>, a square matrix with two rows and two columns.<span class="math notranslate nohighlight">\(^{4}\)</span><a class="headerlink" href="#the-number-of-columns-in-the-first-matrix-must-equal-the-number-of-rows-in-the-second-matrix-in-order-to-perform-matrix-multiplication-the-resulting-matrix-has-elements-that-are-equal-to-the-sum-product-of-the-columns-and-rows-these-elements-are-indexed-by-the-rows-and-columns-the-numpy-method-matmul-can-be-used-to-multiply-two-conforming-matrices-in-the-example-provided-array-method-is-the-first-matrix-and-transpose-array-is-the-second-matrix-because-transpose-converts-rows-to-columns-the-number-of-columns-of-the-original-matrix-will-equal-number-of-rows-of-the-trasnposed-matrix-the-result-is-multiplied-array-a-square-matrix-with-two-rows-and-two-columns-4" title="Link to this heading">#</a></h4>
+<section id="the-number-of-columns-in-the-first-matrix-must-equal-the-number-of-rows-in-the-second-matrix-in-order-to-perform-matrix-multiplication-the-resulting-matrix-has-elements-that-are-equal-to-the-sum-product-of-the-columns-and-rows-these-elements-are-indexed-by-the-rows-and-columns-the-numpy-method-matmul-can-be-used-to-multiply-two-conforming-matrices-in-the-example-provided-array-method-is-the-first-matrix-and-transpose-array-is-the-second-matrix-because-transpose-converts-rows-to-columns-the-number-of-columns-of-the-original-matrix-will-equal-number-of-rows-of-the-transposed-matrix-the-result-is-multiplied-array-a-square-matrix-with-two-rows-and-two-columns-3">
+<h4>The number of columns in the first matrix must equal the number of rows in the second matrix<br> in order to perform matrix multiplication. The resulting matrix has elements that are equal to<br> the sum product of the columns and rows. These elements are indexed by the rows and<br> columns. The NumPy method <font color='green'>matmul()</font> can be used to multiply two conforming matrices.<br> In the example provided, <font color='green'>array_method</font> is the first matrix and <font color='green'>transpose_array</font> is the second<br> matrix. Because <font color='green'>transpose()</font> converts rows to columns, the number of columns of the original matrix will equal number of rows of the transposed matrix. The result is <font color='green'>multiplied_array</font>, a square matrix with two rows and two columns.<span class="math notranslate nohighlight">\(^{3}\)</span><a class="headerlink" href="#the-number-of-columns-in-the-first-matrix-must-equal-the-number-of-rows-in-the-second-matrix-in-order-to-perform-matrix-multiplication-the-resulting-matrix-has-elements-that-are-equal-to-the-sum-product-of-the-columns-and-rows-these-elements-are-indexed-by-the-rows-and-columns-the-numpy-method-matmul-can-be-used-to-multiply-two-conforming-matrices-in-the-example-provided-array-method-is-the-first-matrix-and-transpose-array-is-the-second-matrix-because-transpose-converts-rows-to-columns-the-number-of-columns-of-the-original-matrix-will-equal-number-of-rows-of-the-transposed-matrix-the-result-is-multiplied-array-a-square-matrix-with-two-rows-and-two-columns-3" title="Link to this heading">#</a></h4>
 <hr class="docutils" />
 <section id="the-volumes-use-the-matmul-method-to-multiply-matrices-the-ampersand-symbol-can-also-be-used-for-this-purpose-but-matmul-is-preferred-for-clarity">
-<h5><span class="math notranslate nohighlight">\(^{4}\)</span>The volumes use the <font color='green'>matmul()</font> method to multiply matrices; the ampersand symbol (&#64;) can also be used for this purpose,<br> but <font color='green'>matmul()</font> is preferred for clarity.<a class="headerlink" href="#the-volumes-use-the-matmul-method-to-multiply-matrices-the-ampersand-symbol-can-also-be-used-for-this-purpose-but-matmul-is-preferred-for-clarity" title="Link to this heading">#</a></h5>
+<h5><span class="math notranslate nohighlight">\(^{3}\)</span>The volumes use the <font color='green'>matmul()</font> method to multiply matrices; the ampersand symbol (&#64;) can also be used for this purpose,<br> but <font color='green'>matmul()</font> is preferred for clarity.<a class="headerlink" href="#the-volumes-use-the-matmul-method-to-multiply-matrices-the-ampersand-symbol-can-also-be-used-for-this-purpose-but-matmul-is-preferred-for-clarity" title="Link to this heading">#</a></h5>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">multiplied_array</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">array_method</span><span class="p">,</span><span class="n">transpose_array</span><span class="p">)</span>
@@ -677,8 +658,8 @@ Raising e To x [ 2.71828183  7.3890561  20.08553692]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ 1.0000000e+00, -8.8817842e-16],
-       [ 0.0000000e+00,  1.0000000e+00]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[1., 0.],
+       [0., 1.]])
 </pre></div>
 </div>
 </div>
@@ -774,7 +755,7 @@ Row Number &amp; Row Array 1  &amp;  [32 77]
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><em><strong>Pandas</strong></em></p>
+        <p class="prev-next-title"><em><strong>A Quick Introduction To Pandas</strong></em></p>
       </div>
     </a>
     <a class="right-next"
@@ -803,11 +784,13 @@ Row Number &amp; Row Array 1  &amp;  [32 77]
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-numpy-library-offers-efficient-numerical-procedures-that-simplify-complex-calculations-the-fundamental-object-in-this-library-is-the-numpy-array-like-pandas-numpy-must-be-imported-before-use-depending-on-your-notebook-you-may-need-to-install-numpy-before-importing-it">The NumPy library offers efficient numerical procedures that simplify complex calculations. The fundamental object in this library is the NumPy array. Like Pandas, NumPy must be imported before use. Depending on your notebook, you may need to install NumPy before importing it.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-example-code-cell-below-uses-a-try-and-except-code-block-to-import-numpy-and-assigns-it-the-common-alias-np-1">The example code cell below uses a <font color="green">try</font> and <font color="green">except</font> code block to import NumPy and assigns<br/> it the common alias <font color="green">np</font>.<span class="math notranslate nohighlight">\(^{1}\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-example-code-cell-below-uses-a-try-and-except-code-block-to-import-numpy-and-assigns-it-the-common-alias-np-1">The example code cell below uses a <font color="green">try</font> and <font color="green">except</font> code block to import NumPy and assigns<br/> it the common alias <font color="green">np</font>.<span class="math notranslate nohighlight">\(^{1}\)</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#for-a-discusion-of-try-and-except-code-blocks-see-chapter-control-statements"><span class="math notranslate nohighlight">\(^{1}\)</span> For a discusion of  <font color="green">try</font> and <font color="green">except</font> code blocks see Chapter <em>Control Statements</em>.</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-one-dimensional-array"><em><strong>A One Dimensional Array</strong></em></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-array-method-uses-iterable-data-such-as-a-list-as-its-argument-to-generate-numpy-arrays-for-instance-an-array-containing-the-numbers-1-2-and-3-can-be-created-from-a-list-2-3">The <font color="green">array()</font> method uses iterable data, such as a list, as its argument to generate NumPy arrays. For instance, an array containing the numbers 1, 2, and 3 can be created from a list.<span class="math notranslate nohighlight">\(^{2,3}\)</span></a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#if-you-need-a-little-help-with-this-concept-check-out-the-lists-notebook"><span class="math notranslate nohighlight">\(^{2}\)</span> If you need a little help with this concept check out the Lists Notebook</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#all-elements-of-a-numpy-array-are-of-the-same-type"><span class="math notranslate nohighlight">\(^{3}\)</span> All elements of a Numpy array are of the same type.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-array-method-uses-iterable-data-such-as-a-list-as-its-argument-to-generate-numpy-arrays-for-instance-an-array-containing-the-numbers-1-2-and-3-can-be-created-from-a-list-2">The <font color="green">array()</font> method uses iterable data, such as a list, as its argument to generate NumPy arrays. For instance, an array containing the numbers 1, 2, and 3 can be created from a list.<span class="math notranslate nohighlight">\(^{2}\)</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#if-you-need-a-little-help-with-this-concept-see-chapter-a-first-look-at-lists"><span class="math notranslate nohighlight">\(^{2}\)</span> If you need a little help with this concept see Chapter <em>A First Look At Lists</em>.</a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#three-important-attributes-of-arrays"><em><strong>Three Important Attributes Of Arrays</strong></em></a><ul class="nav section-nav flex-column">
@@ -821,7 +804,7 @@ Row Number &amp; Row Array 1  &amp;  [32 77]
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multi-dimensional-arrays"><em><strong>Multi-Dimensional Arrays</strong></em></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy-arrays-cam-have-anyy-number-of-dimensions-our-attention-is-limited-to-two">Numpy arrays cam have anyy number of dimensions.  Our attention is limited to two:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy-arrays-cam-have-any-number-of-dimensions-our-attention-is-limited-to-two">Numpy arrays cam have any number of dimensions.  Our attention is limited to two:</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-simple-two-dimensional-array"><em><strong>A Simple Two-Dimensional Array</strong></em></a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#a-column-vector-represents-the-simplest-multi-dimensional-array-an-array-is-generated-from-a-nested-list-of-the-integers-one-two-and-three-this-array-has-two-dimensions-ndim-and-its-rows-and-columns-shape-are-three-and-one-respectively">A column vector represents the simplest multi-dimensional array. An array is generated from a nested list of the integers one, two, and three. This array has two dimensions (<font color="green">ndim</font>) and its rows and columns (<font color="green">shape</font>) are three and one, respectively.</a></li>
 </ul>
@@ -831,8 +814,8 @@ Row Number &amp; Row Array 1  &amp;  [32 77]
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiplying-arrays"><em><strong>Multiplying Arrays</strong></em></a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-number-of-columns-in-the-first-matrix-must-equal-the-number-of-rows-in-the-second-matrix-in-order-to-perform-matrix-multiplication-the-resulting-matrix-has-elements-that-are-equal-to-the-sum-product-of-the-columns-and-rows-these-elements-are-indexed-by-the-rows-and-columns-the-numpy-method-matmul-can-be-used-to-multiply-two-conforming-matrices-in-the-example-provided-array-method-is-the-first-matrix-and-transpose-array-is-the-second-matrix-because-transpose-converts-rows-to-columns-the-number-of-columns-of-the-original-matrix-will-equal-number-of-rows-of-the-trasnposed-matrix-the-result-is-multiplied-array-a-square-matrix-with-two-rows-and-two-columns-4">The number of columns in the first matrix must equal the number of rows in the second matrix<br/> in order to perform matrix multiplication. The resulting matrix has elements that are equal to<br/> the sum product of the columns and rows. These elements are indexed by the rows and<br/> columns. The NumPy method <font color="green">matmul()</font> can be used to multiply two conforming matrices.<br/> In the example provided, <font color="green">array_method</font> is the first matrix and <font color="green">transpose_array</font> is the second<br/> matrix. Because <font color="green">transpose()</font> converts rows to columns, the number of columns of the original matrix will equal number of rows of the trasnposed matrix. The result is <font color="green">multiplied_array</font>, a square matrix with two rows and two columns.<span class="math notranslate nohighlight">\(^{4}\)</span></a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#the-volumes-use-the-matmul-method-to-multiply-matrices-the-ampersand-symbol-can-also-be-used-for-this-purpose-but-matmul-is-preferred-for-clarity"><span class="math notranslate nohighlight">\(^{4}\)</span>The volumes use the <font color="green">matmul()</font> method to multiply matrices; the ampersand symbol (@) can also be used for this purpose,<br/> but <font color="green">matmul()</font> is preferred for clarity.</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-number-of-columns-in-the-first-matrix-must-equal-the-number-of-rows-in-the-second-matrix-in-order-to-perform-matrix-multiplication-the-resulting-matrix-has-elements-that-are-equal-to-the-sum-product-of-the-columns-and-rows-these-elements-are-indexed-by-the-rows-and-columns-the-numpy-method-matmul-can-be-used-to-multiply-two-conforming-matrices-in-the-example-provided-array-method-is-the-first-matrix-and-transpose-array-is-the-second-matrix-because-transpose-converts-rows-to-columns-the-number-of-columns-of-the-original-matrix-will-equal-number-of-rows-of-the-transposed-matrix-the-result-is-multiplied-array-a-square-matrix-with-two-rows-and-two-columns-3">The number of columns in the first matrix must equal the number of rows in the second matrix<br/> in order to perform matrix multiplication. The resulting matrix has elements that are equal to<br/> the sum product of the columns and rows. These elements are indexed by the rows and<br/> columns. The NumPy method <font color="green">matmul()</font> can be used to multiply two conforming matrices.<br/> In the example provided, <font color="green">array_method</font> is the first matrix and <font color="green">transpose_array</font> is the second<br/> matrix. Because <font color="green">transpose()</font> converts rows to columns, the number of columns of the original matrix will equal number of rows of the transposed matrix. The result is <font color="green">multiplied_array</font>, a square matrix with two rows and two columns.<span class="math notranslate nohighlight">\(^{3}\)</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#the-volumes-use-the-matmul-method-to-multiply-matrices-the-ampersand-symbol-can-also-be-used-for-this-purpose-but-matmul-is-preferred-for-clarity"><span class="math notranslate nohighlight">\(^{3}\)</span>The volumes use the <font color="green">matmul()</font> method to multiply matrices; the ampersand symbol (@) can also be used for this purpose,<br/> but <font color="green">matmul()</font> is preferred for clarity.</a></li>
 </ul>
 </li>
 </ul>

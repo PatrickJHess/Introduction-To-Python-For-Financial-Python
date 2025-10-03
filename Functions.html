@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Functions &#8212; An Introduction to Python for Financial Python</title>
+    <title>A Quick Look At Functions &#8212; An Introduction to Python for Financial Python</title>
   
   
   
@@ -62,8 +62,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'Functions';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Numerical Calculations With Dates" href="Manipulating_Dates.html" />
-    <link rel="prev" title="Dictionaries" href="Dictionaries.html" />
+    <link rel="next" title="A Quick Introduction To Manipulating Dates" href="Manipulating_Dates.html" />
+    <link rel="prev" title="An Introductin To Dictionaries" href="Dictionaries.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -182,43 +182,18 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="Basic_Grammar.html"><em><strong>Introduction</strong></em></a></li>
-<li class="toctree-l1"><a class="reference internal" href="Strings.html"><em><strong>Strings</strong></em></a></li>
-
-
-
-
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="Numbers_%26_Booleans.html"><em><strong>Numbers &amp; Booleans</strong></em></a></li>
-<li class="toctree-l1"><a class="reference internal" href="Control_Statements.html"><em><strong>Statements That Control Other Statements</strong></em></a></li>
-<li class="toctree-l1"><a class="reference internal" href="A_First_Look_At_Lists.html"><em><strong>Lists</strong></em></a></li>
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="Tuples.html"><em><strong>Tuples</strong></em></a></li>
-
-
-<li class="toctree-l1"><a class="reference internal" href="Dictionaries.html"><em><strong>Dictionaries</strong></em></a></li>
-
-
-
-
-
-
-
-
-
-
-<li class="toctree-l1 current active"><a class="current reference internal" href="#"><em><strong>Functions</strong></em></a></li>
-<li class="toctree-l1"><a class="reference internal" href="Manipulating_Dates.html"><em><strong>Numerical Calculations With Dates</strong></em></a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="An_Introduction_To_Pandas.html"><em><strong>Pandas</strong></em></a></li>
-<li class="toctree-l1"><a class="reference internal" href="An_Introduction_To_NumPy.html"><em><strong>NumPy</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Basic_Grammar.html"><em><strong>Basic Grammar</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Strings.html"><em><strong>A Quick Look At Strings</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Numbers_%26_Booleans.html"><em><strong>A Quick Introducton To Numbers And Booleans</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Control_Statements.html"><em><strong>Control Statements</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="A_First_Look_At_Lists.html"><em><strong>A First Look At Lists</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tuples.html"><em><strong>A Quick Introduction To Tuples</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Dictionaries.html"><em><strong>An Introductin To Dictionaries</strong></em></a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#"><em><strong>A Quick Look At Functions</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Manipulating_Dates.html"><em><strong>A Quick Introduction To Manipulating Dates</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="An_Introduction_To_Pandas.html"><em><strong>A Quick Introduction To Pandas</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="An_Introduction_To_NumPy.html"><em><strong>A Quick Introductin To NumPy</strong></em></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Sets.html"><em><strong>Sets</strong></em></a></li>
-
-
 </ul>
 
     </div>
@@ -404,7 +379,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Functions</h1>
+    <h1>A Quick Look At Functions</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -424,7 +399,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#local-variables"><em><strong>Local Variables</strong></em></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#local-variables-exist-only-within-the-function-where-they-are-defined-once-the-function-finishes-running-these-variables-are-deleted-and-are-no-longer-accessible-for-example-the-variable-x-is-established-inside-the-function-giving-something-back-attempting-to-execute-the-command">Local variables exist only within the function where they are defined. Once the function finishes running, these variables are deleted and are no longer accessible.  For example, the variable <font color="green">x</font> is established inside the function <font color="green">giving_something_back()</font>.Attempting to execute the command:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#local-variables-exist-only-within-the-function-where-they-are-defined-once-the-function-finishes-running-these-variables-are-deleted-and-are-no-longer-accessible-for-example-the-variable-x-is-established-inside-the-function-giving-something-back-attempting-to-execute-the-command">Local variables exist only within the function where they are defined. Once the function finishes running, these variables are deleted and are no longer accessible.  For example, the variable <font color="green">x</font> is established inside the function <font color="green">giving_something_back()</font>. Attempting to execute the command:</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#outside-of-that-function-will-result-in-an-error-since-x-is-not-defined-outside-of-the-function">outside of that function will result in an error since <font color="green">x</font> is not defined outside of the function.</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-where-x-is-local-to-giving-something-back"><em><strong>Example Where x Is local To <font color="green">giving_something_back()</font></strong></em></a></li>
 </ul>
@@ -439,16 +414,16 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-global-variable-is-defined-inside-a-function"><em><strong>A Global Variable Is Defined Inside A Function</strong></em></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-function-defines-the-variable-z-as-global-making-it-available-outside-the-function">The function defines the variable <font color="green">z</font> as global making it available outside the function.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-function-defines-the-variable-z-as-global-making-it-available-outside-the-function">The function defines the variable <font color="green">z</font> as <font color="green">global</font> making it available outside the function.</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assigning-a-new-value-to-an-existing-global-variable-inside-a-function"><em><strong>Assigning A New Value To An Existing Global Variable Inside A Function</strong></em></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-function-defines-x-as-global-and-assigns-a-new-value-to-existing-global-variable">The function defines <font color="green">x</font> as global and assigns a new value to existing global variable.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-function-defines-x-as-global-and-assigns-a-new-value-to-existing-global-variable">The function defines <font color="green">x</font> as <font color="green">global</font> and assigns a new value to existing global variable.</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-of-the-global-keyword"><em><strong>Example Of The Global Keyword</strong></em></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-functions-are-like-any-other-object"><em><strong>Python Functions Are Like Any Other Object.</strong></em></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#in-the-first-example-the-create-global-variable-function-is-modified-to-return-the-xgive-something-back-function">In the first example The <font color="green">create_global_variable</font>() function is modified to return the <font color="green">x</font>give_something_back() function.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#in-the-first-example-the-create-global-variable-function-is-modified-to-return-the-give-something-back-function">In the first example The <font color="green">create_global_variable</font>() function is modified to return the <font color="green">give_something_back()</font> function.</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#in-the-second-example-a-function-is-passed-as-an-argument-of-function-as-argument">In the second example, a function is passed as an argument of <font color="green">function_as_argument()</font>.</a></li>
 </ul>
 </li>
@@ -459,6 +434,8 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#positional-and-keyword-arguments"><em><strong>Positional And Keyword Arguments</strong></em></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#arguments-can-be-either-positional-or-keyword-positional-arguments-must-be-assigned-in-the-order-of-the-parameters-the-square-value-div-function-has-parameters-x-and-y-both-parameters-are-assigned-positional-arguments">Arguments can be either positional or keyword. Positional arguments must be assigned in the order of the parameters. The <font color="green">square_value_div()</font> function has parameters x and y. Both parameters are assigned positional arguments.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#assigning-x-2-and-y-4-is-written-as">Assigning <font color="green">x</font>=2 and <font color="green">y</font>=4 is written as:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#and-returns-a-value-of-2-2-4-1-0">and returns a value of (2**2)/4 = 1.0</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#keyword-arguments-are-assigned-when-the-function-is-called-and-are-defined-by-the-parameter-s-name-keyword-arguments-are-useful-when-default-values-are-assigned-or-when-the-function-s-parameters-are-complex-if-both-keyword-and-positional-arguments-are-used-positional-arguments-must-come-first-and-in-the-right-order">Keyword arguments are assigned when the function is called and are defined by the parameter’s name. Keyword arguments are useful when default values are assigned or when the function’s parameters are complex.  If both keyword and positional arguments are used, positional arguments must come first and in the right order.</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#two-keyword-arguments-position-irrelevant"><em><strong>Two Keyword Arguments: Position Irrelevant</strong></em></a></li>
 </ul>
@@ -480,7 +457,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lambda-anonymous-functions-often-used-in-pandas"><em><strong>lambda: Anonymous Functions Often Used In Pandas</strong></em></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-lambda-can-have-numerous-arguments-but-only-a-single-result-unlike-a-typical-function-lambda-is-not-named-and-controls-a-single-statmeent-the-square-value-div-function-can-be-expressed-as-a-lambda-function">A <font color="green">lambda</font> can have numerous arguments, but only a single result. Unlike a typical function, <font color="green">lambda</font> is not named and controls a single statmeent. The <font color="green">square_value_div()</font> function can be expressed as a <font color="green">lambda</font> function.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-lambda-can-have-numerous-arguments-but-only-a-single-result-unlike-a-typical-function-lambda-is-not-named-and-controls-a-single-statement-the-square-value-div-function-can-be-expressed-as-a-lambda-function">A <font color="green">lambda</font> can have numerous arguments, but only a single result. Unlike a typical function, <font color="green">lambda</font> is not named and controls a single statement. The <font color="green">square_value_div()</font> function can be expressed as a <font color="green">lambda</font> function.</a></li>
 </ul>
 </li>
 </ul>
@@ -494,8 +471,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <img src='https://docs.google.com/drawings/d/e/2PACX-1vTIOserV4jy3EtjMSJnLXtcBcAmqHHsebzSkm6fBjzai4esKaDQytZ1QBj1by47pTrFa_mxj8V3E8nV/pub?w=960&h=720'><section class="tex2jax_ignore mathjax_ignore" id="functions">
-<h1><em><strong>Functions</strong></em><a class="headerlink" href="#functions" title="Link to this heading">#</a></h1>
+  <img src='https://docs.google.com/drawings/d/e/2PACX-1vTIOserV4jy3EtjMSJnLXtcBcAmqHHsebzSkm6fBjzai4esKaDQytZ1QBj1by47pTrFa_mxj8V3E8nV/pub?w=960&h=720'><section class="tex2jax_ignore mathjax_ignore" id="a-quick-look-at-functions">
+<h1><em><strong>A Quick Look At Functions</strong></em><a class="headerlink" href="#a-quick-look-at-functions" title="Link to this heading">#</a></h1>
 <section id="python-offers-numerous-built-in-functions-and-methods-and-users-can-easily-create-their-own-functions-to-address-unique-requirements-functions-are-defined-using-the-def-keyword-followed-by-the-function-s-name-parentheses-and-a-colon-functions-limit-code-duplication-and-improve-the-readability-of-complex-code-1">
 <h2>Python offers numerous built-in functions and methods, and users can easily create their own functions to address unique requirements. Functions are defined using the def keyword, followed by the function’s name, parentheses, and a colon. Functions limit code duplication and improve the readability of complex code.<span class="math notranslate nohighlight">\(^{1}\)</span><a class="headerlink" href="#python-offers-numerous-built-in-functions-and-methods-and-users-can-easily-create-their-own-functions-to-address-unique-requirements-functions-are-defined-using-the-def-keyword-followed-by-the-function-s-name-parentheses-and-a-colon-functions-limit-code-duplication-and-improve-the-readability-of-complex-code-1" title="Link to this heading">#</a></h2>
 <hr class="docutils" />
@@ -580,7 +557,7 @@ document.write(`
 <section id="local-variables">
 <h2><em><strong>Local Variables</strong></em><a class="headerlink" href="#local-variables" title="Link to this heading">#</a></h2>
 <section id="local-variables-exist-only-within-the-function-where-they-are-defined-once-the-function-finishes-running-these-variables-are-deleted-and-are-no-longer-accessible-for-example-the-variable-x-is-established-inside-the-function-giving-something-back-attempting-to-execute-the-command">
-<h3>Local variables exist only within the function where they are defined. Once the function finishes running, these variables are deleted and are no longer accessible.  For example, the variable <font color='green'>x</font> is established inside the function <font color='green'>giving_something_back()</font>.Attempting to execute the command:<a class="headerlink" href="#local-variables-exist-only-within-the-function-where-they-are-defined-once-the-function-finishes-running-these-variables-are-deleted-and-are-no-longer-accessible-for-example-the-variable-x-is-established-inside-the-function-giving-something-back-attempting-to-execute-the-command" title="Link to this heading">#</a></h3>
+<h3>Local variables exist only within the function where they are defined. Once the function finishes running, these variables are deleted and are no longer accessible.  For example, the variable <font color='green'>x</font> is established inside the function <font color='green'>giving_something_back()</font>. Attempting to execute the command:<a class="headerlink" href="#local-variables-exist-only-within-the-function-where-they-are-defined-once-the-function-finishes-running-these-variables-are-deleted-and-are-no-longer-accessible-for-example-the-variable-x-is-established-inside-the-function-giving-something-back-attempting-to-execute-the-command" title="Link to this heading">#</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -599,7 +576,7 @@ document.write(`
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_31875</span><span class="o">/</span><span class="mf">1353120783.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_17225</span><span class="o">/</span><span class="mf">1353120783.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 
 <span class="ne">NameError</span>: name &#39;x&#39; is not defined
@@ -666,7 +643,7 @@ document.write(`
 <section id="a-global-variable-is-defined-inside-a-function">
 <h2><em><strong>A Global Variable Is Defined Inside A Function</strong></em><a class="headerlink" href="#a-global-variable-is-defined-inside-a-function" title="Link to this heading">#</a></h2>
 <section id="the-function-defines-the-variable-z-as-global-making-it-available-outside-the-function">
-<h3>The function defines the variable <font color='green'>z</font> as global making it available outside the function.<a class="headerlink" href="#the-function-defines-the-variable-z-as-global-making-it-available-outside-the-function" title="Link to this heading">#</a></h3>
+<h3>The function defines the variable <font color='green'>z</font> as <font color='green'>global</font> making it available outside the function.<a class="headerlink" href="#the-function-defines-the-variable-z-as-global-making-it-available-outside-the-function" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">create_global_variable</span><span class="p">():</span>
@@ -694,7 +671,7 @@ document.write(`
 <section id="assigning-a-new-value-to-an-existing-global-variable-inside-a-function">
 <h2><em><strong>Assigning A New Value To An Existing Global Variable Inside A Function</strong></em><a class="headerlink" href="#assigning-a-new-value-to-an-existing-global-variable-inside-a-function" title="Link to this heading">#</a></h2>
 <section id="the-function-defines-x-as-global-and-assigns-a-new-value-to-existing-global-variable">
-<h3>The function defines <font color='green'>x</font> as global and assigns a new value to existing global variable.<a class="headerlink" href="#the-function-defines-x-as-global-and-assigns-a-new-value-to-existing-global-variable" title="Link to this heading">#</a></h3>
+<h3>The function defines <font color='green'>x</font> as <font color='green'>global</font> and assigns a new value to existing global variable.<a class="headerlink" href="#the-function-defines-x-as-global-and-assigns-a-new-value-to-existing-global-variable" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize a global variable &#39;x&#39; in the global scope.</span>
@@ -718,11 +695,12 @@ document.write(`
 <h3><em><strong>Example Of The Global Keyword</strong></em><a class="headerlink" href="#example-of-the-global-keyword" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Without global <font color='green'>x</font> inside the function,  a new local variable also named <font color='green'>x</font> is created within that function’s scope. The global <font color='green'>x</font> would remain unchanged.</p></li>
-<li><p>global <font color='green'>x</font> makes the function point to the global varriable and alters the value of the global variable.</p></li>
+<li><p>global <font color='green'>x</font> makes the function point to the global variable and alters the value of the global variable.</p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">define_existing_global</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">define_existing_global</span><span class="p">()</span>
 <span class="n">x</span>
 </pre></div>
 </div>
@@ -737,8 +715,8 @@ document.write(`
 </section>
 <section id="python-functions-are-like-any-other-object">
 <h2><em><strong>Python Functions Are Like Any Other Object.</strong></em><a class="headerlink" href="#python-functions-are-like-any-other-object" title="Link to this heading">#</a></h2>
-<section id="in-the-first-example-the-create-global-variable-function-is-modified-to-return-the-xgive-something-back-function">
-<h3>In the first example The <font color='green'>create_global_variable</font>() function is modified to return the <font color='green'>x</font>give_something_back()</font> function.<a class="headerlink" href="#in-the-first-example-the-create-global-variable-function-is-modified-to-return-the-xgive-something-back-function" title="Link to this heading">#</a></h3>
+<section id="in-the-first-example-the-create-global-variable-function-is-modified-to-return-the-give-something-back-function">
+<h3>In the first example The <font color='green'>create_global_variable</font>() function is modified to return the <font color='green'>give_something_back()</font> function.<a class="headerlink" href="#in-the-first-example-the-create-global-variable-function-is-modified-to-return-the-give-something-back-function" title="Link to this heading">#</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">define_existing_global</span><span class="p">():</span>
  <span class="k">global</span> <span class="n">x</span>
  <span class="n">x</span><span class="o">=</span><span class="mi">7</span>
@@ -855,9 +833,17 @@ document.write(`
 <h3>Arguments can be either positional or keyword. Positional arguments must be assigned in the order of the parameters. The <font color='green'>square_value_div()</font> function has parameters x and y. Both parameters are assigned positional arguments.<a class="headerlink" href="#arguments-can-be-either-positional-or-keyword-positional-arguments-must-be-assigned-in-the-order-of-the-parameters-the-square-value-div-function-has-parameters-x-and-y-both-parameters-are-assigned-positional-arguments" title="Link to this heading">#</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">square_value_div</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
   <span class="n">returns</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="n">y</span>
-<span class="n">square_value_div</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
+</section>
+<section id="assigning-x-2-and-y-4-is-written-as">
+<h3>Assigning <font color='green'>x</font>=2 and <font color='green'>y</font>=4 is written as:<a class="headerlink" href="#assigning-x-2-and-y-4-is-written-as" title="Link to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">square_value_div</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="and-returns-a-value-of-2-2-4-1-0">
+<h3>and returns a value of (2**2)/4 = 1.0<a class="headerlink" href="#and-returns-a-value-of-2-2-4-1-0" title="Link to this heading">#</a></h3>
 </section>
 <section id="keyword-arguments-are-assigned-when-the-function-is-called-and-are-defined-by-the-parameter-s-name-keyword-arguments-are-useful-when-default-values-are-assigned-or-when-the-function-s-parameters-are-complex-if-both-keyword-and-positional-arguments-are-used-positional-arguments-must-come-first-and-in-the-right-order">
 <h3>Keyword arguments are assigned when the function is called and are defined by the parameter’s name. Keyword arguments are useful when default values are assigned or when the function’s parameters are complex.  If both keyword and positional arguments are used, positional arguments must come first and in the right order.<a class="headerlink" href="#keyword-arguments-are-assigned-when-the-function-is-called-and-are-defined-by-the-parameter-s-name-keyword-arguments-are-useful-when-default-values-are-assigned-or-when-the-function-s-parameters-are-complex-if-both-keyword-and-positional-arguments-are-used-positional-arguments-must-come-first-and-in-the-right-order" title="Link to this heading">#</a></h3>
@@ -879,12 +865,12 @@ document.write(`
 <p>###<em><strong>Two Positional Arguments Assigned In The order Of Parameters</strong></em></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">square_value_div</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">square_value_div</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.0
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.0
 </pre></div>
 </div>
 </div>
@@ -924,7 +910,7 @@ document.write(`
 <section id="when-a-function-is-created-default-arguments-may-be-assigned-to-its-parameters-any-parameters-with-default-arguments-must-appear-after-those-without-for-instance-in-square-value-div-the-default-arguments-for-x-and-y-are-zero-and-one-respectively">
 <h3>When a function is created, default arguments may be assigned to its parameters. Any parameters with default arguments must appear after those without. For instance, in <font color='green'>square_value_div()</font>, the default arguments for <font color='green'>x</font> and <font color='green'>y</font> are zero and one, respectively.<a class="headerlink" href="#when-a-function-is-created-default-arguments-may-be-assigned-to-its-parameters-any-parameters-with-default-arguments-must-appear-after-those-without-for-instance-in-square-value-div-the-default-arguments-for-x-and-y-are-zero-and-one-respectively" title="Link to this heading">#</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">square_value_div</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
-  <span class="k">return</span> <span class="n">s</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="n">y</span>
+  <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="n">y</span>
 </pre></div>
 </div>
 </section>
@@ -980,7 +966,7 @@ document.write(`
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Union</span> <span class="c1"># Import Union for specifying multiple possible types</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">square_value_div</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">str</span><span class="p">]:</span> <span class="nb">float</span><span class="p">:</span>
-  <span class="k">if</span> <span class="n">y</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span> <span class="n">returne</span> <span class="s1">&#39;Can</span><span class="se">\&#39;</span><span class="s1">t divide by zero&#39;</span>
+  <span class="k">if</span> <span class="n">y</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span> <span class="k">return</span> <span class="s1">&#39;Can</span><span class="se">\&#39;</span><span class="s1">t divide by zero&#39;</span>
   <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="n">y</span>
 </pre></div>
 </div>
@@ -1078,11 +1064,11 @@ document.write(`
 
 square_value_div(x: Union[int, float] = 0, y: Union[int, float] = 1) -&gt; Union[float, str]
     Squares the first numerical argument (x) and then divides the result by the second numerical argument (y).
-    
+
     This function performs the mathematical operation: result = (x * x) / y.
     It includes robust handling for division by zero, returning a descriptive error message
     instead of raising a runtime error in that specific case.
-    
+
     Args:
       x (Union[int, float], optional): The base number to be squared.
                                        Can be an integer or a floating-point number.
@@ -1090,7 +1076,7 @@ square_value_div(x: Union[int, float] = 0, y: Union[int, float] = 1) -&gt; Union
       y (Union[int, float], optional): The divisor. This number will divide the squared value of x.
                                        Can be an integer or a floating-point number.
                                        Defaults to 1.
-    
+
     Returns:
       Union[float, str]:
         - A `float` representing the calculated result of (x squared / y),
@@ -1118,8 +1104,8 @@ square_value_div(x: Union[int, float] = 0, y: Union[int, float] = 1) -&gt; Union
 </section>
 <section id="lambda-anonymous-functions-often-used-in-pandas">
 <h2><em><strong>lambda: Anonymous Functions Often Used In Pandas</strong></em><a class="headerlink" href="#lambda-anonymous-functions-often-used-in-pandas" title="Link to this heading">#</a></h2>
-<section id="a-lambda-can-have-numerous-arguments-but-only-a-single-result-unlike-a-typical-function-lambda-is-not-named-and-controls-a-single-statmeent-the-square-value-div-function-can-be-expressed-as-a-lambda-function">
-<h3>A <font color='green'>lambda</font> can have numerous arguments, but only a single result. Unlike a typical function, <font color='green'>lambda</font> is not named and controls a single statmeent. The <font color='green'>square_value_div()</font> function can be expressed as a <font color='green'>lambda</font> function.<a class="headerlink" href="#a-lambda-can-have-numerous-arguments-but-only-a-single-result-unlike-a-typical-function-lambda-is-not-named-and-controls-a-single-statmeent-the-square-value-div-function-can-be-expressed-as-a-lambda-function" title="Link to this heading">#</a></h3>
+<section id="a-lambda-can-have-numerous-arguments-but-only-a-single-result-unlike-a-typical-function-lambda-is-not-named-and-controls-a-single-statement-the-square-value-div-function-can-be-expressed-as-a-lambda-function">
+<h3>A <font color='green'>lambda</font> can have numerous arguments, but only a single result. Unlike a typical function, <font color='green'>lambda</font> is not named and controls a single statement. The <font color='green'>square_value_div()</font> function can be expressed as a <font color='green'>lambda</font> function.<a class="headerlink" href="#a-lambda-can-have-numerous-arguments-but-only-a-single-result-unlike-a-typical-function-lambda-is-not-named-and-controls-a-single-statement-the-square-value-div-function-can-be-expressed-as-a-lambda-function" title="Link to this heading">#</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">square</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">:</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="n">y</span>
 </pre></div>
 </div>
@@ -1176,7 +1162,7 @@ square_value_div(x: Union[int, float] = 0, y: Union[int, float] = 1) -&gt; Union
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><em><strong>Dictionaries</strong></em></p>
+        <p class="prev-next-title"><em><strong>An Introductin To Dictionaries</strong></em></p>
       </div>
     </a>
     <a class="right-next"
@@ -1184,7 +1170,7 @@ square_value_div(x: Union[int, float] = 0, y: Union[int, float] = 1) -&gt; Union
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><em><strong>Numerical Calculations With Dates</strong></em></p>
+        <p class="prev-next-title"><em><strong>A Quick Introduction To Manipulating Dates</strong></em></p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1214,7 +1200,7 @@ square_value_div(x: Union[int, float] = 0, y: Union[int, float] = 1) -&gt; Union
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#local-variables"><em><strong>Local Variables</strong></em></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#local-variables-exist-only-within-the-function-where-they-are-defined-once-the-function-finishes-running-these-variables-are-deleted-and-are-no-longer-accessible-for-example-the-variable-x-is-established-inside-the-function-giving-something-back-attempting-to-execute-the-command">Local variables exist only within the function where they are defined. Once the function finishes running, these variables are deleted and are no longer accessible.  For example, the variable <font color="green">x</font> is established inside the function <font color="green">giving_something_back()</font>.Attempting to execute the command:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#local-variables-exist-only-within-the-function-where-they-are-defined-once-the-function-finishes-running-these-variables-are-deleted-and-are-no-longer-accessible-for-example-the-variable-x-is-established-inside-the-function-giving-something-back-attempting-to-execute-the-command">Local variables exist only within the function where they are defined. Once the function finishes running, these variables are deleted and are no longer accessible.  For example, the variable <font color="green">x</font> is established inside the function <font color="green">giving_something_back()</font>. Attempting to execute the command:</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#outside-of-that-function-will-result-in-an-error-since-x-is-not-defined-outside-of-the-function">outside of that function will result in an error since <font color="green">x</font> is not defined outside of the function.</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-where-x-is-local-to-giving-something-back"><em><strong>Example Where x Is local To <font color="green">giving_something_back()</font></strong></em></a></li>
 </ul>
@@ -1229,16 +1215,16 @@ square_value_div(x: Union[int, float] = 0, y: Union[int, float] = 1) -&gt; Union
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-global-variable-is-defined-inside-a-function"><em><strong>A Global Variable Is Defined Inside A Function</strong></em></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-function-defines-the-variable-z-as-global-making-it-available-outside-the-function">The function defines the variable <font color="green">z</font> as global making it available outside the function.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-function-defines-the-variable-z-as-global-making-it-available-outside-the-function">The function defines the variable <font color="green">z</font> as <font color="green">global</font> making it available outside the function.</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assigning-a-new-value-to-an-existing-global-variable-inside-a-function"><em><strong>Assigning A New Value To An Existing Global Variable Inside A Function</strong></em></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-function-defines-x-as-global-and-assigns-a-new-value-to-existing-global-variable">The function defines <font color="green">x</font> as global and assigns a new value to existing global variable.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-function-defines-x-as-global-and-assigns-a-new-value-to-existing-global-variable">The function defines <font color="green">x</font> as <font color="green">global</font> and assigns a new value to existing global variable.</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-of-the-global-keyword"><em><strong>Example Of The Global Keyword</strong></em></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-functions-are-like-any-other-object"><em><strong>Python Functions Are Like Any Other Object.</strong></em></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#in-the-first-example-the-create-global-variable-function-is-modified-to-return-the-xgive-something-back-function">In the first example The <font color="green">create_global_variable</font>() function is modified to return the <font color="green">x</font>give_something_back() function.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#in-the-first-example-the-create-global-variable-function-is-modified-to-return-the-give-something-back-function">In the first example The <font color="green">create_global_variable</font>() function is modified to return the <font color="green">give_something_back()</font> function.</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#in-the-second-example-a-function-is-passed-as-an-argument-of-function-as-argument">In the second example, a function is passed as an argument of <font color="green">function_as_argument()</font>.</a></li>
 </ul>
 </li>
@@ -1249,6 +1235,8 @@ square_value_div(x: Union[int, float] = 0, y: Union[int, float] = 1) -&gt; Union
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#positional-and-keyword-arguments"><em><strong>Positional And Keyword Arguments</strong></em></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#arguments-can-be-either-positional-or-keyword-positional-arguments-must-be-assigned-in-the-order-of-the-parameters-the-square-value-div-function-has-parameters-x-and-y-both-parameters-are-assigned-positional-arguments">Arguments can be either positional or keyword. Positional arguments must be assigned in the order of the parameters. The <font color="green">square_value_div()</font> function has parameters x and y. Both parameters are assigned positional arguments.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#assigning-x-2-and-y-4-is-written-as">Assigning <font color="green">x</font>=2 and <font color="green">y</font>=4 is written as:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#and-returns-a-value-of-2-2-4-1-0">and returns a value of (2**2)/4 = 1.0</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#keyword-arguments-are-assigned-when-the-function-is-called-and-are-defined-by-the-parameter-s-name-keyword-arguments-are-useful-when-default-values-are-assigned-or-when-the-function-s-parameters-are-complex-if-both-keyword-and-positional-arguments-are-used-positional-arguments-must-come-first-and-in-the-right-order">Keyword arguments are assigned when the function is called and are defined by the parameter’s name. Keyword arguments are useful when default values are assigned or when the function’s parameters are complex.  If both keyword and positional arguments are used, positional arguments must come first and in the right order.</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#two-keyword-arguments-position-irrelevant"><em><strong>Two Keyword Arguments: Position Irrelevant</strong></em></a></li>
 </ul>
@@ -1270,7 +1258,7 @@ square_value_div(x: Union[int, float] = 0, y: Union[int, float] = 1) -&gt; Union
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lambda-anonymous-functions-often-used-in-pandas"><em><strong>lambda: Anonymous Functions Often Used In Pandas</strong></em></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-lambda-can-have-numerous-arguments-but-only-a-single-result-unlike-a-typical-function-lambda-is-not-named-and-controls-a-single-statmeent-the-square-value-div-function-can-be-expressed-as-a-lambda-function">A <font color="green">lambda</font> can have numerous arguments, but only a single result. Unlike a typical function, <font color="green">lambda</font> is not named and controls a single statmeent. The <font color="green">square_value_div()</font> function can be expressed as a <font color="green">lambda</font> function.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-lambda-can-have-numerous-arguments-but-only-a-single-result-unlike-a-typical-function-lambda-is-not-named-and-controls-a-single-statement-the-square-value-div-function-can-be-expressed-as-a-lambda-function">A <font color="green">lambda</font> can have numerous arguments, but only a single result. Unlike a typical function, <font color="green">lambda</font> is not named and controls a single statement. The <font color="green">square_value_div()</font> function can be expressed as a <font color="green">lambda</font> function.</a></li>
 </ul>
 </li>
 </ul>

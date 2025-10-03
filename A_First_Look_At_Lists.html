@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Lists &#8212; An Introduction to Python for Financial Python</title>
+    <title>A First Look At Lists &#8212; An Introduction to Python for Financial Python</title>
   
   
   
@@ -60,8 +60,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'A_First_Look_At_Lists';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Tuples" href="Tuples.html" />
-    <link rel="prev" title="Statements That Control Other Statements" href="Control_Statements.html" />
+    <link rel="next" title="A Quick Introduction To Tuples" href="Tuples.html" />
+    <link rel="prev" title="Control Statements" href="Control_Statements.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -180,43 +180,18 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="Basic_Grammar.html"><em><strong>Introduction</strong></em></a></li>
-<li class="toctree-l1"><a class="reference internal" href="Strings.html"><em><strong>Strings</strong></em></a></li>
-
-
-
-
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="Numbers_%26_Booleans.html"><em><strong>Numbers &amp; Booleans</strong></em></a></li>
-<li class="toctree-l1"><a class="reference internal" href="Control_Statements.html"><em><strong>Statements That Control Other Statements</strong></em></a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#"><em><strong>Lists</strong></em></a></li>
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="Tuples.html"><em><strong>Tuples</strong></em></a></li>
-
-
-<li class="toctree-l1"><a class="reference internal" href="Dictionaries.html"><em><strong>Dictionaries</strong></em></a></li>
-
-
-
-
-
-
-
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="Functions.html"><em><strong>Functions</strong></em></a></li>
-<li class="toctree-l1"><a class="reference internal" href="Manipulating_Dates.html"><em><strong>Numerical Calculations With Dates</strong></em></a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="An_Introduction_To_Pandas.html"><em><strong>Pandas</strong></em></a></li>
-<li class="toctree-l1"><a class="reference internal" href="An_Introduction_To_NumPy.html"><em><strong>NumPy</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Basic_Grammar.html"><em><strong>Basic Grammar</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Strings.html"><em><strong>A Quick Look At Strings</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Numbers_%26_Booleans.html"><em><strong>A Quick Introducton To Numbers And Booleans</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Control_Statements.html"><em><strong>Control Statements</strong></em></a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#"><em><strong>A First Look At Lists</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tuples.html"><em><strong>A Quick Introduction To Tuples</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Dictionaries.html"><em><strong>An Introductin To Dictionaries</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Functions.html"><em><strong>A Quick Look At Functions</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Manipulating_Dates.html"><em><strong>A Quick Introduction To Manipulating Dates</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="An_Introduction_To_Pandas.html"><em><strong>A Quick Introduction To Pandas</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="An_Introduction_To_NumPy.html"><em><strong>A Quick Introductin To NumPy</strong></em></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Sets.html"><em><strong>Sets</strong></em></a></li>
-
-
 </ul>
 
     </div>
@@ -402,7 +377,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Lists</h1>
+    <h1>A First Look At Lists</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -412,37 +387,34 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><em><strong>Lists</strong></em></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-list-is-a-data-type-that-can-hold-multiple-values">A list is a data type that can hold multiple values.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-list-can-be-instantiated-created-in-several-ways-the-easiest-way-is-to-directly-assign-values-by-using-square-brackets-with-commas-to-separate-data-another-way-is-using-the-list-constructor-list-with-iterable-data-list-comprehension-is-also-an-option-that-involves-iterating-through-data-to-create-a-list">A list can be instantiated (created) in several ways.  The easiest way is to directly assign values by using square brackets with commas to separate data. Another way is using the list constructor <font color="green">list()</font> with iterable data. List comprehension is also an option that involves iterating through data to create a list.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-nested-list-and-a-list-with-multiple-data-types"><em><strong>A Nested List And A List With Multiple Data Types</strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-example-demonstrates-how-a-list-can-contain-different-data-types-even-other-lists-list-lists-is-created-from-the-existing-lists-x-y-and-z-mixed-list-includes-a-string-an-integer-and-a-boolean-value">The example demonstrates how a list can contain different data types, even other lists.<br/> <font color="green">list_lists</font> is created from the existing lists <font color="green">x</font>, <font color="green">y</font>, and <font color="green">z</font>. <font color="green">mixed_list</font> includes, a string, an integer, and a boolean value.</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#a-nexted-list-and-a-list-with-multiple-data-types"><em><strong>A Nexted List And A List With Multiple Data Types</strong></em></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-example-demonstrates-how-a-list-can-contain-different-data-types-even-other-lists-list-lists-is-created-from-the-existing-lists-x-y-and-z-mixed-list-includes-a-string-an-integer-and-a-boolean-value">The example demonstrates how a list can contain different data types, even other lists.<br/> <font color="green">list_lists</font> is created from the existing lists <font color="green">x</font>, <font color="green">y</font>, and <font color="green">z</font>. <font color="green">mixed_list</font> includes, a string, an integer, and a boolean value.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#some-useful-methods"><em><strong>Some Useful Methods</strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-append-index-and-sort-methods-are-commonly-used-tools-for-working-with-lists-the-append-method-adds-a-new-element-to-the-end-of-a-list-the-index-method-provides-the-first-location-of-a-specified-value-within-the-list-the-sort-method-rearranges-the-elements-of-the-list-with-descending-order-as-the-default-and-ascending-order-as-an-option-reverse-true">The <font color="green">append</font>, <font color="green">index</font>, and <font color="green">sort</font> methods are commonly used tools for working with lists. The <font color="green">append</font> method adds a new element to the end of a list. The <font color="green">index</font> method provides the first location of a specified value within the list. The <font color="green">sort</font> method rearranges the elements of the list, with descending order as the default and ascending order as an option (reverse=True).</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#other-list-methods-are-described-here">Other list methods are described here.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-append-method"><em><strong>The Append Method</strong></em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-index-method"><em><strong>The Index Method</strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#if-a-value-is-in-the-list-the-method-index-returns-its-location"><em><strong>If A Value Is In The List, The method <font color="green">index()</font> Returns Its Location.</strong></em></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#if-the-value-is-not-in-the-list-the-method-index-returns-an-error-terminating-execution"><em><strong>If The Value Is Not In The List, The method <font color="green">index()</font> Returns An Error Terminating Execution.</strong></em></a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#some-useful-methods"><em><strong>Some Useful Methods</strong></em></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-append-index-and-sort-methods-are-commonly-used-tools-for-working-with-lists-the-append-method-adds-a-new-element-to-the-end-of-a-list-the-index-method-provides-the-first-location-of-a-specified-value-within-the-list-the-sort-method-rearranges-the-elements-of-the-list-with-descending-order-as-the-default-and-ascending-order-as-an-option-reverse-true">The <font color="green">append</font>, <font color="green">index</font>, and <font color="green">sort</font> methods are commonly used tools for working with lists. The <font color="green">append</font> method adds a new element to the end of a list. The <font color="green">index</font> method provides the first location of a specified value within the list. The <font color="green">sort</font> method rearranges the elements of the list, with descending order as the default and ascending order as an option (reverse=True).</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other-list-methods-are-described-here">Other list methods are described here.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-append-method"><em><strong>The Append Method</strong></em></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-index-method"><em><strong>The Index Method</strong></em></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#if-the-value-is-not-in-the-list-the-method-index-returns-an-error-terminating-execution"><em><strong>If The Value Is Not In The List, The method <font color="green">index()</font> Returns An Error Terminating Execution.</strong></em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#combining-and-slicing-lists-with-the-index"><em><strong>Combining And Slicing Lists With The Index</strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-list-z-is-returned-to-its-original-values-5-6-and-then-combined-with-lists-z-and-y-using-the-plus-sign-the-list-method-extend-may-be-used-to-add-an-iterable-to-the-end-of-a-list-if-you-are-working-only-with-lists-the-plus-sign-is-more-flexible-the-resulting-combined-list-is-then-sliced-and-iterated-through-using-a-for-loop">The list <font color="green">z</font> is returned to its original values [5,6] and then combined with lists <font color="green">z</font> and <font color="green">y</font> using the plus sign. The list method <font color="green">extend</font> may be used to add an iterable to the end of a list. If you are working only with lists, the plus sign is more flexible.  The resulting combined list is then sliced and iterated through using a <font color="green">for loop</font>.</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-sort-method"><em><strong>The Sort Method</strong></em></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#combining-and-slicing-lists-with-the-index"><em><strong>Combining And Slicing Lists With The Index</strong></em></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-list-z-is-returned-to-its-original-values-5-6-and-then-combined-with-lists-z-and-y-using-the-plus-sign-the-list-method-extend-may-be-used-to-add-an-iterable-to-the-end-of-a-list-if-you-are-working-only-with-lists-the-plus-sign-is-more-flexible-the-resulting-combined-list-is-then-sliced-and-iterated-through-using-a-for-loop">The list <font color="green">z</font> is returned to its original values [5,6] and then combined with lists <font color="green">z</font> and <font color="green">y</font> using the plus sign. The list method <font color="green">extend</font> may be used to add an iterable to the end of a list. If you are working only with lists, the plus sign is more flexible.  The resulting combined list is then sliced and iterated through using a <font color="green">for loop</font>.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-sort-method"><em><strong>The Sort Method</strong></em></a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-list-by-iterating-through-a-string-list-comprehension-for-loop"><em><strong>Create A List By Iterating Through A String: List Comprehension &amp; For Loop</strong></em></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assign-the-text-financial-python-to-the-variable-financial-python-the-first-option-is-to-use-list-comprehension-to-convert-the-string-to-a-list-of-characters-each-character-becomes-a-separate-value">Assign the text “Financial Python” to the variable <font color="green">financial_python</font>. The first option is to use list comprehension to convert the string to a list of characters: each character becomes a separate value.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#option-2-is-to-use-a-for-loop-initialize-a-list-with-no-values-then-iterate-through-each-character-in-financial-python-adding-each-element-to-the-new-list-for-iteration">Option 2 is to use a <font color="green">for loop</font>. Initialize a list with no values. Then iterate through each character in <font color="green">financial_python</font> adding each element to the new list for iteration.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-list-by-iterating-through-a-string-list-comprehension-for-loop"><em><strong>Create A List By Iterating Through A String: List Comprehension &amp; For Loop</strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#assign-the-text-financial-python-to-the-variable-financial-python-the-first-option-is-to-use-list-comprehension-to-convert-the-string-to-a-list-of-characters-each-character-becomes-a-separate-value">Assign the text “Financial Python” to the variable <font color="green">financial_python</font>. The first option is to use list comprehension to convert the string to a list of characters: each character becomes a separate value.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#option-2-is-to-use-a-for-loop-initialize-a-list-with-no-values-then-iterate-through-each-character-in-financial-python-adding-each-element-to-the-new-list-for-iteration">Option 2 is to use a <font color="green">for loop</font>. Initialize a list with no values. Then iterate through each character in <font color="green">financial_python</font> adding each element to the new list for iteration.</a></li>
 </ul>
 </li>
 </ul>
-
             </nav>
         </div>
     </div>
@@ -453,8 +425,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <img src='https://docs.google.com/drawings/d/e/2PACX-1vQqQ4axsy3MtEoO9KfxzaMgieXChVHyF_KVlejN1Hd5GDZPR4fzBTf37h7XGgo2xvKF8DOmp0YeiMDb/pub?w=960&h=720'><section id="lists">
-<h1><em><strong>Lists</strong></em><a class="headerlink" href="#lists" title="Link to this heading">#</a></h1>
+  <img src='https://docs.google.com/drawings/d/e/2PACX-1vQqQ4axsy3MtEoO9KfxzaMgieXChVHyF_KVlejN1Hd5GDZPR4fzBTf37h7XGgo2xvKF8DOmp0YeiMDb/pub?w=960&h=720'><section class="tex2jax_ignore mathjax_ignore" id="a-first-look-at-lists">
+<h1><em><strong>A First Look At Lists</strong></em><a class="headerlink" href="#a-first-look-at-lists" title="Link to this heading">#</a></h1>
 <section id="a-list-is-a-data-type-that-can-hold-multiple-values">
 <h2>A list is a data type that can hold multiple values.<a class="headerlink" href="#a-list-is-a-data-type-that-can-hold-multiple-values" title="Link to this heading">#</a></h2>
 </section>
@@ -511,11 +483,10 @@ document.write(`
 </div>
 </div>
 </section>
-</section>
-<section id="a-nexted-list-and-a-list-with-multiple-data-types">
-<h1><em><strong>A Nexted List And A List With Multiple Data Types</strong></em><a class="headerlink" href="#a-nexted-list-and-a-list-with-multiple-data-types" title="Link to this heading">#</a></h1>
+<section id="a-nested-list-and-a-list-with-multiple-data-types">
+<h2><em><strong>A Nested List And A List With Multiple Data Types</strong></em><a class="headerlink" href="#a-nested-list-and-a-list-with-multiple-data-types" title="Link to this heading">#</a></h2>
 <section id="the-example-demonstrates-how-a-list-can-contain-different-data-types-even-other-lists-list-lists-is-created-from-the-existing-lists-x-y-and-z-mixed-list-includes-a-string-an-integer-and-a-boolean-value">
-<h2>The example demonstrates how a list can contain different data types, even other lists.<br> <font color='green'>list_lists</font> is created from the existing lists <font color='green'>x</font>, <font color='green'>y</font>, and <font color='green'>z</font>. <font color='green'>mixed_list</font> includes, a string, an integer, and a boolean value.<a class="headerlink" href="#the-example-demonstrates-how-a-list-can-contain-different-data-types-even-other-lists-list-lists-is-created-from-the-existing-lists-x-y-and-z-mixed-list-includes-a-string-an-integer-and-a-boolean-value" title="Link to this heading">#</a></h2>
+<h3>The example demonstrates how a list can contain different data types, even other lists.<br> <font color='green'>list_lists</font> is created from the existing lists <font color='green'>x</font>, <font color='green'>y</font>, and <font color='green'>z</font>. <font color='green'>mixed_list</font> includes, a string, an integer, and a boolean value.<a class="headerlink" href="#the-example-demonstrates-how-a-list-can-contain-different-data-types-even-other-lists-list-lists-is-created-from-the-existing-lists-x-y-and-z-mixed-list-includes-a-string-an-integer-and-a-boolean-value" title="Link to this heading">#</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">list_lists</span> <span class="o">=</span> <span class="p">[</span><span class="n">element</span> <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="p">[</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">]]</span>  <span class="c1"># Creates [[1, 2], [3, 4], [7, 6, 5]]</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">list_lists</span><span class="p">)</span>
 <span class="n">mixed_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Finance&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="kc">True</span><span class="p">]</span>               <span class="c1"># Mixed data types</span>
@@ -542,15 +513,15 @@ document.write(`
 </section>
 </section>
 <section id="some-useful-methods">
-<h1><em><strong>Some Useful Methods</strong></em><a class="headerlink" href="#some-useful-methods" title="Link to this heading">#</a></h1>
+<h2><em><strong>Some Useful Methods</strong></em><a class="headerlink" href="#some-useful-methods" title="Link to this heading">#</a></h2>
 <section id="the-append-index-and-sort-methods-are-commonly-used-tools-for-working-with-lists-the-append-method-adds-a-new-element-to-the-end-of-a-list-the-index-method-provides-the-first-location-of-a-specified-value-within-the-list-the-sort-method-rearranges-the-elements-of-the-list-with-descending-order-as-the-default-and-ascending-order-as-an-option-reverse-true">
-<h2>The <font color='green'>append</font>, <font color='green'>index</font>, and <font color='green'>sort</font> methods are commonly used tools for working with lists. The <font color='green'>append</font> method adds a new element to the end of a list. The <font color='green'>index</font> method provides the first location of a specified value within the list. The <font color='green'>sort</font> method rearranges the elements of the list, with descending order as the default and ascending order as an option (reverse=True).<a class="headerlink" href="#the-append-index-and-sort-methods-are-commonly-used-tools-for-working-with-lists-the-append-method-adds-a-new-element-to-the-end-of-a-list-the-index-method-provides-the-first-location-of-a-specified-value-within-the-list-the-sort-method-rearranges-the-elements-of-the-list-with-descending-order-as-the-default-and-ascending-order-as-an-option-reverse-true" title="Link to this heading">#</a></h2>
+<h3>The <font color='green'>append</font>, <font color='green'>index</font>, and <font color='green'>sort</font> methods are commonly used tools for working with lists. The <font color='green'>append</font> method adds a new element to the end of a list. The <font color='green'>index</font> method provides the first location of a specified value within the list. The <font color='green'>sort</font> method rearranges the elements of the list, with descending order as the default and ascending order as an option (reverse=True).<a class="headerlink" href="#the-append-index-and-sort-methods-are-commonly-used-tools-for-working-with-lists-the-append-method-adds-a-new-element-to-the-end-of-a-list-the-index-method-provides-the-first-location-of-a-specified-value-within-the-list-the-sort-method-rearranges-the-elements-of-the-list-with-descending-order-as-the-default-and-ascending-order-as-an-option-reverse-true" title="Link to this heading">#</a></h3>
 </section>
 <section id="other-list-methods-are-described-here">
-<h2>Other list methods are described <a class="reference external" href="https://www.w3schools.com/python/python_ref_list.asp">here</a>.<a class="headerlink" href="#other-list-methods-are-described-here" title="Link to this heading">#</a></h2>
+<h3>Other list methods are described <a class="reference external" href="https://www.w3schools.com/python/python_ref_list.asp">here</a>.<a class="headerlink" href="#other-list-methods-are-described-here" title="Link to this heading">#</a></h3>
 </section>
 <section id="the-append-method">
-<h2><em><strong>The Append Method</strong></em><a class="headerlink" href="#the-append-method" title="Link to this heading">#</a></h2>
+<h3><em><strong>The Append Method</strong></em><a class="headerlink" href="#the-append-method" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Add the value 7 to the end of list z</span>
@@ -578,9 +549,25 @@ document.write(`
 </div>
 </section>
 <section id="the-index-method">
-<h2><em><strong>The Index Method</strong></em><a class="headerlink" href="#the-index-method" title="Link to this heading">#</a></h2>
+<h3><em><strong>The Index Method</strong></em><a class="headerlink" href="#the-index-method" title="Link to this heading">#</a></h3>
+<section id="if-a-value-is-in-the-list-the-method-index-returns-its-location">
+<h4><em><strong>If A Value Is In The List, The method <font color='green'>index()</font> Returns Its Location.</strong></em><a class="headerlink" href="#if-a-value-is-in-the-list-the-method-index-returns-its-location" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">location</span><span class="o">=</span><span class="n">z</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">location</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 <section id="if-the-value-is-not-in-the-list-the-method-index-returns-an-error-terminating-execution">
-<h3><em><strong>If The Value Is Not In The List, The method <font color='green'>index()</font> Returns An Error Terminating Execution.</strong></em><a class="headerlink" href="#if-the-value-is-not-in-the-list-the-method-index-returns-an-error-terminating-execution" title="Link to this heading">#</a></h3>
+<h4><em><strong>If The Value Is Not In The List, The method <font color='green'>index()</font> Returns An Error Terminating Execution.</strong></em><a class="headerlink" href="#if-the-value-is-not-in-the-list-the-method-index-returns-an-error-terminating-execution" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">location</span><span class="o">=</span><span class="n">z</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
@@ -591,7 +578,7 @@ document.write(`
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_31734</span><span class="o">/</span><span class="mf">4115913051.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_17107</span><span class="o">/</span><span class="mf">4115913051.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">location</span><span class="o">=</span><span class="n">z</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="nb">print</span><span class="p">(</span><span class="n">location</span><span class="p">)</span>
 
@@ -602,50 +589,10 @@ document.write(`
 </div>
 </section>
 </section>
-<section id="the-sort-method">
-<h2><em><strong>The Sort Method</strong></em><a class="headerlink" href="#the-sort-method" title="Link to this heading">#</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Sort the list x_y_z in ascending order</span>
-<span class="n">x_y_z</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
-
-<span class="c1"># Print the list after sorting in ascending order</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">x_y_z</span><span class="p">)</span>
-
-<span class="c1"># Sort the list x_y_z in descending order by setting reverse=True</span>
-<span class="n">x_y_z</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-
-<span class="c1"># Print the list after sorting in descending order</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">x_y_z</span><span class="p">)</span>
-
-</pre></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Sort the list x_y_z in ascending order</span>
-<span class="n">x_y_z</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
-
-<span class="c1"># Print the list after sorting in ascending order</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">x_y_z</span><span class="p">)</span>
-
-<span class="c1"># Sort the list x_y_z in descending order by setting reverse=True</span>
-<span class="n">x_y_z</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-
-<span class="c1"># Print the list after sorting in descending order</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">x_y_z</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 2, 3, 4, 5, 6]
-[6, 5, 4, 3, 2, 1]
-</pre></div>
-</div>
-</div>
-</div>
-</section>
 <section id="combining-and-slicing-lists-with-the-index">
-<h2><em><strong>Combining And Slicing Lists With The Index</strong></em><a class="headerlink" href="#combining-and-slicing-lists-with-the-index" title="Link to this heading">#</a></h2>
+<h3><em><strong>Combining And Slicing Lists With The Index</strong></em><a class="headerlink" href="#combining-and-slicing-lists-with-the-index" title="Link to this heading">#</a></h3>
 <section id="the-list-z-is-returned-to-its-original-values-5-6-and-then-combined-with-lists-z-and-y-using-the-plus-sign-the-list-method-extend-may-be-used-to-add-an-iterable-to-the-end-of-a-list-if-you-are-working-only-with-lists-the-plus-sign-is-more-flexible-the-resulting-combined-list-is-then-sliced-and-iterated-through-using-a-for-loop">
-<h3>The list <font color='green'>z</font> is returned to its original values [5,6] and then combined with lists <font color='green'>z</font> and <font color='green'>y</font> using the plus sign. The list method <font color='green'>extend</font> may be used to add an iterable to the end of a list. If you are working only with lists, the plus sign is more flexible.  The resulting combined list is then sliced and iterated through using a <font color='green'>for loop</font>.<a class="headerlink" href="#the-list-z-is-returned-to-its-original-values-5-6-and-then-combined-with-lists-z-and-y-using-the-plus-sign-the-list-method-extend-may-be-used-to-add-an-iterable-to-the-end-of-a-list-if-you-are-working-only-with-lists-the-plus-sign-is-more-flexible-the-resulting-combined-list-is-then-sliced-and-iterated-through-using-a-for-loop" title="Link to this heading">#</a></h3>
+<h4>The list <font color='green'>z</font> is returned to its original values [5,6] and then combined with lists <font color='green'>z</font> and <font color='green'>y</font> using the plus sign. The list method <font color='green'>extend</font> may be used to add an iterable to the end of a list. If you are working only with lists, the plus sign is more flexible.  The resulting combined list is then sliced and iterated through using a <font color='green'>for loop</font>.<a class="headerlink" href="#the-list-z-is-returned-to-its-original-values-5-6-and-then-combined-with-lists-z-and-y-using-the-plus-sign-the-list-method-extend-may-be-used-to-add-an-iterable-to-the-end-of-a-list-if-you-are-working-only-with-lists-the-plus-sign-is-more-flexible-the-resulting-combined-list-is-then-sliced-and-iterated-through-using-a-for-loop" title="Link to this heading">#</a></h4>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Reset list z to its original values for demonstration</span>
 <span class="n">z</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
 
@@ -716,14 +663,54 @@ The Fifth Value Is At Index Value  4 5
 </div>
 </section>
 </section>
+<section id="the-sort-method">
+<h3><em><strong>The Sort Method</strong></em><a class="headerlink" href="#the-sort-method" title="Link to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Sort the list x_y_z in ascending order</span>
+<span class="n">x_y_z</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+
+<span class="c1"># Print the list after sorting in ascending order</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x_y_z</span><span class="p">)</span>
+
+<span class="c1"># Sort the list x_y_z in descending order by setting reverse=True</span>
+<span class="n">x_y_z</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Print the list after sorting in descending order</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x_y_z</span><span class="p">)</span>
+
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Sort the list x_y_z in ascending order</span>
+<span class="n">x_y_z</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+
+<span class="c1"># Print the list after sorting in ascending order</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x_y_z</span><span class="p">)</span>
+
+<span class="c1"># Sort the list x_y_z in descending order by setting reverse=True</span>
+<span class="n">x_y_z</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Print the list after sorting in descending order</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x_y_z</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 2, 3, 4, 5, 6]
+[6, 5, 4, 3, 2, 1]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 </section>
 <section id="create-a-list-by-iterating-through-a-string-list-comprehension-for-loop">
-<h1><em><strong>Create A List By Iterating Through A String: List Comprehension &amp; For Loop</strong></em><a class="headerlink" href="#create-a-list-by-iterating-through-a-string-list-comprehension-for-loop" title="Link to this heading">#</a></h1>
+<h2><em><strong>Create A List By Iterating Through A String: List Comprehension &amp; For Loop</strong></em><a class="headerlink" href="#create-a-list-by-iterating-through-a-string-list-comprehension-for-loop" title="Link to this heading">#</a></h2>
 <section id="assign-the-text-financial-python-to-the-variable-financial-python-the-first-option-is-to-use-list-comprehension-to-convert-the-string-to-a-list-of-characters-each-character-becomes-a-separate-value">
-<h2>Assign the text “Financial Python” to the variable <font color='green'>financial_python</font>. The first option is to use list comprehension to convert the string to a list of characters: each character becomes a separate value.<a class="headerlink" href="#assign-the-text-financial-python-to-the-variable-financial-python-the-first-option-is-to-use-list-comprehension-to-convert-the-string-to-a-list-of-characters-each-character-becomes-a-separate-value" title="Link to this heading">#</a></h2>
+<h3>Assign the text “Financial Python” to the variable <font color='green'>financial_python</font>. The first option is to use list comprehension to convert the string to a list of characters: each character becomes a separate value.<a class="headerlink" href="#assign-the-text-financial-python-to-the-variable-financial-python-the-first-option-is-to-use-list-comprehension-to-convert-the-string-to-a-list-of-characters-each-character-becomes-a-separate-value" title="Link to this heading">#</a></h3>
 </section>
 <section id="option-2-is-to-use-a-for-loop-initialize-a-list-with-no-values-then-iterate-through-each-character-in-financial-python-adding-each-element-to-the-new-list-for-iteration">
-<h2>Option 2 is to use a <font color='green'>for loop</font>. Initialize a list with no values. Then iterate through each character in <font color='green'>financial_python</font> adding each element to the new list for iteration.<a class="headerlink" href="#option-2-is-to-use-a-for-loop-initialize-a-list-with-no-values-then-iterate-through-each-character-in-financial-python-adding-each-element-to-the-new-list-for-iteration" title="Link to this heading">#</a></h2>
+<h3>Option 2 is to use a <font color='green'>for loop</font>. Initialize a list with no values. Then iterate through each character in <font color='green'>financial_python</font> adding each element to the new list for iteration.<a class="headerlink" href="#option-2-is-to-use-a-for-loop-initialize-a-list-with-no-values-then-iterate-through-each-character-in-financial-python-adding-each-element-to-the-new-list-for-iteration" title="Link to this heading">#</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define a string variable containing the text &quot;Financial Python&quot;</span>
 <span class="n">financial_python</span> <span class="o">=</span> <span class="s1">&#39;Financial Python&#39;</span>
 
@@ -779,6 +766,7 @@ The Fifth Value Is At Index Value  4 5
 </div>
 </section>
 </section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -816,7 +804,7 @@ The Fifth Value Is At Index Value  4 5
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><em><strong>Statements That Control Other Statements</strong></em></p>
+        <p class="prev-next-title"><em><strong>Control Statements</strong></em></p>
       </div>
     </a>
     <a class="right-next"
@@ -824,7 +812,7 @@ The Fifth Value Is At Index Value  4 5
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><em><strong>Tuples</strong></em></p>
+        <p class="prev-next-title"><em><strong>A Quick Introduction To Tuples</strong></em></p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -844,37 +832,34 @@ The Fifth Value Is At Index Value  4 5
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><em><strong>Lists</strong></em></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-list-is-a-data-type-that-can-hold-multiple-values">A list is a data type that can hold multiple values.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-list-can-be-instantiated-created-in-several-ways-the-easiest-way-is-to-directly-assign-values-by-using-square-brackets-with-commas-to-separate-data-another-way-is-using-the-list-constructor-list-with-iterable-data-list-comprehension-is-also-an-option-that-involves-iterating-through-data-to-create-a-list">A list can be instantiated (created) in several ways.  The easiest way is to directly assign values by using square brackets with commas to separate data. Another way is using the list constructor <font color="green">list()</font> with iterable data. List comprehension is also an option that involves iterating through data to create a list.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-nested-list-and-a-list-with-multiple-data-types"><em><strong>A Nested List And A List With Multiple Data Types</strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-example-demonstrates-how-a-list-can-contain-different-data-types-even-other-lists-list-lists-is-created-from-the-existing-lists-x-y-and-z-mixed-list-includes-a-string-an-integer-and-a-boolean-value">The example demonstrates how a list can contain different data types, even other lists.<br/> <font color="green">list_lists</font> is created from the existing lists <font color="green">x</font>, <font color="green">y</font>, and <font color="green">z</font>. <font color="green">mixed_list</font> includes, a string, an integer, and a boolean value.</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#a-nexted-list-and-a-list-with-multiple-data-types"><em><strong>A Nexted List And A List With Multiple Data Types</strong></em></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-example-demonstrates-how-a-list-can-contain-different-data-types-even-other-lists-list-lists-is-created-from-the-existing-lists-x-y-and-z-mixed-list-includes-a-string-an-integer-and-a-boolean-value">The example demonstrates how a list can contain different data types, even other lists.<br/> <font color="green">list_lists</font> is created from the existing lists <font color="green">x</font>, <font color="green">y</font>, and <font color="green">z</font>. <font color="green">mixed_list</font> includes, a string, an integer, and a boolean value.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#some-useful-methods"><em><strong>Some Useful Methods</strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-append-index-and-sort-methods-are-commonly-used-tools-for-working-with-lists-the-append-method-adds-a-new-element-to-the-end-of-a-list-the-index-method-provides-the-first-location-of-a-specified-value-within-the-list-the-sort-method-rearranges-the-elements-of-the-list-with-descending-order-as-the-default-and-ascending-order-as-an-option-reverse-true">The <font color="green">append</font>, <font color="green">index</font>, and <font color="green">sort</font> methods are commonly used tools for working with lists. The <font color="green">append</font> method adds a new element to the end of a list. The <font color="green">index</font> method provides the first location of a specified value within the list. The <font color="green">sort</font> method rearranges the elements of the list, with descending order as the default and ascending order as an option (reverse=True).</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#other-list-methods-are-described-here">Other list methods are described here.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-append-method"><em><strong>The Append Method</strong></em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-index-method"><em><strong>The Index Method</strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#if-a-value-is-in-the-list-the-method-index-returns-its-location"><em><strong>If A Value Is In The List, The method <font color="green">index()</font> Returns Its Location.</strong></em></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#if-the-value-is-not-in-the-list-the-method-index-returns-an-error-terminating-execution"><em><strong>If The Value Is Not In The List, The method <font color="green">index()</font> Returns An Error Terminating Execution.</strong></em></a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#some-useful-methods"><em><strong>Some Useful Methods</strong></em></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-append-index-and-sort-methods-are-commonly-used-tools-for-working-with-lists-the-append-method-adds-a-new-element-to-the-end-of-a-list-the-index-method-provides-the-first-location-of-a-specified-value-within-the-list-the-sort-method-rearranges-the-elements-of-the-list-with-descending-order-as-the-default-and-ascending-order-as-an-option-reverse-true">The <font color="green">append</font>, <font color="green">index</font>, and <font color="green">sort</font> methods are commonly used tools for working with lists. The <font color="green">append</font> method adds a new element to the end of a list. The <font color="green">index</font> method provides the first location of a specified value within the list. The <font color="green">sort</font> method rearranges the elements of the list, with descending order as the default and ascending order as an option (reverse=True).</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other-list-methods-are-described-here">Other list methods are described here.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-append-method"><em><strong>The Append Method</strong></em></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-index-method"><em><strong>The Index Method</strong></em></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#if-the-value-is-not-in-the-list-the-method-index-returns-an-error-terminating-execution"><em><strong>If The Value Is Not In The List, The method <font color="green">index()</font> Returns An Error Terminating Execution.</strong></em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#combining-and-slicing-lists-with-the-index"><em><strong>Combining And Slicing Lists With The Index</strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-list-z-is-returned-to-its-original-values-5-6-and-then-combined-with-lists-z-and-y-using-the-plus-sign-the-list-method-extend-may-be-used-to-add-an-iterable-to-the-end-of-a-list-if-you-are-working-only-with-lists-the-plus-sign-is-more-flexible-the-resulting-combined-list-is-then-sliced-and-iterated-through-using-a-for-loop">The list <font color="green">z</font> is returned to its original values [5,6] and then combined with lists <font color="green">z</font> and <font color="green">y</font> using the plus sign. The list method <font color="green">extend</font> may be used to add an iterable to the end of a list. If you are working only with lists, the plus sign is more flexible.  The resulting combined list is then sliced and iterated through using a <font color="green">for loop</font>.</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-sort-method"><em><strong>The Sort Method</strong></em></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#combining-and-slicing-lists-with-the-index"><em><strong>Combining And Slicing Lists With The Index</strong></em></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-list-z-is-returned-to-its-original-values-5-6-and-then-combined-with-lists-z-and-y-using-the-plus-sign-the-list-method-extend-may-be-used-to-add-an-iterable-to-the-end-of-a-list-if-you-are-working-only-with-lists-the-plus-sign-is-more-flexible-the-resulting-combined-list-is-then-sliced-and-iterated-through-using-a-for-loop">The list <font color="green">z</font> is returned to its original values [5,6] and then combined with lists <font color="green">z</font> and <font color="green">y</font> using the plus sign. The list method <font color="green">extend</font> may be used to add an iterable to the end of a list. If you are working only with lists, the plus sign is more flexible.  The resulting combined list is then sliced and iterated through using a <font color="green">for loop</font>.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-sort-method"><em><strong>The Sort Method</strong></em></a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-list-by-iterating-through-a-string-list-comprehension-for-loop"><em><strong>Create A List By Iterating Through A String: List Comprehension &amp; For Loop</strong></em></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assign-the-text-financial-python-to-the-variable-financial-python-the-first-option-is-to-use-list-comprehension-to-convert-the-string-to-a-list-of-characters-each-character-becomes-a-separate-value">Assign the text “Financial Python” to the variable <font color="green">financial_python</font>. The first option is to use list comprehension to convert the string to a list of characters: each character becomes a separate value.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#option-2-is-to-use-a-for-loop-initialize-a-list-with-no-values-then-iterate-through-each-character-in-financial-python-adding-each-element-to-the-new-list-for-iteration">Option 2 is to use a <font color="green">for loop</font>. Initialize a list with no values. Then iterate through each character in <font color="green">financial_python</font> adding each element to the new list for iteration.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-list-by-iterating-through-a-string-list-comprehension-for-loop"><em><strong>Create A List By Iterating Through A String: List Comprehension &amp; For Loop</strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#assign-the-text-financial-python-to-the-variable-financial-python-the-first-option-is-to-use-list-comprehension-to-convert-the-string-to-a-list-of-characters-each-character-becomes-a-separate-value">Assign the text “Financial Python” to the variable <font color="green">financial_python</font>. The first option is to use list comprehension to convert the string to a list of characters: each character becomes a separate value.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#option-2-is-to-use-a-for-loop-initialize-a-list-with-no-values-then-iterate-through-each-character-in-financial-python-adding-each-element-to-the-new-list-for-iteration">Option 2 is to use a <font color="green">for loop</font>. Initialize a list with no values. Then iterate through each character in <font color="green">financial_python</font> adding each element to the new list for iteration.</a></li>
 </ul>
 </li>
 </ul>
-
   </nav></div>
 
 </div></div>
