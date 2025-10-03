@@ -1,0 +1,674 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>A Quick Introduction To Tuples &#8212; An Introduction to Python for Financial Python</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Tuples';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="An Introductin To Dictionaries" href="Dictionaries.html" />
+    <link rel="prev" title="A First Look At Lists" href="A_First_Look_At_Lists.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/Small_Logo.svg" class="logo__image only-light" alt="An Introduction to Python for Financial Python - Home"/>
+    <script>document.write(`<img src="_static/Small_Logo.svg" class="logo__image only-dark" alt="An Introduction to Python for Financial Python - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Background Material: An Introduction to Python for Financial Python
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Basic_Grammar.html"><em><strong>Basic Grammar</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Strings.html"><em><strong>A Quick Look At Strings</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Numbers_%26_Booleans.html"><em><strong>A Quick Introducton To Numbers And Booleans</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Control_Statements.html"><em><strong>Control Statements</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="A_First_Look_At_Lists.html"><em><strong>A First Look At Lists</strong></em></a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#"><em><strong>A Quick Introduction To Tuples</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Dictionaries.html"><em><strong>An Introductin To Dictionaries</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Functions.html"><em><strong>A Quick Look At Functions</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Manipulating_Dates.html"><em><strong>A Quick Introduction To Manipulating Dates</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="An_Introduction_To_Pandas.html"><em><strong>A Quick Introduction To Pandas</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="An_Introduction_To_NumPy.html"><em><strong>A Quick Introductin To NumPy</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sets.html"><em><strong>Sets</strong></em></a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/PatrickJHess/Introduction-To-Python-For-Financial-Python" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/PatrickJHess/Introduction-To-Python-For-Financial-Python/issues/new?title=Issue%20on%20page%20%2FTuples.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Tuples.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>A Quick Introduction To Tuples</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tuples-similar-to-lists-can-be-instantiated-created-in-multiple-ways-they-can-be-created-using-round-brackets-parentheses-with-commas-to-separate-data-by-using-the-tuple-constructor-with-iterable-data-or-with-a-constructor-and-a-generator-expression-that-iterates-through-data-unlike-lists-tuple-values-cannot-be-changed-after-instantiation">Tuples, similar to lists, can be instantiated (created) in multiple ways. They can be created using round brackets (parentheses) with commas to separate data, by using the <font color="green">tuple()</font> constructor with iterable data, or with a constructor and a generator expression that iterates through data. Unlike lists, tuple values cannot be changed after instantiation.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#index-method"><em><strong>Index Method</strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#like-lists-the-index-method-returns-the-location-of-a-value-in-a-tuple-the-try-except-commands-avoid-an-execution-stopping-error">Like lists, the <font color="green">index</font> method returns the location of a value in a tuple. The <font color="green">try-except</font> commands avoid an execution stopping error.</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iterating-and-slicing"><em><strong>Iterating And Slicing</strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-tuples-a-b-and-c-are-combined-using-the-plus-sign-and-the-resulting-combined-tuple-is-then-sliced-and-iterated-through">The tuples <font color="green">a</font>, <font color="green">b</font>, and <font color="green">c</font> are combined using the plus sign, and the resulting <font color="green">combined_tuple</font><br/> is then sliced and iterated through.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#even-though-tuples-are-immutable-can-t-be-changed-after-creation-they-support-many-of-the-same-operations-as-lists-including-concatenation-slicing-and-iteration">Even though tuples are immutable (can’t be changed after creation), they support many of the same operations as lists, including concatenation, slicing, and iteration.</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <img src='https://docs.google.com/drawings/d/e/2PACX-1vQq5fvv0irbZoHDDk5e2zz4NzUj5qMg0z3tQ-_JOESz7sxygYjw0cz_KAulZFMpDKorJDdfzL9-v_dE/pub?w=960&h=720'><section class="tex2jax_ignore mathjax_ignore" id="a-quick-introduction-to-tuples">
+<h1><em><strong>A Quick Introduction To Tuples</strong></em><a class="headerlink" href="#a-quick-introduction-to-tuples" title="Link to this heading">#</a></h1>
+<section id="tuples-similar-to-lists-can-be-instantiated-created-in-multiple-ways-they-can-be-created-using-round-brackets-parentheses-with-commas-to-separate-data-by-using-the-tuple-constructor-with-iterable-data-or-with-a-constructor-and-a-generator-expression-that-iterates-through-data-unlike-lists-tuple-values-cannot-be-changed-after-instantiation">
+<h2>Tuples, similar to lists, can be instantiated (created) in multiple ways. They can be created using round brackets (parentheses) with commas to separate data, by using the <font color='green'>tuple()</font> constructor with iterable data, or with a constructor and a generator expression that iterates through data. Unlike lists, tuple values cannot be changed after instantiation.<a class="headerlink" href="#tuples-similar-to-lists-can-be-instantiated-created-in-multiple-ways-they-can-be-created-using-round-brackets-parentheses-with-commas-to-separate-data-by-using-the-tuple-constructor-with-iterable-data-or-with-a-constructor-and-a-generator-expression-that-iterates-through-data-unlike-lists-tuple-values-cannot-be-changed-after-instantiation" title="Link to this heading">#</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Method 1: Create tuple using round brackets (parentheses)</span>
+<span class="c1"># This is the most common and direct way to create a tuple</span>
+<span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>  <span class="c1"># Round bracket</span>
+
+<span class="c1"># Method 2: Create tuple using the tuple() constructor with a list</span>
+<span class="c1"># The tuple() function converts an iterable (like a list) into a tuple</span>
+<span class="n">b</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>  <span class="c1"># Tuple constructor</span>
+
+<span class="c1"># Method 3: Create tuple using tuple constructor with generator expression</span>
+<span class="c1"># The generator expression (data for data in [5,6]) creates values on-the-fly</span>
+<span class="c1"># Note: This is actually a generator expression, not tuple comprehension</span>
+<span class="c1"># (Python doesn&#39;t have true tuple comprehensions like list comprehensions)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">data</span> <span class="k">for</span> <span class="n">data</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>  <span class="c1"># Tuple Comprehension (generator expression)</span>
+
+<span class="c1"># Print all three tuples to show they produce the same type of immutable sequence</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Method 1: Create tuple using round brackets (parentheses)</span>
+<span class="c1"># This is the most common and direct way to create a tuple</span>
+<span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>  <span class="c1"># Round bracket</span>
+
+<span class="c1"># Method 2: Create tuple using the tuple() constructor with a list</span>
+<span class="c1"># The tuple() function converts an iterable (like a list) into a tuple</span>
+<span class="n">b</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>  <span class="c1"># Tuple constructor</span>
+
+<span class="c1"># Method 3: Create tuple using tuple constructor with generator expression</span>
+<span class="c1"># The generator expression (data for data in [5,6]) creates values on-the-fly</span>
+<span class="c1"># Note: This is actually a generator expression, not tuple comprehension</span>
+<span class="c1"># (Python doesn&#39;t have true tuple comprehensions like list comprehensions)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">data</span> <span class="k">for</span> <span class="n">data</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>  <span class="c1"># Tuple Comprehension (generator expression)</span>
+
+<span class="c1"># Print all three tuples to show they produce the same type of immutable sequence</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1, 2) (3, 4) (5, 6)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="index-method">
+<h2><em><strong>Index Method</strong></em><a class="headerlink" href="#index-method" title="Link to this heading">#</a></h2>
+<section id="like-lists-the-index-method-returns-the-location-of-a-value-in-a-tuple-the-try-except-commands-avoid-an-execution-stopping-error">
+<h3>Like lists, the <font color='green'>index</font> method returns the location of a value in a tuple. The <font color='green'>try-except</font> commands avoid an execution stopping error.<a class="headerlink" href="#like-lists-the-index-method-returns-the-location-of-a-value-in-a-tuple-the-try-except-commands-avoid-an-execution-stopping-error" title="Link to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Use try-except block to safely search for value 5 in tuple c</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="c1"># Attempt to find the index position of value 5 in tuple c</span>
+    <span class="c1"># tuple.index() returns the first occurrence index if found</span>
+    <span class="c1"># If value 5 exists in the tuple, print its index position</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="c1"># If value 5 is not found in tuple c, the index() method raises a ValueError</span>
+    <span class="c1"># Catch the exception and print -1 as a sentinel value indicating &quot;not found&quot;</span>
+    <span class="c1"># Using -1 follows common programming convention for &quot;element not found&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Use try-except block to safely search for value 5 in tuple c</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="c1"># Attempt to find the index position of value 5 in tuple c</span>
+    <span class="c1"># tuple.index() returns the first occurrence of index value if found</span>
+    <span class="c1"># If value 5 exists in the tuple, print its index position</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="c1"># If value 5 is not found in tuple c, the index() method raises a ValueError</span>
+    <span class="c1"># Catch the exception and print -1 as a sentinel value indicating &quot;not found&quot;</span>
+    <span class="c1"># Using -1 follows common programming convention for &quot;element not found&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="c1">#tuple c has 5 as its first element (position 0)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="iterating-and-slicing">
+<h2><em><strong>Iterating And Slicing</strong></em><a class="headerlink" href="#iterating-and-slicing" title="Link to this heading">#</a></h2>
+<section id="the-tuples-a-b-and-c-are-combined-using-the-plus-sign-and-the-resulting-combined-tuple-is-then-sliced-and-iterated-through">
+<h3>The tuples <font color='green'>a</font>, <font color='green'>b</font>, and <font color='green'>c</font> are combined using the plus sign, and the resulting <font color='green'>combined_tuple</font><br> is then sliced and iterated through.<a class="headerlink" href="#the-tuples-a-b-and-c-are-combined-using-the-plus-sign-and-the-resulting-combined-tuple-is-then-sliced-and-iterated-through" title="Link to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">combined_tuple</span><span class="o">=</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="o">+</span><span class="n">c</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">combined_tuple</span><span class="p">[:</span><span class="mi">4</span><span class="p">])</span> <span class="c1">#sliced</span>
+<span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">combined_tuple</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
+
+</pre></div>
+</div>
+</section>
+<section id="even-though-tuples-are-immutable-can-t-be-changed-after-creation-they-support-many-of-the-same-operations-as-lists-including-concatenation-slicing-and-iteration">
+<h3>Even though tuples are immutable (can’t be changed after creation), they support many of the same operations as lists, including concatenation, slicing, and iteration.<a class="headerlink" href="#even-though-tuples-are-immutable-can-t-be-changed-after-creation-they-support-many-of-the-same-operations-as-lists-including-concatenation-slicing-and-iteration" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">combined_tuple</span><span class="o">=</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="o">+</span><span class="n">c</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">combined_tuple</span><span class="p">[:</span><span class="mi">4</span><span class="p">])</span> <span class="c1">#sliced</span>
+<span class="c1">#print each element, one per line for combined_tuple</span>
+<span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">combined_tuple</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1, 2, 3, 4)
+1
+2
+3
+4
+5
+6
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="A_First_Look_At_Lists.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><em><strong>A First Look At Lists</strong></em></p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Dictionaries.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><em><strong>An Introductin To Dictionaries</strong></em></p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tuples-similar-to-lists-can-be-instantiated-created-in-multiple-ways-they-can-be-created-using-round-brackets-parentheses-with-commas-to-separate-data-by-using-the-tuple-constructor-with-iterable-data-or-with-a-constructor-and-a-generator-expression-that-iterates-through-data-unlike-lists-tuple-values-cannot-be-changed-after-instantiation">Tuples, similar to lists, can be instantiated (created) in multiple ways. They can be created using round brackets (parentheses) with commas to separate data, by using the <font color="green">tuple()</font> constructor with iterable data, or with a constructor and a generator expression that iterates through data. Unlike lists, tuple values cannot be changed after instantiation.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#index-method"><em><strong>Index Method</strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#like-lists-the-index-method-returns-the-location-of-a-value-in-a-tuple-the-try-except-commands-avoid-an-execution-stopping-error">Like lists, the <font color="green">index</font> method returns the location of a value in a tuple. The <font color="green">try-except</font> commands avoid an execution stopping error.</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iterating-and-slicing"><em><strong>Iterating And Slicing</strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-tuples-a-b-and-c-are-combined-using-the-plus-sign-and-the-resulting-combined-tuple-is-then-sliced-and-iterated-through">The tuples <font color="green">a</font>, <font color="green">b</font>, and <font color="green">c</font> are combined using the plus sign, and the resulting <font color="green">combined_tuple</font><br/> is then sliced and iterated through.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#even-though-tuples-are-immutable-can-t-be-changed-after-creation-they-support-many-of-the-same-operations-as-lists-including-concatenation-slicing-and-iteration">Even though tuples are immutable (can’t be changed after creation), they support many of the same operations as lists, including concatenation, slicing, and iteration.</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Financial Python
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

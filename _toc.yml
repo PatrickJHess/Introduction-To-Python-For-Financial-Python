@@ -1,0 +1,18 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+chapters:
+- file: Basic_Grammar
+- file: Strings
+- file: Numbers_&_Booleans
+- file: Control_Statements
+- file: A_First_Look_At_Lists
+- file: Tuples
+- file: Dictionaries
+- file: Functions
+- file: Manipulating_Dates
+- file: An_Introduction_To_Pandas
+- file: An_Introduction_To_NumPy
+- file: Sets
