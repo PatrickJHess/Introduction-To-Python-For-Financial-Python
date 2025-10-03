@@ -28,7 +28,7 @@ for key in ['x', 'y', 'z', 'w']:
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mKeyError[0m                                  Traceback (most recent call last)
-[0;32m/tmp/ipykernel_17207/2772980581.py[0m in [0;36m<module>[0;34m[0m
+[0;32m/tmp/ipykernel_29378/2772980581.py[0m in [0;36m<module>[0;34m[0m
 [1;32m      5[0m     [0;31m# This will work fine for 'x', 'y', 'z' but will raise a KeyError for 'w'[0m[0;34m[0m[0;34m[0m[0m
 [1;32m      6[0m     [0;31m# The program will crash when it tries to access the non-existent key 'w'[0m[0;34m[0m[0;34m[0m[0m
 [0;32m----> 7[0;31m     [0mprint[0m[0;34m([0m[0mthird_dict[0m[0;34m[[0m[0mkey[0m[0;34m][0m[0;34m)[0m  [0;31m# Returns an error for w[0m[0;34m[0m[0;34m[0m[0m
