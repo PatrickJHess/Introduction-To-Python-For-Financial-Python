@@ -188,7 +188,7 @@
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">A Quick Introduction To Tuples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Dictionaries.html">A Quick Introduction To Dictionaries</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Functions.html">A Quick Look At Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Manipulating_Dates.html"><em><strong>A Quick Introduction To Manipulating Dates</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Manipulating_Dates.html">A Quick Introduction To Manipulating Dates</a></li>
 <li class="toctree-l1"><a class="reference internal" href="An_Introduction_To_Pandas.html">A Quick Introduction To Pandas</a></li>
 <li class="toctree-l1"><a class="reference internal" href="An_Introduction_To_NumPy.html">A Quick Introduction To NumPy</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Sets.html">Sets</a></li>
@@ -454,16 +454,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tuples-similar-to-lists-can-be-instantiated-created-in-multiple-ways-they-can-be-created-using-round-brackets-parentheses-with-commas-to-separate-data-by-using-the-tuple-constructor-with-iterable-data-or-with-a-constructor-and-a-generator-expression-that-iterates-through-data-unlike-lists-tuple-values-cannot-be-changed-after-instantiation">Tuples, similar to lists, can be instantiated (created) in multiple ways. They can be created using round brackets (parentheses) with commas to separate data, by using the <font color="green">tuple()</font> constructor with iterable data, or with a constructor and a generator expression that iterates through data. Unlike lists, tuple values cannot be changed after instantiation.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#index-method">Index Method</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#like-lists-the-index-method-returns-the-location-of-a-value-in-a-tuple-the-try-except-commands-avoid-an-execution-stopping-error">Like lists, the <font color="green">index</font> method returns the location of a value in a tuple. The <font color="green">try-except</font> commands avoid an execution stopping error.</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iterating-and-slicing">Iterating And Slicing</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-tuples-a-b-and-c-are-combined-using-the-plus-sign-and-the-resulting-combined-tuple-is-then-sliced-and-iterated-through">The tuples <font color="green">a</font>, <font color="green">b</font>, and <font color="green">c</font> are combined using the plus sign, and the resulting <font color="green">combined_tuple</font><br/> is then sliced and iterated through.</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#even-though-tuples-are-immutable-can-t-be-changed-after-creation-they-support-many-of-the-same-operations-as-lists-including-concatenation-slicing-and-iteration">Even though tuples are immutable (can’t be changed after creation), they support many of the same operations as lists, including concatenation, slicing, and iteration.</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#index-method">Index Method</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iterating-and-slicing">Iterating And Slicing</a></li>
 </ul>
             </nav>
         </div>
@@ -477,8 +469,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="a-quick-introduction-to-tuples">
 <h1>A Quick Introduction To Tuples<a class="headerlink" href="#a-quick-introduction-to-tuples" title="Link to this heading">#</a></h1>
-<section id="tuples-similar-to-lists-can-be-instantiated-created-in-multiple-ways-they-can-be-created-using-round-brackets-parentheses-with-commas-to-separate-data-by-using-the-tuple-constructor-with-iterable-data-or-with-a-constructor-and-a-generator-expression-that-iterates-through-data-unlike-lists-tuple-values-cannot-be-changed-after-instantiation">
-<h2>Tuples, similar to lists, can be instantiated (created) in multiple ways. They can be created using round brackets (parentheses) with commas to separate data, by using the <font color='green'>tuple()</font> constructor with iterable data, or with a constructor and a generator expression that iterates through data. Unlike lists, tuple values cannot be changed after instantiation.<a class="headerlink" href="#tuples-similar-to-lists-can-be-instantiated-created-in-multiple-ways-they-can-be-created-using-round-brackets-parentheses-with-commas-to-separate-data-by-using-the-tuple-constructor-with-iterable-data-or-with-a-constructor-and-a-generator-expression-that-iterates-through-data-unlike-lists-tuple-values-cannot-be-changed-after-instantiation" title="Link to this heading">#</a></h2>
+<p>Tuples, similar to lists, can be instantiated (created) in multiple ways. They can be created using round brackets (parentheses) with commas to separate data, by using the <font color='green'>tuple()</font> constructor with iterable data, or with a constructor and a generator expression that iterates through data. Unlike lists, tuple values cannot be changed after instantiation.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Method 1: Create tuple using round brackets (parentheses)</span>
 <span class="c1"># This is the most common and direct way to create a tuple</span>
 <span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>  <span class="c1"># Round bracket</span>
@@ -525,11 +516,9 @@ document.write(`
 </div>
 </div>
 </div>
-</section>
 <section id="index-method">
 <h2>Index Method<a class="headerlink" href="#index-method" title="Link to this heading">#</a></h2>
-<section id="like-lists-the-index-method-returns-the-location-of-a-value-in-a-tuple-the-try-except-commands-avoid-an-execution-stopping-error">
-<h3>Like lists, the <font color='green'>index</font> method returns the location of a value in a tuple. The <font color='green'>try-except</font> commands avoid an execution stopping error.<a class="headerlink" href="#like-lists-the-index-method-returns-the-location-of-a-value-in-a-tuple-the-try-except-commands-avoid-an-execution-stopping-error" title="Link to this heading">#</a></h3>
+<p>Like lists, the <font color='green'>index</font> method returns the location of a value in a tuple. The <font color='green'>try-except</font> commands avoid an execution stopping error.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Use try-except block to safely search for value 5 in tuple c</span>
 <span class="k">try</span><span class="p">:</span>
     <span class="c1"># Attempt to find the index position of value 5 in tuple c</span>
@@ -569,11 +558,9 @@ document.write(`
 </div>
 </div>
 </section>
-</section>
 <section id="iterating-and-slicing">
 <h2>Iterating And Slicing<a class="headerlink" href="#iterating-and-slicing" title="Link to this heading">#</a></h2>
-<section id="the-tuples-a-b-and-c-are-combined-using-the-plus-sign-and-the-resulting-combined-tuple-is-then-sliced-and-iterated-through">
-<h3>The tuples <font color='green'>a</font>, <font color='green'>b</font>, and <font color='green'>c</font> are combined using the plus sign, and the resulting <font color='green'>combined_tuple</font><br> is then sliced and iterated through.<a class="headerlink" href="#the-tuples-a-b-and-c-are-combined-using-the-plus-sign-and-the-resulting-combined-tuple-is-then-sliced-and-iterated-through" title="Link to this heading">#</a></h3>
+<p>The tuples <font color='green'>a</font>, <font color='green'>b</font>, and <font color='green'>c</font> are combined using the plus sign, and the resulting <font color='green'>combined_tuple</font><br> is then sliced and iterated through.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">combined_tuple</span><span class="o">=</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="o">+</span><span class="n">c</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">combined_tuple</span><span class="p">[:</span><span class="mi">4</span><span class="p">])</span> <span class="c1">#sliced</span>
 <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">combined_tuple</span><span class="p">:</span>
@@ -581,9 +568,7 @@ document.write(`
 
 </pre></div>
 </div>
-</section>
-<section id="even-though-tuples-are-immutable-can-t-be-changed-after-creation-they-support-many-of-the-same-operations-as-lists-including-concatenation-slicing-and-iteration">
-<h3>Even though tuples are immutable (can’t be changed after creation), they support many of the same operations as lists, including concatenation, slicing, and iteration.<a class="headerlink" href="#even-though-tuples-are-immutable-can-t-be-changed-after-creation-they-support-many-of-the-same-operations-as-lists-including-concatenation-slicing-and-iteration" title="Link to this heading">#</a></h3>
+<p>Even though tuples are immutable (can’t be changed after creation), they support many of the same operations as lists, including concatenation, slicing, and iteration.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">combined_tuple</span><span class="o">=</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="o">+</span><span class="n">c</span>
@@ -606,7 +591,6 @@ document.write(`
 </div>
 </div>
 </div>
-</section>
 </section>
 </section>
 
@@ -674,16 +658,8 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tuples-similar-to-lists-can-be-instantiated-created-in-multiple-ways-they-can-be-created-using-round-brackets-parentheses-with-commas-to-separate-data-by-using-the-tuple-constructor-with-iterable-data-or-with-a-constructor-and-a-generator-expression-that-iterates-through-data-unlike-lists-tuple-values-cannot-be-changed-after-instantiation">Tuples, similar to lists, can be instantiated (created) in multiple ways. They can be created using round brackets (parentheses) with commas to separate data, by using the <font color="green">tuple()</font> constructor with iterable data, or with a constructor and a generator expression that iterates through data. Unlike lists, tuple values cannot be changed after instantiation.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#index-method">Index Method</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#like-lists-the-index-method-returns-the-location-of-a-value-in-a-tuple-the-try-except-commands-avoid-an-execution-stopping-error">Like lists, the <font color="green">index</font> method returns the location of a value in a tuple. The <font color="green">try-except</font> commands avoid an execution stopping error.</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iterating-and-slicing">Iterating And Slicing</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-tuples-a-b-and-c-are-combined-using-the-plus-sign-and-the-resulting-combined-tuple-is-then-sliced-and-iterated-through">The tuples <font color="green">a</font>, <font color="green">b</font>, and <font color="green">c</font> are combined using the plus sign, and the resulting <font color="green">combined_tuple</font><br/> is then sliced and iterated through.</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#even-though-tuples-are-immutable-can-t-be-changed-after-creation-they-support-many-of-the-same-operations-as-lists-including-concatenation-slicing-and-iteration">Even though tuples are immutable (can’t be changed after creation), they support many of the same operations as lists, including concatenation, slicing, and iteration.</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#index-method">Index Method</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iterating-and-slicing">Iterating And Slicing</a></li>
 </ul>
   </nav></div>
 

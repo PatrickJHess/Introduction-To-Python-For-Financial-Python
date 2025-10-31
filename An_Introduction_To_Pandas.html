@@ -456,114 +456,41 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-dataframe-reminiscent-of-a-spreadsheet-is-the-primary-object-in-pandas-data-is-organized-into-tables-with-columns-and-rows-that-can-be-manipulated-similar-to-a-spreadsheet-depending-on-your-notebook-you-may-need-to-install-pandas-before-importing-it">A DataFrame, reminiscent of a spreadsheet, is the primary object in Pandas. Data is organized into tables with columns and rows, that can be manipulated similar to a spreadsheet. Depending on your notebook, you may need to install Pandas before importing it.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-example-code-cell-below-uses-a-try-and-except-code-block-to-import-pandas-and-assigns-it-the-common-alias-pd-1">The example code cell below uses a <font color="green">try</font> and <font color="green">except</font> code block to import Pandas and assigns<br/> it the common alias <font color="green">pd</font>.<span class="math notranslate nohighlight">\(^{1}\)</span></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#for-a-discussion-of-try-and-except-code-block-see-the-chapter-control-statements"><span class="math notranslate nohighlight">\(^{1}\)</span> For a discussion of  <font color="green">try</font> and <font color="green">except</font> code block see the Chapter <em>Control Statements</em>.</a></li>
-</ul>
-</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-or-instantiating-a-dataframe">Creating Or Instantiating A DataFrame</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-bare-bones-dataframe">A Bare Bones DataFrame</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-first-pandas-method-demonstrated-is-dataframe-the-required-arguments-of-the-method-are-the-data-that-must-be-an-iterable-e-g-a-list-or-a-dictionary-2-here-the-dataframe-df-bare-bones-is-created-with-two-simple-lists-x-and-y">The first Pandas method demonstrated is <font color="green">DataFrame()</font>.  The required arguments of the method are<br/> the data that must be an iterable: e.g. a list or a dictionary.<span class="math notranslate nohighlight">\(^{2}\)</span>  Here the DataFrame <font color="green">df_bare_bones</font> is <br/>created with two simple lists: <font color="green">x</font> and <font color="green">y</font>.</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#if-you-need-a-little-help-with-this-concept-check-out-chapter-a-first-look-at-lists"><span class="math notranslate nohighlight">\(^{2}\)</span> If you need a little help with this concept check out Chapter <em>A First Look At Lists</em>.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-bare-bones-dataframe">A Bare Bones DataFrame</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-labels-for-columns-and-rows">Adding Labels For Columns And Rows</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#including-the-labels-as-arguments-of-dataframe">Including The Labels As Arguments Of DataFrame()</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-labels-for-columns-and-rows">Adding Labels For Columns And Rows</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#df-bare-bones-is-a-table-but-it-s-not-very-useful-the-first-improvement-is-to-provide-labels-for-the-columns-and-the-rows-both-are-attributes-of-df-bare-bones-and-the-values-have-been-assigned-by-pandas-the-column-attribute-is-referred-to-as-columns-and-the-row-attribute-as-index-as-with-all-objects-these-attributes-can-be-accessed-using-a-dot-after-the-object-s-name-in-this-case-the-columns-attribute-is-assigned-the-list-first-second-third-and-the-rows-attribute-is-assigned-the-list-x-y"><font color="green">df_bare_bones</font> is a table, but it’s not very useful.  The first improvement is to provide labels for the<br/> columns and the rows.  Both are attributes of <font color="green">df_bare_bones</font> and the values have been<br/> assigned by Pandas.  The column attribute is referred to as <font color="green">columns</font> and the row attribute<br/> as <font color="green">index</font>. As with all objects, these attributes can be accessed using a dot after the<br/> object’s name. In this case, the <font color="green">columns</font> attribute is assigned the list <font color="green">[‘First’, ‘Second’, ‘Third’]</font>,<br/> and the <font color="green">rows</font> attribute is assigned the list <font color="green">[‘x’, ‘y’]</font>.</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#including-the-labels-as-arguments-of-dataframe">Including The Labels As Arguments Of DataFrame()</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#as-an-alternative-the-label-values-can-be-assigned-to-columns-and-index-as-arguments-of-the-method-because-the-attributes-are-not-variables-of-the-notebook-the-names-assigned-may-be-the-same-as-the-attributes">As an alternative the label values can  be assigned to <font color="green">columns</font> and <font color="green">index</font> as arguments of the method. Because the attributes are not variables of the notebook, the names assigned may be the same as the attributes.</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iterating-through-the-columns-and-index">Iterating Through The Columns And Index</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-values-of-rows-and-columns-can-be-accessed-by-iterating-through-a-dataframe-s-columns-or-index-here-the-values-of-the-labels-of-columns-and-index-are-printed">The values of rows and columns can be accessed by iterating through a DataFrame’s <font color="green">columns</font><br/> or <font color="green">index</font>.  Here the values of the labels of <font color="green">columns</font> and <font color="green">index</font> are printed.</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iterating-through-the-columns-and-index">Iterating Through The Columns And Index</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-loc-and-iloc-attributes">The loc and iloc Attributes</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#a-row-of-a-dataframe-is-identified-with-the-loc-or-iloc-attribute-the-loc-attribute-uses-the-value-of-the-index-in-our-example-x-or-y-the-iloc-attribute-uses-the-location-of-the-row-in-the-index-in-our-example-0-or-1">A row of A DataFrame is identified with the <font color="green">loc</font> or <font color="green">iloc</font> attribute.  The <font color="green">loc</font> attribute uses<br/> the value of the <font color="green">index</font>; in our example ‘x’ or ‘y’.  The <font color="green">iloc</font> attribute uses the location of the row<br/> in the <font color="green">index</font>; in our example, 0 or 1.</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#in-the-next-code-cell-the-values-of-first-column-are-printed-by-iterating-through-the-index-with-loc">In the next code cell the values of ‘First’ column are printed by iterating through the index with loc.</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#loc-attribute">loc Attribute</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#iloc-attribute">iloc Attribute</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-iloc-example-uses-the-index-values-of-0-and-1-to-print-the-value-of-second-column-the-iloc-attribute-requires-the-enumerate-function-of-python-that-keeps-track-of-the-number-of-iterations-3-the-row-is-then-fixed-with-loc-and-the-columns-are-iterated-through-to-show-all-the-values-of-the-list-x">The <font color="green">iloc</font> example uses the <font color="green">index</font> values of 0 and 1 to print the value of ‘Second’ column.<br/>  The <font color="green">iloc</font> attribute requires the <font color="green">enumerate</font> function of Python that keeps track of the number<br/> of iterations.<span class="math notranslate nohighlight">\(^{3}\)</span>  The row is then fixed with <font color="green">loc</font> and the columns are iterated through to show all<br/> the values of the list <font color="green">x</font>.</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#gemini-provides-a-nice-explanation-of-the-enumerate-function"><span class="math notranslate nohighlight">\(^{3.}\)</span> Gemini provides a nice explanation of the <font color="green">enumerate</font> function.</a></li>
 </ul>
 </li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-iloc-example-uses-the-index-values-of-0-and-1-to-print-the-value-of-second-column-the-iloc-attribute-requires-the-enumerate-function-of-python-that-keeps-track-of-the-number-of-iterations-3-the-row-is-then-fixed-with-loc-and-the-columns-are-iterated-through-to-show-all-the-values-of-the-list-x">The <font color="green">iloc</font> example uses the <font color="green">index</font> values of 0 and 1 to print the value of ‘Second’ column.<br/>  The <font color="green">iloc</font> attribute requires the <font color="green">enumerate</font> function of Python that keeps track of the number<br/> of iterations.<span class="math notranslate nohighlight">\(^{3}\)</span>  The row is then fixed with <font color="green">loc</font> and the columns are iterated through to show all<br/> the values of the list <font color="green">x</font>.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#locate-a-row-with-an-index-value">Locate A Row With An Index Value</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#locate-a-row-with-an-index-value">Locate A Row With An Index Value</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-get-indexer-method-locates-the-row-number-of-the-index-from-a-value-if-the-label-is-not-present-minus-one-is-returned-the-value-must-be-an-iterable-here-it-is-a-list">The <font color="green">get_indexer()</font> method locates the row number of the <font color="green">index</font> from a value.  If the label is not present, minus one is returned. The value must be an iterable.  Here it is a list.</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fixing-the-row-with-loc-and-iterating-through-the-columns">Fixing The Row With <font color="green">loc</font> And Iterating Through The Columns.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-dataframe-from-a-dictionary">Create A DataFrame From A Dictionary</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-a-column">Add A Column</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-dataframe-from-a-dictionary">Create A DataFrame From A Dictionary</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#it-s-convenient-to-create-a-dataframe-from-a-dictionary-dictionaries-are-key-value-pairs-4-the-keys-are-interpreted-as-column-names-and-the-values-are-the-data-assigned-to-those-columns-in-this-example-the-value-of-x-and-value-of-y-columns-are-assigned-the-lists-x-and-y-respectively">It’s convenient to create a DataFrame from a dictionary.  Dictionaries are key-value pairs.<span class="math notranslate nohighlight">\(^{4}\)</span><br/> The keys are interpreted as column names, and the values are the data assigned to those columns.<br/> In this example, the ‘Value of x’ and ‘Value of y’ columns are assigned the lists <font color="green">x</font> and <font color="green">y</font>, respectively.</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#for-an-introduction-to-dictionaries-see-chapter-a-quick-introduction-to-dictionaries"><span class="math notranslate nohighlight">\(^{4}\)</span> For an introduction to dictionaries see Chapter <em>A Quick Introduction To Dictionaries</em>.</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-a-column">Add A Column</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#assign-a-list-to-the-new-column-values-of-z">Assign A List To The New Column ‘Values of z’</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#assign-three-plus-the-column-values-of-y-to-the-new-column-values-of-z">Assign Three Plus The Column ‘Values of y’ To The New Column ‘Values of z’</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-transpose">The Transpose</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#because-the-dataframe-method-interprets-the-dictionary-keys-as-column-names-df-dict-is-the-transpose-of-df-bare-bones-to-that-end-the-index-of-df-dict-is-assigned-the-columns-list-that-was-assigned-as-the-columns-of-df-bare-bones-the-pandas-method-transpose-transposes-a-dataframe-but-does-not-replace-the-values-to-keep-the-transposed-dataframe-it-must-be-assigned-to-another-variable-the-transpose-method-may-also-be-accessed-with-a-capital-t">Because the <font color="green">DataFrame()</font> method interprets the dictionary keys as column names, <font color="green">df_dict</font><br/> is the transpose of <font color="green">df_bare_bones</font>.  To that end, the index of <font color="green">df_dict</font> is assigned the <font color="green">columns</font><br/> list that was assigned as the <font color="green">columns</font> of <font color="green">df_bare_bones</font>.  The Pandas method <font color="green">transpose()</font><br/> transposes a DataFrame but does not replace the values.  To keep the transposed <font color="green">DataFrame</font><br/> it must be assigned to another variable. The <font color="green">transpose</font> method may also be accessed with a capital <font color="green">T</font>.</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#transpose-with-method-transpose-t-for-shorthand">Transpose With Method <font color="green">transpose()</font>, <font color="green">T</font> For Shorthand.</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-transpose">The Transpose</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#transpose-with-method-transpose-t-for-shorthand">Transpose With Method <font color="green">transpose()</font>, <font color="green">T</font> For Shorthand.</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataframes-csv-and-excel-files">DataFrames, CSV, And Excel Files</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-dataframe-with-a-csv-file">Creating A DataFrame With A CSV File</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#colab-notebooks-contain-sample-data-within-the-sample-data-folder-in-this-instance-the-data-from-the-csv-file-california-housing-train-csv-is-transformed-into-a-dataframe-using-the-pandas-read-csv-method-the-file-is-downloaded-from-dropbox-and-the-sole-necessary-argument-is-the-path-to-the-file">Colab notebooks contain sample data within the ‘sample_data’ folder. In this instance, the data from the csv file ‘california_housing_train.csv’ is transformed into a DataFrame using the Pandas <font color="green">read_csv()</font> method. The file is downloaded from DropBox and the sole necessary argument is the path to the file.</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-file-is-then-assigned-to-df-csv-and-the-initial-ten-rows-are-displayed-by-slicing-the-index-using-the-iloc-attribute">The file is then assigned to <font color="green">df_csv</font>, and the initial ten rows are displayed by slicing the <font color="green">index</font><br/> using the <font color="green">iloc</font> attribute.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-dataframe-with-a-csv-file">Creating A DataFrame With A CSV File</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#making-a-column-the-index">Making A Column The Index</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-set-index-method-makes-a-column-an-index-one-of-the-arguments-of-the-method-is-inplace-that-defaults-to-false-if-assigned-true-the-dataframe-is-permanently-changed-here-it-is-assigned-to-a-new-dataframe">The <font color="green">set_index()</font> method makes a column an index. One of the arguments of the method<br/> is <font color="green">inplace</font> that defaults to False.  If assigned True, the DataFrame is permanently changed.<br/>  Here it is assigned to a new DataFrame.</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pandas-to-numpy">Pandas To Numpy</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-method-to-numpy-converts-a-dataframe-to-a-numpy-array-all-values-of-the-dataframe-are-converted-to-a-single-type-unlike-dataframes-numpy-arrays-are-not-indexed-the-value-for-the-114-56-latitude-is-accessed-with-the-iloc-attribute">The method <font color="green">to_numpy()</font> converts a DataFrame to a NumPy array. All values of the DataFrame are converted to a single type.  Unlike DataFrames, NumPy arrays are not indexed. The value for the -114.56 latitude is accessed with the <font color="green">iloc</font> attribute.</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-apply-method">The apply() Method</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-apply-function-in-pandas-is-a-versatile-method-used-to-apply-a-function-along-an-axis-of-a-dataframe-or-to-the-values-of-a-series-it-enables-element-wise-row-wise-or-column-wise-operations-using-custom-or-built-in-functions-avoiding-iterating-through-rows-or-columns">The <font color="green">apply()</font> function in Pandas is a versatile method used to apply a function along an axis of a DataFrame or to the values of a Series. It enables element-wise, row-wise, or column-wise operations using custom or built-in functions avoiding iterating through rows or columns.</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-average-bedrooms-function-calculates-the-average-number-of-bedrooms-from-the-total-number-of-bedrooms-and-households">The <font color="green">average_bedrooms()</font> function calculates the average number of bedrooms from the total number of bedrooms and households.</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#average-bedrooms-is-applied-to-each-longitude-row-of-the-dataframe-df-excel-new-using-the-anonymous-lambda-function-allows-the-assignment-of-values-in-each-row-as-arguments-of-the-function-5"><font color="green">average_bedrooms()</font> is applied to each longitude (row) of the DataFrame <font color="green">df_excel_new</font>. Using the anonymous lambda function allows the assignment of values in each row as arguments of the function.<span class="math notranslate nohighlight">\(^{5}\)</span></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#in-this-example-the-apply-method-has-the-same-effects-as-direct-operation-on-the-columns">In this example, the <font color="green">apply()</font> method has the same effects as direct operation on the columns.</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#for-a-discussion-of-lambda-functions-see-a-quick-look-at-functions"><span class="math notranslate nohighlight">\(^{5}\)</span> For a discussion of lambda functions see <em>A Quick Look At Functions</em>.</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-iterrows-method">The iterrows() Method</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-iterrows-method-of-pandas-iterates-over-the-rows-of-a-dataframe-and-returns-a-tuple-of-the-row-s-values-the-example">The <font color="green">iterrows()</font> method of Pandas iterates over the rows of a DataFrame and returns a tuple of the row’s values.  The example:</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#displays-the-longitude-and-the-latitude-of-the-first-five-rows-as-a-list-of-tuples-the-index-is-assigned-to-longitude-and-latitudge-to-the-latitude-column-of-df-excel-new-index-the-list-longitude-latitude-is-created-with-list-comprehension-of-the-two-values">Displays the longitude and the latitude of the first five rows as a list of tuples.  The index is assigned to longitude and latitudge to the ‘latitude’ column of <font color="green">df_excel_new_index</font>.  The list <font color="green">longitude_latitude</font> is created with list comprehension of the two values.</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pandas-to-timestamp-method">Pandas To Timestamp() Method</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-pandas-timestamp-is-the-pandas-equivalent-of-datetime-and-includes-some-useful-attributes-the-example-converts-a-datetime-to-a-timestamp-and-printing-both-values-and-several-attributes-of-pandas-timestamp-6">The Pandas <font color="green">Timestamp()</font> is the Pandas equivalent of <font color="green">datetime</font> and includes some useful attributes.  The example converts a <font color="green">datetime</font> to a <font color="green">Timestamp</font> and printing both values and several attributes of Pandas <font color="green">Timestamp()</font>.<span class="math notranslate nohighlight">\(^{6}\)</span></a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#for-introduction-to-the-datetime-module-see-chapter-a-quick-introduction-to-manipulating-dates"><span class="math notranslate nohighlight">\(^{6}\)</span> For introduction to the datetime module see Chapter <em>A Quick Introduction To Manipulating Dates</em>.</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pandas-duplicated-method">Pandas duplicated() Method</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#duplicated-rows-of-a-dataframe-or-values-of-a-series-can-be-determined-with-the-duplicated-method-by-default-the-first-occurrence-of-a-duplicated-value-is-marked-as-false-and-all-others-are-marked-as-true-here-the-method-is-applied-to-the-index-of-the-first-ten-rows-of-df-excel-new-index">Duplicated rows of a DataFrame or values of a Series can be determined with the <font color="green">duplicated()</font> method.  By default the first occurrence of a duplicated value is marked as False and all others are marked as True.  Here the method is applied to the index of the first ten rows of <font color="green">df_excel_new_index</font>.</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#negate-a-pandas-value-with">Negate A Pandas Value With ~</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#if-you-want-to-only-keep-unique-values-it-makes-sense-to-negate-the-values-returned-from-duplicated">If you want to only keep unique values, it makes sense to negate the values returned from <font color="green">duplicated()</font>.</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#making-a-column-the-index">Making A Column The Index</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pandas-to-numpy">Pandas To Numpy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-apply-method">The apply() Method</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-iterrows-method">The iterrows() Method</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pandas-to-timestamp-method">Pandas To Timestamp() Method</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pandas-duplicated-method">Pandas duplicated() Method</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#negate-a-pandas-value-with">Negate A Pandas Value With ~</a></li>
 </ul>
             </nav>
         </div>
@@ -577,14 +504,10 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="a-quick-introduction-to-pandas">
 <h1>A Quick Introduction To Pandas<a class="headerlink" href="#a-quick-introduction-to-pandas" title="Link to this heading">#</a></h1>
-<section id="a-dataframe-reminiscent-of-a-spreadsheet-is-the-primary-object-in-pandas-data-is-organized-into-tables-with-columns-and-rows-that-can-be-manipulated-similar-to-a-spreadsheet-depending-on-your-notebook-you-may-need-to-install-pandas-before-importing-it">
-<h2>A DataFrame, reminiscent of a spreadsheet, is the primary object in Pandas. Data is organized into tables with columns and rows, that can be manipulated similar to a spreadsheet. Depending on your notebook, you may need to install Pandas before importing it.<a class="headerlink" href="#a-dataframe-reminiscent-of-a-spreadsheet-is-the-primary-object-in-pandas-data-is-organized-into-tables-with-columns-and-rows-that-can-be-manipulated-similar-to-a-spreadsheet-depending-on-your-notebook-you-may-need-to-install-pandas-before-importing-it" title="Link to this heading">#</a></h2>
-</section>
-<section id="the-example-code-cell-below-uses-a-try-and-except-code-block-to-import-pandas-and-assigns-it-the-common-alias-pd-1">
-<h2>The example code cell below uses a <font color='green'>try</font> and <font color='green'>except</font> code block to import Pandas and assigns<br> it the common alias <font color='green'>pd</font>.<span class="math notranslate nohighlight">\(^{1}\)</span><a class="headerlink" href="#the-example-code-cell-below-uses-a-try-and-except-code-block-to-import-pandas-and-assigns-it-the-common-alias-pd-1" title="Link to this heading">#</a></h2>
+<p>A DataFrame, reminiscent of a spreadsheet, is the primary object in Pandas. Data is organized into tables with columns and rows, that can be manipulated similar to a spreadsheet. Depending on your notebook, you may need to install Pandas before importing it.</p>
+<p>The example code cell below uses a <font color='green'>try</font> and <font color='green'>except</font> code block to import Pandas and assigns<br> it the common alias <font color='green'>pd</font>.<span class="math notranslate nohighlight">\(^{1}\)</span></p>
 <hr class="docutils" />
-<section id="for-a-discussion-of-try-and-except-code-block-see-the-chapter-control-statements">
-<h3><span class="math notranslate nohighlight">\(^{1}\)</span> For a discussion of  <font color='green'>try</font> and <font color='green'>except</font> code block see the Chapter <em>Control Statements</em>.<a class="headerlink" href="#for-a-discussion-of-try-and-except-code-block-see-the-chapter-control-statements" title="Link to this heading">#</a></h3>
+<p><span class="math notranslate nohighlight">\(^{1}\)</span> For a discussion of  <font color='green'>try</font> and <font color='green'>except</font> code block see the Chapter <em>Control Statements</em>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
@@ -596,17 +519,13 @@ document.write(`
 </div>
 </div>
 </div>
-</section>
-</section>
 <section id="creating-or-instantiating-a-dataframe">
 <h2>Creating Or Instantiating A DataFrame<a class="headerlink" href="#creating-or-instantiating-a-dataframe" title="Link to this heading">#</a></h2>
 <section id="a-bare-bones-dataframe">
 <h3>A Bare Bones DataFrame<a class="headerlink" href="#a-bare-bones-dataframe" title="Link to this heading">#</a></h3>
-<section id="the-first-pandas-method-demonstrated-is-dataframe-the-required-arguments-of-the-method-are-the-data-that-must-be-an-iterable-e-g-a-list-or-a-dictionary-2-here-the-dataframe-df-bare-bones-is-created-with-two-simple-lists-x-and-y">
-<h4>The first Pandas method demonstrated is <font color='green'>DataFrame()</font>.  The required arguments of the method are<br> the data that must be an iterable: e.g. a list or a dictionary.<span class="math notranslate nohighlight">\(^{2}\)</span>  Here the DataFrame <font color='green'>df_bare_bones</font> is <br>created with two simple lists: <font color='green'>x</font> and <font color='green'>y</font>.<a class="headerlink" href="#the-first-pandas-method-demonstrated-is-dataframe-the-required-arguments-of-the-method-are-the-data-that-must-be-an-iterable-e-g-a-list-or-a-dictionary-2-here-the-dataframe-df-bare-bones-is-created-with-two-simple-lists-x-and-y" title="Link to this heading">#</a></h4>
+<p>The Pandas method <font color='green'>DataFrame</font> requires data this iterable- e.g. a list or a dictionary.<span class="math notranslate nohighlight">\(^{2}\)</span>.  The DataFrame <font color='green'>df_bare_bones</font> is created with the lists <font color='green'>x</font> and <font color='green'>y</font>.</p>
 <hr class="docutils" />
-<section id="if-you-need-a-little-help-with-this-concept-check-out-chapter-a-first-look-at-lists">
-<h5><span class="math notranslate nohighlight">\(^{2}\)</span> If you need a little help with this concept check out Chapter <em>A First Look At Lists</em>.<a class="headerlink" href="#if-you-need-a-little-help-with-this-concept-check-out-chapter-a-first-look-at-lists" title="Link to this heading">#</a></h5>
+<p><span class="math notranslate nohighlight">\(^{2}\)</span> Two halpful chapters of this book are <em>A First Look At Lists</em> and <em>Dictionaries</em>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
@@ -658,12 +577,9 @@ document.write(`
 </div></div></div>
 </div>
 </section>
-</section>
-</section>
 <section id="adding-labels-for-columns-and-rows">
 <h3>Adding Labels For Columns And Rows<a class="headerlink" href="#adding-labels-for-columns-and-rows" title="Link to this heading">#</a></h3>
-<section id="df-bare-bones-is-a-table-but-it-s-not-very-useful-the-first-improvement-is-to-provide-labels-for-the-columns-and-the-rows-both-are-attributes-of-df-bare-bones-and-the-values-have-been-assigned-by-pandas-the-column-attribute-is-referred-to-as-columns-and-the-row-attribute-as-index-as-with-all-objects-these-attributes-can-be-accessed-using-a-dot-after-the-object-s-name-in-this-case-the-columns-attribute-is-assigned-the-list-first-second-third-and-the-rows-attribute-is-assigned-the-list-x-y">
-<h4><font color='green'>df_bare_bones</font> is a table, but it’s not very useful.  The first improvement is to provide labels for the<br> columns and the rows.  Both are attributes of <font color='green'>df_bare_bones</font> and the values have been<br> assigned by Pandas.  The column attribute is referred to as <font color='green'>columns</font> and the row attribute<br> as <font color='green'>index</font>. As with all objects, these attributes can be accessed using a dot after the<br> object’s name. In this case, the <font color='green'>columns</font> attribute is assigned the list <font color='green'>[‘First’, ‘Second’, ‘Third’]</font>,<br> and the <font color='green'>rows</font> attribute is assigned the list <font color='green'>[‘x’, ‘y’]</font>.<a class="headerlink" href="#df-bare-bones-is-a-table-but-it-s-not-very-useful-the-first-improvement-is-to-provide-labels-for-the-columns-and-the-rows-both-are-attributes-of-df-bare-bones-and-the-values-have-been-assigned-by-pandas-the-column-attribute-is-referred-to-as-columns-and-the-row-attribute-as-index-as-with-all-objects-these-attributes-can-be-accessed-using-a-dot-after-the-object-s-name-in-this-case-the-columns-attribute-is-assigned-the-list-first-second-third-and-the-rows-attribute-is-assigned-the-list-x-y" title="Link to this heading">#</a></h4>
+<p><font color='green'>df_bare_bones</font> is a table, but it’s not very useful.  The first improvement is to provide labels for the<br> columns and the rows.  Both are attributes of <font color='green'>df_bare_bones</font> and the values have been<br> assigned by Pandas.  The column attribute is referred to as <font color='green'>columns</font> and the row attribute<br> as <font color='green'>index</font>. As with all objects, these attributes can be accessed using a dot after the<br> object’s name. In this case, the <font color='green'>columns</font> attribute is assigned the list <font color='green'>[‘First’, ‘Second’, ‘Third’]</font>,<br> and the <font color='green'>rows</font> attribute is assigned the list <font color='green'>[‘x’, ‘y’]</font>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_bare_bones</span><span class="o">.</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;First&#39;</span><span class="p">,</span><span class="s1">&#39;Second&#39;</span><span class="p">,</span><span class="s1">&#39;Third&#39;</span><span class="p">]</span>
@@ -714,11 +630,9 @@ document.write(`
 </div></div></div>
 </div>
 </section>
-</section>
 <section id="including-the-labels-as-arguments-of-dataframe">
 <h3>Including The Labels As Arguments Of DataFrame()<a class="headerlink" href="#including-the-labels-as-arguments-of-dataframe" title="Link to this heading">#</a></h3>
-<section id="as-an-alternative-the-label-values-can-be-assigned-to-columns-and-index-as-arguments-of-the-method-because-the-attributes-are-not-variables-of-the-notebook-the-names-assigned-may-be-the-same-as-the-attributes">
-<h4>As an alternative the label values can  be assigned to <font color='green'>columns</font> and <font color='green'>index</font> as arguments of the method. Because the attributes are not variables of the notebook, the names assigned may be the same as the attributes.<a class="headerlink" href="#as-an-alternative-the-label-values-can-be-assigned-to-columns-and-index-as-arguments-of-the-method-because-the-attributes-are-not-variables-of-the-notebook-the-names-assigned-may-be-the-same-as-the-attributes" title="Link to this heading">#</a></h4>
+<p>As an alternative the label values can  be assigned to <font color='green'>columns</font> and <font color='green'>index</font> as arguments of the method. Because the attributes are not variables of the notebook, the names assigned may be the same as the attributes.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;First&#39;</span><span class="p">,</span><span class="s1">&#39;Second&#39;</span><span class="p">,</span><span class="s1">&#39;Third&#39;</span><span class="p">]</span>
@@ -772,9 +686,8 @@ document.write(`
 </section>
 </section>
 <section id="iterating-through-the-columns-and-index">
-<h3>Iterating Through The Columns And Index<a class="headerlink" href="#iterating-through-the-columns-and-index" title="Link to this heading">#</a></h3>
-<section id="the-values-of-rows-and-columns-can-be-accessed-by-iterating-through-a-dataframe-s-columns-or-index-here-the-values-of-the-labels-of-columns-and-index-are-printed">
-<h4>The values of rows and columns can be accessed by iterating through a DataFrame’s <font color='green'>columns</font><br> or <font color='green'>index</font>.  Here the values of the labels of <font color='green'>columns</font> and <font color='green'>index</font> are printed.<a class="headerlink" href="#the-values-of-rows-and-columns-can-be-accessed-by-iterating-through-a-dataframe-s-columns-or-index-here-the-values-of-the-labels-of-columns-and-index-are-printed" title="Link to this heading">#</a></h4>
+<h2>Iterating Through The Columns And Index<a class="headerlink" href="#iterating-through-the-columns-and-index" title="Link to this heading">#</a></h2>
+<p>The values of rows and columns can be accessed by iterating through a DataFrame’s <font color='green'>columns</font><br> or <font color='green'>index</font>.  Here the values of the labels of <font color='green'>columns</font> and <font color='green'>index</font> are printed.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">df_bare_bones</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
@@ -794,16 +707,10 @@ y
 </div>
 </div>
 </div>
-</section>
-</section>
 <section id="the-loc-and-iloc-attributes">
 <h3>The loc and iloc Attributes<a class="headerlink" href="#the-loc-and-iloc-attributes" title="Link to this heading">#</a></h3>
-<section id="a-row-of-a-dataframe-is-identified-with-the-loc-or-iloc-attribute-the-loc-attribute-uses-the-value-of-the-index-in-our-example-x-or-y-the-iloc-attribute-uses-the-location-of-the-row-in-the-index-in-our-example-0-or-1">
-<h4>A row of A DataFrame is identified with the <font color='green'>loc</font> or <font color='green'>iloc</font> attribute.  The <font color='green'>loc</font> attribute uses<br> the value of the <font color='green'>index</font>; in our example ‘x’ or ‘y’.  The <font color='green'>iloc</font> attribute uses the location of the row<br> in the <font color='green'>index</font>; in our example, 0 or 1.<a class="headerlink" href="#a-row-of-a-dataframe-is-identified-with-the-loc-or-iloc-attribute-the-loc-attribute-uses-the-value-of-the-index-in-our-example-x-or-y-the-iloc-attribute-uses-the-location-of-the-row-in-the-index-in-our-example-0-or-1" title="Link to this heading">#</a></h4>
-</section>
-<section id="in-the-next-code-cell-the-values-of-first-column-are-printed-by-iterating-through-the-index-with-loc">
-<h4>In the next code cell the values of ‘First’ column are printed by iterating through the index with loc.<a class="headerlink" href="#in-the-next-code-cell-the-values-of-first-column-are-printed-by-iterating-through-the-index-with-loc" title="Link to this heading">#</a></h4>
-</section>
+<p>A row of A DataFrame is identified with the <font color='green'>loc</font> or <font color='green'>iloc</font> attribute.  The <font color='green'>loc</font> attribute uses<br> the value of the <font color='green'>index</font>; in our example ‘x’ or ‘y’.  The <font color='green'>iloc</font> attribute uses the location of the row<br> in the <font color='green'>index</font>; in our example, 0 or 1.</p>
+<p>In the next code cell the values of ‘First’ column are printed by iterating through the index with loc.</p>
 <section id="loc-attribute">
 <h4>loc Attribute<a class="headerlink" href="#loc-attribute" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
@@ -824,11 +731,11 @@ y
 <section id="iloc-attribute">
 <h4>iloc Attribute<a class="headerlink" href="#iloc-attribute" title="Link to this heading">#</a></h4>
 </section>
+</section>
 <section id="the-iloc-example-uses-the-index-values-of-0-and-1-to-print-the-value-of-second-column-the-iloc-attribute-requires-the-enumerate-function-of-python-that-keeps-track-of-the-number-of-iterations-3-the-row-is-then-fixed-with-loc-and-the-columns-are-iterated-through-to-show-all-the-values-of-the-list-x">
-<h4>The <font color='green'>iloc</font> example uses the <font color='green'>index</font> values of 0 and 1 to print the value of ‘Second’ column.<br>  The <font color='green'>iloc</font> attribute requires the <font color='green'>enumerate</font> function of Python that keeps track of the number<br> of iterations.<span class="math notranslate nohighlight">\(^{3}\)</span>  The row is then fixed with <font color='green'>loc</font> and the columns are iterated through to show all<br> the values of the list <font color='green'>x</font>.<a class="headerlink" href="#the-iloc-example-uses-the-index-values-of-0-and-1-to-print-the-value-of-second-column-the-iloc-attribute-requires-the-enumerate-function-of-python-that-keeps-track-of-the-number-of-iterations-3-the-row-is-then-fixed-with-loc-and-the-columns-are-iterated-through-to-show-all-the-values-of-the-list-x" title="Link to this heading">#</a></h4>
+<h3>The <font color='green'>iloc</font> example uses the <font color='green'>index</font> values of 0 and 1 to print the value of ‘Second’ column.<br>  The <font color='green'>iloc</font> attribute requires the <font color='green'>enumerate</font> function of Python that keeps track of the number<br> of iterations.<span class="math notranslate nohighlight">\(^{3}\)</span>  The row is then fixed with <font color='green'>loc</font> and the columns are iterated through to show all<br> the values of the list <font color='green'>x</font>.<a class="headerlink" href="#the-iloc-example-uses-the-index-values-of-0-and-1-to-print-the-value-of-second-column-the-iloc-attribute-requires-the-enumerate-function-of-python-that-keeps-track-of-the-number-of-iterations-3-the-row-is-then-fixed-with-loc-and-the-columns-are-iterated-through-to-show-all-the-values-of-the-list-x" title="Link to this heading">#</a></h3>
 <hr class="docutils" />
-<section id="gemini-provides-a-nice-explanation-of-the-enumerate-function">
-<h5><span class="math notranslate nohighlight">\(^{3.}\)</span> <a class="reference external" href="https://www.google.com/search?q=enumerate+python&amp;amp;sca_esv=4c9a68065c6f5352&amp;amp;sxsrf=AHTn8zpFQrffBo7A1DtDquPAIbCumB4tUQ%3A1742055832997&amp;amp;ei=mKnVZ9bRPKvJwN4P857-qAo&amp;amp;oq=enumerate+fpython&amp;amp;gs_lp=Egxnd3Mtd2l6LXNlcnAiEWVudW1lcmF0ZSBmcHl0aG9uKgIIATIGEAAYBxgeMgoQABiABBixAxgNMgYQABgHGB4yBhAAGAcYHjIGEAAYBxgeMgYQABgHGB4yBhAAGAcYHjIHEAAYgAQYDTIHEAAYgAQYDTIGEAAYBxgeSO1BUKguWKgucAN4AZABAJgBXKABXKoBATG4AQHIAQD4AQGYAgSgAoIBwgIKEAAYsAMY1gQYR8ICDRAAGIAEGLADGEMYigXCAhMQLhiABBiwAxjRAxhDGMcBGIoFmAMAiAYBkAYKkgcDMy4xoAfuBg&amp;amp;sclient=gws-wiz-serp">Gemini</a> provides a nice explanation of the <font color='green'>enumerate</font> function.<a class="headerlink" href="#gemini-provides-a-nice-explanation-of-the-enumerate-function" title="Link to this heading">#</a></h5>
+<p><span class="math notranslate nohighlight">\(^{3.}\)</span> <a class="reference external" href="https://www.google.com/search?q=enumerate+python&amp;amp;sca_esv=4c9a68065c6f5352&amp;amp;sxsrf=AHTn8zpFQrffBo7A1DtDquPAIbCumB4tUQ%3A1742055832997&amp;amp;ei=mKnVZ9bRPKvJwN4P857-qAo&amp;amp;oq=enumerate+fpython&amp;amp;gs_lp=Egxnd3Mtd2l6LXNlcnAiEWVudW1lcmF0ZSBmcHl0aG9uKgIIATIGEAAYBxgeMgoQABiABBixAxgNMgYQABgHGB4yBhAAGAcYHjIGEAAYBxgeMgYQABgHGB4yBhAAGAcYHjIHEAAYgAQYDTIHEAAYgAQYDTIGEAAYBxgeSO1BUKguWKgucAN4AZABAJgBXKABXKoBATG4AQHIAQD4AQGYAgSgAoIBwgIKEAAYsAMY1gQYR8ICDRAAGIAEGLADGEMYigXCAhMQLhiABBiwAxjRAxhDGMcBGIoFmAMAiAYBkAYKkgcDMy4xoAfuBg&amp;amp;sclient=gws-wiz-serp">Gemini</a> provides a nice explanation of the <font color='green'>enumerate</font> function.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">row</span><span class="p">,</span><span class="n">index</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">df_bare_bones</span><span class="o">.</span><span class="n">index</span><span class="p">):</span>
@@ -844,12 +751,9 @@ y
 </div>
 </div>
 </section>
-</section>
-</section>
 <section id="locate-a-row-with-an-index-value">
 <h3>Locate A Row With An Index Value<a class="headerlink" href="#locate-a-row-with-an-index-value" title="Link to this heading">#</a></h3>
-<section id="the-get-indexer-method-locates-the-row-number-of-the-index-from-a-value-if-the-label-is-not-present-minus-one-is-returned-the-value-must-be-an-iterable-here-it-is-a-list">
-<h4>The <font color='green'>get_indexer()</font> method locates the row number of the <font color='green'>index</font> from a value.  If the label is not present, minus one is returned. The value must be an iterable.  Here it is a list.<a class="headerlink" href="#the-get-indexer-method-locates-the-row-number-of-the-index-from-a-value-if-the-label-is-not-present-minus-one-is-returned-the-value-must-be-an-iterable-here-it-is-a-list" title="Link to this heading">#</a></h4>
+<p>The <font color='green'>get_indexer()</font> method locates the row number of the <font color='green'>index</font> from a value.  If the label is not present, minus one is returned. The value must be an iterable.  Here it is a list.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># the list [&#39;x&#39;, &#39;z&#39;] is used for get_indexer method.</span>
@@ -865,9 +769,7 @@ y
 </div>
 </div>
 </div>
-</section>
-<section id="fixing-the-row-with-loc-and-iterating-through-the-columns">
-<h4>Fixing The Row With <font color='green'>loc</font> And Iterating Through The Columns.<a class="headerlink" href="#fixing-the-row-with-loc-and-iterating-through-the-columns" title="Link to this heading">#</a></h4>
+<p>Fixing The Row With <font color='green'>loc</font> And Iterating Through The Columns.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># the row is fixed as &#39;x&#39;</span>
@@ -887,12 +789,10 @@ y
 </section>
 </section>
 <section id="create-a-dataframe-from-a-dictionary">
-<h3>Create A DataFrame From A Dictionary<a class="headerlink" href="#create-a-dataframe-from-a-dictionary" title="Link to this heading">#</a></h3>
-<section id="it-s-convenient-to-create-a-dataframe-from-a-dictionary-dictionaries-are-key-value-pairs-4-the-keys-are-interpreted-as-column-names-and-the-values-are-the-data-assigned-to-those-columns-in-this-example-the-value-of-x-and-value-of-y-columns-are-assigned-the-lists-x-and-y-respectively">
-<h4>It’s convenient to create a DataFrame from a dictionary.  Dictionaries are key-value pairs.<span class="math notranslate nohighlight">\(^{4}\)</span><br> The keys are interpreted as column names, and the values are the data assigned to those columns.<br> In this example, the ‘Value of x’ and ‘Value of y’ columns are assigned the lists <font color='green'>x</font> and <font color='green'>y</font>, respectively.<a class="headerlink" href="#it-s-convenient-to-create-a-dataframe-from-a-dictionary-dictionaries-are-key-value-pairs-4-the-keys-are-interpreted-as-column-names-and-the-values-are-the-data-assigned-to-those-columns-in-this-example-the-value-of-x-and-value-of-y-columns-are-assigned-the-lists-x-and-y-respectively" title="Link to this heading">#</a></h4>
+<h2>Create A DataFrame From A Dictionary<a class="headerlink" href="#create-a-dataframe-from-a-dictionary" title="Link to this heading">#</a></h2>
+<p>It’s convenient to create a DataFrame from a dictionary.  Dictionaries are key-value pairs.<span class="math notranslate nohighlight">\(^{4}\)</span><br> The keys are interpreted as column names, and the values are the data assigned to those columns.<br> In this example, the ‘Value of x’ and ‘Value of y’ columns are assigned the lists <font color='green'>x</font> and <font color='green'>y</font>, respectively.</p>
 <hr class="docutils" />
-<section id="for-an-introduction-to-dictionaries-see-chapter-a-quick-introduction-to-dictionaries">
-<h5><span class="math notranslate nohighlight">\(^{4}\)</span> For an introduction to dictionaries see Chapter <em>A Quick Introduction To Dictionaries</em>.<a class="headerlink" href="#for-an-introduction-to-dictionaries-see-chapter-a-quick-introduction-to-dictionaries" title="Link to this heading">#</a></h5>
+<p><span class="math notranslate nohighlight">\(^{4}\)</span> For an introduction to dictionaries see Chapter <em>A Quick Introduction To Dictionaries</em>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Pandas method DataFrame() with the sole argument the dictionary data</span>
@@ -945,14 +845,9 @@ y
 </table>
 </div></div></div>
 </div>
-</section>
-</section>
-</section>
-</section>
 <section id="add-a-column">
-<h2>Add A Column<a class="headerlink" href="#add-a-column" title="Link to this heading">#</a></h2>
-<section id="assign-a-list-to-the-new-column-values-of-z">
-<h3>Assign A List To The New Column ‘Values of z’<a class="headerlink" href="#assign-a-list-to-the-new-column-values-of-z" title="Link to this heading">#</a></h3>
+<h3>Add A Column<a class="headerlink" href="#add-a-column" title="Link to this heading">#</a></h3>
+<p>Assign A List To The New Column ‘Values of z’</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_dict</span><span class="p">[</span><span class="s1">&#39;Values of z&#39;</span><span class="p">]</span><span class="o">=</span><span class="p">[</span><span class="mf">4.5</span><span class="p">,</span><span class="mf">5.5</span><span class="p">,</span><span class="mf">6.5</span><span class="p">]</span>
@@ -1007,9 +902,7 @@ y
 </table>
 </div></div></div>
 </div>
-</section>
-<section id="assign-three-plus-the-column-values-of-y-to-the-new-column-values-of-z">
-<h3>Assign Three Plus The Column ‘Values of y’ To The New Column ‘Values of z’<a class="headerlink" href="#assign-three-plus-the-column-values-of-y-to-the-new-column-values-of-z" title="Link to this heading">#</a></h3>
+<p>Assign Three Plus The Column ‘Values of y’ To The New Column ‘Values of z’</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_dict</span><span class="p">[</span><span class="s1">&#39;Values of z&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">df_dict</span><span class="p">[</span><span class="s1">&#39;Values of y&#39;</span><span class="p">]</span><span class="o">+</span><span class="mi">3</span>
@@ -1065,12 +958,12 @@ y
 </div></div></div>
 </div>
 </section>
+</section>
 <section id="the-transpose">
-<h3>The Transpose<a class="headerlink" href="#the-transpose" title="Link to this heading">#</a></h3>
-<section id="because-the-dataframe-method-interprets-the-dictionary-keys-as-column-names-df-dict-is-the-transpose-of-df-bare-bones-to-that-end-the-index-of-df-dict-is-assigned-the-columns-list-that-was-assigned-as-the-columns-of-df-bare-bones-the-pandas-method-transpose-transposes-a-dataframe-but-does-not-replace-the-values-to-keep-the-transposed-dataframe-it-must-be-assigned-to-another-variable-the-transpose-method-may-also-be-accessed-with-a-capital-t">
-<h4>Because the <font color='green'>DataFrame()</font> method interprets the dictionary keys as column names, <font color='green'>df_dict</font><br> is the transpose of <font color='green'>df_bare_bones</font>.  To that end, the index of <font color='green'>df_dict</font> is assigned the <font color='green'>columns</font><br> list that was assigned as the <font color='green'>columns</font> of <font color='green'>df_bare_bones</font>.  The Pandas method <font color='green'>transpose()</font><br> transposes a DataFrame but does not replace the values.  To keep the transposed <font color='green'>DataFrame</font><br> it must be assigned to another variable. The <font color='green'>transpose</font> method may also be accessed with a capital <font color='green'>T</font>.<a class="headerlink" href="#because-the-dataframe-method-interprets-the-dictionary-keys-as-column-names-df-dict-is-the-transpose-of-df-bare-bones-to-that-end-the-index-of-df-dict-is-assigned-the-columns-list-that-was-assigned-as-the-columns-of-df-bare-bones-the-pandas-method-transpose-transposes-a-dataframe-but-does-not-replace-the-values-to-keep-the-transposed-dataframe-it-must-be-assigned-to-another-variable-the-transpose-method-may-also-be-accessed-with-a-capital-t" title="Link to this heading">#</a></h4>
+<h2>The Transpose<a class="headerlink" href="#the-transpose" title="Link to this heading">#</a></h2>
+<p>Because the <font color='green'>DataFrame()</font> method interprets the dictionary keys as column names, <font color='green'>df_dict</font><br> is the transpose of <font color='green'>df_bare_bones</font>.  To that end, the index of <font color='green'>df_dict</font> is assigned the <font color='green'>columns</font><br> list that was assigned as the <font color='green'>columns</font> of <font color='green'>df_bare_bones</font>.  The Pandas method <font color='green'>transpose()</font><br> transposes a DataFrame but does not replace the values.  To keep the transposed <font color='green'>DataFrame</font><br> it must be assigned to another variable. The <font color='green'>transpose</font> method may also be accessed with a capital <font color='green'>T</font>.</p>
 <section id="transpose-with-method-transpose-t-for-shorthand">
-<h5>Transpose With Method <font color='green'>transpose()</font>, <font color='green'>T</font> For Shorthand.<a class="headerlink" href="#transpose-with-method-transpose-t-for-shorthand" title="Link to this heading">#</a></h5>
+<h3>Transpose With Method <font color='green'>transpose()</font>, <font color='green'>T</font> For Shorthand.<a class="headerlink" href="#transpose-with-method-transpose-t-for-shorthand" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Use the full name of the method transpose()</span>
@@ -1182,17 +1075,12 @@ y
 </div>
 </section>
 </section>
-</section>
-</section>
 <section id="dataframes-csv-and-excel-files">
 <h2>DataFrames, CSV, And Excel Files<a class="headerlink" href="#dataframes-csv-and-excel-files" title="Link to this heading">#</a></h2>
 <section id="creating-a-dataframe-with-a-csv-file">
 <h3>Creating A DataFrame With A CSV File<a class="headerlink" href="#creating-a-dataframe-with-a-csv-file" title="Link to this heading">#</a></h3>
-<section id="colab-notebooks-contain-sample-data-within-the-sample-data-folder-in-this-instance-the-data-from-the-csv-file-california-housing-train-csv-is-transformed-into-a-dataframe-using-the-pandas-read-csv-method-the-file-is-downloaded-from-dropbox-and-the-sole-necessary-argument-is-the-path-to-the-file">
-<h4>Colab notebooks contain sample data within the ‘sample_data’ folder. In this instance, the data from the csv file ‘california_housing_train.csv’ is transformed into a DataFrame using the Pandas <font color='green'>read_csv()</font> method. The file is downloaded from DropBox and the sole necessary argument is the path to the file.<a class="headerlink" href="#colab-notebooks-contain-sample-data-within-the-sample-data-folder-in-this-instance-the-data-from-the-csv-file-california-housing-train-csv-is-transformed-into-a-dataframe-using-the-pandas-read-csv-method-the-file-is-downloaded-from-dropbox-and-the-sole-necessary-argument-is-the-path-to-the-file" title="Link to this heading">#</a></h4>
-</section>
-<section id="the-file-is-then-assigned-to-df-csv-and-the-initial-ten-rows-are-displayed-by-slicing-the-index-using-the-iloc-attribute">
-<h4>The file is then assigned to <font color='green'>df_csv</font>, and the initial ten rows are displayed by slicing the <font color='green'>index</font><br> using the <font color='green'>iloc</font> attribute.<a class="headerlink" href="#the-file-is-then-assigned-to-df-csv-and-the-initial-ten-rows-are-displayed-by-slicing-the-index-using-the-iloc-attribute" title="Link to this heading">#</a></h4>
+<p>Colab notebooks contain sample data within the ‘sample_data’ folder. In this instance, the data from the csv file ‘california_housing_train.csv’ is transformed into a DataFrame using the Pandas <font color='green'>read_csv()</font> method. The file is downloaded from DropBox and the sole necessary argument is the path to the file.</p>
+<p>The file is then assigned to <font color='green'>df_csv</font>, and the initial ten rows are displayed by slicing the <font color='green'>index</font><br> using the <font color='green'>iloc</font> attribute.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">url</span><span class="o">=</span><span class="s1">&#39;https://www.dropbox.com/scl/fi/8vr4pq42p99zxu5lc9qe6/</span><span class="se">\</span>
@@ -1530,9 +1418,8 @@ y
 </section>
 </section>
 <section id="making-a-column-the-index">
-<h3>Making A Column The Index<a class="headerlink" href="#making-a-column-the-index" title="Link to this heading">#</a></h3>
-<section id="the-set-index-method-makes-a-column-an-index-one-of-the-arguments-of-the-method-is-inplace-that-defaults-to-false-if-assigned-true-the-dataframe-is-permanently-changed-here-it-is-assigned-to-a-new-dataframe">
-<h4>The <font color='green'>set_index()</font> method makes a column an index. One of the arguments of the method<br> is <font color='green'>inplace</font> that defaults to False.  If assigned True, the DataFrame is permanently changed.<br>  Here it is assigned to a new DataFrame.<a class="headerlink" href="#the-set-index-method-makes-a-column-an-index-one-of-the-arguments-of-the-method-is-inplace-that-defaults-to-false-if-assigned-true-the-dataframe-is-permanently-changed-here-it-is-assigned-to-a-new-dataframe" title="Link to this heading">#</a></h4>
+<h2>Making A Column The Index<a class="headerlink" href="#making-a-column-the-index" title="Link to this heading">#</a></h2>
+<p>The <font color='green'>set_index()</font> method makes a column an index. One of the arguments of the method<br> is <font color='green'>inplace</font> that defaults to False.  If assigned True, the DataFrame is permanently changed.<br>  Here it is assigned to a new DataFrame.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_excel_new_index</span><span class="o">=</span><span class="n">df_excel</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;longitude&#39;</span><span class="p">)</span>
@@ -1708,12 +1595,9 @@ y
 </div></div></div>
 </div>
 </section>
-</section>
-</section>
 <section id="pandas-to-numpy">
 <h2>Pandas To Numpy<a class="headerlink" href="#pandas-to-numpy" title="Link to this heading">#</a></h2>
-<section id="the-method-to-numpy-converts-a-dataframe-to-a-numpy-array-all-values-of-the-dataframe-are-converted-to-a-single-type-unlike-dataframes-numpy-arrays-are-not-indexed-the-value-for-the-114-56-latitude-is-accessed-with-the-iloc-attribute">
-<h3>The method <font color='green'>to_numpy()</font> converts a DataFrame to a NumPy array. All values of the DataFrame are converted to a single type.  Unlike DataFrames, NumPy arrays are not indexed. The value for the -114.56 latitude is accessed with the <font color='green'>iloc</font> attribute.<a class="headerlink" href="#the-method-to-numpy-converts-a-dataframe-to-a-numpy-array-all-values-of-the-dataframe-are-converted-to-a-single-type-unlike-dataframes-numpy-arrays-are-not-indexed-the-value-for-the-114-56-latitude-is-accessed-with-the-iloc-attribute" title="Link to this heading">#</a></h3>
+<p>The method <font color='green'>to_numpy()</font> converts a DataFrame to a NumPy array. All values of the DataFrame are converted to a single type.  Unlike DataFrames, NumPy arrays are not indexed. The value for the -114.56 latitude is accessed with the <font color='green'>iloc</font> attribute.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">excel_numpy</span><span class="o">=</span><span class="n">df_excel_new_index</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
@@ -1730,22 +1614,16 @@ y
 </div>
 </div>
 </section>
-</section>
 <section id="the-apply-method">
 <h2>The apply() Method<a class="headerlink" href="#the-apply-method" title="Link to this heading">#</a></h2>
-<section id="the-apply-function-in-pandas-is-a-versatile-method-used-to-apply-a-function-along-an-axis-of-a-dataframe-or-to-the-values-of-a-series-it-enables-element-wise-row-wise-or-column-wise-operations-using-custom-or-built-in-functions-avoiding-iterating-through-rows-or-columns">
-<h3>The <font color='green'>apply()</font> function in Pandas is a versatile method used to apply a function along an axis of a DataFrame or to the values of a Series. It enables element-wise, row-wise, or column-wise operations using custom or built-in functions avoiding iterating through rows or columns.<a class="headerlink" href="#the-apply-function-in-pandas-is-a-versatile-method-used-to-apply-a-function-along-an-axis-of-a-dataframe-or-to-the-values-of-a-series-it-enables-element-wise-row-wise-or-column-wise-operations-using-custom-or-built-in-functions-avoiding-iterating-through-rows-or-columns" title="Link to this heading">#</a></h3>
-</section>
-<section id="the-average-bedrooms-function-calculates-the-average-number-of-bedrooms-from-the-total-number-of-bedrooms-and-households">
-<h3>The <font color='green'>average_bedrooms()</font> function calculates the average number of bedrooms from the total number of bedrooms and households.<a class="headerlink" href="#the-average-bedrooms-function-calculates-the-average-number-of-bedrooms-from-the-total-number-of-bedrooms-and-households" title="Link to this heading">#</a></h3>
+<p>The <font color='green'>apply()</font> function in Pandas is a versatile method used to apply a function along an axis of a DataFrame or to the values of a Series. It enables element-wise, row-wise, or column-wise operations using custom or built-in functions avoiding iterating through rows or columns.</p>
+<p>The <font color='green'>average_bedrooms()</font> function calculates the average number of bedrooms from the total number of bedrooms and households.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">average_bedrooms</span><span class="p">(</span><span class="n">total_num_bedrooms</span><span class="p">,</span><span class="n">total_num_households</span><span class="p">):</span>
   <span class="n">avg_bedrooms</span><span class="o">=</span><span class="n">total_num_bedrooms</span><span class="o">/</span><span class="n">total_num_households</span>
   <span class="k">return</span> <span class="n">avg_bedrooms</span>
 </pre></div>
 </div>
-</section>
-<section id="average-bedrooms-is-applied-to-each-longitude-row-of-the-dataframe-df-excel-new-using-the-anonymous-lambda-function-allows-the-assignment-of-values-in-each-row-as-arguments-of-the-function-5">
-<h3><font color='green'>average_bedrooms()</font> is applied to each longitude (row) of the DataFrame <font color='green'>df_excel_new</font>. Using the anonymous lambda function allows the assignment of values in each row as arguments of the function.<span class="math notranslate nohighlight">\(^{5}\)</span><a class="headerlink" href="#average-bedrooms-is-applied-to-each-longitude-row-of-the-dataframe-df-excel-new-using-the-anonymous-lambda-function-allows-the-assignment-of-values-in-each-row-as-arguments-of-the-function-5" title="Link to this heading">#</a></h3>
+<p><font color='green'>average_bedrooms()</font> is applied to each longitude (row) of the DataFrame <font color='green'>df_excel_new</font>. Using the anonymous lambda function allows the assignment of values in each row as arguments of the function.<span class="math notranslate nohighlight">\(^{5}\)</span></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">df_excel_new_index</span><span class="p">[</span><span class="s1">&#39;Average Bedrooms&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_excel_new_index</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span>
     <span class="k">lambda</span> <span class="n">row</span><span class="p">:</span> <span class="n">average_bedrooms</span><span class="p">(</span>
         <span class="n">total_num_bedrooms</span><span class="o">=</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;total_bedrooms&#39;</span><span class="p">],</span>  <span class="c1"># &#39;total_bedrooms&#39; accessed from the row</span>
@@ -1754,15 +1632,12 @@ y
 <span class="n">df_excel_new_index</span>
 </pre></div>
 </div>
-</section>
-<section id="in-this-example-the-apply-method-has-the-same-effects-as-direct-operation-on-the-columns">
-<h3>In this example, the <font color='green'>apply()</font> method has the same effects as direct operation on the columns.<a class="headerlink" href="#in-this-example-the-apply-method-has-the-same-effects-as-direct-operation-on-the-columns" title="Link to this heading">#</a></h3>
+<p>In this example, the <font color='green'>apply()</font> method has the same effects as direct operation on the columns.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">df_excel_new_index</span><span class="p">[</span><span class="s1">&#39;Average Bedrooms&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">df_exce_new_index</span><span class="p">[</span><span class="s1">&#39;total_bedrooms&#39;</span><span class="p">]</span><span class="o">/</span><span class="n">df_excel_new_index</span><span class="p">[</span><span class="s1">&#39;households&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 <hr class="docutils" />
-<section id="for-a-discussion-of-lambda-functions-see-a-quick-look-at-functions">
-<h4><span class="math notranslate nohighlight">\(^{5}\)</span> For a discussion of lambda functions see <em>A Quick Look At Functions</em>.<a class="headerlink" href="#for-a-discussion-of-lambda-functions-see-a-quick-look-at-functions" title="Link to this heading">#</a></h4>
+<p><span class="math notranslate nohighlight">\(^{5}\)</span> For a discussion of lambda functions see <em>A Quick Look At Functions</em>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">average_bedrooms</span><span class="p">(</span><span class="n">total_num_bedrooms</span><span class="p">,</span><span class="n">total_num_households</span><span class="p">):</span>
@@ -1964,19 +1839,14 @@ y
 </div></div></div>
 </div>
 </section>
-</section>
-</section>
 <section id="the-iterrows-method">
 <h2>The iterrows() Method<a class="headerlink" href="#the-iterrows-method" title="Link to this heading">#</a></h2>
-<section id="the-iterrows-method-of-pandas-iterates-over-the-rows-of-a-dataframe-and-returns-a-tuple-of-the-row-s-values-the-example">
-<h3>The <font color='green'>iterrows()</font> method of Pandas iterates over the rows of a DataFrame and returns a tuple of the row’s values.  The example:<a class="headerlink" href="#the-iterrows-method-of-pandas-iterates-over-the-rows-of-a-dataframe-and-returns-a-tuple-of-the-row-s-values-the-example" title="Link to this heading">#</a></h3>
+<p>The <font color='green'>iterrows()</font> method of Pandas iterates over the rows of a DataFrame and returns a tuple of the row’s values.  The example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">longitude_latitude</span><span class="o">=</span><span class="p">[(</span><span class="n">longitude</span><span class="p">,</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;latitude&#39;</span><span class="p">])</span> <span class="k">for</span> <span class="n">longitude</span><span class="p">,</span><span class="n">row</span> <span class="ow">in</span> <span class="n">df_excel_new_index</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">5</span><span class="p">]</span><span class="o">.</span><span class="n">iterrows</span><span class="p">()]</span>
 <span class="n">display</span><span class="p">(</span><span class="n">longitude_latitude</span><span class="p">)</span>
 </pre></div>
 </div>
-</section>
-<section id="displays-the-longitude-and-the-latitude-of-the-first-five-rows-as-a-list-of-tuples-the-index-is-assigned-to-longitude-and-latitudge-to-the-latitude-column-of-df-excel-new-index-the-list-longitude-latitude-is-created-with-list-comprehension-of-the-two-values">
-<h3>Displays the longitude and the latitude of the first five rows as a list of tuples.  The index is assigned to longitude and latitudge to the ‘latitude’ column of <font color='green'>df_excel_new_index</font>.  The list <font color='green'>longitude_latitude</font> is created with list comprehension of the two values.<a class="headerlink" href="#displays-the-longitude-and-the-latitude-of-the-first-five-rows-as-a-list-of-tuples-the-index-is-assigned-to-longitude-and-latitudge-to-the-latitude-column-of-df-excel-new-index-the-list-longitude-latitude-is-created-with-list-comprehension-of-the-two-values" title="Link to this heading">#</a></h3>
+<p>Displays the longitude and the latitude of the first five rows as a list of tuples.  The index is assigned to longitude and latitudge to the ‘latitude’ column of <font color='green'>df_excel_new_index</font>.  The list <font color='green'>longitude_latitude</font> is created with list comprehension of the two values.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">longitude_latitude</span><span class="o">=</span><span class="p">[(</span><span class="n">longitude</span><span class="p">,</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;latitude&#39;</span><span class="p">])</span> <span class="k">for</span> <span class="n">longitude</span><span class="p">,</span><span class="n">row</span> <span class="ow">in</span> <span class="n">df_excel_new_index</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">5</span><span class="p">]</span><span class="o">.</span><span class="n">iterrows</span><span class="p">()]</span>
@@ -1995,14 +1865,11 @@ y
 </div>
 </div>
 </section>
-</section>
 <section id="pandas-to-timestamp-method">
 <h2>Pandas To Timestamp() Method<a class="headerlink" href="#pandas-to-timestamp-method" title="Link to this heading">#</a></h2>
-<section id="the-pandas-timestamp-is-the-pandas-equivalent-of-datetime-and-includes-some-useful-attributes-the-example-converts-a-datetime-to-a-timestamp-and-printing-both-values-and-several-attributes-of-pandas-timestamp-6">
-<h3>The Pandas <font color='green'>Timestamp()</font> is the Pandas equivalent of <font color='green'>datetime</font> and includes some useful attributes.  The example converts a <font color='green'>datetime</font> to a <font color='green'>Timestamp</font> and printing both values and several attributes of Pandas <font color='green'>Timestamp()</font>.<span class="math notranslate nohighlight">\(^{6}\)</span><a class="headerlink" href="#the-pandas-timestamp-is-the-pandas-equivalent-of-datetime-and-includes-some-useful-attributes-the-example-converts-a-datetime-to-a-timestamp-and-printing-both-values-and-several-attributes-of-pandas-timestamp-6" title="Link to this heading">#</a></h3>
+<p>The Pandas <font color='green'>Timestamp()</font> is the Pandas equivalent of <font color='green'>datetime</font> and includes some useful attributes.  The example converts a <font color='green'>datetime</font> to a <font color='green'>Timestamp</font> and printing both values and several attributes of Pandas <font color='green'>Timestamp()</font>.<span class="math notranslate nohighlight">\(^{6}\)</span></p>
 <hr class="docutils" />
-<section id="for-introduction-to-the-datetime-module-see-chapter-a-quick-introduction-to-manipulating-dates">
-<h4><span class="math notranslate nohighlight">\(^{6}\)</span> For introduction to the datetime module see Chapter <em>A Quick Introduction To Manipulating Dates</em>.<a class="headerlink" href="#for-introduction-to-the-datetime-module-see-chapter-a-quick-introduction-to-manipulating-dates" title="Link to this heading">#</a></h4>
+<p><span class="math notranslate nohighlight">\(^{6}\)</span> For introduction to the datetime module see Chapter <em>A Quick Introduction To Manipulating Dates</em>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">datetime</span>
@@ -2022,12 +1889,9 @@ y
 </div>
 </div>
 </section>
-</section>
-</section>
 <section id="pandas-duplicated-method">
 <h2>Pandas duplicated() Method<a class="headerlink" href="#pandas-duplicated-method" title="Link to this heading">#</a></h2>
-<section id="duplicated-rows-of-a-dataframe-or-values-of-a-series-can-be-determined-with-the-duplicated-method-by-default-the-first-occurrence-of-a-duplicated-value-is-marked-as-false-and-all-others-are-marked-as-true-here-the-method-is-applied-to-the-index-of-the-first-ten-rows-of-df-excel-new-index">
-<h3>Duplicated rows of a DataFrame or values of a Series can be determined with the <font color='green'>duplicated()</font> method.  By default the first occurrence of a duplicated value is marked as False and all others are marked as True.  Here the method is applied to the index of the first ten rows of <font color='green'>df_excel_new_index</font>.<a class="headerlink" href="#duplicated-rows-of-a-dataframe-or-values-of-a-series-can-be-determined-with-the-duplicated-method-by-default-the-first-occurrence-of-a-duplicated-value-is-marked-as-false-and-all-others-are-marked-as-true-here-the-method-is-applied-to-the-index-of-the-first-ten-rows-of-df-excel-new-index" title="Link to this heading">#</a></h3>
+<p>Duplicated rows of a DataFrame or values of a Series can be determined with the <font color='green'>duplicated()</font> method.  By default the first occurrence of a duplicated value is marked as False and all others are marked as True.  Here the method is applied to the index of the first ten rows of <font color='green'>df_excel_new_index</font>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">df_excel_new_index</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">]</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">duplicated</span><span class="p">())</span>
@@ -2048,11 +1912,9 @@ y
 </div>
 </div>
 </section>
-</section>
 <section id="negate-a-pandas-value-with">
 <h2>Negate A Pandas Value With ~<a class="headerlink" href="#negate-a-pandas-value-with" title="Link to this heading">#</a></h2>
-<section id="if-you-want-to-only-keep-unique-values-it-makes-sense-to-negate-the-values-returned-from-duplicated">
-<h3>If you want to only keep unique values, it makes sense to negate the values returned from <font color='green'>duplicated()</font>.<a class="headerlink" href="#if-you-want-to-only-keep-unique-values-it-makes-sense-to-negate-the-values-returned-from-duplicated" title="Link to this heading">#</a></h3>
+<p>If you want to only keep unique values, it makes sense to negate the values returned from <font color='green'>duplicated()</font>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">first_occurence</span><span class="o">=</span><span class="p">(</span><span class="o">~</span><span class="n">df_excel_new_index</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">]</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">duplicated</span><span class="p">())</span>
@@ -2066,7 +1928,6 @@ y
 </div>
 </div>
 </div>
-</section>
 </section>
 </section>
 
@@ -2134,114 +1995,41 @@ y
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-dataframe-reminiscent-of-a-spreadsheet-is-the-primary-object-in-pandas-data-is-organized-into-tables-with-columns-and-rows-that-can-be-manipulated-similar-to-a-spreadsheet-depending-on-your-notebook-you-may-need-to-install-pandas-before-importing-it">A DataFrame, reminiscent of a spreadsheet, is the primary object in Pandas. Data is organized into tables with columns and rows, that can be manipulated similar to a spreadsheet. Depending on your notebook, you may need to install Pandas before importing it.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-example-code-cell-below-uses-a-try-and-except-code-block-to-import-pandas-and-assigns-it-the-common-alias-pd-1">The example code cell below uses a <font color="green">try</font> and <font color="green">except</font> code block to import Pandas and assigns<br/> it the common alias <font color="green">pd</font>.<span class="math notranslate nohighlight">\(^{1}\)</span></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#for-a-discussion-of-try-and-except-code-block-see-the-chapter-control-statements"><span class="math notranslate nohighlight">\(^{1}\)</span> For a discussion of  <font color="green">try</font> and <font color="green">except</font> code block see the Chapter <em>Control Statements</em>.</a></li>
-</ul>
-</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-or-instantiating-a-dataframe">Creating Or Instantiating A DataFrame</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-bare-bones-dataframe">A Bare Bones DataFrame</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-first-pandas-method-demonstrated-is-dataframe-the-required-arguments-of-the-method-are-the-data-that-must-be-an-iterable-e-g-a-list-or-a-dictionary-2-here-the-dataframe-df-bare-bones-is-created-with-two-simple-lists-x-and-y">The first Pandas method demonstrated is <font color="green">DataFrame()</font>.  The required arguments of the method are<br/> the data that must be an iterable: e.g. a list or a dictionary.<span class="math notranslate nohighlight">\(^{2}\)</span>  Here the DataFrame <font color="green">df_bare_bones</font> is <br/>created with two simple lists: <font color="green">x</font> and <font color="green">y</font>.</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#if-you-need-a-little-help-with-this-concept-check-out-chapter-a-first-look-at-lists"><span class="math notranslate nohighlight">\(^{2}\)</span> If you need a little help with this concept check out Chapter <em>A First Look At Lists</em>.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-bare-bones-dataframe">A Bare Bones DataFrame</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-labels-for-columns-and-rows">Adding Labels For Columns And Rows</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#including-the-labels-as-arguments-of-dataframe">Including The Labels As Arguments Of DataFrame()</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-labels-for-columns-and-rows">Adding Labels For Columns And Rows</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#df-bare-bones-is-a-table-but-it-s-not-very-useful-the-first-improvement-is-to-provide-labels-for-the-columns-and-the-rows-both-are-attributes-of-df-bare-bones-and-the-values-have-been-assigned-by-pandas-the-column-attribute-is-referred-to-as-columns-and-the-row-attribute-as-index-as-with-all-objects-these-attributes-can-be-accessed-using-a-dot-after-the-object-s-name-in-this-case-the-columns-attribute-is-assigned-the-list-first-second-third-and-the-rows-attribute-is-assigned-the-list-x-y"><font color="green">df_bare_bones</font> is a table, but it’s not very useful.  The first improvement is to provide labels for the<br/> columns and the rows.  Both are attributes of <font color="green">df_bare_bones</font> and the values have been<br/> assigned by Pandas.  The column attribute is referred to as <font color="green">columns</font> and the row attribute<br/> as <font color="green">index</font>. As with all objects, these attributes can be accessed using a dot after the<br/> object’s name. In this case, the <font color="green">columns</font> attribute is assigned the list <font color="green">[‘First’, ‘Second’, ‘Third’]</font>,<br/> and the <font color="green">rows</font> attribute is assigned the list <font color="green">[‘x’, ‘y’]</font>.</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#including-the-labels-as-arguments-of-dataframe">Including The Labels As Arguments Of DataFrame()</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#as-an-alternative-the-label-values-can-be-assigned-to-columns-and-index-as-arguments-of-the-method-because-the-attributes-are-not-variables-of-the-notebook-the-names-assigned-may-be-the-same-as-the-attributes">As an alternative the label values can  be assigned to <font color="green">columns</font> and <font color="green">index</font> as arguments of the method. Because the attributes are not variables of the notebook, the names assigned may be the same as the attributes.</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iterating-through-the-columns-and-index">Iterating Through The Columns And Index</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-values-of-rows-and-columns-can-be-accessed-by-iterating-through-a-dataframe-s-columns-or-index-here-the-values-of-the-labels-of-columns-and-index-are-printed">The values of rows and columns can be accessed by iterating through a DataFrame’s <font color="green">columns</font><br/> or <font color="green">index</font>.  Here the values of the labels of <font color="green">columns</font> and <font color="green">index</font> are printed.</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iterating-through-the-columns-and-index">Iterating Through The Columns And Index</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-loc-and-iloc-attributes">The loc and iloc Attributes</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#a-row-of-a-dataframe-is-identified-with-the-loc-or-iloc-attribute-the-loc-attribute-uses-the-value-of-the-index-in-our-example-x-or-y-the-iloc-attribute-uses-the-location-of-the-row-in-the-index-in-our-example-0-or-1">A row of A DataFrame is identified with the <font color="green">loc</font> or <font color="green">iloc</font> attribute.  The <font color="green">loc</font> attribute uses<br/> the value of the <font color="green">index</font>; in our example ‘x’ or ‘y’.  The <font color="green">iloc</font> attribute uses the location of the row<br/> in the <font color="green">index</font>; in our example, 0 or 1.</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#in-the-next-code-cell-the-values-of-first-column-are-printed-by-iterating-through-the-index-with-loc">In the next code cell the values of ‘First’ column are printed by iterating through the index with loc.</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#loc-attribute">loc Attribute</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#iloc-attribute">iloc Attribute</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-iloc-example-uses-the-index-values-of-0-and-1-to-print-the-value-of-second-column-the-iloc-attribute-requires-the-enumerate-function-of-python-that-keeps-track-of-the-number-of-iterations-3-the-row-is-then-fixed-with-loc-and-the-columns-are-iterated-through-to-show-all-the-values-of-the-list-x">The <font color="green">iloc</font> example uses the <font color="green">index</font> values of 0 and 1 to print the value of ‘Second’ column.<br/>  The <font color="green">iloc</font> attribute requires the <font color="green">enumerate</font> function of Python that keeps track of the number<br/> of iterations.<span class="math notranslate nohighlight">\(^{3}\)</span>  The row is then fixed with <font color="green">loc</font> and the columns are iterated through to show all<br/> the values of the list <font color="green">x</font>.</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#gemini-provides-a-nice-explanation-of-the-enumerate-function"><span class="math notranslate nohighlight">\(^{3.}\)</span> Gemini provides a nice explanation of the <font color="green">enumerate</font> function.</a></li>
 </ul>
 </li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-iloc-example-uses-the-index-values-of-0-and-1-to-print-the-value-of-second-column-the-iloc-attribute-requires-the-enumerate-function-of-python-that-keeps-track-of-the-number-of-iterations-3-the-row-is-then-fixed-with-loc-and-the-columns-are-iterated-through-to-show-all-the-values-of-the-list-x">The <font color="green">iloc</font> example uses the <font color="green">index</font> values of 0 and 1 to print the value of ‘Second’ column.<br/>  The <font color="green">iloc</font> attribute requires the <font color="green">enumerate</font> function of Python that keeps track of the number<br/> of iterations.<span class="math notranslate nohighlight">\(^{3}\)</span>  The row is then fixed with <font color="green">loc</font> and the columns are iterated through to show all<br/> the values of the list <font color="green">x</font>.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#locate-a-row-with-an-index-value">Locate A Row With An Index Value</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#locate-a-row-with-an-index-value">Locate A Row With An Index Value</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-get-indexer-method-locates-the-row-number-of-the-index-from-a-value-if-the-label-is-not-present-minus-one-is-returned-the-value-must-be-an-iterable-here-it-is-a-list">The <font color="green">get_indexer()</font> method locates the row number of the <font color="green">index</font> from a value.  If the label is not present, minus one is returned. The value must be an iterable.  Here it is a list.</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fixing-the-row-with-loc-and-iterating-through-the-columns">Fixing The Row With <font color="green">loc</font> And Iterating Through The Columns.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-dataframe-from-a-dictionary">Create A DataFrame From A Dictionary</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-a-column">Add A Column</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-dataframe-from-a-dictionary">Create A DataFrame From A Dictionary</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#it-s-convenient-to-create-a-dataframe-from-a-dictionary-dictionaries-are-key-value-pairs-4-the-keys-are-interpreted-as-column-names-and-the-values-are-the-data-assigned-to-those-columns-in-this-example-the-value-of-x-and-value-of-y-columns-are-assigned-the-lists-x-and-y-respectively">It’s convenient to create a DataFrame from a dictionary.  Dictionaries are key-value pairs.<span class="math notranslate nohighlight">\(^{4}\)</span><br/> The keys are interpreted as column names, and the values are the data assigned to those columns.<br/> In this example, the ‘Value of x’ and ‘Value of y’ columns are assigned the lists <font color="green">x</font> and <font color="green">y</font>, respectively.</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#for-an-introduction-to-dictionaries-see-chapter-a-quick-introduction-to-dictionaries"><span class="math notranslate nohighlight">\(^{4}\)</span> For an introduction to dictionaries see Chapter <em>A Quick Introduction To Dictionaries</em>.</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-a-column">Add A Column</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#assign-a-list-to-the-new-column-values-of-z">Assign A List To The New Column ‘Values of z’</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#assign-three-plus-the-column-values-of-y-to-the-new-column-values-of-z">Assign Three Plus The Column ‘Values of y’ To The New Column ‘Values of z’</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-transpose">The Transpose</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#because-the-dataframe-method-interprets-the-dictionary-keys-as-column-names-df-dict-is-the-transpose-of-df-bare-bones-to-that-end-the-index-of-df-dict-is-assigned-the-columns-list-that-was-assigned-as-the-columns-of-df-bare-bones-the-pandas-method-transpose-transposes-a-dataframe-but-does-not-replace-the-values-to-keep-the-transposed-dataframe-it-must-be-assigned-to-another-variable-the-transpose-method-may-also-be-accessed-with-a-capital-t">Because the <font color="green">DataFrame()</font> method interprets the dictionary keys as column names, <font color="green">df_dict</font><br/> is the transpose of <font color="green">df_bare_bones</font>.  To that end, the index of <font color="green">df_dict</font> is assigned the <font color="green">columns</font><br/> list that was assigned as the <font color="green">columns</font> of <font color="green">df_bare_bones</font>.  The Pandas method <font color="green">transpose()</font><br/> transposes a DataFrame but does not replace the values.  To keep the transposed <font color="green">DataFrame</font><br/> it must be assigned to another variable. The <font color="green">transpose</font> method may also be accessed with a capital <font color="green">T</font>.</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#transpose-with-method-transpose-t-for-shorthand">Transpose With Method <font color="green">transpose()</font>, <font color="green">T</font> For Shorthand.</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-transpose">The Transpose</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#transpose-with-method-transpose-t-for-shorthand">Transpose With Method <font color="green">transpose()</font>, <font color="green">T</font> For Shorthand.</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataframes-csv-and-excel-files">DataFrames, CSV, And Excel Files</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-dataframe-with-a-csv-file">Creating A DataFrame With A CSV File</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#colab-notebooks-contain-sample-data-within-the-sample-data-folder-in-this-instance-the-data-from-the-csv-file-california-housing-train-csv-is-transformed-into-a-dataframe-using-the-pandas-read-csv-method-the-file-is-downloaded-from-dropbox-and-the-sole-necessary-argument-is-the-path-to-the-file">Colab notebooks contain sample data within the ‘sample_data’ folder. In this instance, the data from the csv file ‘california_housing_train.csv’ is transformed into a DataFrame using the Pandas <font color="green">read_csv()</font> method. The file is downloaded from DropBox and the sole necessary argument is the path to the file.</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-file-is-then-assigned-to-df-csv-and-the-initial-ten-rows-are-displayed-by-slicing-the-index-using-the-iloc-attribute">The file is then assigned to <font color="green">df_csv</font>, and the initial ten rows are displayed by slicing the <font color="green">index</font><br/> using the <font color="green">iloc</font> attribute.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-dataframe-with-a-csv-file">Creating A DataFrame With A CSV File</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#making-a-column-the-index">Making A Column The Index</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-set-index-method-makes-a-column-an-index-one-of-the-arguments-of-the-method-is-inplace-that-defaults-to-false-if-assigned-true-the-dataframe-is-permanently-changed-here-it-is-assigned-to-a-new-dataframe">The <font color="green">set_index()</font> method makes a column an index. One of the arguments of the method<br/> is <font color="green">inplace</font> that defaults to False.  If assigned True, the DataFrame is permanently changed.<br/>  Here it is assigned to a new DataFrame.</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pandas-to-numpy">Pandas To Numpy</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-method-to-numpy-converts-a-dataframe-to-a-numpy-array-all-values-of-the-dataframe-are-converted-to-a-single-type-unlike-dataframes-numpy-arrays-are-not-indexed-the-value-for-the-114-56-latitude-is-accessed-with-the-iloc-attribute">The method <font color="green">to_numpy()</font> converts a DataFrame to a NumPy array. All values of the DataFrame are converted to a single type.  Unlike DataFrames, NumPy arrays are not indexed. The value for the -114.56 latitude is accessed with the <font color="green">iloc</font> attribute.</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-apply-method">The apply() Method</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-apply-function-in-pandas-is-a-versatile-method-used-to-apply-a-function-along-an-axis-of-a-dataframe-or-to-the-values-of-a-series-it-enables-element-wise-row-wise-or-column-wise-operations-using-custom-or-built-in-functions-avoiding-iterating-through-rows-or-columns">The <font color="green">apply()</font> function in Pandas is a versatile method used to apply a function along an axis of a DataFrame or to the values of a Series. It enables element-wise, row-wise, or column-wise operations using custom or built-in functions avoiding iterating through rows or columns.</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-average-bedrooms-function-calculates-the-average-number-of-bedrooms-from-the-total-number-of-bedrooms-and-households">The <font color="green">average_bedrooms()</font> function calculates the average number of bedrooms from the total number of bedrooms and households.</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#average-bedrooms-is-applied-to-each-longitude-row-of-the-dataframe-df-excel-new-using-the-anonymous-lambda-function-allows-the-assignment-of-values-in-each-row-as-arguments-of-the-function-5"><font color="green">average_bedrooms()</font> is applied to each longitude (row) of the DataFrame <font color="green">df_excel_new</font>. Using the anonymous lambda function allows the assignment of values in each row as arguments of the function.<span class="math notranslate nohighlight">\(^{5}\)</span></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#in-this-example-the-apply-method-has-the-same-effects-as-direct-operation-on-the-columns">In this example, the <font color="green">apply()</font> method has the same effects as direct operation on the columns.</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#for-a-discussion-of-lambda-functions-see-a-quick-look-at-functions"><span class="math notranslate nohighlight">\(^{5}\)</span> For a discussion of lambda functions see <em>A Quick Look At Functions</em>.</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-iterrows-method">The iterrows() Method</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-iterrows-method-of-pandas-iterates-over-the-rows-of-a-dataframe-and-returns-a-tuple-of-the-row-s-values-the-example">The <font color="green">iterrows()</font> method of Pandas iterates over the rows of a DataFrame and returns a tuple of the row’s values.  The example:</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#displays-the-longitude-and-the-latitude-of-the-first-five-rows-as-a-list-of-tuples-the-index-is-assigned-to-longitude-and-latitudge-to-the-latitude-column-of-df-excel-new-index-the-list-longitude-latitude-is-created-with-list-comprehension-of-the-two-values">Displays the longitude and the latitude of the first five rows as a list of tuples.  The index is assigned to longitude and latitudge to the ‘latitude’ column of <font color="green">df_excel_new_index</font>.  The list <font color="green">longitude_latitude</font> is created with list comprehension of the two values.</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pandas-to-timestamp-method">Pandas To Timestamp() Method</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-pandas-timestamp-is-the-pandas-equivalent-of-datetime-and-includes-some-useful-attributes-the-example-converts-a-datetime-to-a-timestamp-and-printing-both-values-and-several-attributes-of-pandas-timestamp-6">The Pandas <font color="green">Timestamp()</font> is the Pandas equivalent of <font color="green">datetime</font> and includes some useful attributes.  The example converts a <font color="green">datetime</font> to a <font color="green">Timestamp</font> and printing both values and several attributes of Pandas <font color="green">Timestamp()</font>.<span class="math notranslate nohighlight">\(^{6}\)</span></a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#for-introduction-to-the-datetime-module-see-chapter-a-quick-introduction-to-manipulating-dates"><span class="math notranslate nohighlight">\(^{6}\)</span> For introduction to the datetime module see Chapter <em>A Quick Introduction To Manipulating Dates</em>.</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pandas-duplicated-method">Pandas duplicated() Method</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#duplicated-rows-of-a-dataframe-or-values-of-a-series-can-be-determined-with-the-duplicated-method-by-default-the-first-occurrence-of-a-duplicated-value-is-marked-as-false-and-all-others-are-marked-as-true-here-the-method-is-applied-to-the-index-of-the-first-ten-rows-of-df-excel-new-index">Duplicated rows of a DataFrame or values of a Series can be determined with the <font color="green">duplicated()</font> method.  By default the first occurrence of a duplicated value is marked as False and all others are marked as True.  Here the method is applied to the index of the first ten rows of <font color="green">df_excel_new_index</font>.</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#negate-a-pandas-value-with">Negate A Pandas Value With ~</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#if-you-want-to-only-keep-unique-values-it-makes-sense-to-negate-the-values-returned-from-duplicated">If you want to only keep unique values, it makes sense to negate the values returned from <font color="green">duplicated()</font>.</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#making-a-column-the-index">Making A Column The Index</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pandas-to-numpy">Pandas To Numpy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-apply-method">The apply() Method</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-iterrows-method">The iterrows() Method</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pandas-to-timestamp-method">Pandas To Timestamp() Method</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pandas-duplicated-method">Pandas duplicated() Method</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#negate-a-pandas-value-with">Negate A Pandas Value With ~</a></li>
 </ul>
   </nav></div>
 
