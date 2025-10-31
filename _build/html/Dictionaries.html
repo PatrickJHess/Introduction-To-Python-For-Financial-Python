@@ -188,7 +188,7 @@
 <li class="toctree-l1"><a class="reference internal" href="Tuples.html">A Quick Introduction To Tuples</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">A Quick Introduction To Dictionaries</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Functions.html">A Quick Look At Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Manipulating_Dates.html"><em><strong>A Quick Introduction To Manipulating Dates</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Manipulating_Dates.html">A Quick Introduction To Manipulating Dates</a></li>
 <li class="toctree-l1"><a class="reference internal" href="An_Introduction_To_Pandas.html">A Quick Introduction To Pandas</a></li>
 <li class="toctree-l1"><a class="reference internal" href="An_Introduction_To_NumPy.html">A Quick Introduction To NumPy</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Sets.html">Sets</a></li>
@@ -454,31 +454,15 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dictionaries-store-data-as-key-value-pairs-much-like-a-physical-dictionary-where-a-definition-is-found-for-a-word-python-dictionaries-hold-data-the-value-associated-with-a-label-key-like-lists-and-tuples-dictionaries-are-iterable-and-can-be-created-in-multiple-ways-using-curly-brackets-the-dict-constructor-or-dictionary-comprehension-dictionary-keys-must-be-unique-and-immutable-but-the-data-associated-with-those-keys-is-mutable-key-value-pairs-may-be-deleted-or-added">Dictionaries store data as key:value pairs. Much like a physical dictionary where a definition is found for a word, Python dictionaries hold data (the value) associated with a label (key). Like lists and tuples, dictionaries are iterable and can be created in multiple ways: using curly brackets, the <font color="green">dict()</font> constructor, or dictionary comprehension. Dictionary keys must be unique and immutable, but the data associated with those keys is mutable.  key:value pairs may be deleted or added.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-zip-function-is-particularly-useful-for-the-third-method-as-it-pairs-up-corresponding-elements-from-the-keys-list-x-y-z-with-the-value-lists-x-y-z-creating-tuples-that-the-dictionary-comprehension-then-converts-into-key-value-pairs">The <font color="green">zip()</font> function is particularly useful for the third method as it pairs up corresponding elements from the keys list <font color="green">[‘x’,’y’,’z’]</font> with the value lists <font color="green">[x,y,z]</font>, creating tuples that the dictionary comprehension then converts into key:value pairs.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#all-methods-are-valid-approaches-with-dictionary-comprehension-being-more-pythonic-when-you-have-all-the-data-available-at-once-each-method-creates-dictionaries-with-string-keys-and-list-values">All methods are valid approaches, with dictionary comprehension being more Pythonic when you have all the data available at once. Each method creates dictionaries with string keys and list values.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#access-keys-with-keys-method">Access Keys With <font color="green">keys()</font> Method</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#access-values-with-values-method">Access Values With <font color="green">values()</font> Method</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iterate-through-keys-and-access-values">Iterate Through Keys And Access Values</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-get-method-doesn-t-return-an-error-if-key-is-missing">The <font color="green">get()</font> Method Doesn’t Return An Error If Key Is Missing.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-items-method-returns-key-value-as-a-list-of-tuples">The <font color="green">items()</font> Method Returns key:value As A List Of Tuples</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-items-method-equivalent-to-zip-of-keys-and-values">The <font color="green">items()</font> Method Equivalent To zip Of Keys And Values.</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-items-method-returns-a-view-of-key-value-pairs-as-tuples-which-are-then-unpacked-into-the-key-and-value-variables-in-the-for-loop-this-produces-the-same-output-as-the-earlier-key-based-iteration-but-with-better-performance-and-style">The <font color="green">items()</font> method returns a view of key:value pairs as tuples, which are then unpacked into the key and value variables in the for loop. This produces the same output as the earlier key-based iteration but with better performance and style.</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#removing-a-key-with-the-del-command-and-pop-method">Removing A Key With The <font color="green">del</font> Command And <font color="green">pop()</font> Method</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#del-permanently-removes-the-key-value-pair-from-the-dictionary"><font color="green">del</font> permanently removes the key:value pair from the dictionary.</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#attempting-to-remove-a-key-when-the-key-doesn-t-exist">Attempting To Remove A Key When The Key Doesn’t Exist</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#if-you-try-to-delete-a-non-existent-key-it-will-raise-a-keyerror-there-are-two-methods-to-avoid-the-error-the-first-method-uses-try-except">If you try to delete a non-existent key, it will raise a KeyError. There are two methods to avoid the error. The first method uses <font color="green">try-except</font>.</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#alternative-method-is-dict-pop-key-which-returns-the-deleted-value">Alternative method is <font color="green">dict.pop(‘key’)</font> which returns the deleted value</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-a-dictionary-to-or-modify-an-existing-dictionary-the-update-method">Add A Dictionary To Or Modify An Existing Dictionary: The <font color="green">update()</font> Method</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-update-method-allows-you-to-add-new-key-value-pairs-or-modify-existing-ones-in-a-dictionary-it-takes-another-dictionary-or-an-iterable-of-key-value-pairs-like-a-list-of-tuples-as-an-argument">The <font color="green">update()</font> method allows you to add new key-value pairs or modify existing ones in a dictionary. It takes another dictionary or an iterable of key-value pairs (like a list of tuples) as an argument.</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-items-method-equivalent-to-zip-of-keys-and-values">The <font color="green">items()</font> Method Equivalent To zip Of Keys And Values.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#removing-a-key-with-the-del-command-and-pop-method">Removing A Key With The <font color="green">del</font> Command And <font color="green">pop()</font> Method</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#attempting-to-remove-a-key-when-the-key-doesn-t-exist">Attempting To Remove A Key When The Key Doesn’t Exist</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-a-dictionary-to-or-modify-an-existing-dictionary-the-update-method">Add A Dictionary To Or Modify An Existing Dictionary: The <font color="green">update()</font> Method</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-with-dictionary-and-tuple">Add With Dictionary And Tuple</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modify-with-dictionary-and-list">Modify With Dictionary And List</a></li>
 </ul>
@@ -494,8 +478,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="a-quick-introduction-to-dictionaries">
 <h1>A Quick Introduction To Dictionaries<a class="headerlink" href="#a-quick-introduction-to-dictionaries" title="Link to this heading">#</a></h1>
-<section id="dictionaries-store-data-as-key-value-pairs-much-like-a-physical-dictionary-where-a-definition-is-found-for-a-word-python-dictionaries-hold-data-the-value-associated-with-a-label-key-like-lists-and-tuples-dictionaries-are-iterable-and-can-be-created-in-multiple-ways-using-curly-brackets-the-dict-constructor-or-dictionary-comprehension-dictionary-keys-must-be-unique-and-immutable-but-the-data-associated-with-those-keys-is-mutable-key-value-pairs-may-be-deleted-or-added">
-<h2>Dictionaries store data as key:value pairs. Much like a physical dictionary where a definition is found for a word, Python dictionaries hold data (the value) associated with a label (key). Like lists and tuples, dictionaries are iterable and can be created in multiple ways: using curly brackets, the <font color='green'>dict()</font> constructor, or dictionary comprehension. Dictionary keys must be unique and immutable, but the data associated with those keys is mutable.  key:value pairs may be deleted or added.<a class="headerlink" href="#dictionaries-store-data-as-key-value-pairs-much-like-a-physical-dictionary-where-a-definition-is-found-for-a-word-python-dictionaries-hold-data-the-value-associated-with-a-label-key-like-lists-and-tuples-dictionaries-are-iterable-and-can-be-created-in-multiple-ways-using-curly-brackets-the-dict-constructor-or-dictionary-comprehension-dictionary-keys-must-be-unique-and-immutable-but-the-data-associated-with-those-keys-is-mutable-key-value-pairs-may-be-deleted-or-added" title="Link to this heading">#</a></h2>
+<p>Dictionaries store data as key:value pairs. Much like a physical dictionary where a definition is found for a word, Python dictionaries hold data (the value) associated with a label (key). Like lists and tuples, dictionaries are iterable and can be created in multiple ways: using curly brackets, the <font color='green'>dict()</font> constructor, or dictionary comprehension. Dictionary keys must be unique and immutable, but the data associated with those keys is mutable.  key:value pairs may be deleted or added.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define x, y and z lists</span>
 <span class="n">x</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
 <span class="n">y</span><span class="o">=</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
@@ -561,9 +544,7 @@ document.write(`
 </div>
 </div>
 </div>
-</section>
-<section id="the-zip-function-is-particularly-useful-for-the-third-method-as-it-pairs-up-corresponding-elements-from-the-keys-list-x-y-z-with-the-value-lists-x-y-z-creating-tuples-that-the-dictionary-comprehension-then-converts-into-key-value-pairs">
-<h2>The <font color='green'>zip()</font> function is particularly useful for the third method as it pairs up corresponding elements from the keys list <font color='green'>[‘x’,’y’,’z’]</font> with the value lists <font color='green'>[x,y,z]</font>, creating tuples that the dictionary comprehension then converts into key:value pairs.<a class="headerlink" href="#the-zip-function-is-particularly-useful-for-the-third-method-as-it-pairs-up-corresponding-elements-from-the-keys-list-x-y-z-with-the-value-lists-x-y-z-creating-tuples-that-the-dictionary-comprehension-then-converts-into-key-value-pairs" title="Link to this heading">#</a></h2>
+<p>The <font color='green'>zip()</font> function is particularly useful for the third method as it pairs up corresponding elements from the keys list <font color='green'>[‘x’,’y’,’z’]</font> with the value lists <font color='green'>[x,y,z]</font>, creating tuples that the dictionary comprehension then converts into key:value pairs.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Method 3: Create dictionary using dictionary comprehension</span>
 <span class="c1"># zip() function pairs up elements from two lists: keys [&#39;x&#39;,&#39;y&#39;,&#39;z&#39;] with values [x,y,z]</span>
 <span class="c1"># Dictionary comprehension {key:value for key,value in iterable} creates the dictionary in one line</span>
@@ -596,10 +577,7 @@ document.write(`
 </div>
 </div>
 </div>
-</section>
-<section id="all-methods-are-valid-approaches-with-dictionary-comprehension-being-more-pythonic-when-you-have-all-the-data-available-at-once-each-method-creates-dictionaries-with-string-keys-and-list-values">
-<h2>All methods are valid approaches, with dictionary comprehension being more Pythonic when you have all the data available at once. Each method creates dictionaries with string keys and list values.<a class="headerlink" href="#all-methods-are-valid-approaches-with-dictionary-comprehension-being-more-pythonic-when-you-have-all-the-data-available-at-once-each-method-creates-dictionaries-with-string-keys-and-list-values" title="Link to this heading">#</a></h2>
-</section>
+<p>All methods are valid approaches, with dictionary comprehension being more Pythonic when you have all the data available at once. Each method creates dictionaries with string keys and list values.</p>
 <section id="access-keys-with-keys-method">
 <h2>Access Keys With <font color='green'>keys()</font> Method<a class="headerlink" href="#access-keys-with-keys-method" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
@@ -690,7 +668,7 @@ z [5, 6]
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_16845</span><span class="o">/</span><span class="mf">2772980581.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_13211</span><span class="o">/</span><span class="mf">2772980581.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="c1"># This will work fine for &#39;x&#39;, &#39;y&#39;, &#39;z&#39; but will raise a KeyError for &#39;w&#39;</span>
 <span class="g g-Whitespace">      </span><span class="mi">6</span>     <span class="c1"># The program will crash when it tries to access the non-existent key &#39;w&#39;</span>
 <span class="ne">----&gt; </span><span class="mi">7</span>     <span class="nb">print</span><span class="p">(</span><span class="n">third_dict</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>  <span class="c1"># Returns an error for w</span>
@@ -712,9 +690,9 @@ z [5, 6]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 2]
-[3, 4]
-[5, 6]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>None
+None
+None
 None
 </pre></div>
 </div>
@@ -730,7 +708,7 @@ None
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict_items([(&#39;x&#39;, [1, 2]), (&#39;y&#39;, [3, 4]), (&#39;z&#39;, [5, 6])])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict_items([(&#39;a&#39;, 3), (&#39;b&#39;, 5)])
 </pre></div>
 </div>
 </div>
@@ -738,8 +716,7 @@ None
 </section>
 <section id="the-items-method-equivalent-to-zip-of-keys-and-values">
 <h2>The <font color='green'>items()</font> Method Equivalent To zip Of Keys And Values.<a class="headerlink" href="#the-items-method-equivalent-to-zip-of-keys-and-values" title="Link to this heading">#</a></h2>
-<section id="the-items-method-returns-a-view-of-key-value-pairs-as-tuples-which-are-then-unpacked-into-the-key-and-value-variables-in-the-for-loop-this-produces-the-same-output-as-the-earlier-key-based-iteration-but-with-better-performance-and-style">
-<h3>The <font color='green'>items()</font> method returns a view of key:value pairs as tuples, which are then unpacked into the key and value variables in the for loop. This produces the same output as the earlier key-based iteration but with better performance and style.<a class="headerlink" href="#the-items-method-returns-a-view-of-key-value-pairs-as-tuples-which-are-then-unpacked-into-the-key-and-value-variables-in-the-for-loop-this-produces-the-same-output-as-the-earlier-key-based-iteration-but-with-better-performance-and-style" title="Link to this heading">#</a></h3>
+<p>The <font color='green'>items()</font> method returns a view of key:value pairs as tuples, which are then unpacked into the key and value variables in the for loop. This produces the same output as the earlier key-based iteration but with better performance and style.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Most Pythonic way to iterate through dictionary key:value pairs</span>
 <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">third_dict</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
     <span class="c1"># The items() method returns key:value pairs as tuples</span>
@@ -761,9 +738,8 @@ None
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x [1, 2]
-y [3, 4]
-z [5, 6]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a 3
+b 5
 </pre></div>
 </div>
 </div>
@@ -776,20 +752,11 @@ z [5, 6]
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x [1, 2]
-y [3, 4]
-z [5, 6]
-</pre></div>
 </div>
-</div>
-</div>
-</section>
 </section>
 <section id="removing-a-key-with-the-del-command-and-pop-method">
 <h2>Removing A Key With The <font color='green'>del</font> Command And <font color='green'>pop()</font> Method<a class="headerlink" href="#removing-a-key-with-the-del-command-and-pop-method" title="Link to this heading">#</a></h2>
-<section id="del-permanently-removes-the-key-value-pair-from-the-dictionary">
-<h3><font color='green'>del</font> permanently removes the key:value pair from the dictionary.<a class="headerlink" href="#del-permanently-removes-the-key-value-pair-from-the-dictionary" title="Link to this heading">#</a></h3>
+<p><font color='green'>del</font> permanently removes the key:value pair from the dictionary.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">del</span> <span class="n">third_dict</span><span class="p">[</span><span class="s1">&#39;z&#39;</span><span class="p">]</span>
 <span class="n">third_dict</span>
 
@@ -803,17 +770,21 @@ z [5, 6]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;x&#39;: [1, 2], &#39;y&#39;: [3, 4]}
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="nn">/tmp/ipython-input-3642017985.py</span> in <span class="ni">&lt;cell line: 0&gt;</span><span class="nt">()</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="k">del</span> <span class="n">third_dict</span><span class="p">[</span><span class="s1">&#39;z&#39;</span><span class="p">]</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">third_dict</span>
+
+<span class="ne">KeyError</span>: &#39;z&#39;
 </pre></div>
 </div>
 </div>
 </div>
 </section>
-</section>
 <section id="attempting-to-remove-a-key-when-the-key-doesn-t-exist">
 <h2>Attempting To Remove A Key When The Key Doesn’t Exist<a class="headerlink" href="#attempting-to-remove-a-key-when-the-key-doesn-t-exist" title="Link to this heading">#</a></h2>
-<section id="if-you-try-to-delete-a-non-existent-key-it-will-raise-a-keyerror-there-are-two-methods-to-avoid-the-error-the-first-method-uses-try-except">
-<h3>If you try to delete a non-existent key, it will raise a KeyError. There are two methods to avoid the error. The first method uses <font color='green'>try-except</font>.<a class="headerlink" href="#if-you-try-to-delete-a-non-existent-key-it-will-raise-a-keyerror-there-are-two-methods-to-avoid-the-error-the-first-method-uses-try-except" title="Link to this heading">#</a></h3>
+<p>If you try to delete a non-existent key, it will raise a KeyError. There are two methods to avoid the error. The first method uses <font color='green'>try-except</font>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Method 1: Safe deletion using try-except with del statement</span>
 <span class="k">try</span><span class="p">:</span>
     <span class="c1"># Attempt to delete key &#39;z&#39; using del statement</span>
@@ -846,14 +817,12 @@ z [5, 6]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;x&#39;: [1, 2], &#39;y&#39;: [3, 4]}
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;a&#39;: 3, &#39;b&#39;: 5}
 </pre></div>
 </div>
 </div>
 </div>
-</section>
-<section id="alternative-method-is-dict-pop-key-which-returns-the-deleted-value">
-<h3>Alternative method is <font color='green'>dict.pop(‘key’)</font> which returns the deleted value<a class="headerlink" href="#alternative-method-is-dict-pop-key-which-returns-the-deleted-value" title="Link to this heading">#</a></h3>
+<p>Alternative method is <font color='green'>dict.pop(‘key’)</font> which returns the deleted value</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Method 2: Safe deletion using pop() with default value</span>
 <span class="c1"># pop() removes and returns the value for the given key</span>
 <span class="c1"># If key doesn&#39;t exist, it returns the default value (None) instead of raising an error</span>
@@ -884,18 +853,15 @@ z [5, 6]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;x&#39;: [1, 2], &#39;y&#39;: [3, 4]}
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;a&#39;: 3, &#39;b&#39;: 5}
 </pre></div>
 </div>
 </div>
 </div>
 </section>
-</section>
 <section id="add-a-dictionary-to-or-modify-an-existing-dictionary-the-update-method">
 <h2>Add A Dictionary To Or Modify An Existing Dictionary: The <font color='green'>update()</font> Method<a class="headerlink" href="#add-a-dictionary-to-or-modify-an-existing-dictionary-the-update-method" title="Link to this heading">#</a></h2>
-<section id="the-update-method-allows-you-to-add-new-key-value-pairs-or-modify-existing-ones-in-a-dictionary-it-takes-another-dictionary-or-an-iterable-of-key-value-pairs-like-a-list-of-tuples-as-an-argument">
-<h3>The <font color='green'>update()</font> method allows you to add new key-value pairs or modify existing ones in a dictionary. It takes another dictionary or an iterable of key-value pairs (like a list of tuples) as an argument.<a class="headerlink" href="#the-update-method-allows-you-to-add-new-key-value-pairs-or-modify-existing-ones-in-a-dictionary-it-takes-another-dictionary-or-an-iterable-of-key-value-pairs-like-a-list-of-tuples-as-an-argument" title="Link to this heading">#</a></h3>
-</section>
+<p>The <font color='green'>update()</font> method allows you to add new key-value pairs or modify existing ones in a dictionary. It takes another dictionary or an iterable of key-value pairs (like a list of tuples) as an argument.</p>
 </section>
 <section id="add-with-dictionary-and-tuple">
 <h2>Add With Dictionary And Tuple<a class="headerlink" href="#add-with-dictionary-and-tuple" title="Link to this heading">#</a></h2>
@@ -1033,31 +999,15 @@ z [5, 6]
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dictionaries-store-data-as-key-value-pairs-much-like-a-physical-dictionary-where-a-definition-is-found-for-a-word-python-dictionaries-hold-data-the-value-associated-with-a-label-key-like-lists-and-tuples-dictionaries-are-iterable-and-can-be-created-in-multiple-ways-using-curly-brackets-the-dict-constructor-or-dictionary-comprehension-dictionary-keys-must-be-unique-and-immutable-but-the-data-associated-with-those-keys-is-mutable-key-value-pairs-may-be-deleted-or-added">Dictionaries store data as key:value pairs. Much like a physical dictionary where a definition is found for a word, Python dictionaries hold data (the value) associated with a label (key). Like lists and tuples, dictionaries are iterable and can be created in multiple ways: using curly brackets, the <font color="green">dict()</font> constructor, or dictionary comprehension. Dictionary keys must be unique and immutable, but the data associated with those keys is mutable.  key:value pairs may be deleted or added.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-zip-function-is-particularly-useful-for-the-third-method-as-it-pairs-up-corresponding-elements-from-the-keys-list-x-y-z-with-the-value-lists-x-y-z-creating-tuples-that-the-dictionary-comprehension-then-converts-into-key-value-pairs">The <font color="green">zip()</font> function is particularly useful for the third method as it pairs up corresponding elements from the keys list <font color="green">[‘x’,’y’,’z’]</font> with the value lists <font color="green">[x,y,z]</font>, creating tuples that the dictionary comprehension then converts into key:value pairs.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#all-methods-are-valid-approaches-with-dictionary-comprehension-being-more-pythonic-when-you-have-all-the-data-available-at-once-each-method-creates-dictionaries-with-string-keys-and-list-values">All methods are valid approaches, with dictionary comprehension being more Pythonic when you have all the data available at once. Each method creates dictionaries with string keys and list values.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#access-keys-with-keys-method">Access Keys With <font color="green">keys()</font> Method</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#access-values-with-values-method">Access Values With <font color="green">values()</font> Method</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iterate-through-keys-and-access-values">Iterate Through Keys And Access Values</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-get-method-doesn-t-return-an-error-if-key-is-missing">The <font color="green">get()</font> Method Doesn’t Return An Error If Key Is Missing.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-items-method-returns-key-value-as-a-list-of-tuples">The <font color="green">items()</font> Method Returns key:value As A List Of Tuples</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-items-method-equivalent-to-zip-of-keys-and-values">The <font color="green">items()</font> Method Equivalent To zip Of Keys And Values.</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-items-method-returns-a-view-of-key-value-pairs-as-tuples-which-are-then-unpacked-into-the-key-and-value-variables-in-the-for-loop-this-produces-the-same-output-as-the-earlier-key-based-iteration-but-with-better-performance-and-style">The <font color="green">items()</font> method returns a view of key:value pairs as tuples, which are then unpacked into the key and value variables in the for loop. This produces the same output as the earlier key-based iteration but with better performance and style.</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#removing-a-key-with-the-del-command-and-pop-method">Removing A Key With The <font color="green">del</font> Command And <font color="green">pop()</font> Method</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#del-permanently-removes-the-key-value-pair-from-the-dictionary"><font color="green">del</font> permanently removes the key:value pair from the dictionary.</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#attempting-to-remove-a-key-when-the-key-doesn-t-exist">Attempting To Remove A Key When The Key Doesn’t Exist</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#if-you-try-to-delete-a-non-existent-key-it-will-raise-a-keyerror-there-are-two-methods-to-avoid-the-error-the-first-method-uses-try-except">If you try to delete a non-existent key, it will raise a KeyError. There are two methods to avoid the error. The first method uses <font color="green">try-except</font>.</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#alternative-method-is-dict-pop-key-which-returns-the-deleted-value">Alternative method is <font color="green">dict.pop(‘key’)</font> which returns the deleted value</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-a-dictionary-to-or-modify-an-existing-dictionary-the-update-method">Add A Dictionary To Or Modify An Existing Dictionary: The <font color="green">update()</font> Method</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-update-method-allows-you-to-add-new-key-value-pairs-or-modify-existing-ones-in-a-dictionary-it-takes-another-dictionary-or-an-iterable-of-key-value-pairs-like-a-list-of-tuples-as-an-argument">The <font color="green">update()</font> method allows you to add new key-value pairs or modify existing ones in a dictionary. It takes another dictionary or an iterable of key-value pairs (like a list of tuples) as an argument.</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-items-method-equivalent-to-zip-of-keys-and-values">The <font color="green">items()</font> Method Equivalent To zip Of Keys And Values.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#removing-a-key-with-the-del-command-and-pop-method">Removing A Key With The <font color="green">del</font> Command And <font color="green">pop()</font> Method</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#attempting-to-remove-a-key-when-the-key-doesn-t-exist">Attempting To Remove A Key When The Key Doesn’t Exist</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-a-dictionary-to-or-modify-an-existing-dictionary-the-update-method">Add A Dictionary To Or Modify An Existing Dictionary: The <font color="green">update()</font> Method</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-with-dictionary-and-tuple">Add With Dictionary And Tuple</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modify-with-dictionary-and-list">Modify With Dictionary And List</a></li>
 </ul>
